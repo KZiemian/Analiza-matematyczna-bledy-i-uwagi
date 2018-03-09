@@ -1,145 +1,150 @@
-\RequirePackage[l2tabu, orthodox]{nag}
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
-\usepackage[utf8]{inputenc} % Pozwala pisać polskie znaki bezpośrednio.
-\usepackage[polish]{babel} % Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
-\usepackage[MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
-\usepackage{amsfonts, amscd}
-\usepackage[intlimits]{amsmath}% Dalsze wsparcie od AMS. Więc tego, co najlepsze w LaTeX, czyli trybu
-%matematycznego.
-\usepackage{upgreek}%Lepsze greckie czcionki. Przyklad skladni: pi = \uppi
-%\usepackage{txfonts}%Inne ulepszenie greckich liter. Przyklad skladni: pi = \piup
-\usepackage{latexsym}% Więcej symboli.
-\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
-\usepackage{slashed}% Pozwala pisać slash Feynmana.
-\usepackage{xy}% Pozwala rysować grafy.
-\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
-%tensorowej:).
-\usepackage{graphicx}% Pozwala wstawiać grafikę.
-\usepackage{xcolor}
-\usepackage{amsmath}
-\usepackage{vmargin}
-%----------------------------------------------------------------------
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
 % MARGINS
-%----------------------------------------------------------------------
+% ----------------------------
 \setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
-\usepackage{hyperref}
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
 
 
-\newcommand{\spaceOne}{2em}
-\newcommand{\spaceTwo}{1em}
-\newcommand{\spaceThree}{0.5em}
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
 
 
-\DeclareMathOperator{\sech}{sech}
-\DeclareMathOperator{\csch}{csch}
-\DeclareMathOperator{\arcsec}{arcsec}
-\DeclareMathOperator{\arccsc}{arcCsc}
-\DeclareMathOperator{\arccosh}{arcCosh}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\artanh}{artanh}
-\DeclareMathOperator{\arcsech}{arcsech}
-\DeclareMathOperator{\arccsch}{arcCsch}
-\DeclareMathOperator{\arcoth}{arcoth}
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
+% ,,twr'' do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
 
 
-\newcommand{\fr}{\frac}
-\newcommand{\tfr}{\tfrac}
-\newcommand{\mb}{\mathbb}
-\newcommand{\mc}{\mathcal}
-\newcommand{\mr}{\mathrm}
-\newcommand{\ul}{\underline}
-\newcommand{\ol}{\overline}
-\newcommand{\wh}{\widehat}
-\newcommand{\wt}{\widetilde}
-\newcommand{\ld}{\ldots}
-\newcommand{\ra}{\rightarrow}
-\newcommand{\xra}{\xrightarrow}
-\newcommand{\mt}{\mapsto}
-\newcommand{\pr}{\partial}
-\newcommand{\sq}{\sqrt}
-\newcommand{\Cj}{\mc{C}^{ j }}
-\newcommand{\Ck}[1]{\mc{C}^{ k }}
-\newcommand{\Lim}{\lim\limits}
-\newcommand{\Sum}{\sum\limits}
-\newcommand{\IntL}{\int\limits}
-\newcommand{\Int}[2]{ \int #1 \, d#2 }
 
-\newcommand{\e}{\mr{e}}
-\newcommand{\ii}{\mr{i}}
-\newcommand{\id}{\mr{id}}
-\newcommand{\de}{\mr{d}}
-\newcommand{\sgm}{\mr{sgm}}
-\newcommand{\supp}{\mr{supp}}
-\newcommand{\cy}{\mr{cykl}}
-\newcommand{\ad}{\mr{ad}}
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-\newcommand{\vp}{\varphi}
-\newcommand{\eps}{\epsilon}
-\newcommand{\veps}{\varepsilon}
-\newcommand{\del}{\delta}
-\newcommand{\Del}{\Delta}
-\newcommand{\la}{\uplambda}
-\newcommand{\ga}{\gamma}
-\newcommand{\Ga}{\Gamma}
-\newcommand{\Ad}{\mr{Ad}}
-\newcommand{\Le}{\mc{L}}
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{reedsimon} % Pakiet napisany konkretnie dla tego pliku.
+\usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
 
-\newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
-\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } } }
-\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } } }
 
-\newcommand{\tb}{\textbf}
-\newcommand{\noi}{\noindent}
-\newcommand{\start}{\noi \tb{--} {}}
-\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
-\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
-\newcommand{\Str}[1]{\tb{Str. #1.}}
-\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.} \\}
-\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).} \\}
-\newcommand{\Jest}{\tb{Jest: }}
-\newcommand{\Pow}{\tb{Powinno być: }}
-\newcommand{\Prze}{{\color{red} Przemyśl.}}
-\newcommand{\Dok}{{\color{red} Dokończ.}}
-\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
-\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1} } \end{center} }
 
-\providecommand{\abs}[1]{\lvert #1 \rvert}
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
 
 
 
 
-\renewcommand{\arraystretch}{1.4}
 
 
 
+
+% ####################################################################
 \begin{document}
+% ####################################################################
 
 
 
-% ########################################
-\Field{ Analiza matematyczna, błędy i~uwagi. }
+% ##############################
+\Main{Historia Polski} % Tytuł całego tekstu
 
-\vspace{\spaceOne}
-% ########################################
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ##############################
 
 
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Stanisław Łojasiewicz \\
+  ,,Wstęp do~teorii funkcji rzeczywistych'',
+  \cite{LojasiewiczWstepDoFunkcjiRzeczywistych76} }
 
+
+% ####################
 \Work{
   G. M. Fichtenholz \\
-  ,,Rachunek różniczkowy i~całkowy. Tom~I.'', \cite{Fic05a}.}
+  ,,Rachunek różniczkowy i~całkowy. Tom~I'', \cite{Fic05a}.}
 
 
 % Uwagi:
@@ -162,20 +167,23 @@ $$\sum_{ i = 1 }^{ n } a_{ i }^{2} \sum_{ i = 1 }^{ n } b_{ i }^{ 2 } - \{ \sum_
 \item[--] Str.
 \end{itemize}
 
-\vspace{\spaceOne}
+\vspace{\spaceTwo}
 
 
 
+
+
+% ####################
 \Work{
   G. M. Fichtenholz \\
-  ,,Rachunek różniczkowy i całkowy. Tom~II.'', \cite{Fic04}. }
+  ,,Rachunek różniczkowy i całkowy. Tom~II'', \cite{Fic04}. }
 
 
 \CenterTB{Uwagi}
 
 % \tb{Konkretne strony.}
 
-% \vspace{\spaceThree}
+% \vspace{\spaceFour}
 
 \start \Str{6} Stwierdzenie, że~wszystkie funkcje pierwotne różnią~się
 o~stałą, można zinterpretować w~błędny, acz bez~ustanku powtarzany,
@@ -183,6 +191,9 @@ sposób. Dwie funkcje pierwotne różnią~się o~stałą dowolną na każdym
 przedziale spójnym, jednak jeśli dziedzina funkcji składa~się z~dwóch
 lub więcej przedziałów spójnych, na każdym z~nich można wybrać inną
 stałą dowolną.
+
+\vspace{\spaceFour}
+
 
 \start \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
 wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
@@ -243,9 +254,6 @@ jakiś znany fakt z~algebry? \Dok
     & & & & \\ \hline
   \end{tabular}
 \end{center}
-
-\vspace{1em}
-
 \noi \\
 \StrWd{34}{3}
 \tb{Jest:} Zróżniczkujmy (10) obustronnie\ld \\
@@ -256,13 +264,16 @@ $R\left( x, \sq{ ax^{ 4 } + bx^{ 3 } + cx^{ 2 } + dx + e }
 \Pow $R\left( x, \sq{ ax^{ 4 } + bx^{ 3 } + cx^{ 2 } + dx + e }
 \right)$ \\
 
-\vspace{\spaceOne}
+\vspace{\spaceTwo}
 
 
 
+
+
+% ####################
 \Work{
   W. Krysicki, L. Włodarski \\
-  ,,Analiza matematyczna w zadaniach. Tom~I.'', \cite{KW05}.}
+  ,,Analiza matematyczna w zadaniach. Tom~I'', \cite{KW05}.}
 
 
 \CenterTB{Uwagi}
@@ -276,10 +287,16 @@ i~skorzystać z~tego, że~$\Lim_{ x \ra 0 } \fr{ \sin 3x }{ 3x } = 0$,
 pytanie jedna czy ta ostania równość zachodzi? Pozytywną odpowiedź
 na~to~pytanie daje poniższe twierdzenie.
 
+\vspace{\spaceFour}
+
+
 \start \Str{96} Można zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają
 taką samą pochodną, więc powinny różnią~się o~stałą, co~jest
 nonsensem. Wyjaśnieniem problemu jest fakt, że~te dwie funkcje~są
 określone na rozłącznych dziedzinach.
+
+\vspace{\spaceFour}
+
 
 \start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
 założenie o~tym, że~$\dd{}{ x }{ t } \neq 0$. Jeżeli mamy dane dwie
@@ -313,6 +330,9 @@ stwierdzić, czy znikanie pochodnej $\dd{}{ x }{ t }( t_{ 0 } )$ musi
 pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
 nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
 aby~tak było.
+
+\vspace{\spaceFour}
+
 
 \start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
 pochodnej równy jest pochodnej modułu:
@@ -435,13 +455,16 @@ składowa przyśpieszenia również musi rosnąć.
 
 \end{itemize}
 
-\vspace{\spaceOne}
+\vspace{\spaceTwo}
 
 
 
+
+
+% ####################
 \Work{
-  W. Krysicki, L. Włodarski\\
-  ,,Analiza matematyczna w~zadaniach. Tom~II.'', \cite{KW04}. }
+  W. Krysicki, L. Włodarski \\
+  ,,Analiza matematyczna w~zadaniach. Tom~II.'', \cite{KW04} }
 
 
 \CenterTB{Uwagi}
@@ -474,6 +497,9 @@ rozwiązaniem jest:
     \sin x - 1,& x \in ( \fr{ \pi }{ 2 }, \fr{ 3 \pi }{ 2 } ).
   \end{cases}
 \end{equation*}
+
+\vspace{\spaceFour}
+
 
 \start \Str{200} \tb{Zadanie 7.3.} Również tutaj problem znalezienia
 wszystkich rozwiązań równania różniczkowego nie został w~pełni
@@ -539,13 +565,16 @@ przedziale, choć nie jest różniczkowalne w~0.
   % \item[--] Str.
 \end{itemize}
 
-\vspace{\spaceOne}
+\vspace{\spaceTwo}
 
 
 
+
+
+% ####################
 \Work{
   P. J. Nahin \\
-  ,,Inside Interesting Integrals'', \cite{Nah15}.}
+  ,,Inside Interesting Integrals'', \cite{Nahin15} }
 
 
 
@@ -571,25 +600,27 @@ przedziale, choć nie jest różniczkowalne w~0.
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu &  &  \\ \hline
-    & & & & \\
-    & & & & \\ \hline
+    % & & & & \\
+    % & & & & \\
+    \hline
   \end{tabular}
 \end{center}
-
 \noi
 \StrWg{vi}{3} \\
 \Jest \tb{immediatly know they have encountered a~most interesting
   character}: \\
-\Pow \tb{\emph{immediatly know they have encountered a most
-    interesting
+\Pow \tb{\emph{immediatly know they have encountered a~most interesting
     character}:} \\
 \newpage
 
 
 
+
+
+% ####################
 \Work{
   B. W. Szabat \\
-  ,,Wstęp do analizy zespolonej'', \cite{Sza74}.}
+  ,,Wstęp do analizy zespolonej'', \cite{Szabat74} }
 
 
 \CenterTB{Błędy}
@@ -601,17 +632,21 @@ przedziale, choć nie jest różniczkowalne w~0.
     & Od góry & Od dołu &  &  \\ \hline
     17 & 5 & & dal & dal\dywiz \\
     25 & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
-    & & & & \\ \hline
+    % & & & & \\
+    \hline
   \end{tabular}
 \end{center}
 
-\vspace{\spaceOne}
+\vspace{\spaceTwo}
 
 
 
+
+
+% ####################
 \Work{
   W. Żakowski, W. Lesiński \\
-  ,,Matematyka. Część IV.'' % \cite{ZL78}
+  ,,Matematyka. Część IV'' % \cite{ZL78}
 }
 
 
@@ -620,7 +655,7 @@ przedziale, choć nie jest różniczkowalne w~0.
 
 \noi \tb{Część~I.}
 
-\vspace{\spaceThree}
+\vspace{\spaceFour}
 
 
 \start Często w~tej części książki pojawia~się następująca sytuacja.
@@ -631,12 +666,14 @@ okazywało~się, że~funkcję $\vp( x, C )$ można w~naturalny sposób
 przedłużyć do~$C = b$ i~$\vp( x, b ) = $ również jest rozwiązaniem
 tego równania. Czy to jest zbieg okoliczności, czy~też przy pewnych
 warunkach musi to zachodzić? \Prze
-\vspace{\spaceTwo}
+
+\vspace{\spaceThree}
 
 
 
 \noi \tb{Konkretne strony.}
-\vspace{\spaceThree}
+
+\vspace{\spaceFour}
 
 
 \start \Str{23} \Dok
@@ -661,12 +698,17 @@ w~istocie jest.
     & Od góry & Od dołu &  &  \\ \hline
     % & & & & \\
     % & & & & \\
-    & & & & \\ \hline
+    % & & & & \\
+    \hline
   \end{tabular}
 \end{center}
 
 
 
+
+
+% ####################################################################
+% ####################################################################
 \bibliographystyle{alpha} \bibliography{Bibliography}{}
 
 
