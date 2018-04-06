@@ -61,11 +61,14 @@
 
 
 % Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\left| \, #1 \, \right|}
+\providecommand{\abso}[1]{\left| \, #1 \, \right|}
 \providecommand{\absj}[1]{\lvert #1 \rvert}
 \providecommand{\absd}[1]{\left| #1 \right|}
 % Zupełnie nie wiem, czemu to jest \providecommand
 \newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+
+
+
 
 
 % ##########
@@ -90,11 +93,11 @@
 
 
 
-
 % ##########
 % Standardowe używane w oznaczeniach litery o specjalnej czcionce
 % \mb = \mathbb
 \newcommand{\N}{\mb{N}}
+\newcommand{\Z}{\mb{Z}}
 \newcommand{\R}{\mb{R}}
 \newcommand{\C}{\mb{C}}
 
@@ -123,6 +126,8 @@
 
 
 
+
+
 % ##########
 % Teoria mnogości
 \newcommand{\es}{\emptyset}
@@ -135,12 +140,15 @@
 
 
 
+
+
 % ##########
 % Algebra
 \newcommand{\Real}{\mf{Re}}
 \newcommand{\Imag}{\mf{Im}}
 \newcommand{\ot}{\otimes}
 \newcommand{\Tr}{\mr{Tr}}
+
 
 
 
@@ -157,6 +165,19 @@
 \newcommand{\vecq}{\vec{ q }}
 \newcommand{\vecp}{\vec{ p }}
 
+\newcommand{\vecF}{\vec{ F }}
+
+
+% Funkcje wektorowe
+\newcommand{\vecxt}{\vec{ x }( t )}
+
+
+% Wersory
+\newcommand{\nhat}{\wh{n}}
+
+
+
+
 
 % ##################
 % Analiza matematyczna
@@ -168,7 +189,6 @@
 
 
 % Delty
-\newcommand{\DelToZero}{\Del t \to 0}
 \newcommand{\Delt}{\Del t}
 
 % Granice
@@ -176,7 +196,18 @@
 \newcommand{\Liminf}{\ul{\lim}}
 \newcommand{\Limsup}{\ol{\lim}}
 
-\newcommand{\nToInfty}{n \ra +\infty}
+
+\newcommand{\nToInfty}{n \to +\infty}
+
+\newcommand{\xToZero}{x \to 0}
+\newcommand{\xToPInfty}{x \to +\infty}
+\newcommand{\xToMInfty}{x \to -\infty}
+
+\newcommand{\epsToZero}{\veps \to 0}
+\newcommand{\epsToPZero}{\veps \to 0^{ + }}
+
+\newcommand{\DelToZero}{\Del t \to 0}
+
 
 % Sumy
 \newcommand{\Sum}{\sum\limits}
@@ -190,6 +221,11 @@
 \newcommand{\pr}{\partial}
 \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
 
+
+% Klasy różniczkowalności
+\newcommand{\Cj}{\Cc^{ j }}
+% \newcommand{\Ck}[1]{\Cc^{ k }}
+
 % Całki i całkowanie
 \newcommand{\dx}{\de x}
 \newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
@@ -201,6 +237,8 @@
 \newcommand{\IntWie}[3]{\Int_{ #1 } \de^{ #2 }#3 \,} % Wielowymiarowa
 \newcommand{\IntTro}[1]{ \Int \de^{ 3 }#1 \,} % Trójwymiarowa
 \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+
+
 
 
 
@@ -217,16 +255,22 @@
 
 
 % Przestrzenie L^{ p }
-\newcommand{\Lj}{L^{ 1 }}
-\newcommand{\Ld}{L^{ 2 }}
+\newcommand{\Lo}{L^{ 1 }}  % L^{ one }
+\newcommand{\Lt}{L^{ 2 }}  % L^{ two }
 \newcommand{\Lp}{L^{ p }}
-\newcommand{\LIj}{\Lc^{ 1 }}
+\newcommand{\LIo}{\Lc^{ 1 }}
 \newcommand{\LIp}{\Lc^{ p }}
-\newcommand{\LdJ}{\Ld( \R, \de \mu )}
+\newcommand{\LdO}{\Ld( \R, \de \mu )}
 \newcommand{\LdT}{\Ld( \R^{ 3 }, \de \mu )}
-\newcommand{\Ldlim}{L^{ 2 }-\Lim}
+\newcommand{\LdLim}{L^{ 2 }-\Lim}
 
 
+
+
+
+% ##########
+% Teoria dystrybucji
+\newcommand{\Pv}{\mathrm{Pv}}
 
 
 % ########################################
@@ -246,7 +290,9 @@
 % Całka Jeden
 \newcommand{\IntCaD}[2] { \Int #1 \, d#2 } % Całka dwa
 
-% ####################
+
+
+% ##########
 % Całki w określonych granicach
 \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
 \newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
@@ -257,7 +303,7 @@
 
 
 
-% ##############################
+% ############################
 % Sprawdź czy się nie powtarzają
 
 
@@ -342,24 +388,10 @@
 
 % ####################
 % Analiza funkcjonalna
-% \newcommand{\da}{\dagger}
 
 
 % % Brakety
 % % W analizie funkcjonalnej też często się je stosuje
-% \newcommand{\lket}{\langle}
-% \newcommand{\rket}{\rangle}
-
-% % Przestrzenie L^{ p }
-% \newcommand{\Lj}{L^{ 1 }}
-% \newcommand{\Ld}{L^{ 2 }}
-% \newcommand{\Lp}{L^{ p }}
-% \newcommand{\LIj}{\L^{ 1 }}
-% \newcommand{\LIp}{\L^{ p }}
-% \newcommand{\LdJ}{\Ld( \R, \de \mu )}
-% \newcommand{\LdT}{\Ld( \R^{ 3 }, \de \mu )}
-% \newcommand{\Ldlim}{L^{ 2 }-\Lim}
-
 
 % % ####################
 % % Wartość bezwzględna i normy
@@ -389,6 +421,39 @@
 % % \newcommand{\IntL}[3]{ \int\limits_{ { #1 } }^{ { #2 } } \d#3 \; }
 
 
+% \DeclareMathOperator{\sech}{sech}
+% \DeclareMathOperator{\csch}{csch}
+% \DeclareMathOperator{\arcsec}{arcsec}
+% \DeclareMathOperator{\arccsc}{arcCsc}
+% \DeclareMathOperator{\arccosh}{arcCosh}
+% \DeclareMathOperator{\arcsinh}{arcsinh}
+% \DeclareMathOperator{\artanh}{artanh}
+% \DeclareMathOperator{\arcsech}{arcsech}
+% \DeclareMathOperator{\arccsch}{arcCsch}
+% \DeclareMathOperator{\arcoth}{arcoth}
+
+% \newcommand{\wt}{\widetilde}
+% \newcommand{\mt}{\mapsto}
+% \newcommand{\pr}{\partial}
+% \newcommand{\sq}{\sqrt}
+
+
+% \newcommand{\tfr}{\tfrac}
+
+% \newcommand{\e}{\mr{e}}
+% \newcommand{\ii}{\mr{i}}
+% \newcommand{\id}{\mr{id}}
+% \newcommand{\de}{\mr{d}}
+% \newcommand{\sgm}{\mr{sgm}}
+% \newcommand{\supp}{\mr{supp}}
+% \newcommand{\cy}{\mr{cykl}}
+% \newcommand{\ad}{\mr{ad}}
+% \newcommand{\Ad}{\mr{Ad}}
+% \newcommand{\Le}{\mc{L}}
+
+% \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
+% \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } } }
+% \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } } }
 
 
 
