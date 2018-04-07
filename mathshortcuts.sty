@@ -23,6 +23,7 @@
 \newcommand{\tfr}{\tfrac}
 \newcommand{\tr}{\textrm}
 
+
 % Często pojawiające się stałe matematyczna
 \newcommand{\onehalf}{\fr{ 1 }{ 2 }}
 \newcommand{\sqrtTwo}{\sqrt{ 2 }} % Pierwiastek z 2
@@ -35,12 +36,18 @@
 \newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }}
 \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
 
-% Oznaczenia ,,nad i pod''. Wymyśl lepszą nazwę
+
+% Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
+% Wymyśl lepszą nazwę
 \newcommand{\til}{\tilde}
-\newcommand{\ul}{\underline}
-\newcommand{\ol}{\overline}
+
 \newcommand{\wh}{\widehat}
 \newcommand{\wt}{\widetilde}
+
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\us}{\underset}
+
 
 % Trzcionki matematyczne
 \newcommand{\mr}{\mathrm}
@@ -100,6 +107,7 @@
 \newcommand{\Z}{\mb{Z}}
 \newcommand{\R}{\mb{R}}
 \newcommand{\C}{\mb{C}}
+
 
 % \mc = \mathcal
 \newcommand{\Cc}{\mc{C}}
@@ -213,30 +221,47 @@
 \newcommand{\Sum}{\sum\limits}
 
 % Różniczkowanie i pochodne
-\newcommand{\Cinfty}{\Cc^{ \infty }}
-
 \newcommand{\de}{\mr{d}}
 \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+% Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
+% trzeci zmienna
 
 \newcommand{\pr}{\partial}
 \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
-
+% Jw tylko dla pochodnej cząstkowej
+\newcommand{\pdo}[1]{\pr_{ #1 }}  % Partial derivative one - notacja
+% pochodnej cząstkowej bez ułamka
+\newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
+\newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
+    { \pr x^{ #3 } } }}  % PD three - po zmnienych x z indeksami "#1" "#2"
 
 % Klasy różniczkowalności
 \newcommand{\Cj}{\Cc^{ j }}
-% \newcommand{\Ck}[1]{\Cc^{ k }}
+\newcommand{\Ck}[1]{\Cc^{ #1 }}
 
+\newcommand{\Cinfty}{\Cc^{ \infty }}
+\newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
+\newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
+
+\newcommand{\CinftyRt}{\Cinfty( \R^{ 3 } )}
+\newcommand{\CinftyRf}{\Cinfty( \R^{ 4 } )}
+
+
+
+
+
+
+% ##########
 % Całki i całkowanie
 \newcommand{\dx}{\de x}
 \newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
 
-
-\newcommand{\IntSet}[3]{\Int_{ #1 } #2 \, d#3} % Całka po zbiorze.
-\newcommand{\IntCa}[2]{\Int #1 \, \de#2} % Juz z calkowaniem
-\newcommand{\IntFi}[2]{\Int \de#1 \, #2} % Bardziej Fizyczna notacja;)
-\newcommand{\IntWie}[3]{\Int_{ #1 } \de^{ #2 }#3 \,} % Wielowymiarowa
-\newcommand{\IntTro}[1]{ \Int \de^{ 3 }#1 \,} % Trójwymiarowa
-\newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+\newcommand{\IntSet}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+\newcommand{\IntCa}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
+\newcommand{\IntFi}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
+\newcommand{\IntWie}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
+\newcommand{\IntTro}[1]{ \Int \de^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntDo}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
 
 
 
@@ -250,8 +275,8 @@
 % W analizie funkcjonalnej też często się je stosuje
 \newcommand{\lket}{\langle}
 \newcommand{\rket}{\rangle}
-\newcommand{\dketo}[2]{\lket #1 | #2 \rket} % Dirac ket one
-\newcommand{\dkett}[2]{\lket #1, \, #2 \rket} % Dirac ket two
+\newcommand{\dketo}[2]{\lket #1 | #2 \rket}  % Dirac ket one
+\newcommand{\dkett}[2]{\lket #1, \, #2 \rket}  % Dirac ket two
 
 
 % Przestrzenie L^{ p }
@@ -285,10 +310,11 @@
 
 % Całki i całkowanie
 \newcommand{\Int}{\int\limits}
-\newcommand{\IntL}[3]{ \Int_{ { #1 } }^{ { #2 } } \de#3 \; }
-\newcommand{\IntCaJ}[2]{ \Int #1 \, \de#2 } % Juz z calkowaniem
+\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
+\newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
+\newcommand{\IntCaJ}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
 % Całka Jeden
-\newcommand{\IntCaD}[2] { \Int #1 \, d#2 } % Całka dwa
+\newcommand{\IntCaD}[2]{\Int #1 \, d#2}  % Całka dwa
 
 
 
@@ -311,63 +337,15 @@
 % Różne komendy zdefiniowane dla ułatwienia pracy z LaTeXem
 % --------------------------------------------------------------------
 
-% Ładniejszy zbiór pusty
-% \let\oldemptyset\emptyset
-% \let\emptyset\varnothing
-
-
-% ####################
-
-
-
-
-% Standardowe oznaczenia literowe
-% \newcommand{\N}{\mb{N}}
-% \newcommand{\R}{\mb{R}}
-% \newcommand{\C}{\mb{C}}
-% \newcommand{\D}{\mc{D}}
-% \newcommand{\Hc}{\mc{H}}
-% \newcommand{\Lc}{\mc{L}}
-% \newcommand{\Rn}{\R^{ n }}
-% \newcommand{\Rc}{\mc{R}}
-% \newcommand{\Cc}{\mc{C}}
-
-% Mniej używane oznaczenia literowe
-% \newcommand{\B}{\mc{B}}
-% \newcommand{\Oc}{\mc{O}}
-% \newcommand{\Rp}{\R_{ + }}
-
-% ####################
-% Standardowe matematyczne symbole literowe
-% Mathbb
-% \newcommand{\C}{\mb{C}}
-% \newcommand{\N}{\mb{N}}
-% \newcommand{\R}{\mb{R}}
-% \newcommand{\Rn}{\R^{ n }}
-% \newcommand{\Rp}{\R_{ + }}
-
-
-
-
-
-
-
 % ####################
 % Analiza matematyczna
 
 % Sumy
 % \newcommand{\Sum}{\sum\limits}
 
-% Różniczkowanie i pochodne
-% \newcommand{\pr}{\partial}
-% \newcommand{\de}{\mr{d}}
-% \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
-% \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
-
 % Powszechnie używane symbole
 % \newcommand{\Cinfty}{\Cc^{ \infty }}
-% \newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
-% \newcommand{\CinftyRn}{\Cc^{ \infty }( \Rn )}
+
 
 % Całki i całkowanie
 % \newcommand{\dx}{\de x}
@@ -377,18 +355,6 @@
 % \newcommand{\IntFi}[2]{ \Int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
 % \newcommand{\IntWie}[3]{ \Int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa
 % \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
-
-% ####################
-% Całki w określonych granicach
-% \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-% \newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
-% \newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
-% \newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
-
-
-% ####################
-% Analiza funkcjonalna
-
 
 % % Brakety
 % % W analizie funkcjonalnej też często się je stosuje
@@ -401,13 +367,6 @@
 
 
 % % % Sumy
-% % \newcommand{\Sum}{\sum\limits}
-
-% % % Różniczkowanie i pochodne
-% % \newcommand{\pr}{\partial}
-% % \newcommand{\de}{\mr{d}}
-% % \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
-% % \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
 
 % % % Całki
 % % \newcommand{\Int}{\int\limits}
@@ -432,12 +391,6 @@
 % \DeclareMathOperator{\arccsch}{arcCsch}
 % \DeclareMathOperator{\arcoth}{arcoth}
 
-% \newcommand{\wt}{\widetilde}
-% \newcommand{\mt}{\mapsto}
-% \newcommand{\pr}{\partial}
-% \newcommand{\sq}{\sqrt}
-
-
 % \newcommand{\tfr}{\tfrac}
 
 % \newcommand{\e}{\mr{e}}
@@ -452,8 +405,31 @@
 % \newcommand{\Le}{\mc{L}}
 
 % \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
-% \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } } }
-% \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } } }
+
+% ####################
+% Analiza matematyczna
+
+% Całki i całkowanie
+% \newcommand{\IntCa}[2]{ \Int #1 \, \de#2 } % Juz z calkowaniem
+% \newcommand{\IntFi}[2]{ \Int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
+% \newcommand{\IntWie}[3]{ \Int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa
+% \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+
+% --------------------
+% Całki w określonych granicach
+% \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+% \newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
+% \newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
+% \newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+
+
+% \newcommand{\IntCa}[2]{ \int #1 \, \de#2 } % Juz z calkowaniem
+% \newcommand{\IntFi}[2]{ \int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
+% \newcommand{\IntW}[3]{ \int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa.
+% \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+% \newcommand{\IntLj}[3]{ \int\limits_{ { #1 } }^{ { #2 } } \de#3 \; }
+% \newcommand{\IntLd}[4]{ \int\limits_{ { #1 } }^{ { #2 } } #3 \; \de#4}
+
 
 
 
