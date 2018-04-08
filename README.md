@@ -1,2 +1,2 @@
 # Analiza-matematyczna-bledy-i-uwagi
-Trzeba poprawić tą erratę
+Trzeba poprawić tę erratę.
