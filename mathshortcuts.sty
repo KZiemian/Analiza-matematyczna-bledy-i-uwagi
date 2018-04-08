@@ -47,6 +47,7 @@
 \newcommand{\ul}{\underline}
 \newcommand{\ol}{\overline}
 \newcommand{\us}{\underset}
+\newcommand{\os}{\overset}
 
 
 % Trzcionki matematyczne
@@ -233,7 +234,7 @@
 % pochodnej cząstkowej bez ułamka
 \newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
 \newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
-    { \pr x^{ #3 } } }}  % PD three - po zmnienych x z indeksami "#1" "#2"
+    { \pr x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
 
 % Klasy różniczkowalności
 \newcommand{\Cj}{\Cc^{ j }}
@@ -391,7 +392,11 @@
 % \DeclareMathOperator{\arccsch}{arcCsch}
 % \DeclareMathOperator{\arcoth}{arcoth}
 
-% \newcommand{\tfr}{\tfrac}
+
+% \newcommand{\IntLj}[3]{ \int\limits_{ { #1 } }^{ { #2 } } \de#3 \; }
+% \newcommand{\IntLd}[4]{ \int\limits_{ { #1 } }^{ { #2 } } #3 \; \de#4}
+
+
 
 % \newcommand{\e}{\mr{e}}
 % \newcommand{\ii}{\mr{i}}
