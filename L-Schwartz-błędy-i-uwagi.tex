@@ -1,46 +1,121 @@
-\RequirePackage[l2tabu, orthodox]{nag}
-\documentclass[a4paper]{article}
-\usepackage[polish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[MeX]{polski}
-\usepackage{microtype}
-\let\lll\undefined
-\usepackage[intlimits]{amsmath}
-\usepackage{amsfonts, amssymb, amscd, amsthm}
-\usepackage{verse}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{calrsfs} % Lepsze kaligrafowane litery.
-% \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
-\usepackage{vmargin}
-%----------------------------------------------------------------------
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
 % MARGINS
-%----------------------------------------------------------------------
+% ----------------------------
 \setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
-\usepackage{hyperref}
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
 
 
-\newcommand{\spaceOne}{2em}
-\newcommand{\spaceTwo}{1em}
-\newcommand{\spaceThree}{0.5em}
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
-\newcommand{\tr}{\textrm}
-\newcommand{\mb}{\mathbb}
-\newcommand{\mc}{\mathcal}
-\newcommand{\mr}{\mathrm}
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
+% ,,twr'' do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+% \usepackage{reedsimon} % Pakiet napisany konkretnie dla tego pliku.
+\usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
 
 \newcommand{\e}{\mr{e}}
 \newcommand{\ii}{\mr{i}} 
-\newcommand{\de}{\mr{d}}
 \newcommand{\im}{\tr{im}}
 \newcommand{\R}{\mb{R}}
 \newcommand{\C}{\mb{C}}
@@ -49,12 +124,6 @@
 \let\L\undefined
 \newcommand{\L}{\mb{L}}
 \newcommand{\CF}{\mc{C}}
-
-\newcommand{\fr}{\frac}
-\newcommand{\wt}{\widetilde}
-\newcommand{\wh}{\widehat}
-\newcommand{\ul}{\underline}
-\newcommand{\ol}{\overline}
 
 \newcommand{\Lim}{\lim\limits}
 \newcommand{\Sum}{\sum\limits}
@@ -83,52 +152,35 @@
 \newcommand{\ola}{\overlightarrow}
 \newcommand{\bs}{\backslash}
 
-\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
-\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
-
-\newcommand{\tb}{\textbf}
-\newcommand{\noi}{\noindent}
-\newcommand{\start}{\noi \tb{--} {}}
-\newcommand{\Str}[1]{\tb{Str. #1.}}
-\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
-\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
-\newcommand{\Dow}{\tb{Dowód}}
-\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
-\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
-\newcommand{\Jest}{\tb{Jest: }}
-\newcommand{\Pow}{\tb{Powinno być: }}
-\newcommand{\Pop}{{\color{red} Popraw.}}
-\newcommand{\Prze}{{\color{red} Przemyśl.}}
-\newcommand{\Dok}{{\color{red} Dokończ.}}
-\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
-\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
-
-
-\newcommand{\attribA}[1]{%
-  \nopagebreak{\vspace{3mm}\raggedleft\footnotesize #1\par\vspace{2em}}}
-\newcommand{\attribB}[1]{%
-  \nopagebreak{\raggedleft\footnotesize #1\par} \vspace{2em}}
-\verselinenumbersleft
-
-
-\renewcommand{\arraystretch}{1.2}
 
 
 
+
+% ####################################################################
 \begin{document}
+% ####################################################################
 
 
 
-\Field{Książki Laurenta Schwartza --~błędy i~uwagi}
+% ##############################
+\Main{Książki Laurenta Schwartza --~błędy
+  i~uwagi} % Tytuł całego tekstu
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ##############################
+
+
+
 
 ,,P\ldots'' oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony. \\
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\Work{
+% ##################
+\Work{ % Autor i tytuł dzieła
   Laurent Schwartz \\
-  ,,Kurs analizy matematycznej. Tom~I.'', \cite{Sch79}.}
+  ,,Kurs analizy matematycznej. Tom~I'',
+  \cite{SchwartzKursAnalizyMatematycznejTomI79} }
 
 
 \CenterTB{Uwagi}
@@ -756,41 +808,41 @@ zastanowić. %
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu &  &  \\ \hline
-    10 & 9 & & $E$ i jeżeli $A \supset B$, to & $E$, to \\
-    10 & & 6 & zawierają $n$ elementów & zawierają $n$\dywiz ty element \\
-    11 & 10 & & element z $F$ & dokładnie jeden element z $F$ \\
-    12 & 18 & & nazywa się \emph{stałe} & nazywa się \emph{stałym} \\
-    13 & & 11 & $d^{ -1 }( \{ y \} )$ & $f^{ -1 }( \{ y \} )$ \\
-    14 & 3 & & Mamy & Mamy ponadto \\
-    16 & 2 & & funckji & funkcji \\
-    18 & 9 & & właśnie liczba & liczba \\
-    19 & & 8 & jeżeli$( x, y ) \in R$ & jeżeli $( x, y ) \in R$ \\
-    22 & 6 & & $b_{ 1 } \leq x \leq b$ & $b_{ 1 } < x < b$ \\
-    22 & 18 & & że są dwa & że istnieją dwa \\
-    23 & & 18 & zbiór $E$ & zbiór $R$ \\
-    23 & & 6 & uporządkowanym & chaotycznie uporządkowanym \\
-    25 & & 11 & Oczywiste~są & Nie oczywiste~są \\
-    26 & & 1 & tłnm)$\cdot$ & tłum.). \\
-    27 & 5 & & i skoro & i skoro, na mocy iniekcji $x \mt \{ x \}$, \\
-    27 & 7 & & $f_{ 0 }( x ) \neq \emptyset$ & $f_{ 0 }( x )
+    10  &  9 & & $E$ i jeżeli $A \supset B$, to & $E$, to \\
+    10  & &  6 & zawierają $n$ elementów & zawierają $n$\dywiz ty element \\
+    11  & 10 & & element z $F$ & dokładnie jeden element z $F$ \\
+    12  & 18 & & nazywa się \emph{stałe} & nazywa się \emph{stałym} \\
+    13  & & 11 & $d^{ -1 }( \{ y \} )$ & $f^{ -1 }( \{ y \} )$ \\
+    14  &  3 & & Mamy & Mamy ponadto \\
+    16  &  2 & & funckji & funkcji \\
+    18  &  9 & & właśnie liczba & liczba \\
+    19  & &  8 & jeżeli$( x, y ) \in R$ & jeżeli $( x, y ) \in R$ \\
+    22  &  6 & & $b_{ 1 } \leq x \leq b$ & $b_{ 1 } < x < b$ \\
+    22  & 18 & & że są dwa & że istnieją dwa \\
+    23  & & 18 & zbiór $E$ & zbiór $R$ \\
+    23  & &  6 & uporządkowanym & chaotycznie uporządkowanym \\
+    25  & & 11 & Oczywiste~są & Nie oczywiste~są \\
+    26  & &  1 & tłnm)$\cdot$ & tłum.). \\
+    27  &  5 & & i skoro & i skoro, na mocy iniekcji $x \mt \{ x \}$, \\
+    27  &  7 & & $f_{ 0 }( x ) \neq \emptyset$ & $f_{ 0 }( x )
                                                = \emptyset$ \\
-    31 & 3 & & gdy & gdyż \\
-    34 & 5 & & $( \forall a \in \R ) ( \forall \veps > 0 )$
+    31  &  3 & & gdy & gdyż \\
+    34  &  5 & & $( \forall a \in \R ) ( \forall \veps > 0 )$
            & $( \forall \veps > 0 ) ( \forall a \in \R )$ \\
-    36 & & 8 & funkcję & funkcję rzeczywistą \\
-    37 & 1 & & $|| 0 || = \vec{ 0 }$ & $|| \vec{ 0 } || = 0$ \\
-    37 & 5 & & $|| \vec{ x }_{ 1 } + \vec{ x }_{ 2 } + \ld
+    36  & &  8 & funkcję & funkcję rzeczywistą \\
+    37  &  1 & & $|| 0 || = \vec{ 0 }$ & $|| \vec{ 0 } || = 0$ \\
+    37  &  5 & & $|| \vec{ x }_{ 1 } + \vec{ x }_{ 2 } + \ld
                + \vec{ x }_{ n } |$
            & $|| \vec{ x }_{ 1 } + \vec{ x }_{ 2 } + \ld
              + \vec{ x }_{ n } ||$ \\
-    40 & 14 & & est & jest \\
-    40 & & 18 & Przechodzą & Przechodząc \\
-    40 & & 18 & dotyczący h & dotyczących \\
-    41 & & 11 & (a) & (a$^{ \prime \prime }$) \\
-    43 & 10 & & to nie należy do żadnego & to nie zawiera się w żadnym \\
-    43 & 18 & & $\ol{A,}$ & $\ol{A},$ \\
-    43 & & 15 & \emph{zbioru $E$} & \emph{zbioru $A$} \\
-    43 & & 3 & nie przecinającym się & przecinającym się \\
+    40  & 14 & & est & jest \\
+    40  & & 18 & Przechodzą & Przechodząc \\
+    40  & & 18 & dotyczący h & dotyczących \\
+    41  & & 11 & (a) & (a$^{ \prime \prime }$) \\
+    43  & 10 & & to nie należy do żadnego & to nie zawiera się w żadnym \\
+    43  & 18 & & $\ol{A,}$ & $\ol{A},$ \\
+    43  & & 15 & \emph{zbioru $E$} & \emph{zbioru $A$} \\
+    43  & &  3 & nie przecinającym się & przecinającym się \\
     44 & 19 & & metryczna & metryczną \\
     44 & 20 & & \emph{ośrodkowa} & \emph{ośrodkową} \\
     44 & 21 & & wszędzie gęstą & gęstą \\
@@ -1427,7 +1479,7 @@ zastanowić. %
            & $\vec{ f }_{ m n }( x ) - \vec{ f }_{ m n }( x )$ \\
     649 & & 9 & \raisebox{\depth}
                 {\scalebox{1}[-1]{\emph{j}}}\emph{ednostajnie}
-                & \emph{jednostajnie} \\
+           & \emph{jednostajnie} \\
     654 & 4 & & $1 )$ & $1$ \\
     649 & & 8 & \emph{ewentualnie} & \emph{odpowiednio} \\
     666 & 4 & & wyprowadzony & podany \\
@@ -1526,7 +1578,8 @@ przeciwne do założenia $a \in \overline{ A }$
   mnogościową domknięcia
   zbioru punktów $a_{ \nu }$ i~nośnika funkcji $\vec{ p }$.} \\
 \Pow \emph{zawiera się w sumie mnogościowej domknięcia zbioru punktów
-  $a_{ \nu }$ i nośnika funkcji $\vec{ p }$, zaś przy $\vec{ p }$ ciągłym
+  $a_{ \nu }$ i nośnika funkcji $\vec{ p }$, zaś przy $\vec{ p }$
+  ciągłym
   jest ich sumą.} \\
 \StrWd{415}{14} \\
 \Jest \emph{lokalnie zwartą\ldots} \\
@@ -1675,9 +1728,10 @@ otwartym przestrzeni af\mbox{}inicznej unormowanej $E$\ldots
     k_{ 2 } }, \ldots, x_{ k_{ p } } ) } \; dx_{ k_{ 1 } } \wedge dx_{
   k_{ 2 } } \wedge \ldots \wedge dx_{ k_{ p } } \textrm{.}$$
 
-\start Str. 95. $$d_{ \mathcal{ R } } \vec{ \omega }_{ J } = \sum_{ \alpha } dx_{
-  \alpha} \wedge \frac{ \partial \vec{ \omega }_{ J } }{ \partial
-  x_{ \alpha } } \textrm{.}$$
+\start Str. 95.
+$$d_{ \mathcal{ R } } \vec{ \omega }_{ J } = \sum_{ \alpha } dx_{
+  \alpha} \wedge \frac{ \partial \vec{ \omega }_{ J } }{ \partial x_{
+    \alpha } } \textrm{.}$$
 
 \start Str. 100. \ldots tu pewna pozorna trudność, zresztą bez
 znaczenia).
@@ -1685,37 +1739,30 @@ znaczenia).
 \start Str. 104. \ldots jest dopuszczalne, jest tak jeżeli obszar
 $\Omega_{ 0 }$\ldots
 
-\start Str. 107. \ldots\emph{fromą różniczkową zamknietą}
-(\emph{tzn. $d\vec{ \omega } = \vec{ 0 }$})\ldots
+\start Str. 107. \ldots\emph{fromą różniczkową zamknietą} (\emph{tzn.
+  $d\vec{ \omega } = \vec{ 0 }$})\ldots
 
 \start Str. 113. \ldots że jest ona stała w każdym spójnym otoczeniu
 punktu $\alpha$.
 
 \start Str. 114. \ldots\emph{to są one identyczne w całym otoczeniu
   spójnym punktu} $a$\ldots
-% \start Str.
-% \start Str.
-% \start Str.
-% \start Str.
+% \start Str. \start Str. \start Str. \start Str.
 
 \start Str. 135.
 $$\ldots \vec{ \mu }_{ \vec{ \omega } \Phi } = \vec{ f }( u_{ 1 },
-u_{ 2 }, \ldots, u_{ n } ) \theta( u_{ 1 }, u_{ 2 }, \ldots, u_{ n }
-) \; du_{ 1 } \otimes du_{ 2 } \otimes \ldots \otimes du_{ n }
+u_{ 2 }, \ldots, u_{ n } ) \theta( u_{ 1 }, u_{ 2 }, \ldots, u_{ n } )
+\; du_{ 1 } \otimes du_{ 2 } \otimes \ldots \otimes du_{ n }
 \textrm{,}$$
 
 \start Str. 136.
 $$\vec{ \mu }_{ 2 } = \Phi_{ 2 1 } \vec{ \mu }_{ 1 } \ldots$$
-% \start Str.
-% \start Str.
-% \start Str.
-% \start Str.
-% \start Str.
+% \start Str. \start Str. \start Str. \start Str. \start Str.
 
 
 
 
-  \bibliographystyle{alpha} \bibliography{Bibliography}{}
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
 
 
 
