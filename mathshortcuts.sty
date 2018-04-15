@@ -257,13 +257,33 @@
 \newcommand{\dx}{\de x}
 \newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
 
-\newcommand{\IntSet}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-\newcommand{\IntCa}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
+% Całki i całkowanie
+\newcommand{\Int}{\int\limits}
+\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
+\newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
+
+\newcommand{\IntCao}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
+% Całka Jeden
+\newcommand{\IntCat}[2]{\Int #1 \, d#2}  % Całka dwa
 \newcommand{\IntFi}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
 \newcommand{\IntWie}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
-\newcommand{\IntTro}[1]{ \Int \de^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntTro}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
 \newcommand{\IntDo}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
 
+\newcommand{\IntSeto}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+\newcommand{\IntSett}[1]{\Int_{ #1 }}
+
+
+
+% ##########
+% Całki w określonych granicach
+\newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntOvRo}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
 
 
 
@@ -309,22 +329,6 @@
 % Analiza matematyczna
 
 
-% Całki i całkowanie
-\newcommand{\Int}{\int\limits}
-\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
-\newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
-\newcommand{\IntCaJ}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
-% Całka Jeden
-\newcommand{\IntCaD}[2]{\Int #1 \, d#2}  % Całka dwa
-
-
-
-% ##########
-% Całki w określonych granicach
-\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
-\newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
-\newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
 
 
 
@@ -334,26 +338,6 @@
 % Sprawdź czy się nie powtarzają
 
 
-% --------------------------------------------------------------------
-% Różne komendy zdefiniowane dla ułatwienia pracy z LaTeXem
-% --------------------------------------------------------------------
-
-% ####################
-% Analiza matematyczna
-
-% Sumy
-% \newcommand{\Sum}{\sum\limits}
-
-% Powszechnie używane symbole
-% \newcommand{\Cinfty}{\Cc^{ \infty }}
-
-
-% Całki i całkowanie
-% \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
-
-% % % Całki
-% % \newcommand{\IntC}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
-% % \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
 
 
 % \DeclareMathOperator{\sech}{sech}
@@ -376,7 +360,6 @@
 % \newcommand{\id}{\mr{id}}
 % \newcommand{\de}{\mr{d}}
 % \newcommand{\sgm}{\mr{sgm}}
-% \newcommand{\supp}{\mr{supp}}
 % \newcommand{\cy}{\mr{cykl}}
 % \newcommand{\ad}{\mr{ad}}
 % \newcommand{\Ad}{\mr{Ad}}
@@ -384,15 +367,6 @@
 
 % \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
 
-% ####################
-% Analiza matematyczna
-
-% Całki i całkowanie
-% \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
-
-% --------------------
-% Całki w określonych granicach
-% \newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
 
 
 
