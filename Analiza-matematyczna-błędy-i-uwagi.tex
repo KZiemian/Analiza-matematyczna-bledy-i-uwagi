@@ -83,7 +83,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-% \usepackage{reedsimon} % Pakiet napisany konkretnie dla tego pliku.
+% \usepackage{} % Pakiet napisany konkretnie dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
 
@@ -241,7 +241,7 @@ jakiś znany fakt z~algebry? \Dok
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu &  &  \\
+    & Od góry & Od dołu & & \\
     \hline
     8   & & 11 & $< | \Del P | <$ & $\leq | \Del P | \leq$ \\
     8   & &  7 & $< \fr{ | \Del P | }{ \Del x } <$
@@ -325,8 +325,6 @@ przekształcić wyrażenie do postaci $3 \fr{ \sin 3x }{ 3x }$
 i~skorzystać z~tego, że~$\Lim_{ \xToZero } \fr{ \sin 3x }{ 3x } = 0$,
 pytanie jedna czy ta ostania równość zachodzi? Pozytywną odpowiedź
 na~to~pytanie daje poniższe twierdzenie.
-
-\vspace{\spaceFour}
 
 % Funkcje tu użyte wciąż nie są zdefiniowane \start \Str{96} Można
 % zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają taką samą pochodną,
@@ -520,7 +518,7 @@ po~spierwiastkowaniu sprowadza~się do~równania:
 Równania tego nie da~się przedstawić w~postaci Newtona, zaś poza
 równaniami (3) z~tego zadania, można uzyskać z~niego nieskończoną
 ilość innych, np. ograniczając~się do przedziału
-$( -\fr{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 })$ możemy rozpatrzyć:
+$( -\fr{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 } )$ możemy rozpatrzyć:
 \begin{equation*}
   \dd{}{ y }{ x } =
   \begin{cases}
@@ -647,8 +645,8 @@ przedziale, choć nie jest różniczkowalne w~0.
 %                               & Powinno być \\ \cline{2-3}
 %     & Od góry & Od dołu & & \\
 %     \hline
-%     % & & & & \\
-%     % & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
 %     \hline
 %   \end{tabular}
 % \end{center}
@@ -748,12 +746,69 @@ w~istocie jest.
 %                               & Powinno być \\ \cline{2-3}
 %     & Od góry & Od dołu & & \\
 %     \hline
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
 %     \hline
 %   \end{tabular}
 % \end{center}
+
+
+
+
+
+% ######################################
+\newpage
+\Field{Pozostali autorzy} % Tytuł całego tekstu
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Franciszek Leja \\
+  ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone06} }
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7  & & 10 & $\al,\:\; \be$ & $\al, \be$ \\
+    7  & &  9 & $x,\! y$ & $x, y$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    24  & 11 & & $a, \:\; b$ & $a, b$ \\
+    30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
+    30  & & 11 & $t$ & $( t - t_{ 0 } )$ \\
+    36  &  4 & & $\left| \frac{ z - ( p - \uplambda^{ 2 } q) }{ 1
+                 - \uplambda^{ 2 } } \right|^{ 2 }$
+           & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
+             - \uplambda^{ 2 } } \right|^{ 2 }$ \\
+    45 & 13 & & \emph{wewnętrzną ,} & \emph{wewnętrzną,} \\
+    47 &  5 & & $z_{ n }$ & $z^{ n }$ \\
+    49 & & 13 & $z$ & $| z |$ \\
+    57 &  9 & & 31 & 31) \\
+    68 & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
+           & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
 
 
 
