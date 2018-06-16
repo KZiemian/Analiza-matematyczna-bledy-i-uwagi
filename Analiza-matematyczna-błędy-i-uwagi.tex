@@ -70,7 +70,7 @@
 
 
 
-% ##########
+% ----------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
 \newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
 % ,,twr'' do pisania twierdzeń matematycznych
@@ -86,6 +86,11 @@
 % \usepackage{} % Pakiet napisany konkretnie dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
+
+
+% ----------
+% Oznaczenia do książki Lejii. Niech na razie to tu zostanie
+\newcommand{\zbar}{\bar{z}}
 
 
 
@@ -657,35 +662,12 @@ przedziale, choć nie jest różniczkowalne w~0.
 \Pow \tb{\emph{immediatly know they have encountered a~most
     interesting
     character}:} \\
-\newpage
+% \newpage
 
 
 
 
 
-% ####################
-\Work{
-  B. W. Szabat \\
-  ,,Wstęp do analizy zespolonej'', \cite{Szabat74} }
-
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    17 &  5 & & dal & dal\dywiz \\
-    25 & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-
-\vspace{\spaceTwo}
 
 
 
@@ -759,9 +741,9 @@ w~istocie jest.
 
 % ######################################
 \newpage
-\Field{Pozostali autorzy} % Tytuł całego tekstu
+\Field{Analiza zespolona} % Tytuł całego tekstu
 
-\vspace{\spaceTwo}
+\vspace{\spaceTwo} \vspace{\spaceThree}
 % ######################################
 
 
@@ -769,6 +751,54 @@ w~istocie jest.
 \Work{ % Autor i tytuł dzieła
   Franciszek Leja \\
   ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone06} }
+
+\CenterTB{Uwagi}
+
+\start \Str{7} Powinna już tu być podana podstawowa własność jednostki
+urojonej~$i^{ 2 } = -1$, nie zaś dopiero na~stronie 9. Bez~tego, bądź
+jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
+liczby postaci $\al + \be i$.
+
+\vspace{\spaceFour}
+
+
+\start \Str{8--9} Aby~wyrażenie $1 / z = \zbar / ( z \zbar )$ miało
+sens, należy chyba postępować w~następujący sposób\footnote{Leja
+  zapewne zdawał sobie z~tego sprawę, jednak według mnie nie~zaznaczył
+  tego wystarczająco jasno w~tekście.}. Na~początku należy zdefiniować
+mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
+zespolonych przez liczbę rzeczywistą~$a$
+\begin{equation}
+  \label{eq:1}
+  \begin{split}
+    \fr{ z }{ a } = \ovOne{ a } z.
+  \end{split}
+\end{equation}
+Ponieważ odwrotność liczby jest liczbą rzeczywistą daną wzorem
+\begin{equation}
+  \label{eq:2}
+  \begin{split}
+    \ovOne{ a + i0 } = \ovOne{ a } + i0,
+  \end{split}
+\end{equation}
+więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz
+z~reguł mnożenia. Teraz możemy \tb{zdefiniować} liczbę $1 / z$ wzorem
+\begin{equation}
+  \label{eq:3}
+  \begin{split}
+    \ovOne{ z } := \fr{ \zbar }{ z \zbar }.
+  \end{split}
+\end{equation}
+Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
+wynika z~pojęć już wprowadzonych. Teraz należy sprawdzić, czy tak
+wprowadzone dzielenie przez liczbę zespoloną posiada te same
+własności, co dzielenie liczb rzeczywistych. Na~przykład, że~zachodzi
+\begin{equation}
+  \label{eq:4}
+  \begin{split}
+    ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \C.
+  \end{split}
+\end{equation}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -803,6 +833,34 @@ w~istocie jest.
            % & & & & \\
            % & & & & \\
            % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ####################
+\Work{
+  B. W. Szabat \\
+  ,,Wstęp do analizy zespolonej'', \cite{Szabat74} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    17 &  5 & & dal & dal\dywiz \\
+    25 & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
+    % & & & & \\
     \hline
   \end{tabular}
 \end{center}
