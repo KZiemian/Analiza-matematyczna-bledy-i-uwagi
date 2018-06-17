@@ -72,6 +72,7 @@
 
 % ----------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+% ----------
 \newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
 % ,,twr'' do pisania twierdzeń matematycznych
 \newtheorem{defin}{Definicja} % Analogicznie jak powyżej
@@ -83,14 +84,11 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-% \usepackage{} % Pakiet napisany konkretnie dla tego pliku.
+\usepackage{analizamatematyczna} % Pakiet napisany między innymi
+% dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
 
-
-% ----------
-% Oznaczenia do książki Lejii. Niech na razie to tu zostanie
-\newcommand{\zbar}{\bar{z}}
 
 
 
@@ -799,6 +797,36 @@ własności, co dzielenie liczb rzeczywistych. Na~przykład, że~zachodzi
     ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \C.
   \end{split}
 \end{equation}
+Tą tożsamość można udowodnić w~następujący sposób
+\begin{equation}
+  \label{eq:5}
+  \begin{split}
+    ( 1 / z ) / w = \left( \fr{ \zbar }{ z \zbar } \right) / w = \fr{
+      \zbar }{ z \zbar } \fr{ \wbar }{ w \wbar } = \ovOne{ z \zbar }
+    \ovOne{ w \wbar } ( \zbar \wbar ) = \ovOne{ z \zbar w \wbar } (
+    \zbar \wbar ) = \ovOne{ z w \zbar \wbar } ( \zbar \wbar ) = 1 / (
+    z w ).
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+\start \Str{9--10} Według wszystkich mi znanych historycznych prac na
+temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
+badania rozwiązań równania \tb{trzeciego} stopnia, nie zaś równań
+kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
+
+\vspace{\spaceFour}
+
+
+\start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
+momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
+$\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
+$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
+obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
+wiem, jak należałoby to~poprawić.
+
 
 \CenterTB{Błędy}
 \begin{center}
