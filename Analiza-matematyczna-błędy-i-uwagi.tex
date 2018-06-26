@@ -863,12 +863,15 @@ i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
   \label{eq:8}
   \begin{split}
-    \left( \Sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right)
-    \left( \Sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right)
-    = \Sum_{ n = 0 }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld
-    + a_{ 0 } b_{ n } ) z^{ n }.
+    \left( \Sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
+      \Sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \Sum_{ n = 0
+    }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0
+    } b_{ n } ) z^{ n }.
   \end{split}
 \end{equation}
+Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
+matematycznie niepoprawne dla~pewnych szeregów potęgowych. Dostarczają
+jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 
 \vspace{\spaceFour}
 
@@ -876,6 +879,70 @@ i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
 Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
 wartość tej granicy wynika z~twierdzenia Abela.
+
+\vspace{\spaceFour}
+
+
+\start \Str{20--21} Dowód twierdzenia Mertensa jest według mnie
+przeprowadzony zbyt szybko, dlatego tutaj postaramy~się go uzupełnić
+w~kilku miejscach.
+
+Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
+zachodzi poniższa nierówność
+\begin{equation}
+  \label{eq:9}
+  \begin{split}
+    \abso{ C_{ n } - A_{ n } B } \leq \veps, \quad \forall \veps > 0,
+  \end{split}
+\end{equation}
+bowiem z~tego będzie wynikać
+\begin{equation}
+  \label{eq:10}
+  \begin{split}
+    \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{
+      A_{ n } B - AB } \leq 2\veps,
+  \end{split}
+\end{equation}
+dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\veps > 0$. Teraz
+dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
+$\abso{ \be_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
+\begin{equation}
+  \label{eq:11}
+  \begin{split}
+    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \be_{ n } + a_{ 1 }
+      \be_{ n - 1 } + \ld + a_{ n } \be_{ 0 } } \leq \abso{ a_{ 0 } }
+    \abso{ \be_{ n } } + \abso{ a_{ 1 } } \abso{ \be_{ n - 1 } } + \ld
+    + \abso{ a_{ n - p + 1 } }
+    \abso{ \be_{ p + 1 } } \\
+    &+ \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 } } \leq
+    \fr{ \veps }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1
+      } } ) + \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 }
+    }.
+  \end{split}
+\end{equation}
+Pierwszy wyraz jest $\leq \veps / 2$. Dla drugiego wyrazu mamy
+\begin{equation}
+  \label{eq:12}
+  \begin{split}
+    \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 } } \leq
+    \abso{ a_{ n - p } } \abso{ \be_{ p } } + \ld + \abso{ a_{ n } }
+    \abso{ \be_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld +
+    \abso{ a_{ n } } ),
+  \end{split}
+\end{equation}
+gdzie $M_{ p } = \max( \abso{ \be_{ 1 } }, \ld, \abso{ \be_{ p } } )$.
+Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
+$n > q$ zachodzić $\abso{ a_{ n - p } } < \veps / ( 2 p M_{ p } )$.
+Teraz dla każdego $n > \max( p, q )$ zachodzi
+\begin{equation}
+  \label{eq:14}
+  \begin{split}
+    \abso{ C_{ n } - AB } \leq \veps.
+  \end{split}
+\end{equation}
+Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
+zakończony.
+
 
 \CenterTB{Błędy}
 \begin{center}
