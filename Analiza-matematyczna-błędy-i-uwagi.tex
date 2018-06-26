@@ -130,11 +130,11 @@
 
 
 
-% ##############################
+% ############################
 \Main{Analiza matematyczna --~błędy i~uwagi} % Tytuł całego tekstu
 
 \vspace{\spaceTwo} \vspace{\spaceThree}
-% ##############################
+% ############################
 
 
 % ##################
@@ -838,18 +838,44 @@ i~$\sin \vp$ za~pomocą $\al$ i~$\be$. Teraz możemy obliczyć
 \begin{equation}
   \label{eq:6}
   \begin{split}
-    \cos \theta_{ 0 } = \cos \tfr{ \vp }{ 2 } = \onehalf ( 1 + \cos \vp ),
+    \cos \theta_{ 0 } = \cos \tfr{ \vp }{ 2 } = \onehalf ( 1 + \cos
+    \vp ),
   \end{split}
 \end{equation}
-podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą wzorów
+podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
+wzorów
 \begin{equation}
   \label{eq:7}
   \begin{split}
-    \cos( \tfr{ \vp }{ 2 } + \pi ) = -\cos( \tfr{ \vp }{ 2 } ),
-    \quad \sin( \tfr{ \vp }{ 2 } + \pi ) = -\sin( \tfr{ \vp }{ 2 } ).
+    \cos( \tfr{ \vp }{ 2 } + \pi ) = -\cos( \tfr{ \vp }{ 2 } ), \quad
+    \sin( \tfr{ \vp }{ 2 } + \pi ) = -\sin( \tfr{ \vp }{ 2 } ).
   \end{split}
 \end{equation}
-Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób za~pomocą $\al$ i~$\be$.
+Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
+za~pomocą $\al$ i~$\be$.
+
+\vspace{\spaceFour}
+
+
+\start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
+iloczyn Cauchy'ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
+i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
+\begin{equation}
+  \label{eq:8}
+  \begin{split}
+    \left( \Sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right)
+    \left( \Sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right)
+    = \Sum_{ n = 0 }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld
+    + a_{ 0 } b_{ n } ) z^{ n }.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+\start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
+Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
+wartość tej granicy wynika z~twierdzenia Abela.
 
 \CenterTB{Błędy}
 \begin{center}
@@ -860,10 +886,10 @@ Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób za~pomocą $
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    7  & & 10 & $\al,\:\; \be$ & $\al, \be$ \\
-    7  & &  9 & $x,\! y$ & $x, y$ \\
+    7   & & 10 & $\al,\:\; \be$ & $\al, \be$ \\
+    7   & &  9 & $x,\! y$ & $x, y$ \\
     % & & & & \\
-    % & & & & \\
+    22  & 13 & & urojoną ? & urojoną? \\
     % & & & & \\
     24  & 11 & & $a, \:\; b$ & $a, b$ \\
     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
@@ -872,11 +898,11 @@ Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób za~pomocą $
                  - \uplambda^{ 2 } } \right|^{ 2 }$
            & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
              - \uplambda^{ 2 } } \right|^{ 2 }$ \\
-    45 & 13 & & \emph{wewnętrzną ,} & \emph{wewnętrzną,} \\
-    47 &  5 & & $z_{ n }$ & $z^{ n }$ \\
-    49 & & 13 & $z$ & $| z |$ \\
-    57 &  9 & & 31 & 31) \\
-    68 & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
+    45  & 13 & & \emph{wewnętrzną ,} & \emph{wewnętrzną,} \\
+    47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
+    49  & & 13 & $z$ & $| z |$ \\
+    57  &  9 & & 31 & 31) \\
+    68  & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
            & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
            % & & & & \\
            % & & & & \\
