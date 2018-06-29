@@ -536,7 +536,7 @@ rozwiązaniem jest:
 \begin{equation*}
   y( x )
   \begin{cases}
-    -\sin x + 1,  & x \in ( -\fr{ \pi }{ 2 }, \fr{ \pi }{ 2 } ), \\
+    -\sin x + 1, & x \in ( -\fr{ \pi }{ 2 }, \fr{ \pi }{ 2 } ), \\
     \sin x - 1, & x \in ( \fr{ \pi }{ 2 }, \fr{ 3 \pi }{ 2 } ).
   \end{cases}
 \end{equation*}
@@ -739,10 +739,17 @@ w~istocie jest.
 
 % ######################################
 \newpage
-\Field{Analiza zespolona} % Tytuł całego tekstu
-
-\vspace{\spaceTwo} \vspace{\spaceThree}
+\section{Analiza zespolona}
+\vspace{\spaceTwo} % \vspace{\spaceThree}
 % ######################################
+
+
+% \newpage
+% \Field{Analiza zespolona} % Tytuł całego tekstu
+
+% \vspace{\spaceTwo} \vspace{\spaceThree}
+% % ######################################
+
 
 
 % ####################
@@ -780,7 +787,7 @@ Ponieważ odwrotność liczby jest liczbą rzeczywistą daną wzorem
   \end{split}
 \end{equation}
 więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz
-z~reguł mnożenia. Teraz możemy \tb{zdefiniować} liczbę $1 / z$ wzorem
+z~reguł mnożenia. Teraz możemy \emph{zdefiniować} liczbę $1 / z$ wzorem
 \begin{equation}
   \label{eq:Leja-3}
   \begin{split}
@@ -814,7 +821,7 @@ Tą tożsamość można udowodnić w~następujący sposób
 
 \start \Str{9--10} Według wszystkich mi znanych historycznych prac na
 temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
-badania rozwiązań równania \tb{trzeciego} stopnia, nie zaś równań
+badania rozwiązań równania \emph{trzeciego} stopnia, nie zaś równań
 kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 
 \vspace{\spaceFour}
@@ -947,7 +954,8 @@ zakończony.
 
 
 \start \Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty,
-dlatego tu~postaram się go uzupełnić. Po~pierwsze dowód formuły
+dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
+Po~pierwsze dowód formuły
 \begin{equation}
   \label{eq:Leja-14}
   \begin{split}
@@ -1054,7 +1062,7 @@ korzystając więc, ze~wzoru \eqref{eq:Leja-17}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ld + C_{ n }$ odpowiada
 liczbie~$n + 1$. Tym samym
 \begin{equation}
-  \label{eq:Leja-21}
+  \label{eq:Leja-22}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \Sum_{
       i = 0 }^{ n - 1 } \be_{ i } + B \Sum_{ i = 0 }^{ n - 1 } \al_{ i
@@ -1067,14 +1075,90 @@ liczbie~$n + 1$. Tym samym
 \vspace{\spaceFour}
 
 
-\start \Str{22} Potrzebujemy jeszcze udowodnić, że
+\start \Str{22} Potrzebujemy jeszcze udowodnić,
+że~$\lim_{ \nToInfty } r_{ n } = 0$. Ponieważ $\al_{ n }$
+i~$\be_{ n }$ są zbieżne istnieją więc stałe $M_{ \al }$ i~$M_{ \be }$
+takie, że
 \begin{equation}
-  \label{eq:2}
+  \label{eq:Leja-23}
   \begin{split}
-    r_{ n } \xra[ \nToInfty ]{} 0.
+    \abso{ M_{ \al } } \leq M_{ \al }, \quad \abso{ \be_{ n } } \leq
+    M_{ \be }.
   \end{split}
 \end{equation}
+Ustalmy teraz $\veps > 0$. Skoro $\be_{ n }$ jest zbieżny do~0, więc
+możemy znaleźć taką liczbę~$p$,
+iż~$\abso{ \be_{ n } } \leq \veps / 2 M_{ \al }$, dla~$n > p$. Teraz
+\begin{equation}
+  \label{eq:Leja-24}
+  \begin{split}
+    \abso{ r_{ n } } &= \ovOne{ n } \abso{ \al_{ n - 1 } \be_{ 0 } +
+      \al_{ n - 2 } \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } +
+      \ld
+      + \al_{ 0 } \be_{ n - 1 } } \\
+    &\leq \ovOne{ n } \abso{ \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
+      \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } } + \ovOne{ n }
+    \abso{ \al_{ n - p - 2 } \be_{ p + 1 } + \ld
+      + \al_{ 0 } \be_{ n - 1 } } \\
+    &\leq \fr{ p + 1 }{ n } M_{ \al } M_{ \be } + \fr{ n - p - 1 }{ n
+    } M_{ \al } \fr{ \veps }{ 2 M_{ \al } } = \fr{ p + 1 }{ n } M_{
+      \al } M_{ \be } + \fr{ n - p - 1 }{ n }
+    \fr{ \veps }{ 2 } \\
+    &\leq \fr{ \veps }{ 2 } + \fr{ p + 1 }{ n } M_{ \al } M_{ \be }.
+  \end{split}
+\end{equation}
+Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
+drugi człon jest również mniejszy od~$\veps / 2$, co~kończy dowód.
 
+\vspace{\spaceFour}
+
+
+\start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
+przy omawianiu własności przecięć zbiorów domkniętych, jest tu
+wymieniony osobno.
+
+\vspace{\spaceTwo}
+
+
+\start \Str{} W~przedstawiony tu rozważaniach przyjęto milcząco,
+że~każda z~badanych krzywych jest \tb{regularna}, czyli pozbawiona
+takich punktów, iż $z'( t ) = 0$. Noszą one nazwę \tb{punktów
+  osobliwych}. Jeśli rozważana krzywa nie jest regularna, to może~się
+zdarzyć, że~funkcja~$s( t )$ nie jest monotoniczne rosnąc, lecz tylko
+niemalejąca i~na przedziałach stała, tym samym nieodwracalna
+i~stwierdzenie, iż~???~jest nieprawdziwe.
+
+Powód tego jest dość oczywisty. Jeśli krzywa ma~punkty osobliwe, to
+istnieje możliwość, iż~mimo zmieniającego~się parametru, będzie ona
+,,stała w~miejscu''. Przykładem tego jest
+\begin{equation}
+  \label{eq:Leja-24}
+  \begin{split}
+    z( t ) =
+    \begin{cases}
+      t^{ 2 } + i 0, & t \leq 0, \\
+      0 + i 0, & t > 0.
+    \end{cases}
+  \end{split}
+\end{equation}
+Jest to krzywa klasy $\Cinfty( \R, \C )$, która dla~$t \geq 0$ stoi
+w~punkcie $z = 0 + i 0$. Jeśli obliczymy ????
+\begin{equation}
+  \label{eq:Leja-25}
+  \begin{split}
+    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, \de u
+    = \Int_{ 0 }^{ t } 0 \, \de u = 0, \quad t \geq 0.
+  \end{split}
+\end{equation}
+Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą zmiennej~$s$, czyli jej długości.
+
+Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie da~się sparametryzować w~sposób naturalny????. Jest to wciąż możliwe, jeśli tych punktów jest ,,odpowiednio mało''. Przykładem takiej sytuacji jest krzywa
+\begin{equation}
+  \label{eq:Leja-26}
+  \begin{split}
+    z( t ) = t^{ 3 } + i 0.
+  \end{split}
+\end{equation}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -1091,8 +1175,12 @@ liczbie~$n + 1$. Tym samym
     22  &  1 & & $\be_{ n }$ & $\be_{ n - 1 }$ \\
     22  & 13 & & urojoną ? & urojoną? \\
     22  & 15 & & rzeczywistą~? & rzeczywistą? \\
-    % & & & & \\
     24  & 11 & & $a, \:\; b$ & $a, b$ \\
+    25  & &  6 & $\tr{re} z < 0$ & $\tr{re} z = 0$ \\
+    27  & &  9 & wniosek~: & wniosek: \\
+    27  &  6 & & zbieżny, & zbieżny. \\
+    27  & &  2 & Spójność & $N$\dywiz spójność \\
+    29  &  6 & & otwarty~: & otwarty: \\
     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
     30  & & 11 & $t$ & $( t - t_{ 0 } )$ \\
     36  &  4 & & $\left| \frac{ z - ( p - \uplambda^{ 2 } q) }{ 1
@@ -1114,6 +1202,10 @@ liczbie~$n + 1$. Tym samym
     \hline
   \end{tabular}
 \end{center}
+\noi \\
+\StrWg{28}{5} \\
+\Jest nieograniczone \\
+\Pow  nieograniczone i~domknięte \\
 
 \vspace{\spaceTwo}
 
