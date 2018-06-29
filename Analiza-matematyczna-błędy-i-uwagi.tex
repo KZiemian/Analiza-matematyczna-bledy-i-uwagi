@@ -196,10 +196,12 @@
 Powinno być:
 \begin{itemize}
 \item[--] Str. 303.
-$$\sum_{ i = 1 }^{ n } a_{ i }^{2} \sum_{ i = 1 }^{ n } b_{ i }^{ 2 } - \{ \sum_{ i = 1 }^{ n } a_{ i } b_{ i } \}^{ 2 } \geq 0 \textrm{,}$$
+  \[\sum_{ i = 1 }^{ n } a_{ i }^{2} \sum_{ i = 1 }^{ n } b_{ i }^{ 2
+    } - \{ \sum_{ i = 1 }^{ n } a_{ i } b_{ i } \}^{ 2 } \geq 0
+    \textrm{,}\]
 \item[--] Str. 371.
-  $$z'_{ x } = \frac{ x }{ p } \textrm{,} \quad z'_{ y } = \frac{ y }{
-    q } \textrm{.}$$
+  \[z'_{ x } = \frac{ x }{ p } \textrm{,} \quad z'_{ y } = \frac{ y }{
+      q } \textrm{.}\]
 \item[--] Str. 376. \ldots ale równa jest 0, gdy\ldots
 \item[--] Str.
 \end{itemize}
@@ -296,8 +298,8 @@ jakiś znany fakt z~algebry? \Dok
     \hline
   \end{tabular}
 \end{center}
-\noi \\
-\StrWd{34}{3}
+\noi
+\StrWd{34}{3} \\
 \tb{Jest:} Zróżniczkujmy (10) obustronnie\ld \\
 \tb{Powinno być:} Wykonując jawnie różniczkowanie w~(10)\ld \\
 \StrWd{71}{16} \Jest
@@ -376,9 +378,9 @@ aby~tak było.
 
 \start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
 pochodnej równy jest pochodnej modułu:
-\begin{displaymath}
+\begin{equation*}
   \left| \dd{}{ f }{ t } \right| = \dd{}{ \abso{ f } }{ t }.
-\end{displaymath}
+\end{equation*}
 Że~jest inaczej można~się przekonać rozważając znany przykłady ruchu
 jednostajnego po okręgu, gdzie prędkość ma stałą długość, a~jednak
 moduł przyśpieszenia nie jest równy 0, lecz $\fr{ v^{ 2 } }{ \rho }$,
@@ -787,7 +789,8 @@ Ponieważ odwrotność liczby jest liczbą rzeczywistą daną wzorem
   \end{split}
 \end{equation}
 więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz
-z~reguł mnożenia. Teraz możemy \emph{zdefiniować} liczbę $1 / z$ wzorem
+z~reguł mnożenia. Teraz możemy \emph{zdefiniować} liczbę $1 / z$
+wzorem
 \begin{equation}
   \label{eq:Leja-3}
   \begin{split}
@@ -1132,7 +1135,7 @@ Powód tego jest dość oczywisty. Jeśli krzywa ma~punkty osobliwe, to
 istnieje możliwość, iż~mimo zmieniającego~się parametru, będzie ona
 ,,stała w~miejscu''. Przykładem tego jest
 \begin{equation}
-  \label{eq:Leja-24}
+  \label{eq:Leja-25}
   \begin{split}
     z( t ) =
     \begin{cases}
@@ -1144,17 +1147,21 @@ istnieje możliwość, iż~mimo zmieniającego~się parametru, będzie ona
 Jest to krzywa klasy $\Cinfty( \R, \C )$, która dla~$t \geq 0$ stoi
 w~punkcie $z = 0 + i 0$. Jeśli obliczymy ????
 \begin{equation}
-  \label{eq:Leja-25}
+  \label{eq:Leja-26}
   \begin{split}
-    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, \de u
-    = \Int_{ 0 }^{ t } 0 \, \de u = 0, \quad t \geq 0.
+    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, \de u = \Int_{ 0 }^{
+      t } 0 \, \de u = 0, \quad t \geq 0.
   \end{split}
 \end{equation}
-Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą zmiennej~$s$, czyli jej długości.
+Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
+zmiennej~$s$, czyli jej długości.
 
-Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie da~się sparametryzować w~sposób naturalny????. Jest to wciąż możliwe, jeśli tych punktów jest ,,odpowiednio mało''. Przykładem takiej sytuacji jest krzywa
+Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
+da~się sparametryzować w~sposób naturalny????. Jest to wciąż możliwe,
+jeśli tych punktów jest ,,odpowiednio mało''. Przykładem takiej
+sytuacji jest krzywa
 \begin{equation}
-  \label{eq:Leja-26}
+  \label{eq:Leja-27}
   \begin{split}
     z( t ) = t^{ 3 } + i 0.
   \end{split}
