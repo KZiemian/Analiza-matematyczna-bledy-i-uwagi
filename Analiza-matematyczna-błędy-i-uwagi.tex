@@ -742,7 +742,8 @@ w~istocie jest.
 % ######################################
 \newpage
 \section{Analiza zespolona}
-\vspace{\spaceTwo} % \vspace{\spaceThree}
+
+\vspace{\spaceTwo}
 % ######################################
 
 
@@ -1120,20 +1121,41 @@ drugi człon jest również mniejszy od~$\veps / 2$, co~kończy dowód.
 przy omawianiu własności przecięć zbiorów domkniętych, jest tu
 wymieniony osobno.
 
-\vspace{\spaceTwo}
+\vspace{\spaceFour}
 
 
-\start \Str{} W~przedstawiony tu rozważaniach przyjęto milcząco,
-że~każda z~badanych krzywych jest \tb{regularna}, czyli pozbawiona
-takich punktów, iż $z'( t ) = 0$. Noszą one nazwę \tb{punktów
-  osobliwych}. Jeśli rozważana krzywa nie jest regularna, to może~się
-zdarzyć, że~funkcja~$s( t )$ nie jest monotoniczne rosnąc, lecz tylko
-niemalejąca i~na przedziałach stała, tym samym nieodwracalna
-i~stwierdzenie, iż~???~jest nieprawdziwe.
+\start \Str{28--29} Jest to przykład bałaganu pojęciowego
+najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
+jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
+że~należy odróżnić krzywą od~jej zbioru punktów.
 
-Powód tego jest dość oczywisty. Jeśli krzywa ma~punkty osobliwe, to
-istnieje możliwość, iż~mimo zmieniającego~się parametru, będzie ona
-,,stała w~miejscu''. Przykładem tego jest
+Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
+punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
+należy zdefiniować krzywą jako funkcję zespoloną~$z( t )$, ciągłą
+na~pewnym przedziale~$I$ i~różną od~stałej. Wówczas wzór~(1)
+na~stronie~28 przedstawia zbiór punktów tej krzywej.
+
+\vspace{\spaceFour}
+
+
+\start \Str{29} Jeśli funkcja $\vp( \tau )$ nie jest suriekcją
+na~przedział~$I$, to wedle przyjętej definicji~$z( \vp( \tau ) )$, $\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów, może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie jest żadnym problemem dla~rozwijanej tu~teorii.
+
+\vspace{\spaceFour}
+
+
+\start \Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$
+w~definicji krzywej gładkiej. W~geometrii różniczkowej, krzywą o~tej
+własności nazywa~się \tb{regularną}. Jeśli rozważana krzywa nie jest
+regularna, to może~się zdarzyć, że~funkcja~$s( t )$ nie jest
+monotoniczne rosnąc, lecz tylko niemalejąca i~na przedziałach stała,
+tym samym nieodwracalna i~stwierdzenie, iż~istnieje parametr
+kanoniczny jest nieprawdziwe.
+
+Powód tego jest dość oczywisty. Jeśli krzywa ma~\tb{punkty osobliwe},
+czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest sytuacja,
+iż~pomimo zmieniającego~się parametru, będzie ona ,,stała w~miejscu''.
+Przykładem takie zachowania jest krzywa
 \begin{equation}
   \label{eq:Leja-25}
   \begin{split}
@@ -1145,7 +1167,8 @@ istnieje możliwość, iż~mimo zmieniającego~się parametru, będzie ona
   \end{split}
 \end{equation}
 Jest to krzywa klasy $\Cinfty( \R, \C )$, która dla~$t \geq 0$ stoi
-w~punkcie $z = 0 + i 0$. Jeśli obliczymy ????
+w~punkcie $z = 0 + i 0$. Jeśli wzór na jej długość, dostaniemy
+oczywisty rezultat
 \begin{equation}
   \label{eq:Leja-26}
   \begin{split}
@@ -1157,13 +1180,13 @@ Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
 zmiennej~$s$, czyli jej długości.
 
 Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
-da~się sparametryzować w~sposób naturalny????. Jest to wciąż możliwe,
-jeśli tych punktów jest ,,odpowiednio mało''. Przykładem takiej
-sytuacji jest krzywa
+da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
+możliwe, jeśli tych punktów jest ,,odpowiednio mało''. Przykładem
+takiej sytuacji jest krzywa
 \begin{equation}
   \label{eq:Leja-27}
   \begin{split}
-    z( t ) = t^{ 3 } + i 0.
+    z( t ) = t^{ 3 } + i 0, \quad t \in \R.
   \end{split}
 \end{equation}
 
