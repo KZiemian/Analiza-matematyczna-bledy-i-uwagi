@@ -784,23 +784,25 @@ sens, należy chyba postępować w~następujący sposób\footnote{Leja
   zapewne zdawał sobie z~tego sprawę, jednak według mnie nie~zaznaczył
   tego wystarczająco jasno w~tekście.}. Na~początku należy zdefiniować
 mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
-zespolonych przez liczbę rzeczywistą~$a$
+zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
   \label{eq:Leja-1}
   \begin{split}
     \fr{ z }{ a } = \ovOne{ a } z.
   \end{split}
 \end{equation}
-Ponieważ odwrotność liczby jest liczbą rzeczywistą daną wzorem
+Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
+niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
+odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
   \label{eq:Leja-2}
   \begin{split}
     \ovOne{ a + i0 } = \ovOne{ a } + i0 = \ovOne{ a },
   \end{split}
 \end{equation}
-więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz
-z~reguł mnożenia. Teraz możemy \emph{zdefiniować} liczbę $1 / z$
-wzorem
+więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
+reguł mnożenia. Teraz możemy \emph{zdefiniować} dla~$z \neq 0$ liczbę
+$1 / z$ wzorem
 \begin{equation}
   \label{eq:Leja-3}
   \begin{split}
@@ -808,9 +810,13 @@ wzorem
   \end{split}
 \end{equation}
 Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
-wynika z~pojęć już wprowadzonych. Teraz należy sprawdzić, czy tak
-wprowadzone dzielenie przez liczbę zespoloną posiada te same
-własności, co dzielenie liczb rzeczywistych. Na~przykład, że~zachodzi
+wynika z~pojęć już wprowadzonych. Gdy $z = 0$ wtedy $z \zbar = 0$,
+widzimy więc, że~również w~przypadku liczb zespolonych nie jest
+możliwe dzielenie przez~0.
+
+Teraz należy sprawdzić, czy tak wprowadzone dzielenie przez liczbę
+zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
+Na~przykład, że~zachodzi
 \begin{equation}
   \label{eq:Leja-4}
   \begin{split}
@@ -836,6 +842,34 @@ Tą tożsamość można udowodnić w~następujący sposób
 temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
 badania rozwiązań równania \emph{trzeciego} stopnia, nie zaś równań
 kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
+
+\vspace{\spaceFour}
+
+
+\start \Str{10} Przy określaniu argumentu liczby zespolonej pierwszy
+raz pojawia~się problem często spotykany w~analizie zespolonej
+mianowicie, że~wielu funkcji nie da~się określić jako zwykłych funkcji
+liczbowych, które liczbie zespolonej przyporządkowują liczbę
+zespoloną. Sam zapis $\arg z$ wielu sugeruje, że~argument jest zwykłą
+funkcją liczbową zmiennej~$z$, jednak z~definicji\footnote{Niezależnie
+  którą~się przyjmuje.} wynika, że~istnieje jednak nieskończenie wiele
+liczb odpowiadających zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla
+  $z = 0$ choć da~się zdefiniować nieskończony zbiór argumentów~0, to
+  pojęcie to nie jest użyteczne i~nie będziemy~się nim zajmować.}.
+Są~one postaci
+\begin{equation}
+  \label{eq:Leja-??}
+  \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2,\ld,
+\end{equation}
+gdzie $\Arg z$ jest już zwyczajną funkcją liczbową. Właściwym sposobem
+rozwiązania tego dylematu\footnote{A~przynajmniej najlepszym obecnie
+  znanym.} jest rozważanie $\arg z$, przy $z \neq 0$ jako funkcji nie
+na~płaszczyźnie zespolonej, lecz na~odpowiedniej powierzchni Riemanna.
+Ponieważ jednak jest to już dość zaawansowana część analizy
+zespolonej, tutaj ograniczymy~się do~omówienia, dlaczego inne sposoby
+rozwiązania nie są wystarczające.
+
+Najprostszy polega na~ograniczeniu~się do~argumentów zawierających~się w~przedziale $( -\pi, \pi ]$
 
 \vspace{\spaceFour}
 
@@ -1202,6 +1236,37 @@ takiej sytuacji jest krzywa
   \end{split}
 \end{equation}
 
+Z~tego względu rozróżnia~się \tb{punkty osobliwe krzywej} i~\tb{punkty
+  osobliwe parametryzacja}
+\cite{GdowskiElementGeometriiRozniczkowejZZadaniami99}. Punkt
+$z( t_{ 0 } )$ jest punktem osobliwym parametryzacja krzywej $z( t )$,
+$t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
+  skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
+reparametryzacja $\vp: I_{ 1 } \to I$ taka,
+że~$t_{ 0 } = \vp( \tau_{ 0 } )$
+i~$\tfr{ \de }{ \de \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 } }
+\neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą, lecz z~pewną
+możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-27} powyżej
+jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
+reparametryzującej
+\begin{equation}
+  \label{eq:Leja-28}
+  \vp( \tau ) =
+  \begin{cases}
+    -\sqrt[3]{ \abso{ \tau } }, & \tau \leq 0, \\
+    \sqrt[3]{ \tau }, & \tau > 0,
+  \end{cases}
+\end{equation}
+otrzymamy
+\begin{equation}
+  \label{eq:Leja-29}
+  z( \vp( \tau ) ) = \tau, \quad \tau \in \R.
+\end{equation}
+Natomiast w~przypadku \eqref{eq:Leja-25} mamy do~czynienia z~punktami
+osobliwymi krzywej, co~nie powinno nas dziwić. Problem polega tu
+bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
+że~krzywa od pewnego momentu stoi w~miejscu.
+
 \vspace{\spaceFour}
 
 
@@ -1211,7 +1276,8 @@ rzeczywistą $\C \simeq \R^{ 2 }$? Zauważmy bowiem, że~podana tu
 definicji jest z~praktycznego punktu widzenie
 wystarczająca\footnote{Przynajmniej zazwyczaj.}, jednak nieścisła.
 Wystarczy zadać pytanie, czy idziemy po~krzywej ,,głową do~góry'', czy
-,,głową do~dołu''? Poniżej przedstawimy standardowe ścisłe sformułowanie orientacji krzywej.
+,,głową do~dołu''? Poniżej przedstawimy standardowe ścisłe
+sformułowanie orientacji krzywej.
 
 Standardowe ścisłe sformułowanie jest następujące. ??????
 
@@ -1221,6 +1287,11 @@ Standardowe ścisłe sformułowanie jest następujące. ??????
 \start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
 symetryczne względem pewnej prostej, to~łączący je odcinek jest
 prostopadły do~tej prostej.
+
+\vspace{\spaceFour}
+
+
+\start \Str{36}
 
 \CenterTB{Błędy}
 \begin{center}
