@@ -866,10 +866,15 @@ rozwiązania tego dylematu\footnote{A~przynajmniej najlepszym obecnie
   znanym.} jest rozważanie $\arg z$, przy $z \neq 0$ jako funkcji nie
 na~płaszczyźnie zespolonej, lecz na~odpowiedniej powierzchni Riemanna.
 Ponieważ jednak jest to już dość zaawansowana część analizy
-zespolonej, tutaj ograniczymy~się do~omówienia, dlaczego inne sposoby
-rozwiązania nie są wystarczające.
+zespolonej, tutaj ograniczymy~się do~omówienia, dlaczego najprostszy
+sposób rozwiązania tego nie jest wystarczający.
 
-Najprostszy polega na~ograniczeniu~się do~argumentów zawierających~się w~przedziale $( -\pi, \pi ]$
+Najprostszy polega na~ograniczeniu~się do~argumentów zawierających~się
+w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie wyprowadzenia
+wzoru na~pierwiastek n\dywiz stopnia (str.~11--12) staje~się
+to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie byłaby
+ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się bardzo
+niewygodnie (pierwsze znaki tego znaleźć można na~stronach 59--60).
 
 \vspace{\spaceFour}
 
@@ -1293,6 +1298,18 @@ prostopadły do~tej prostej.
 
 \start \Str{36}
 
+\vspace{\spaceFour}
+
+
+\start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
+\begin{equation}
+  \label{eq:Leja-30}
+  \begin{split}
+    f( z ) - \Sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
+  \end{split}
+\end{equation}
+
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -1322,10 +1339,16 @@ prostopadły do~tej prostej.
                  - \uplambda^{ 2 } } \right|^{ 2 }$
            & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
              - \uplambda^{ 2 } } \right|^{ 2 }$ \\
+    39  &  2 & & $\abso{ b - c }$ ? & $\abso{ b - c }$? \\
+    % & & & & \\
     45  & 13 & & \emph{wewnętrzną ,} & \emph{wewnętrzną,} \\
     47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
-    49  & & 13 & $z$ & $| z |$ \\
+    49  & & 13 & $\sqrt[n]{ \abso{ a_{ n } } } z$
+           & $\sqrt[n]{ \abso{ a_{ n } } } | z |$ \\
+    53  &  7 & & $s$ ? & $s$? \\
+    54  & 10 & & słabszym : & słabszym: \\
     57  &  9 & & 31 & 31) \\
+    64  &  5 & & krótko : & krótko: \\
     68  & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
            & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
            % & & & & \\
