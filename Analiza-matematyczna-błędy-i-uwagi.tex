@@ -1296,12 +1296,63 @@ prostopadły do~tej prostej.
 \vspace{\spaceFour}
 
 
-\start \Str{36}
+\start \Str{36} Nazwanie prostych \tb{okręgami niewłaściwymi}
+i~\tb{okręgami przechodzącymi przez punkt w nieskończoności} jest to,
+że~rzucie stereograficznym obrazem koła na~sferze przechodzącego przez
+biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 
 \vspace{\spaceFour}
 
 
-\start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
+\start \Str{38} Nie jestem pewien czy z~definicji wynika, że~do danych
+pęków należą odpowiednie proste (okręgi niewłaściwe), czy też należy
+tak zmienić definicję, by~do nich należały.
+
+\vspace{\spaceFour}
+
+
+\start \Str{42} W~definicji ciała liczb wymiernych jest pewna
+subtelność w~określeniu wyniku operacji dodawania, odejmowania,
+mnożenia i~dzielania. Rozważmy najpierw przypadek dzielenia. Wielomian
+$P_{ 1 }( z ) = 1$ jest określony na~dziedzinie~$\C$. Jeśli podzielimy
+go~przez wielomian $Q_{ 1 }( z ) = z - 1$ to otrzymany iloraz
+$P_{ 1 }( z ) / Q_{ 1 }( z )$, to jest on określony na dziedzinie
+$\C \setminus 1$, widzimy więc, że~operacja dzielenia może prowadzić
+do~powstania funkcji o~nowej dziedzinie.
+
+Teraz zajmiemy~się subtelniejszym problemem. Rozważmy następujący
+iloczyn
+\begin{equation}
+  \label{eq:Leja-??}
+  \begin{split}
+    W_{ 1 }( z ) = \fr{ P_{ 1 }( z ) }{ Q_{ 1 }( z ) } ( z - 1 ) ( z -
+    2 ) = \fr{ 1 }{ z - 1 } ( z - 1 ) ( z - 2 ) = z - 2.
+  \end{split}
+\end{equation}
+Ponieważ funkcja $1 / ( z - 1 )$ jest określona tylko dla $z \neq 1$,
+więc formalnie funkcja $W( z )$ ma~dziedzinę $\C \setminus 1$.
+To~jedna mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
+okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne
+dziedziny. Z~tego problemu łatwo jednak wybrnąć.
+
+Jeśli daną funkcję wymierną~$f( z )$ która jest określony na~zbiorze
+$\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać
+w~postaci $P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$,
+wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
+$\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
+  \ld, z_{ n } }$ poprzez
+\begin{equation}
+  \label{eq:Leja-???}
+  \begin{split}
+    f( z_{ i } ) := \fr{ P( z_{ i } ) }{ Q( z_{ i } ) }.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+\start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest
+funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \begin{equation}
   \label{eq:Leja-30}
   \begin{split}
