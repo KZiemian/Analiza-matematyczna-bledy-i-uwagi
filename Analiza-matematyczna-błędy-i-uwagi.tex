@@ -84,7 +84,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-\usepackage{analizamatematyczna} % Pakiet napisany między innymi
+\usepackage{analizamatematyczna}  % Pakiet napisany między innymi
 % dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
@@ -114,11 +114,20 @@
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
 % ----------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
 
 
+
+
+% --------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Analiza matematyczna --~błędy i~uwagi}
+
+% \author{}
+% \date{}
+% --------------------------------------------------------------------
 
 
 
@@ -130,11 +139,18 @@
 
 
 
-% ############################
-\Main{Analiza matematyczna --~błędy i~uwagi} % Tytuł całego tekstu
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
 
-\vspace{\spaceTwo} \vspace{\spaceThree}
-% ############################
+
+
+% ######################################
+\section{Analiza matematyczna}
+
+\vspace{\spaceTwo}
+% ######################################
+
 
 
 % ##################
@@ -1307,6 +1323,14 @@ Standardowe ścisłe sformułowanie jest następujące. ??????
 \vspace{\spaceFour}
 
 
+\start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
+południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
+wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
+Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny.
+
+\vspace{\spaceFour}
+
+
 \start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
 symetryczne względem pewnej prostej, to~łączący je odcinek jest
 prostopadły do~tej prostej.
@@ -1316,22 +1340,22 @@ prostopadły do~tej prostej.
 
 \start \Str{36} Nazwanie prostych \tb{okręgami niewłaściwymi}
 i~\tb{okręgami przechodzącymi przez punkt w nieskończoności} jest to,
-że~rzucie stereograficznym obrazem koła na~sferze przechodzącego przez
-biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
+że~rzucie stereograficznym obrazem okręgu na~sferze przechodzącego
+przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 
 \vspace{\spaceFour}
 
 
 \start \Str{38} Nie jestem pewien czy z~definicji wynika, że~do danych
 pęków należą odpowiednie proste (okręgi niewłaściwe), czy też należy
-tak zmienić definicję, by~do nich należały.
+tak zmodyfikować definicję, by~do nich należały.
 
 \vspace{\spaceFour}
 
 
 \start \Str{42} W~definicji ciała liczb wymiernych jest pewna
 subtelność w~określeniu wyniku operacji dodawania, odejmowania,
-mnożenia i~dzielania. Rozważmy najpierw przypadek dzielenia. Wielomian
+mnożenia i~dzielenia. Rozważmy najpierw przypadek dzielenia. Wielomian
 $P_{ 1 }( z ) = 1$ jest określony na~dziedzinie~$\C$. Jeśli podzielimy
 go~przez wielomian $Q_{ 1 }( z ) = z - 1$ to otrzymany iloraz
 $P_{ 1 }( z ) / Q_{ 1 }( z )$, to jest on określony na dziedzinie
@@ -1389,6 +1413,29 @@ $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
 \start \Str{68}
 
+\vspace{\spaceFour}
+
+
+\start \Str{74} Osie $\eta$ i~$\xi$ na~rys. 38~są podpisane na~odwrót.
+
+\vspace{\spaceFour}
+
+
+\start \Str{75} W~opisie rzutu Mercantora zabrakło wyjaśnienia,
+po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
+to~jednak jasno z~rysunku.
+
+\vspace{\spaceFour}
+
+
+\start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
+różna od~0, jest problematyczne, bowiem nie jest wcale jasne,
+czy~można przypisać jakiś sens pochodnej w~punkcie $z = -d / c$.
+Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
+poza tym punktem.
+
+\vspace{\spaceFour}
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -1431,6 +1478,15 @@ $z$ i~$\zbar$ jako dwie zmienne niezależne.
            & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
     69  & & 13 & $a_{ n }$ & $\abso{ a_{ n } }$ \\
     73  & 13 & & $iw$ & $iv$ \\
+    75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+           & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    75  & &  3 & $c z - d$ & $c z + d$ \\
+    75  & & 16 & $ab - bc$ & $ad - bc$ \\
+    79  & &  5 & okręgów~: & okręgów: \\
+    80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    80  & & 10 & prostą~: & prostą: \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1445,6 +1501,11 @@ $z$ i~$\zbar$ jako dwie zmienne niezależne.
 \StrWg{36}{5} \\
 \Jest Ze~wzorów (9)~otrzymujemy \\
 \Pow Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\StrWg{75}{125} \\
+\Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
+płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
+\Pow rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+w~powierzchnię boczną \\
 
 \vspace{\spaceTwo}
 
