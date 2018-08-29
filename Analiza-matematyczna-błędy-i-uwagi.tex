@@ -866,31 +866,61 @@ kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 raz pojawia~się problem często spotykany w~analizie zespolonej
 mianowicie, że~wielu funkcji nie da~się określić jako zwykłych funkcji
 liczbowych, które liczbie zespolonej przyporządkowują liczbę
-zespoloną. Sam zapis $\arg z$ wielu sugeruje, że~argument jest zwykłą
-funkcją liczbową zmiennej~$z$, jednak z~definicji\footnote{Niezależnie
-  którą~się przyjmuje.} wynika, że~istnieje jednak nieskończenie wiele
-liczb odpowiadających zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla
-  $z = 0$ choć da~się zdefiniować nieskończony zbiór argumentów~0, to
-  pojęcie to nie jest użyteczne i~nie będziemy~się nim zajmować.}.
-Są~one postaci
+zespoloną. Sam zapis wyrażenia $\arg z$ sugeruje, że~argument jest
+zwykłą funkcją liczbową zmiennej~$z$, jednak
+z~definicji\footnote{Niezależnie którą~się przyjmuje.} wynika,
+że~istnieje jednak nieskończenie wiele liczb odpowiadających
+zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla $z = 0$ choć da~się
+  zdefiniować nieskończony zbiór argumentów~0, to pojęcie to nie jest
+  użyteczne i~nie będziemy~się nim zajmować.}. Są~one postaci
 \begin{equation}
   \label{eq:Leja-??}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2,\ld,
 \end{equation}
-gdzie $\Arg z$ jest już zwyczajną funkcją liczbową. Właściwym sposobem
-rozwiązania tego dylematu\footnote{A~przynajmniej najlepszym obecnie
-  znanym.} jest rozważanie $\arg z$, przy $z \neq 0$ jako funkcji nie
-na~płaszczyźnie zespolonej, lecz na~odpowiedniej powierzchni Riemanna.
-Ponieważ jednak jest to już dość zaawansowana część analizy
-zespolonej, tutaj ograniczymy~się do~omówienia, dlaczego najprostszy
-sposób rozwiązania tego nie jest wystarczający.
+gdzie $\Arg z$ jest już zwyczajną funkcją liczbową.
+Wyrażenie~$\arg z$, przy ustalonym~$z$, oznacza więc nie liczbę lecz
+przeliczalny zbiór liczb. Jest to przykład jednego z~typów funkcji
+wielowartościowych.
 
-Najprostszy polega na~ograniczeniu~się do~argumentów zawierających~się
-w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie wyprowadzenia
-wzoru na~pierwiastek n\dywiz stopnia (str.~11--12) staje~się
-to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie byłaby
-ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się bardzo
-niewygodnie (pierwsze znaki tego znaleźć można na~stronach 59--60).
+Właściwym sposobem rozwiązania zagadnienia tego typu
+funkcji\footnote{A~przynajmniej najlepszym obecnie znanym.} jest
+rozważanie $\arg z$, przy $z \neq 0$, jako funkcji nie na~płaszczyźnie
+zespolonej, lecz na~odpowiedniej powierzchni Riemanna. Ponieważ jednak
+jest to już dość zaawansowana część analizy zespolonej, tutaj
+ograniczymy~się do~omówienia, dlaczego najprostszy sposób rozwiązania
+tego nie jest wystarczający.
+
+Rozwiązanie to~polega na~ograniczeniu~się do~argumentów
+zawierających~się w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie
+wyprowadzenia wzoru na~pierwiastek n\dywiz stopnia (str.~11--12)
+staje~się to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie
+byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się
+bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
+59--60).
+
+\vspace{\spaceFour}
+
+
+\start \Str{12} Należy silniej niż w~tekście podkreślić,
+że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową, lecz~$n$\dywiz
+wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
+jednowartościowych\footnote{Pisał już o~tym Frege,
+  zob.\red{???odnśnik}.}. Zapomnienie o~tym prowadzi do~znanego
+paradoksu. Mamy mianowicie
+\begin{equation}
+  \label{eq:2}
+  -1 = i * i = \sqrt{ -1 } \sqrt{ -1 } = \sqrt{ ( -1 ) * ( -1 ) }
+  = \sqrt{ 1 } = 1.
+\end{equation}
+Jednak $\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy
+mnożenie nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc
+to co~się naprawdę dzieje w~powyższym wzorze przestaje być oczywisty.
+W~istocie zauważmy, że~wynik powyższych obliczeń można otrzymać
+w~następujący sposób
+\begin{equation}
+  \label{eq:3}
+  ( -i ) * i = 1.
+\end{equation}
 
 \vspace{\spaceFour}
 
@@ -1313,10 +1343,11 @@ i~$[ t_{ k - 1 }, t_{ k } + \veps ]$ dla wszystkich~$\veps > 0$.
 na~płaszczyźnie zespolonej, inaczej niż traktując ją jako płaszczyznę
 rzeczywistą $\C \simeq \R^{ 2 }$? Zauważmy bowiem, że~podana tu
 definicji jest z~praktycznego punktu widzenie
-wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, gdy~była ona~niewystarczający.}, jednak nieścisła.
-Wystarczy zadać pytanie, czy idziemy po~krzywej ,,głową do~góry'',
-czy~,,głową do~dołu''? Poniżej przedstawimy standardowe ścisłe
-sformułowanie orientacji krzywej.
+wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, gdy~była
+  ona~niewystarczający.}, jednak nieścisła. Wystarczy zadać pytanie,
+czy idziemy po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
+Poniżej przedstawimy standardowe ścisłe sformułowanie orientacji
+krzywej.
 
 Standardowe ścisłe sformułowanie jest następujące. ??????
 
@@ -1326,7 +1357,9 @@ Standardowe ścisłe sformułowanie jest następujące. ??????
 \start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
 południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
 wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
-Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny.
+Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny
+i~wydaje~się, że~terminologia ta jest używana w~całej książce
+konsekwentnie.
 
 \vspace{\spaceFour}
 
@@ -1426,6 +1459,43 @@ mniejsza liczba dodatnia o~tej własności.
 \vspace{\spaceFour}
 
 
+\start \Str{58} Napotykamy tu ten sam problem, jaki omówiliśmy już
+przy okazji $\arg z$. Wyrażenie $\log a$, przy ustalonym~$a$, nie
+reprezentuje liczby zespolonej, lecz przeliczalny zbiór liczb. Dlatego
+nieuważne stosowanie tej funkcji wielowartościowej, jakby była zwykła
+funkcją, może prowadzić do~paradoksów, takich jakie powstają przy
+stosowaniu wyrażenia~$\sqrt{ z }$. $\tr{Log}\, z$ jest już zwykłą
+funkcją liczbową, choć nieciągłą, więc mając to w~pamięci można jej
+używać w~zwykły sposób.
+
+\vspace{\spaceFour}
+
+
+\start \Str{59} Zamiast rozumieć przez $a^{ b }$ każdą z~liczb podanej
+postaci, lepiej byłoby oznaczać zbiór wszystkich tych liczb.
+Oczywiście, należy uważać na~wymienione już w~przypadku funkcji
+wielowartościowych problemy.
+
+\vspace{\spaceFour}
+
+
+\start \Str{59--60} We~fragmencie o~gałęziach logarytmu należałoby
+napisać, że~$l( z )$ ma być funkcją jednowartościową, inaczej
+pojawia~się już problem na~poziomie tego co~ma znaczyć wyrażenie
+$e^{ l( z ) }$. W~tym kontekście również argument z~nieciągłości
+funkcji zdefiniowanej na~zbiorze zawierającym okrąg jest wątpliwy,
+bo~powstaje problem, co oznacza ciągłość funkcji wielowartościowej?
+
+Ostatecznie, zgodnie z~tym co zostało napisane o~$\arg z$, mamy dwa
+wyjścia, jeśli chcemy określić gałąź logarytmu na~całej płaszczyźnie.
+Albo~argumenty liczb zespolonych zmienia~się od~$-\infty$ do~$+\infty$
+i~gałąź logarytmu przestaje być jednoznaczna, albo~ograniczamy ich
+zakres na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi
+mieć skok, a~więc przestaje być ciągła.
+
+\vspace{\spaceFour}
+
+
 \start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
 traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
@@ -1437,7 +1507,25 @@ traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 \vspace{\spaceFour}
 
 
+\start \Str{73} Odnośnie krzywych postaci $u( x, y ) = c$
+i~$v( x, y ) = c'$ nasuwają~się dwa problemy. Po pierwsze, nie widzę
+powodu by~były one spójne, a~że tak zawsze jest sugeruje rys.~36.
+Po~drugie, nie jestem pewien czy~z~warunku $f'( z_{ 0 } ) \neq 0$
+wynika, iż~w~żadnym punkcie jedna z~tych krzywych nie redukują~się
+do~punktu. Obie nie mogą być jednocześnie degenerować~się do~punktu,
+bo~na mocy $f'( z_{ 0 } ) \neq 0$ co~najmniej jedna z~pochodnych
+cząstkowych $u_{ x }$ bądź~$v_{ x }$ jest różna od~0.
+
+\vspace{\spaceFour}
+
+
 \start \Str{74} Osie $\eta$ i~$\xi$ na~rys. 38~są podpisane na~odwrót.
+
+\vspace{\spaceFour}
+
+
+\start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
+policz~$\abso{ z }^{ 2 } + 1$.
 
 \vspace{\spaceFour}
 
@@ -1497,6 +1585,7 @@ poza tym punktem.
     54  & 10 & & słabszym : & słabszym: \\
     57  &  9 & & 31 & 31) \\
     64  &  5 & & krótko : & krótko: \\
+    65  & & 14 & \emph{jeśli ma} & \emph{ma} \\
     68  & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
            & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
     69  & & 13 & $a_{ n }$ & $\abso{ a_{ n } }$ \\
