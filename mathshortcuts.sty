@@ -328,22 +328,23 @@
 % będziesz
 \newcommand{\IntTho}[1]{\Int d^{ 3 }#1 \,}  % Trójwymiarowa one
 \newcommand{\IntDo}[5]{\Int_{ #1 } d^{ #2 }#3\, d^{ #4 }#5 \;}
+% Integral Double One
 
 \newcommand{\IntSeto}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-\newcommand{\IntSett}[1]{\Int_{ #1 }}
+\newcommand{\IntSett}[2]{\Int_{ #1 } d#2 \,}
 
 
 
 % #####
 % Całki w określonych granicach
 \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
-\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
-\newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
+\newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+% \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
+% \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
+% \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
 \newcommand{\IntOvRo}[1]{\int_{ \R } d #1 \;}  % Integral over R version one
-\newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
 \newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, d #2}
 % Integral over R version two
-\newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
 
 
 
@@ -386,6 +387,7 @@
 \newcommand{\lket}{\langle}
 \newcommand{\rket}{\rangle}
 \newcommand{\dketo}[2]{\lket #1 | #2 \rket}  % Dirac ket one
+\newcommand{\DKeto}[2]{\lket #1 \, | \, #2 \rket}  % Dirac KET One
 \newcommand{\dkett}[2]{\lket #1, \, #2 \rket}  % Dirac ket two
 
 
