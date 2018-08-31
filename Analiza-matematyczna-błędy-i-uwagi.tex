@@ -165,7 +165,57 @@
 
 % \vspace{\spaceFour}
 
-\start \Str{7}
+\start \Str{7} Dla pełniejszego wykładu, warto tu przytoczyć pozostałe
+operacje z~udziałem $\pm \infty$.
+\begin{equation}
+  \label{eq:Lojasiewicz-1}
+  \begin{split}
+    &a + ( \pm \infty ) = ( \pm \infty ) + a = \pm \infty, \\
+    &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \pm \infty,
+    \quad a > 0, \\
+    &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \mp \infty,
+    \quad a < 0, \\
+    &( +\infty ) \cdot ( +\infty ) = ( -\infty ) \cdot ( -\infty )
+    = +\infty, \\
+    &( +\infty ) \cdot ( -\infty ) = -\infty.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+\start \Str{7} Iloczyn w~$\overline{ \R }$ nie jest ciągły dla~$x = \pm \infty$ i~$y = 0$ (odpowiednio $x = 0$ i~$y = \pm \infty$), bo jeśli weźmiemy $x_{ n } = n$, $y_{ n } = 1/n$, to
+\begin{equation}
+  \label{eq:Lojasiewicz-2}
+  \Lim_{ \nToInfty } x_{ n } y_{ n } = \Lim_{ \nToInfty } 1 = 1 \neq 0
+  = ( +\infty ) \cdot 0.
+\end{equation}
+Suma nie jest ciągła dla~$x = +\infty$ i~$y = -\infty$ (odpowiednio $x = -\infty$ i~$y = +\infty$), bo~jeśli weźmiemy $x_{ n } = 1 + n$ i~$y_{ n } = -n$, to
+\begin{equation}
+  \label{eq:Lojasiewicz-3}
+  \begin{split}
+    \Lim_{ \nToInfty } ( x_{ n } + y_{ n } ) = \Lim_{ \nToInfty } 1 = 1 \neq 0
+    = +\infty - \infty.
+  \end{split}
+\end{equation}
+Mnożenie nie jest łączne, bo
+\begin{equation}
+  \label{eq:Lojasiewicz-2}
+  \begin{split}
+    &( a + \infty ) - \infty = \infty - \infty = 0, \\
+    &a + ( \infty - \infty ) = a + 0 = a.
+  \end{split}
+\end{equation}
+Mnożenie nie jest rozłączne względem dodawania, bo
+\begin{equation}
+  \label{eq:Lojasiewicz-3}
+  \begin{split}
+    &( +\infty ) \cdot ( a - \infty ) = ( +\infty \cdot a ) - \infty
+    = +\infty - \infty = 0, \\
+    &( +\infty ) \cdot ( a - \infty ) = ( +\infty ) \cdot ( -\infty )
+    = -\infty.
+  \end{split}
+\end{equation}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -909,8 +959,8 @@ jednowartościowych\footnote{Pisał już o~tym Frege,
 paradoksu. Mamy mianowicie
 \begin{equation}
   \label{eq:2}
-  -1 = i * i = \sqrt{ -1 } \sqrt{ -1 } = \sqrt{ ( -1 ) * ( -1 ) }
-  = \sqrt{ 1 } = 1.
+  -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } 
+  = \sqrt{ ( -1 ) \cdot ( -1 ) } = \sqrt{ 1 } = 1.
 \end{equation}
 Jednak $\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy
 mnożenie nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc
@@ -919,7 +969,7 @@ W~istocie zauważmy, że~wynik powyższych obliczeń można otrzymać
 w~następujący sposób
 \begin{equation}
   \label{eq:3}
-  ( -i ) * i = 1.
+  ( -i ) \cdot i = 1.
 \end{equation}
 
 \vspace{\spaceFour}
