@@ -205,7 +205,7 @@ i~$y_{ n } = -n$, to
 \end{equation}
 Mnożenie nie jest łączne, bo
 \begin{equation}
-  \label{eq:Lojasiewicz-2}
+  \label{eq:Lojasiewicz-4}
   \begin{split}
     &( a + \infty ) - \infty = \infty - \infty = 0, \\
     &a + ( \infty - \infty ) = a + 0 = a.
@@ -213,7 +213,7 @@ Mnożenie nie jest łączne, bo
 \end{equation}
 Mnożenie nie jest rozłączne względem dodawania, bo
 \begin{equation}
-  \label{eq:Lojasiewicz-3}
+  \label{eq:Lojasiewicz-5}
   \begin{split}
     &( +\infty ) \cdot ( a - \infty ) = ( +\infty \cdot a ) - \infty
     = +\infty - \infty = 0, \\
@@ -221,6 +221,40 @@ Mnożenie nie jest rozłączne względem dodawania, bo
     = -\infty.
   \end{split}
 \end{equation}
+
+\vspace{\spaceFour}
+
+
+\start \Str{7} Stwierdzenie, że~przez brak łączności dodawania nie
+możemy przenosić wyrazów z~jednej strony równania na drugą, może
+wydawać~się nieoczywiste, dlatego tutaj wyjaśnimy to na przykładzie.
+Rozpatrzmy równość
+\begin{equation}
+  \label{eq:Lojasiewicz-6}
+  1 + \infty = \infty.
+\end{equation}
+Teraz chcielibyśmy odjąć od~obu stron $\infty$ i~wykonać obliczenia
+w~następujący sposób
+\begin{equation}
+  \label{eq:Lojasiewicz-7}
+  \begin{split}
+    &\tr{L} = 1 + \infty - \infty = 1 + 0 = 1, \\
+    &\tr{P} = \infty - \infty = 0.
+  \end{split}
+\end{equation}
+Błąd wynika z~tego, że~tak naprawdę wyrażenie po~lewej stronie ma
+następującą postać
+\begin{equation}
+  \label{eq:Lojasiewicz-8}
+  \tr{L} = ( 1 + \infty ) - \infty.
+\end{equation}
+Chcielibyśmy przekształcić ten wzór w~następujący sposób
+\begin{equation}
+  \label{eq:Lojasiewicz-9}
+  1 + ( \infty - \infty ) = 1 + 0 = 1.
+\end{equation}
+Tego jednak zrobić nie możemy ze~względu na~brak łączności dodawania.
+Zignorowanie tego prowadzi do~błędnych wyników powyżej.
 
 \CenterTB{Błędy}
 \begin{center}
@@ -231,13 +265,13 @@ Mnożenie nie jest rozłączne względem dodawania, bo
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    9  & 15 & & $\abso{ \al }$ $\abso{ \be }$
+    9   & 15 & & $\abso{ \al }$ $\abso{ \be }$
            & $\abso{ \al }$, $\abso{ \be }$ \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
+    11  & &  5 & $\set{ \alpha_{ n } }$ & $\set{ x_{ n } }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     \hline
   \end{tabular}
 \end{center}
@@ -421,9 +455,9 @@ o~odwracaniu funkcji klasy $\Cj$ istnieje\footnote{Nie wiem czy
   w~przypadku funkcji rzeczywistej jednej zmiennej istnieje wiele
   wariantów twierdzenia o~funkcji uwikłanej i~funkcji odwrotnej, więc
   może~się okazać, iż~jeden z~nich pozwala osłabić ten warunek.
-  Dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
-  \cite{Fic05a}.} funkcja $t( x )$ w~pewnym otoczeniu $t_{ 0 }$
-i~w~tym otoczeniu $y( x ) = y( t( x ) )$.
+  Szeroką dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
+  \cite{FichtenholzRachunekRiCTomI05}.} funkcja $t( x )$ w~pewnym
+otoczeniu $t_{ 0 }$ i~w~tym otoczeniu $y( x ) = y( t( x ) )$.
 
 Co~jednak dzieje~się, gdy~$\dd{}{ x }{ t }( t_{ 0 } ) = 0$, czy
 funkcja $y( x )$ wówczas nie istnieje? Następujący przypadek pokazuje,
@@ -830,6 +864,7 @@ w~istocie jest.
 \Work{ % Autor i tytuł dzieła
   Franciszek Leja \\
   ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone06} }
+% Sprawdź tu wszystkie eqref.
 
 \CenterTB{Uwagi}
 
@@ -929,7 +964,7 @@ zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla $z = 0$ choć da~się
   zdefiniować nieskończony zbiór argumentów~0, to pojęcie to nie jest
   użyteczne i~nie będziemy~się nim zajmować.}. Są~one postaci
 \begin{equation}
-  \label{eq:Leja-??}
+  \label{eq:Leja-6}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2,\ld,
 \end{equation}
 gdzie $\Arg z$ jest już zwyczajną funkcją liczbową.
@@ -963,7 +998,7 @@ jednowartościowych\footnote{Pisał już o~tym Frege,
   zob.\red{???odnśnik}.}. Zapomnienie o~tym prowadzi do~znanego
 paradoksu. Mamy mianowicie
 \begin{equation}
-  \label{eq:2}
+  \label{eq:Leja-7}
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } 
   = \sqrt{ ( -1 ) \cdot ( -1 ) } = \sqrt{ 1 } = 1.
 \end{equation}
@@ -973,7 +1008,7 @@ to co~się naprawdę dzieje w~powyższym wzorze przestaje być oczywisty.
 W~istocie zauważmy, że~wynik powyższych obliczeń można otrzymać
 w~następujący sposób
 \begin{equation}
-  \label{eq:3}
+  \label{eq:Leja-8}
   ( -i ) \cdot i = 1.
 \end{equation}
 
@@ -996,7 +1031,7 @@ obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \vp / 2$,
 $\theta_{ 1 } = \vp / 2 + \pi$. Można łatwo wyrazić $\cos \vp$
 i~$\sin \vp$ za~pomocą $\al$ i~$\be$. Teraz możemy obliczyć
 \begin{equation}
-  \label{eq:Leja-6}
+  \label{eq:Leja-9}
   \begin{split}
     \cos \theta_{ 0 } = \cos \tfr{ \vp }{ 2 } = \onehalf ( 1 + \cos
     \vp ),
@@ -1005,7 +1040,7 @@ i~$\sin \vp$ za~pomocą $\al$ i~$\be$. Teraz możemy obliczyć
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
 wzorów
 \begin{equation}
-  \label{eq:Leja-7}
+  \label{eq:Leja-10}
   \begin{split}
     \cos( \tfr{ \vp }{ 2 } + \pi ) = -\cos( \tfr{ \vp }{ 2 } ), \quad
     \sin( \tfr{ \vp }{ 2 } + \pi ) = -\sin( \tfr{ \vp }{ 2 } ).
@@ -1021,7 +1056,7 @@ za~pomocą $\al$ i~$\be$.
 iloczyn Cauchy'ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
 i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
-  \label{eq:Leja-8}
+  \label{eq:Leja-11}
   \begin{split}
     \left( \Sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
       \Sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \Sum_{ n = 0
@@ -1050,14 +1085,14 @@ w~kilku miejscach.
 Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
 zachodzi poniższa nierówność
 \begin{equation}
-  \label{eq:Leja-9}
+  \label{eq:Leja-12}
   \begin{split}
     \abso{ C_{ n } - A_{ n } B } \leq \veps, \quad \forall \veps > 0,
   \end{split}
 \end{equation}
 bowiem z~tego będzie wynikać
 \begin{equation}
-  \label{eq:Leja-10}
+  \label{eq:Leja-13}
   \begin{split}
     \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{
       A_{ n } B - AB } \leq 2\veps,
@@ -1067,7 +1102,7 @@ dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\veps > 0$. Teraz
 dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
 $\abso{ \be_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
 \begin{equation}
-  \label{eq:Leja-11}
+  \label{eq:Leja-14}
   \begin{split}
     \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \be_{ n } + a_{ 1 }
       \be_{ n - 1 } + \ld + a_{ n } \be_{ 0 } } \leq \abso{ a_{ 0 } }
@@ -1082,7 +1117,7 @@ $\abso{ \be_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
 \end{equation}
 Pierwszy wyraz jest $\leq \veps / 2$. Dla drugiego wyrazu mamy
 \begin{equation}
-  \label{eq:Leja-12}
+  \label{eq:Leja-15}
   \begin{split}
     \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 } } \leq
     \abso{ a_{ n - p } } \abso{ \be_{ p } } + \ld + \abso{ a_{ n } }
@@ -1095,7 +1130,7 @@ Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
 $n > q$ zachodzić $\abso{ a_{ n - p } } < \veps / ( 2 p M_{ p } )$.
 Teraz dla każdego $n > \max( p, q )$ zachodzi
 \begin{equation}
-  \label{eq:Leja-13}
+  \label{eq:Leja-16}
   \begin{split}
     \abso{ C_{ n } - AB } \leq \veps.
   \end{split}
@@ -1110,7 +1145,7 @@ zakończony.
 dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
 Po~pierwsze dowód formuły
 \begin{equation}
-  \label{eq:Leja-14}
+  \label{eq:Leja-17}
   \begin{split}
     \fr{ C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } }{ n } = AB + A q_{ n }
     + B p_{ n } + r_{ n },
@@ -1118,7 +1153,7 @@ Po~pierwsze dowód formuły
 \end{equation}
 nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
-  \label{eq:Leja-15}
+  \label{eq:Leja-18}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \be_{ 0 } +
     \be_{ 1 } + \ld + \be_{ n - 1 } ) + B ( \al_{ 0 } + \al_{ 1 } +
@@ -1127,7 +1162,7 @@ nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \end{equation}
 gdzie
 \begin{equation}
-  \label{eq:Leja-16}
+  \label{eq:Leja-19}
   \begin{split}
     R_{ n } = n r_{ n } = \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
     \be_{ 1 } + \ld + \al_{ 0 } \be_{ n - 1 }.
@@ -1138,7 +1173,7 @@ wyrazów.
 
 Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
-  \label{eq:Leja-17}
+  \label{eq:Leja-20}
   \begin{split}
     \Sum_{ i = 0 }^{ n } c_{ i } = \Sum_{ i = 0 }^{ n } ( a_{ i } b_{
       0 } + a_{ i - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
@@ -1151,7 +1186,7 @@ Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
 przypadków. Dowód przeprowadzimy indukcyjnie. Przypadek $n = 0$
 wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
 \begin{equation}
-  \label{eq:Leja-18}
+  \label{eq:Leja-21}
   \begin{split}
     \Sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld +
     a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } ) b_{
@@ -1172,7 +1207,7 @@ Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-15}, który również
 przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
 Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
-  \label{eq:Leja-19}
+  \label{eq:Leja-22}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \Sum_{
       i = 0 }^{ n - 1 } \be_{ i } + B \Sum_{ i = 0 }^{ n - 1 } \al_{ i
@@ -1182,7 +1217,7 @@ Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 Następny krok jest trochę długi. Przeliczając kilka pierwszych
 przypadków, łatwo zgadnąć, że
 \begin{equation}
-  \label{eq:Leja-20}
+  \label{eq:Leja-23}
   \begin{split}
     C_{ n } = AB + A \be_{ n } + B \al_{ n } - R_{ n } + R_{ n + 1 }.
   \end{split}
@@ -1191,7 +1226,7 @@ Zacznijmy od~tego, że
 $b_{ n } = B_{ n } - B_{ n - 1 } = \be_{ n } - \be_{ n - 1 }$,
 korzystając więc, ze~wzoru \eqref{eq:Leja-17}
 \begin{equation}
-  \label{eq:Leja-21}
+  \label{eq:Leja-24}
   \begin{split}
     C_{ n } &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ld + A_{ 0 }
     b_{ n } = ( A + \al_{ n } ) ( B + \be_{ 0 } ) + ( A + \al_{ n - 1
@@ -1215,7 +1250,7 @@ korzystając więc, ze~wzoru \eqref{eq:Leja-17}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ld + C_{ n }$ odpowiada
 liczbie~$n + 1$. Tym samym
 \begin{equation}
-  \label{eq:Leja-22}
+  \label{eq:Leja-25}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \Sum_{
       i = 0 }^{ n - 1 } \be_{ i } + B \Sum_{ i = 0 }^{ n - 1 } \al_{ i
@@ -1233,7 +1268,7 @@ liczbie~$n + 1$. Tym samym
 i~$\be_{ n }$ są zbieżne istnieją więc stałe $M_{ \al }$ i~$M_{ \be }$
 takie, że
 \begin{equation}
-  \label{eq:Leja-23}
+  \label{eq:Leja-26}
   \begin{split}
     \abso{ M_{ \al } } \leq M_{ \al }, \quad \abso{ \be_{ n } } \leq
     M_{ \be }.
@@ -1243,7 +1278,7 @@ Ustalmy teraz $\veps > 0$. Skoro $\be_{ n }$ jest zbieżny do~0, więc
 możemy znaleźć taką liczbę~$p$,
 iż~$\abso{ \be_{ n } } \leq \veps / 2 M_{ \al }$, dla~$n > p$. Teraz
 \begin{equation}
-  \label{eq:Leja-24}
+  \label{eq:Leja-27}
   \begin{split}
     \abso{ r_{ n } } &= \ovOne{ n } \abso{ \al_{ n - 1 } \be_{ 0 } +
       \al_{ n - 2 } \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } +
@@ -1309,7 +1344,7 @@ czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest sytuacja,
 iż~pomimo zmieniającego~się parametru, będzie ona ,,stała w~miejscu''.
 Przykładem takie zachowania jest krzywa
 \begin{equation}
-  \label{eq:Leja-25}
+  \label{eq:Leja-28}
   \begin{split}
     z( t ) =
     \begin{cases}
@@ -1322,7 +1357,7 @@ Jest to krzywa klasy $\Cinfty( \R, \C )$, która dla~$t \geq 0$ stoi
 w~punkcie $z = 0 + i 0$. Jeśli wzór na jej długość, dostaniemy
 oczywisty rezultat
 \begin{equation}
-  \label{eq:Leja-26}
+  \label{eq:Leja-29}
   \begin{split}
     s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, \de u = \Int_{ 0 }^{
       t } 0 \, \de u = 0, \quad t \geq 0.
@@ -1336,7 +1371,7 @@ da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
 możliwe, jeśli tych punktów jest ,,odpowiednio mało''. Przykładem
 takiej sytuacji jest krzywa
 \begin{equation}
-  \label{eq:Leja-27}
+  \label{eq:Leja-30}
   \begin{split}
     z( t ) = t^{ 3 } + i 0, \quad t \in \R.
   \end{split}
@@ -1356,7 +1391,7 @@ możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-27} powyżej
 jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
 reparametryzującej
 \begin{equation}
-  \label{eq:Leja-28}
+  \label{eq:Leja-31}
   \vp( \tau ) =
   \begin{cases}
     -\sqrt[3]{ \abso{ \tau } }, & \tau \leq 0, \\
@@ -1365,7 +1400,7 @@ reparametryzującej
 \end{equation}
 otrzymamy
 \begin{equation}
-  \label{eq:Leja-29}
+  \label{eq:Leja-32}
   z( \vp( \tau ) ) = \tau, \quad \tau \in \R.
 \end{equation}
 Natomiast w~przypadku \eqref{eq:Leja-25} mamy do~czynienia z~punktami
@@ -1453,7 +1488,7 @@ do~powstania funkcji o~nowej dziedzinie.
 Teraz zajmiemy~się subtelniejszym problemem. Rozważmy następujący
 iloczyn
 \begin{equation}
-  \label{eq:Leja-??}
+  \label{eq:Leja-33}
   \begin{split}
     W_{ 1 }( z ) = \fr{ P_{ 1 }( z ) }{ Q_{ 1 }( z ) } ( z - 1 ) ( z -
     2 ) = \fr{ 1 }{ z - 1 } ( z - 1 ) ( z - 2 ) = z - 2.
@@ -1472,7 +1507,7 @@ wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
 $\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
   \ld, z_{ n } }$ poprzez
 \begin{equation}
-  \label{eq:Leja-???}
+  \label{eq:Leja-34}
   \begin{split}
     f( z_{ i } ) := \fr{ P( z_{ i } ) }{ Q( z_{ i } ) }.
   \end{split}
@@ -1484,7 +1519,7 @@ $\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
 \start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest
 funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \begin{equation}
-  \label{eq:Leja-30}
+  \label{eq:Leja-35}
   \begin{split}
     f( z ) - \Sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
   \end{split}
