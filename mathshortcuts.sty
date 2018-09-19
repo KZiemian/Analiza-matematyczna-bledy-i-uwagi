@@ -66,9 +66,10 @@
 
 
 % Strzałki
-\newcommand{\Ra}{\Rightarrow}
 \newcommand{\lra}{\longrightarrow}
 \newcommand{\xra}{\xrightarrow}
+
+\newcommand{\Ra}{\Rightarrow}
 \newcommand{\ifonlyif}{\Longleftrightarrow} % Podobno działa \iff
 
 \newcommand{\ora}{\overrightarrow}
@@ -105,7 +106,6 @@
 \newcommand{\vp}{\varphi}
 \newcommand{\om}{\omega}
 \newcommand{\Om}{\Omega}
-% \newcommand{\si}{\sigma}
 \newcommand{\Si}{\Sigma}
 
 
@@ -115,36 +115,39 @@
 % ##########
 % Standardowe używane w oznaczeniach litery o specjalnej czcionce
 % \mb = \mathbb
-\newcommand{\N}{\mb{N}}
-\newcommand{\Z}{\mb{Z}}
-\newcommand{\R}{\mb{R}}
-\newcommand{\C}{\mb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 
-\newcommand{\Lb}{\mb{L}}
+\newcommand{\Lb}{\mathbb{L}}
 
 
 % \mc = \mathcal
-\newcommand{\Cc}{\mc{C}}
-\newcommand{\Dc}{\mc{D}}
-\newcommand{\Hc}{\mc{H}} % A co z \ell
-\newcommand{\lc}{\mc{l}}
-\newcommand{\Lc}{\mc{L}}
-\newcommand{\Oc}{\mc{O}}
-\newcommand{\Rn}{\R^{ n }}
-\newcommand{\Rc}{\mc{R}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Hc}{\mathcal{H}} % A co z \ell
+\newcommand{\lc}{\mathcal{l}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Rn}{\mathbb{ R }^{ n }}
+\newcommand{\Rd}{\mathbb{ R }^{ d }}
+\newcommand{\Rc}{\mathcal{R}}
 
 \newcommand{\Rp}{\R_{ + }}
 
 
 % Rzadziej używane oznaczenia literowe
 % \mc = \mathcal
-\newcommand{\Bc}{\mc{B}}
-\newcommand{\Fc}{\mc{F}}
-\newcommand{\Mc}{\mc{M}}
-\newcommand{\Tc}{\mc{T}}
-\newcommand{\Pc}{\mc{P}}
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Pc}{\mathcal{P}}
 
-\newcommand{\Rt}{\R^{ 3 }}
+\newcommand{\Rt}{\mathbb{R}^{ 3 }}
 
 
 
@@ -198,7 +201,7 @@
 
 
 % Wersory
-\newcommand{\nhat}{\wh{n}}
+\newcommand{\nhat}{\widehat{n}}
 
 
 % Przestrzenie macierzy
@@ -249,11 +252,11 @@
 \newcommand{\xToPInf}{x \to +\infty}
 \newcommand{\xToMInf}{x \to -\infty}
 
-\newcommand{\epsToZero}{\veps \to 0}
-\newcommand{\epsToPZero}{\veps \to 0^{ + }}
-\newcommand{\epsToMZero}{\veps \to 0^{ + }}
+\newcommand{\epsToZero}{\varepsilon \to 0}
+\newcommand{\epsToPZero}{\varepsilon \to 0^{ + }}
+\newcommand{\epsToMZero}{\varepsilon \to 0^{ + }}
 
-\newcommand{\DelToZero}{\Del t \to 0}
+\newcommand{\DelToZero}{\Delta t \to 0}
 
 
 % Sumy
@@ -266,7 +269,7 @@
 
 % ########
 % Różniczkowanie i pochodne
-\newcommand{\de}{\mr{d}}
+\newcommand{\de}{\mathrm{d}}
 
 
 % #####
@@ -306,7 +309,6 @@
 
 \newcommand{\CinftyRt}{\Cinfty( \R^{ 3 } )}
 \newcommand{\CinftyRf}{\Cinfty( \R^{ 4 } )}
-
 
 
 
@@ -373,11 +375,16 @@
 % Całki w określonych granicach
 \newcommand{\IntMPInfPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
 \newcommand{\IntOInfPL}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
-\newcommand{\IntAPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntBPL}[1]{\int_{ \R } \de #1 \;}
-\newcommand{\IntOvRoPL}[1]{\int_{ \R } \de #1 \;}
-\newcommand{\IntCPL}[2]{\int_{ \R } #1 \, \de #2}
-\newcommand{\IntOvRtPL}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntOvRoPL}[1]{\int_{ \R } \de #1 \;}  % R One
+\newcommand{\IntOvRtPL}[2]{\int_{ \R } #1 \, \de #2}  % R Two
+
+
+
+
+% #############
+% Analiza wektorowa
+\newcommand{\divergence}{\textrm{div}}
+
 
 
 
@@ -390,9 +397,10 @@
 % W analizie funkcjonalnej też często się je stosuje
 \newcommand{\lket}{\langle}
 \newcommand{\rket}{\rangle}
-\newcommand{\dketo}[2]{\lket #1 | #2 \rket}  % Dirac ket one
-\newcommand{\DKeto}[2]{\lket #1 \, | \, #2 \rket}  % Dirac KET One
-\newcommand{\dkett}[2]{\lket #1, \, #2 \rket}  % Dirac ket two
+\newcommand{\dketo}[2]{\langle #1 | #2 \rangle}  % Dirac ket one
+% Jak będziesz mógł to usuń komendę powyżej
+\newcommand{\DKeto}[2]{\langle #1 \, | \, #2 \rangle}  % Dirac Ket One
+\newcommand{\DKett}[2]{\langle #1, \, #2 \rangle}  % Dirac Ket two
 
 
 % Przestrzenie L^{ p }
@@ -412,6 +420,9 @@
 % ##########
 % Teoria dystrybucji
 \newcommand{\Pv}{\mathrm{Pv}}
+
+\newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
+
 
 
 % ########################################
