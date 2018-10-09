@@ -868,7 +868,7 @@ w~istocie jest.
 % ####################
 \Work{ % Autor i tytuł dzieła
   Franciszek Leja \\
-  ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone06} }
+  ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone2006} }
 % Sprawdź tu wszystkie eqref.
 
 \CenterTB{Uwagi}
@@ -897,7 +897,7 @@ sens, należy chyba postępować w~następujący sposób\footnote{Leja
 mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
 zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
-  \label{eq:Leja-1}
+  \label{eq:Leja-01}
   \begin{split}
     \fr{ z }{ a } = \ovOne{ a } z.
   \end{split}
@@ -906,7 +906,7 @@ Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
 niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
 odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
-  \label{eq:Leja-2}
+  \label{eq:Leja-02}
   \begin{split}
     \ovOne{ a + i0 } = \ovOne{ a } + i0 = \ovOne{ a },
   \end{split}
@@ -915,7 +915,7 @@ więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
 reguł mnożenia. Teraz możemy \emph{zdefiniować} dla~$z \neq 0$ liczbę
 $1 / z$ wzorem
 \begin{equation}
-  \label{eq:Leja-3}
+  \label{eq:Leja-03}
   \begin{split}
     \ovOne{ z } := \fr{ \zbar }{ z \zbar }.
   \end{split}
@@ -929,14 +929,14 @@ Teraz należy sprawdzić, czy tak wprowadzone dzielenie przez liczbę
 zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
 Na~przykład, że~zachodzi
 \begin{equation}
-  \label{eq:Leja-4}
+  \label{eq:Leja-04}
   \begin{split}
     ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \C.
   \end{split}
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
 \begin{equation}
-  \label{eq:Leja-5}
+  \label{eq:Leja-05}
   \begin{split}
     ( 1 / z ) / w = \left( \fr{ \zbar }{ z \zbar } \right) / w = \fr{
       \zbar }{ z \zbar } \fr{ \wbar }{ w \wbar } = \ovOne{ z \zbar }
@@ -969,7 +969,7 @@ zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla $z = 0$ choć da~się
   zdefiniować nieskończony zbiór argumentów~0, to pojęcie to nie jest
   użyteczne i~nie będziemy~się nim zajmować.}. Są~one postaci
 \begin{equation}
-  \label{eq:Leja-6}
+  \label{eq:Leja-06}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2,\ld,
 \end{equation}
 gdzie $\Arg z$ jest już zwyczajną funkcją liczbową.
@@ -1003,7 +1003,7 @@ jednowartościowych\footnote{Pisał już o~tym Frege,
   zob.\red{???odnśnik}.}. Zapomnienie o~tym prowadzi do~znanego
 paradoksu. Mamy mianowicie
 \begin{equation}
-  \label{eq:Leja-7}
+  \label{eq:Leja-07}
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } 
   = \sqrt{ ( -1 ) \cdot ( -1 ) } = \sqrt{ 1 } = 1.
 \end{equation}
@@ -1013,7 +1013,7 @@ to co~się naprawdę dzieje w~powyższym wzorze przestaje być oczywisty.
 W~istocie zauważmy, że~wynik powyższych obliczeń można otrzymać
 w~następujący sposób
 \begin{equation}
-  \label{eq:Leja-8}
+  \label{eq:Leja-08}
   ( -i ) \cdot i = 1.
 \end{equation}
 
@@ -1036,7 +1036,7 @@ obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \vp / 2$,
 $\theta_{ 1 } = \vp / 2 + \pi$. Można łatwo wyrazić $\cos \vp$
 i~$\sin \vp$ za~pomocą $\al$ i~$\be$. Teraz możemy obliczyć
 \begin{equation}
-  \label{eq:Leja-9}
+  \label{eq:Leja-09}
   \begin{split}
     \cos \theta_{ 0 } = \cos \tfr{ \vp }{ 2 } = \onehalf ( 1 + \cos
     \vp ),
@@ -1434,17 +1434,32 @@ i~$[ t_{ k - 1 }, t_{ k } + \veps ]$ dla wszystkich~$\veps > 0$.
 \vspace{\spaceFour}
 
 
-\start \Str{32} Powstaje pytanie, czy można wprowadzić orientację
-na~płaszczyźnie zespolonej, inaczej niż traktując ją jako płaszczyznę
-rzeczywistą $\C \simeq \R^{ 2 }$? Zauważmy bowiem, że~podana tu
-definicji jest z~praktycznego punktu widzenie
-wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, gdy~była
-  ona~niewystarczający.}, jednak nieścisła. Wystarczy zadać pytanie,
-czy idziemy po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
-Poniżej przedstawimy standardowe ścisłe sformułowanie orientacji
-krzywej.
+\start \Str{32} Podana tu definicji jest z~praktycznego punktu
+widzenie wystarczająca\footnote{Ja~przynajmniej nie znam przypadku,
+  gdy~była ona~niewystarczający.}, jednak nieścisła. Wystarczy zadać
+pytanie, czy idziemy po~krzywej ,,głową do~góry'', czy~,,głową
+do~dołu''?
 
-Standardowe ścisłe sformułowanie jest następujące. ??????
+Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
+dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
+ciągła (w~tej zresztą ogólnej formie pojęcie orientacji jest
+tu~podane). W~pełni ścisłe sformułowanie tego problemu nie jest wcale
+łatwe. W~tej chwili najbardziej obiecujące wydaje mi~się podejście
+w~którym najpierw definiuje~się orientację okręgu jednostkowego,
+później zaś ,,homotopie zachowujące orientację'', za~krzywą
+zorientowaną dodatnio uznać taką, która jest ,,homotopijna
+z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio''. O~ile
+jednak zdefiniowanie okręgu zorientowanego dodatnio nie jest trudne,
+to~podanie w~sposób ścisły i~wystarczająco ogólnych takich homotopii
+przekracza moją wiedzę i~zdolności.
+
+Dla zupełności zdefiniujemy tutaj \textbf{dodatnio zorientowany okrąg
+  jednostkowy}. Definicja najkrótsza polega na~wskazaniu, że~okrąg ten
+jest dany przez parametryzację $z( t ) = e^{ i t }$. Można podać
+bardziej satysfakcjonujące definicje, bo~głębiej uzasadniające czemu
+ta parametryzacja jest dodatnia, lecz biorąc pod uwagę, że~nie udało
+mi~się zdefiniować odpowiednich homotopii i~tym samym główny problem
+jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
 \vspace{\spaceFour}
 
@@ -1591,13 +1606,33 @@ mieć skok, a~więc przestaje być ciągła.
 \vspace{\spaceFour}
 
 
+\start \Str{60} Nie udowodniono tu, że~dwie dowolne gałęzie logarytmu
+różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
+\begin{equation}
+  \label{eq:Leja-36}
+  e^{ l_{ i }( z ) } = e^{ l_{ j }( z ) }
+  \iff e^{ l_{ i }( z ) } / e^{ l_{ j }( z ) } = e^{ l_{ i }( z ) - l_{ j }( z ) }
+  = 1.
+\end{equation}
+Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
+$\k( z ) \in \Z$. Jako różnica dwóch funkcji ciągłych jest to~funkcja
+ciągła, jednak funkcja ciągła o~wartościach całkowitych musi być równa
+stałej, czyli $k( z ) = k \in \Z$.
+
+\vspace{\spaceFour}
+
+
 \start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
 traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
 \vspace{\spaceFour}
 
 
-\start \Str{68}
+\start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
+zespoloną, a~formalną kluczowe jest to, że~zakłada~się w~nim, iż
+pochodne cząstkowe istnieją i~są ciągłe. Założenie to zostało podane
+wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
+twierdzenia.
 
 \vspace{\spaceFour}
 
@@ -1625,7 +1660,7 @@ policz~$\abso{ z }^{ 2 } + 1$.
 \vspace{\spaceFour}
 
 
-\start \Str{75} W~opisie rzutu Mercantora zabrakło wyjaśnienia,
+\start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
 po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
 to~jednak jasno z~rysunku.
 
@@ -1639,6 +1674,59 @@ Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
 poza tym punktem.
 
 \vspace{\spaceFour}
+
+
+\start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
+całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
+że~rzeczywiście równa jest ona liczbie obiegów, liczonych ze~zwrotem,
+wokół punktu~$a$ krzywej zamkniętej~$C$.
+
+\vspace{\spaceFour}
+
+
+\start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
+tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
+krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
+dać~się aproksymować ją przez linię łamaną.
+
+\vspace{\spaceFour}
+
+
+\start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
+zadziwiająco dużo twierdzeń z~topologii płaszczyzny i~krzywych,
+których dowody wcale nie~są dla mnie oczywiste. Po pierwsze,
+że~istnieją łuki regularne~$l_{ i }$ łączące kontur~$C_{ 0 }$
+z~konturami $C_{ i }$ i~że~powstała w~wyniku tej konstrukcji krzywa
+jest wciąż kawałkami gładka. Po~drugie należy udowodnić, że~w~tej
+nowej krzywej znajdują~się wszystkie krzywe $-C_{ i }$ i~po każdej
+z~nich całkujemy dokładnie raz, brak zaś w~ogóle $C_{ i }$.
+Po~trzecie, że~po~każdym z~łuków $l_{ i }$ całkujemy dokładnie dwa
+razy, obiegając je w~dwóch przeciwnych kierunkach.
+
+Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc jest
+zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
+
+\vspace{\spaceFour}
+
+
+\start \Str{94} W~punkcie \S 7 należy zauważyć, że~przez drogę można
+rozumieć tylko krzywe kawałkami gładką. W~przeciwnym wypadku nie można
+stosować udowodnionych twierdzeń o~całkach.
+
+\vspace{\spaceFour}
+
+
+\start \Str{96} Dowód, że~w~obszarze jednospójnym funkcja
+$\log f( z )$ istnieje jest w~tym momencie niepełny. Ponieważ
+założyliśmy, że~funkcji $f( z )$ jest analityczna, w~tym momencie
+wiemy tylko, że~istnieje jej pierwsza pochodna. Z~tego względu nie
+możemy twierdzić, że~$f'( z ) / f( z )$ jest różniczkowalna, tym samym
+analityczna. Dopiero gdy dowiedziemy, że~każda funkcja analityczna
+jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
+
+\vspace{\spaceFour}
+
+% \vspace{\spaceFour}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -1692,12 +1780,46 @@ poza tym punktem.
     79  & &  5 & okręgów~: & okręgów: \\
     80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
     80  & & 10 & prostą~: & prostą: \\
+    90  &  2 & & \emph{krzywą zamkniętą} & \emph{konturem} \\
     99  &  1 & & zewnątrz & na~zewnątrz \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
+           & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
     \hline
   \end{tabular}
 \end{center}
@@ -1755,7 +1877,7 @@ w~powierzchnię boczną \\
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{Bibliography}{}
+\bibliographystyle{alpha} \bibliography{LibMathInfo}{}
 
 
 
