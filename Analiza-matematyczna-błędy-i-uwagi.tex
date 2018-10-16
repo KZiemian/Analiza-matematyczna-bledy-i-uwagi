@@ -1731,9 +1731,52 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 \vspace{\spaceFour}
 
 
-\start \Str{102}
+\start \Str{102} Pokazano tu, że~jeśli funkcja analityczna ma~0
+skończonego rzędu, to~pewnym jego otoczeniu nie przyjmuje wartości~0.
+Z~tego chyba jednak nie wynika od~razu, że~jeśli zeruje~się na~zbiorze
+posiadającym punkt skupienia wewnątrz obszaru określoności~$D$,
+to~zeruje~się w~całym~$D$.
 
-% \vspace{\spaceFour}
+Aby to udowodnić potrzebne nam będzie następujący lemat. Jeśli funkcja
+analitycznej $f( z )$ określona w~obszarze~$D$, jest równa zeru
+w~pewnym zbiorze otwartym to~zbiór ten jest równy $\emptyset$
+albo~$D$. Rozpatrzmy zbiór $E$ takich punktów, że~$f( z )$ jest równa
+zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
+\begin{eqnarray}
+  \label{eq:Leja-37}
+  E = \Cup_{ z \in E } \Oc_{ z },
+\end{eqnarray}
+gdzie $\Oc_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
+w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia zbioru $E$
+i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
+do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
+$f'( z )$, stąd
+\begin{equation}
+  \label{eq:Leja-38}
+  f( w_{ 0 } ) = \Lim_{ \nToInfty } f( w_{ n } ) = 0.
+\end{equation}
+Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
+i~powtarzając powyższe rozumowanie otrzymujemy,
+że~$f'( w_{ 0 } ) = 0$. Kontynuując to~rozumowanie pokazujemy,
+że~$f^{ ( k ) }( w_{ 0 } ) = 0$, $k = 0, 1, 2, \ld$. Ponieważ znikają
+wszystkie wyrazy rozwinięcia $f( z )$ w~szereg Taylora w~punkcie
+$w_{ 0 }$ i~szereg ten musi mieć niezerowy promień zbieżności,
+funkcja~$f( z )$ znika pewnym otoczeniu~$w_{ 0 }$ i~tym samym
+$w \in E$.
+
+Ponieważ $E$ jest jednocześnie otwarty i~domknięty w~$D$, a~$D$ jako
+obszar jest zbiorem spójnym, $E = \emptyset$ lub $E = D$.
+
+Przejdźmy do~dowodu zasadniczego twierdzenia. Jeśli funkcja $f( z )$
+zeruje~się na zbiorze posiadającym punkt skupienia $z_{ 0 } \in D$, to
+w~$z_{ 0 }$ muszą znikać wszystkie wyrazy jej szeregu Taylora, na~mocy
+tego co pokazał Leja. Ponownie korzystając z~tego, że~promień
+zbieżności tego szeregu jest niezerowy, widzimy, że~funkcja~$f( z )$
+znika w~kole otwartym o~niezerowym promieniu, więc na~mocy
+poprzedniego lematu znika w~całym~$D$.
+
+\vspace{\spaceFour}
+
 
 \CenterTB{Błędy}
 \begin{center}
