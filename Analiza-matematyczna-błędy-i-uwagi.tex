@@ -1438,11 +1438,11 @@ i~$[ t_{ k - 1 }, t_{ k } + \veps ]$ dla wszystkich~$\veps > 0$.
 \vspace{\spaceFour}
 
 
-\start \Str{32} Podana tu definicji jest z~praktycznego punktu
-widzenie wystarczająca\footnote{Ja~przynajmniej nie znam przypadku,
-  gdy~była ona~niewystarczający.}, jednak nieścisła. Wystarczy zadać
-pytanie, czy idziemy po~krzywej ,,głową do~góry'', czy~,,głową
-do~dołu''?
+\start \Str{32} Podana tu definicji krzywej zorientowanej dodatnio
+jest z~praktycznego punktu widzenie
+wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, gdy~była
+  ona~niewystarczający.}, jednak nieścisła. Wystarczy zadać pytanie,
+czy idziemy po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
 
 Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
 dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
@@ -1464,6 +1464,20 @@ bardziej satysfakcjonujące definicje, bo~głębiej uzasadniające czemu
 ta parametryzacja jest dodatnia, lecz biorąc pod uwagę, że~nie udało
 mi~się zdefiniować odpowiednich homotopii i~tym samym główny problem
 jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
+
+\vspace{\spaceFour}
+
+
+\start \Str{32} Ze~względów praktycznych lepiej jest przyjąć,
+że~kontur jest kawałkami gładką, a~nie po~prostu gładką, zorientowaną
+dodatnio krzywą Jordana. W~praktyce bowiem nazwy konturu używa~się
+często dla określenia krzywych zbudowanych z~okręgów, fragmentów
+okręgów i~prostych, które~są tylko kawałkami gładkie.
+
+Należy zauważyć, że~pojęcie konturu używa~się w~praktyce nawet
+w~ogólniejszych przypadkach, kiedy krzywe mają punkty wielokrotne.
+Takie jednak poszerzenie pojęcia konturu, odeszłoby by~chyba zbyt
+daleko od~słów Lejii.
 
 \vspace{\spaceFour}
 
@@ -1713,9 +1727,16 @@ zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 \vspace{\spaceFour}
 
 
-\start \Str{94} W~punkcie \S 7 należy zauważyć, że~przez drogę można
-rozumieć tylko krzywe kawałkami gładką. W~przeciwnym wypadku nie można
-stosować udowodnionych twierdzeń o~całkach.
+\start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
+zostało one w~żaden sposób jasno zdefiniowane, pozostając na~poziomie
+intuicji matematycznej.
+
+\vspace{\spaceFour}
+
+
+\start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
+\textbf{drogi całkowania}, jednak nie jest ono zdefiniowane. Przez
+\textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką.
 
 \vspace{\spaceFour}
 
@@ -1778,6 +1799,13 @@ poprzedniego lematu znika w~całym~$D$.
 \vspace{\spaceFour}
 
 
+\start \textbf{Str.~106, wiersze 1--2.} Nierówność
+$\abso{ f( z' ) } > \abso{ f( z_{ 0 } ) }$ jest bardzo brzydko
+podzielona między dwie linie.
+
+\vspace{\spaceFour}
+
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -1831,7 +1859,7 @@ poprzedniego lematu znika w~całym~$D$.
     80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
     80  & & 10 & prostą~: & prostą: \\
     90  &  2 & & \emph{krzywą zamkniętą} & \emph{konturem} \\
-    99  &  1 & & zewnątrz & na~zewnątrz \\
+    94  & &  6 & regularną & kawałkami gładką \\
     \hline
   \end{tabular}
 
@@ -1842,13 +1870,14 @@ poprzedniego lematu znika w~całym~$D$.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    99  &  1 & & zewnątrz & na~zewnątrz \\
     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
            & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
     102 & &  7 & części & części otwartej \\
     105 & &  6 & zerowych : & zerowych: \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    106 & &  2 & \emph{jest w~środku} & \emph{w~środku} \\
+    106 & &  1 & \emph{równa} & \emph{jest równa} \\
+    107 &  6 & & $\abso{ z } \leq r$ & $\abso{ z } = r$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1879,15 +1908,18 @@ poprzedniego lematu znika w~całym~$D$.
 \Pow  nieograniczone i~domknięte \\
 \StrWg{36}{5} \\
 \Jest Ze~wzorów (9)~otrzymujemy \\
-\Pow Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\Pow  Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
 \StrWg{56}{2} \\
 \Jest a~istnieją wartości~$w$, które \\
 \Pow  a~istnieje wartość~$w$, którą \\
-\StrWg{75}{125} \\
+\StrWg{75}{12} \\
 \Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
-\Pow rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+\Pow  rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
+\StrWd{107}{12} \\
+\Jest dowolnym konturem zawartym \\
+\Pow  dowolną drogą całkowania zawartą \\
 
 \vspace{\spaceTwo}
 
