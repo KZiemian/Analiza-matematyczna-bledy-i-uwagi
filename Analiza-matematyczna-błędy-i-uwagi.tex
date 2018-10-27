@@ -861,11 +861,6 @@ w~istocie jest.
 % ######################################
 
 
-% \newpage
-% \Field{Analiza zespolona} % Tytuł całego tekstu
-
-% \vspace{\spaceTwo} \vspace{\spaceThree}
-% % ######################################
 
 
 
@@ -1499,9 +1494,9 @@ prostopadły do~tej prostej.
 \vspace{\spaceFour}
 
 
-\start \Str{36} Nazwanie prostych \tb{okręgami niewłaściwymi}
-i~\tb{okręgami przechodzącymi przez punkt w nieskończoności} jest to,
-że~rzucie stereograficznym obrazem okręgu na~sferze przechodzącego
+\start \Str{36} Nazwanie prostych \textbf{okręgami niewłaściwymi}
+i~\textbf{okręgami przechodzącymi przez punkt w nieskończoności} jest
+to, że~rzucie stereograficznym obrazem okręgu na~sferze przechodzącego
 przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 
 \vspace{\spaceFour}
@@ -1699,6 +1694,12 @@ całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
 że~rzeczywiście równa jest ona liczbie obiegów, liczonych ze~zwrotem,
 wokół punktu~$a$ krzywej zamkniętej~$C$.
 
+Należy też dodać komentarz, że~okrążenie punktu przez krzywą liczymy
+ze~znakiem plus, gdy~podczas okrążania krzywa jest zorientowana
+dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
+zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze krzywej
+zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny czas.
+
 \vspace{\spaceFour}
 
 
@@ -1807,6 +1808,13 @@ podzielona między dwie linie.
 \vspace{\spaceFour}
 
 
+\start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
+wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
+w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
+
+\vspace{\spaceFour}
+
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -1890,7 +1898,7 @@ podzielona między dwie linie.
              ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
     132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
-    % & & & & \\
+    140 & &  7 & $f |$ & $\abso{ f }$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
