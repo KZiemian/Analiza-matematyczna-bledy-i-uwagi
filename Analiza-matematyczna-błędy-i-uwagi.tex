@@ -168,7 +168,7 @@
 \start \Str{7} Dla pełniejszego wykładu, warto tu przytoczyć pozostałe
 operacje z~udziałem $\pm \infty$.
 \begin{equation}
-  \label{eq:Lojasiewicz-1}
+  \label{eq:Lojasiewicz-01}
   \begin{split}
     &a + ( \pm \infty ) = ( \pm \infty ) + a = \pm \infty, \\
     &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \pm \infty,
@@ -189,7 +189,7 @@ dla~$x = \pm \infty$ i~$y = 0$ (odpowiednio $x = 0$
 i~$y = \pm \infty$), bo jeśli weźmiemy $x_{ n } = n$, $y_{ n } = 1/n$,
 to
 \begin{equation}
-  \label{eq:Lojasiewicz-2}
+  \label{eq:Lojasiewicz-02}
   \Lim_{ \nToInfty } x_{ n } y_{ n } = \Lim_{ \nToInfty } 1 = 1 \neq 0
   = ( +\infty ) \cdot 0.
 \end{equation}
@@ -197,7 +197,7 @@ Suma nie jest ciągła dla~$x = +\infty$ i~$y = -\infty$ (odpowiednio
 $x = -\infty$ i~$y = +\infty$), bo~jeśli weźmiemy $x_{ n } = 1 + n$
 i~$y_{ n } = -n$, to
 \begin{equation}
-  \label{eq:Lojasiewicz-3}
+  \label{eq:Lojasiewicz-03}
   \begin{split}
     \Lim_{ \nToInfty } ( x_{ n } + y_{ n } ) = \Lim_{ \nToInfty } 1 =
     1 \neq 0 = +\infty - \infty.
@@ -205,7 +205,7 @@ i~$y_{ n } = -n$, to
 \end{equation}
 Mnożenie nie jest łączne, bo
 \begin{equation}
-  \label{eq:Lojasiewicz-4}
+  \label{eq:Lojasiewicz-04}
   \begin{split}
     &( a + \infty ) - \infty = \infty - \infty = 0, \\
     &a + ( \infty - \infty ) = a + 0 = a.
@@ -213,7 +213,7 @@ Mnożenie nie jest łączne, bo
 \end{equation}
 Mnożenie nie jest rozłączne względem dodawania, bo
 \begin{equation}
-  \label{eq:Lojasiewicz-5}
+  \label{eq:Lojasiewicz-05}
   \begin{split}
     &( +\infty ) \cdot ( a - \infty ) = ( +\infty \cdot a ) - \infty
     = +\infty - \infty = 0, \\
@@ -230,13 +230,13 @@ możemy przenosić wyrazów z~jednej strony równania na drugą, może
 wydawać~się nieoczywiste, dlatego tutaj wyjaśnimy to na przykładzie.
 Rozpatrzmy równość
 \begin{equation}
-  \label{eq:Lojasiewicz-6}
+  \label{eq:Lojasiewicz-06}
   1 + \infty = \infty.
 \end{equation}
 Teraz chcielibyśmy odjąć od~obu stron $\infty$ i~wykonać obliczenia
 w~następujący sposób
 \begin{equation}
-  \label{eq:Lojasiewicz-7}
+  \label{eq:Lojasiewicz-07}
   \begin{split}
     &\tr{L} = 1 + \infty - \infty = 1 + 0 = 1, \\
     &\tr{P} = \infty - \infty = 0.
@@ -245,12 +245,12 @@ w~następujący sposób
 Błąd wynika z~tego, że~tak naprawdę wyrażenie po~lewej stronie ma
 następującą postać
 \begin{equation}
-  \label{eq:Lojasiewicz-8}
+  \label{eq:Lojasiewicz-08}
   \tr{L} = ( 1 + \infty ) - \infty.
 \end{equation}
 Chcielibyśmy przekształcić ten wzór w~następujący sposób
 \begin{equation}
-  \label{eq:Lojasiewicz-9}
+  \label{eq:Lojasiewicz-09}
   1 + ( \infty - \infty ) = 1 + 0 = 1.
 \end{equation}
 Tego jednak zrobić nie możemy ze~względu na~brak łączności dodawania.
@@ -259,7 +259,6 @@ Zignorowanie tego prowadzi do~błędnych wyników powyżej.
 \vspace{\spaceFour}
 
 
-\start \Str{9}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -739,21 +738,6 @@ przedziale, choć nie jest różniczkowalne w~0.
   \cite{NahinInterestingIntegrals2015} }
 
 
-
-% \noindent
-% Uwagi:
-% \begin{itemize}
-% \item[] \tb{Konkretne strony.}
-% \item[--] \Str{6} Stwierdzenie, że~wszystkie funkcje pierwotne
-%   różnią~się o~stałą, można zinterpretować w~błędny, acz bez~ustanku
-%   powtarzany, sposób. Dwie funkcje pierwotne różnią~się o~stałą
-%   dowolną na każdym przedziale spójnym, jednak jeśli dziedzina
-%   funkcji składa~się z~dwóch lub więcej przedziałów spójnych, na
-%   każdym z~nich można wybrać inną stałą dowolną.
-% \item[--] \Str{34} Nie jestem w~stanie zrozumieć, dlaczego
-%   największym wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest
-%   $Q_{ 1 }$. Może to jakiś znany fakt z~algebry? \Dok
-% \end{itemize}
 
 \CenterTB{Błędy}
 % \begin{center}
@@ -1765,10 +1749,10 @@ analitycznej $f( z )$ określona w~obszarze~$D$, jest równa zeru
 w~pewnym zbiorze otwartym to~zbiór ten jest równy $\emptyset$
 albo~$D$. Rozpatrzmy zbiór $E$ takich punktów, że~$f( z )$ jest równa
 zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
-\begin{eqnarray}
+\begin{equation}
   \label{eq:Leja-37}
   E = \bigcup_{ z \in E } \Oc_{ z },
-\end{eqnarray}
+\end{equation}
 gdzie $\Oc_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
 w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia zbioru $E$
 i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
