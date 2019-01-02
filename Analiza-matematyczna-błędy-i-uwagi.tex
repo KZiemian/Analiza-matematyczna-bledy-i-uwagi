@@ -20,10 +20,10 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
@@ -45,8 +45,8 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
@@ -63,7 +63,7 @@
 % \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
 \usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
@@ -167,7 +167,7 @@
 
 % \CenterTB{Uwagi}
 
-% % \tb{Konkretne strony.}
+% % \textbf{Konkretne strony.}
 
 % % \vspace{\spaceFour}
 
@@ -978,7 +978,7 @@ tego nie jest wystarczający.
 
 Rozwiązanie to~polega na~ograniczeniu~się do~argumentów
 zawierających~się w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie
-wyprowadzenia wzoru na~pierwiastek n\dywiz stopnia (str.~11--12)
+wyprowadzenia wzoru na~pierwiastek $n$-tego stopnia (str.~11--12)
 staje~się to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie
 byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się
 bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
@@ -988,9 +988,9 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 
 
 \start \Str{12} Należy silniej niż w~tekście podkreślić,
-że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową, lecz~$n$\dywiz
-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
-jednowartościowych\footnote{Pisał już o~tym Frege,
+że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową,
+lecz~$n$-wartościową, nie można więc jej używać w~ten sam sposób
+co~funkcji jednowartościowych\footnote{Pisał już o~tym Frege,
   zob.\red{???odnśnik}.}. Zapomnienie o~tym prowadzi do~znanego
 paradoksu. Mamy mianowicie
 \begin{equation}
@@ -1701,7 +1701,7 @@ Choć potem zostanie pokazane, że~są one klasy
 $\Cinfty( \Rtwo )$\footnote{Dokładniej: są one analityczne na~$\Rtwo$.
   Jednak do~tej pory nie znalazłem dowodu tego faktu w~książce
   Lejii.}, to tutaj wystarczy nam, że~są klasy
-$\Cc^{ 1 }( \Rtw )$\footnote{Należy sprawdzić, czy nie wystarczy
+$\Cc^{ 1 }( \Rtwo )$\footnote{Należy sprawdzić, czy nie wystarczy
   zwykła różniczkowalność.}.
 
 Jeśli oznaczymy $z_{ 0 } = x_{ 0 } + i y_{ 0 }$,
@@ -1713,7 +1713,7 @@ punkt $z_{ 0 }$. Ze~wzoru (18) na~stronie~72 wiemy, że~jeśli
 $f'( z_{ 0 } ) \neq 0$, to co najmniej jedna z~pochodnych cząstkowych
 $u_{ x }( x_{ 0 }, y_{ 0 } )$, $v( x_{ 0 }, y_{ 0 } )$ jest różna
 od~0, niech będzie nią $u_{ x }( x_{ 0 }, y_{ 0 } )$. Wówczas na~mocy
-równań Cauchy'ego-Riemana
+równań Cauchy'ego-Riemanna
 $v_{ y }( x_{ 0 }, y_{ 0 } ) = u_{ x }( x_{ 0 }, y_{ 0 } ) \neq 0$. Na
 mocy twierdzenia o~funkcji uwikłanej, w~pewnym otoczeniu
 punktu~$z_{ 0 }$ można odwikłać równanie $c = u( x, y )$ względem
@@ -1733,7 +1733,8 @@ wynika, że~jest ona różna od~zera w~pewnym otoczeniu $z_{ 0 }$
 w~każdym punkcie tego otoczenia można powtórzyć całe powyższe
 rozumowanie i~otrzymać w~każdym punkcie analogiczny obraz poziomic.
 
-Dalej tu czegoś nie rozumiem.
+\red{Nie umiem pokazać, że jedna poziomica $v$ nie może przeciąć
+  poziomic $u$ dwa razy.}
 
 Pytanie jak ten obrazek lokalny, ma~się do globalnego zachowania
 poziomic, odkładam na inny czas (czyli pewnie nigdy).
@@ -1818,6 +1819,60 @@ intuicji matematycznej.
 ,,drogi całkowania'', jednak nie jest ono zdefiniowane. Przez
 \textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką. Dla
 wygody będziemy czasem mówili po~prostu o~,,drodze''.
+
+\vspace{\spaceFour}
+
+
+
+% ##################
+\begin{figure}
+  \centering
+
+  \begin{tikzpicture}[scale=1.3]
+    \def\scale{2.5}
+    \def\R{2.6}
+
+    \draw [help lines, ->] (0, 0) -- (\scale, 0);
+
+    \draw [help lines, ->] (0, -0.5) -- (0, \scale);
+
+    \draw [dashed] (-0.6 * \scale, 0) -- (0, 0);
+
+    \draw [line width=1pt, decoration={ markings, mark=at position
+      0.2 with {\arrow[line width=1.2pt]{>}}, mark=at position 0.6
+      with {\arrow[line width=1.2pt]{>}}}, postaction={decorate}]
+    (1, 0) arc (0:55:1) -- (0.57 * \R, 0.82 * \R);
+
+    % Kod w elispie do obliczania funkcji trygonometrycznych
+    % (cos (* pi (/ 55.0 180)))
+    % (sin (* pi (/ 55.0 180)))
+
+
+    \filldraw [black] (1, 0) circle (1.5pt) node [anchor=north] {1};
+
+    \filldraw [black] (0.57, 0.82) circle (1pt) node [anchor=east]
+    {$e^{ i \varphi }$};
+
+    \filldraw [black] (0.57 * \R, 0.82 * \R) circle (1.5pt)
+    node [anchor=west] {$R\, e^{ i \varphi }$};
+    
+
+    \node at (0.5, \scale) {$i\, \mathfrak{Im}\, z$};
+
+    \node at (\scale, -0.25) {$\mathfrak{Re}\, z$};
+    
+  \end{tikzpicture}
+  
+  \caption{Przykładowy kontur po~którym można całkować funkcje $1 / \zeta$
+    ,,od~1 do~nieskończoności''.}
+
+  \label{fig:Leja-02}
+\end{figure}
+% ##################
+
+
+
+\start \Str{95}
 
 \vspace{\spaceFour}
 
@@ -1915,7 +1970,7 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
     25  & &  6 & $\tr{re}\, z < 0$ & $\tr{re}\, z = 0$ \\
     27  & &  9 & wniosek~: & wniosek: \\
     27  &  6 & & zbieżny, & zbieżny. \\
-    27  & &  2 & Spójność & $N$\dywiz spójność \\
+    27  & &  2 & Spójność & $N$-spójność \\
     29  &  6 & & otwarty~: & otwarty: \\
     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
     30  & & 11 & $t$ & $( t - t_{ 0 } )$ \\
@@ -1947,7 +2002,7 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
     80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
     80  & & 10 & prostą~: & prostą: \\
     90  &  2 & & \emph{krzywą zamkniętą} & \emph{konturem} \\
-    92  & &  6 & \emph{krzywą} & \emph{kawałkami gładką krzywą} \\
+    90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
     \hline
   \end{tabular}
 
@@ -1958,6 +2013,7 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    92  & &  6 & \emph{krzywą} & \emph{krzywą kawałkami gładką} \\
     94  & &  6 & regularną & kawałkami gładką \\
     99  &  1 & & zewnątrz & na~zewnątrz \\
     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
@@ -2009,6 +2065,9 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
 \Pow rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
+\StrWg{95}{5} \\
+\Jest linią \\
+\Pow dowolna linia łamana \\
 \StrWd{107}{12} \\
 \Jest dowolnym konturem zawartym \\
 \Pow  dowolną drogą całkowania zawartą \\
