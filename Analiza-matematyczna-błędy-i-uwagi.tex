@@ -995,7 +995,7 @@ co~funkcji jednowartościowych\footnote{Pisał już o~tym Frege,
 paradoksu. Mamy mianowicie
 \begin{equation}
   \label{eq:Leja-07}
-  -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } 
+  -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 }
   = \sqrt{ ( -1 ) \cdot ( -1 ) } = \sqrt{ 1 } = 1.
 \end{equation}
 Jednak $\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy
@@ -1475,7 +1475,7 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
 
     \node at (1.3 * \radius, -0.25) {$\mathfrak{Re}\, z$};
-    
+
     \node at (0.63, 1.3 * \radius) {$i\, \mathfrak{Im}\, z$};
 
 
@@ -1486,9 +1486,9 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
     \node at (\radius, -0.25) {$R$};
 
     \node at (0.85 * \radius, 2) {$\Gamma$};
-    
+
   \end{tikzpicture}
-  
+
   \caption{Jeden z~podstawowych konturów całkowania~$\Gamma$.}
 
   \label{fig:Leja-01}
@@ -1736,7 +1736,7 @@ zagadnienia tego nie będziemy omawiać.
 \vspace{\spaceFour}
 
 
-\start \Str{74} Osie $\eta$ i~$\xi$ na~rys. 38~są podpisane na~odwrót.
+\start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
 
 \vspace{\spaceFour}
 
@@ -1822,7 +1822,7 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 \begin{figure}
   \centering
 
-  \begin{tikzpicture}[scale=1.3]
+  \begin{tikzpicture}[scale=1.35]
     \def\scale{2.5} \def\R{2.6}
 
     \draw [help lines, ->] (0, 0) -- (\scale, 0);
@@ -1831,10 +1831,10 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
     \draw [dashed] (-0.6 * \scale, 0) -- (0, 0);
 
-    \draw [line width=1pt, decoration={ markings, mark=at position 0.2
-      with {\arrow[line width=1.2pt]{>}}, mark=at position 0.6 with
-      {\arrow[line width=1.2pt]{>}}}, postaction={decorate}] (1, 0)
-    arc (0:55:1) -- (0.57 * \R, 0.82 * \R);
+    \draw [line width=0.9pt, decoration={ markings, mark=at position
+      0.2 with {\arrow[line width=1.2pt]{>}}, mark=at position 0.6
+      with {\arrow[line width=1.1pt]{>}}}, postaction={decorate}] (1,
+    0) arc (0:55:1) -- (0.57 * \R, 0.82 * \R);
 
     % Kod w elispie do obliczania funkcji trygonometrycznych
     % (cos (* pi (/ 55.0 180)))
@@ -1848,14 +1848,16 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
     \filldraw [black] (0.57 * \R, 0.82 * \R) circle (1.5pt) node
     [anchor=west] {$R\, e^{ i \varphi }$};
-    
+
+    \node at (1.0, 0.65) {$\Gamma$};
+
 
     \node at (0.5, \scale) {$i\, \mathfrak{Im}\, z$};
 
     \node at (\scale, -0.25) {$\mathfrak{Re}\, z$};
-    
+
   \end{tikzpicture}
-  
+
   \caption{Przykładowy kontur po~którym można całkować funkcje
     $1 / \zeta$ ,,od~1 do~nieskończoności''.}
 
@@ -1865,7 +1867,58 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
 
 
-\start \Str{95}
+\start \Str{95} W~twierdzeniu o~istnieniu jednoznacznej gałęzi
+logarytmu zakładamy, że~dany obszar~$D$ jest jednospójny i~nie zawiera
+$0$ i~$\infty$. Dlaczego musi byś jednospójny jest oczywiste,
+kontrprzykład z~okręgiem ze~stron~59--60 pokazuje, gdzie leży problem.
+Wykluczenie~$0$ też jest jasne, mówienie o~analityczności $1 / \zeta$
+w~zerze nie ma sensu. Większe problemy stwarza potrzeba usunięcia
+punktu~$\infty$.
+
+Istnieją po~temu dwa powody. Po pierwsze, zgodnie z~przyjęto
+definicjom jednospójności zbiór
+$\C \cap \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
+a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
+zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
+z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
+np.~prostą $\Real\, z < 0$, wykluczający tym samym z~rozważań
+wszystkie nieporządne zbiory.
+
+Drugi powód jest następujący. Rozpatrzmy jak na
+rysunku~(\ref{fig:Leja-02}) płaszczyznę zespoloną bez osi
+$\Real\, z \leq 0$. Można sobie zadać pytanie, czy~wartość całki
+z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur
+całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
+,,do~nieskończoności'' (dla prostoty przyjmijmy $a = 1$). Przez to
+ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
+$\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \C$ takich, że
+\begin{equation}
+  \label{eq:Leja-38}
+  \Lim_{ \RToInf } \gamma_{ R }( t_{ 1 } ) = \infty.
+\end{equation}
+Ponieważ wartość z~całki $1 / \zeta$ nie zależy od~drogi wystarczy
+posłużyć~się rodziną konturów $\gamma_{ R }$ przedstawioną na
+rysunku~(\ref{eq:Leja-02}). Nietrudne obliczenia pokazują, że~całka
+ta~jest zbieżna przy~$\RToInf$, do~$\infty$, niezależnie
+od~wartości~$\varphi$.
+
+Jakkolwiek można by więc nadać sens logarytmowi od~$\infty$, to~byłby
+wówczas pewien problem z~zależnością $\exp( \log z ) = z$. Nie
+istnieje bowiem żaden naturalny wybór wartości $\exp( \infty )$,
+bowiem
+\begin{equation}
+  \label{eq:1}
+  \begin{split}
+    \Lim_{ \xToPInf } e^{ x } = +\infty,
+    \quad
+    \Lim_{ \xToMInf } e^{ -x } = 0,
+    \quad x \in \R.
+  \end{split}
+\end{equation}
+Trzeba by więc przyjąć, że~$\exp( \infty ) = \infty$, by~zachodził
+wzór $\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę,
+decyzja by wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się
+jako dobrze uzasadniona.
 
 \vspace{\spaceFour}
 
