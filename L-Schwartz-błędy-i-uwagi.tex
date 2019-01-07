@@ -9,7 +9,7 @@
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
 \usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+\usepackage[utf8]{inputenc} % Włączenie kodowania TUF-8, co daje dostęp
 % do polskich znaków.
 \usepackage{lmodern} % Wprowadza fonty Latin Modern.
 \usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
@@ -23,8 +23,8 @@
 \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
 \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
@@ -45,9 +45,9 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -114,13 +114,6 @@
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
-\newcommand{\e}{\mr{e}}
-\newcommand{\ii}{\mr{i}} 
-\newcommand{\im}{\tr{im}}
-\newcommand{\V}{\mb{V}}
-\newcommand{\U}{\mb{U}}
-\newcommand{\CF}{\mc{C}}
-
 
 
 
@@ -144,7 +137,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle % Tytuł całego tekstu
 % ######################################
 
 
@@ -194,7 +187,7 @@ oczywiste, że nie będziemy go tu przytaczać.
 
 \vspace{\spaceTwo}
 
-\noi \tb{Rozdział IV.}
+\noi \textbf{Rozdział IV.}
 
 \vspace{\spaceThree}
 
@@ -231,7 +224,7 @@ w~stanie odpowiedzieć.
 \vspace{\spaceFour}
 
 
-\start \tb{2.} Podrozdział~6. ,,Obraz miary w odwzorowaniu'' korzysta
+\start \textbf{2.} Podrozdział~6. ,,Obraz miary w odwzorowaniu'' korzysta
 jawnie z~całki Radona i~funkcji ciągłych o~nośniku zwartym więc jego
 uogólnienie na regularne miary borelowskie może nie być możliwe (choć
 nie wydaje się to prawdopodobne). Ponieważ jednak formuły tutaj są
@@ -1470,7 +1463,7 @@ zastanowić. %
     480 & 10 & & są zazwyczaj & są \\
     481 & 10 & & $] a, b [$ & $] a, b]$ \\
     482 & 14 & & $| g_{ i } |$ & $g_{ i }$ \\
-    483 & &  9 & $\CF( X ) \otimes F$ & $\CF( X ) \ot \vec{ F }$ \\
+    483 & &  9 & $\Cc( X ) \otimes F$ & $\Cc( X ) \ot \vec{ F }$ \\
     487 & 10 & & \emph{jest zapewniona} & \emph{nie jest zapewniona} \\
     487 & 13 & & 32 przyjmując $p = 1$. & 32. \\
     487 & 16 & & $|| \vec{ f } ||^{ p } )$ & $|| \vec{ f } ||^{ p }$ \\
@@ -1635,7 +1628,8 @@ zastanowić. %
                  \right)$
            & $= \left( \fr{ 1 }{ \pd{}{ h }{ { x_{ N } } }( x ) }
              \right)$ \\
-    648 & & 12 & \tb{Całkowalność} & \tb{Różniczkowalność} \\
+    648 & & 12 & \textbf{Całkowalność}
+           & \textbf{Różniczkowalność} \\
     649 & &  1 & $\ora{ f_{ m n }( x ) - f_{ m n }( x ) }$
            & $\vec{ f }_{ m n }( x ) - \vec{ f }_{ m n }( x )$ \\
     649 & &  9 & \raisebox{\depth}
