@@ -3,29 +3,29 @@
 % --------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % --------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
 \usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
 % do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
 % ----------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
 % MARGINS
@@ -45,8 +45,8 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
@@ -54,21 +54,21 @@
 % ------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
 % ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
 % Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
-% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
-\usepackage{tikz} % Potężny pakiet PGF/TikZ.
-\usetikzlibrary{decorations.markings} % Włączenie konkretnych bibliotek
+\usepackage{tikz}  % Potężny pakiet PGF/TikZ.
+\usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
 % pakietu TikZ
 
 
@@ -76,9 +76,9 @@
 % ----------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
 % ----------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
+\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
+\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
 \newtheorem{wni}{Wniosek}
 
 
@@ -108,7 +108,7 @@
 % ----------------------------
 % Ustawienia różnych parametrów tekstu
 % ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
@@ -1893,7 +1893,7 @@ punktu~$\infty$.
 
 Istnieją po~temu dwa powody. Po pierwsze, zgodnie z~przyjęto
 definicjom jednospójności zbiór
-$\C \cap \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
+$\C \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
 a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
 zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
 z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
@@ -1944,6 +1944,26 @@ wiemy tylko, że~istnieje jej pierwsza pochodna. Z~tego względu nie
 możemy twierdzić, że~$f'( z ) / f( z )$ jest różniczkowalna, tym samym
 analityczna. Dopiero gdy dowiedziemy, że~każda funkcja analityczna
 jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
+
+\vspace{\spaceFour}
+
+
+\start \Str{99} Udowodnić wzór
+\begin{equation}
+  \label{eq:1}
+  \dd{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }
+  d\zeta
+  = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } } d\zeta,
+\end{equation}
+można na dwa sposoby. W~obu przypadkach będziemy potrzebowali
+następującego twierdzenia (zob. str.~??, \cite{}). Jeśli w~przestrzeni
+metrycznej dane~są dwa nieprzecinające~się zbiory $C$ i~$K$, przy czym
+$C$ jest domknięty, a~$K$ zwarty, to infimum odległość między punktami
+tych zbiorów jest silnie większa od~0. ???? Dodatkowo jeśli zbiór $C$
+jest zwarty, to~odległość ta~osiąga wartość minimalną.
+
+Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\set{ z }$ widzimy,
+że~odległość między tymi zbiorami $L > 0$.
 
 \vspace{\spaceFour}
 
