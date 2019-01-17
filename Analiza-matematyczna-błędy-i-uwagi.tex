@@ -1315,6 +1315,12 @@ należy zdefiniować krzywą jako funkcję zespoloną~$z( t )$, ciągłą
 na~pewnym przedziale~$I$ i~różną od~stałej. Wówczas wzór~(1)
 na~stronie~28 przedstawia zbiór punktów tej krzywej.
 
+Ponadto Leja wydaje~się używać pojęcia krzywej zarówno
+dla~odwzorowania, jak i~dla jego obrazu, która interpretacja jest
+właściwa wynika zwykle jasno z~kontekstu. Nie będziemy~się starali
+doprecyzować jego słów w~każdej z~tych sytuacji, jednak warto~się
+starać o~większą jasność i~precyzję tekstów matematycznych.
+
 \vspace{\spaceFour}
 
 
@@ -1948,14 +1954,14 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 \vspace{\spaceFour}
 
 
-\start \Str{99} Udowodnić wzór
+\start \Str{99} Wzór
 \begin{equation}
-  \label{eq:1}
-  \dd{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }
+  \label{eq:Leja-}
+  \dd{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }\,
   d\zeta
-  = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } } d\zeta,
+  = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
 \end{equation}
-można na dwa sposoby. W~obu przypadkach będziemy potrzebowali
+można udowodnić na~dwa sposoby. W~obu przypadkach będziemy potrzebowali
 następującego twierdzenia (zob. str.~??, \cite{}). Jeśli w~przestrzeni
 metrycznej dane~są dwa nieprzecinające~się zbiory $C$ i~$K$, przy czym
 $C$ jest domknięty, a~$K$ zwarty, to infimum odległość między punktami
@@ -2028,6 +2034,50 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 
 \vspace{\spaceFour}
 
+
+\start \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4)
+na~stronie~124
+\begin{equation}
+  \label{eq:Leja-}
+  a_{ n } = \frac{ 1 }{ 2\pi i }
+  \Int_{ K } \frac{ f( \zeta ) }{ ( \zeta - a )^{ n + 1 } } \, d\zeta,
+  \quad n = 0, \pm 1, \pm 2, \ldots,
+\end{equation}
+gdzie $K$ jest dowolnym okręgiem leżącym wewnątrz pierścienia
+$0 < \abso{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
+\begin{equation}
+  \label{eq:Leja-}
+  a_{ -1 } = \frac{ 1 }{ 2\pi i } \Int_{ K } f( \zeta )\, d\zeta.
+\end{equation}
+Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
+obszaru ograniczonego przez $C$ i~$K$ ($K$ przyjmujemy jako tak mały
+by~zawierał~się wewnątrz~$C$\footnote{Czy pojęcie ,,znajdowania~się
+  wewnątrz konturu'' zostało już zdefiniowana. Topologiczne wnętrze
+  konturu zwykle jest puste, a~najpewniej zawsze musi być puste.}),
+więc~całki po~nich~są równe, a~stąd wynika wzór~(17).
+
+\vspace{\spaceFour}
+
+
+\start \Str{162} Nazwa \emph{szereg lukowy} bierze~się zapewne stąd,
+że~jeśli rozpatrzymy względną odległość między dwoma kolejnymi
+wykładnikami wynosi
+\begin{equation}
+  \label{eq:Leja-}
+  \frac{ \abso{ \la_{ n + 1 } - \la_{ n } } }{ \abso{ \la_{ n } } }
+  \geq \theta > 0.
+\end{equation}
+W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
+której długość jest większa od~$theta$.
+
+Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
+możemy tylko powiedzieć, że
+\begin{equation}
+  \label{eq:Leja-}
+  \frac{ \abso{ \la_{ n + 1 } - \la_{ n } } }{ \abso{ \la_{ n } } }
+  = \frac{ 1 }{ n }.
+\end{equation}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -2104,8 +2154,6 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
     106 & &  2 & \emph{jest w~środku} & \emph{w~środku} \\
     106 & &  1 & \emph{równa} & \emph{jest równa} \\
     107 &  6 & & $\abso{ z } \leq r$ & $\abso{ z } = r$ \\
-    119 & 15 & & $K \{ \abso{ z - z_{ 0 } } < R \}$
-           & $K = \{ \abso{ z - z_{ 0 } } < R \}$ \\
     131 & 11 & & myś & myśl \\
     126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{
                  ( z - z_{ 0 } )^{ n + 1 } }$
@@ -2115,11 +2163,11 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
     140 & &  7 & $f |$ & $\abso{ f }$ \\
     143 & & 18 & w~otoczeniu punktu & \emph{w~otoczeniu punktu} \\
+    159 & 12 & & części & części otwartej \\
+    159 & & 10 & części & części otwartej \\
+    164 & 10 & & 102 & 101 \\
     166 &  6 & & potęgowych . & potęgowych. \\
     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -2160,6 +2208,12 @@ w~powierzchnię boczną \\
 \StrWd{134}{16} \\
 \Jest krzywych zamkniętych \\
 \Pow  kawałkami gładkich zamkniętych krzywych \\
+\StrWg{165}{2} \\
+\Jest niech brzeg tego obszaru zawiera odcinek \\
+\Pow  niech część wspólna brzegu tego obszaru i~osi $\textrm{im}\, z = 0$ tworzy odcinek \\
+\StrWd{165}{6} \\
+\Jest \emph{symetrii{ }{ } Riemanna-Schwarza} \\
+\Pow \emph{symetrii Riemanna-Schwarza}
 
 \vspace{\spaceTwo}
 
