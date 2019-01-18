@@ -1915,7 +1915,7 @@ całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
 ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
 $\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \C$ takich, że
 \begin{equation}
-  \label{eq:Leja-38}
+  \label{eq:Leja-37}
   \Lim_{ \RToInf } \gamma_{ R }( t_{ 1 } ) = \infty.
 \end{equation}
 Ponieważ wartość z~całki $1 / \zeta$ nie zależy od~drogi wystarczy
@@ -1929,7 +1929,7 @@ wówczas pewien problem z~zależnością $\exp( \log z ) = z$. Nie
 istnieje bowiem żaden naturalny wybór wartości $\exp( \infty )$,
 bowiem
 \begin{equation}
-  \label{eq:Leja-39}
+  \label{eq:Leja-38}
   \begin{split}
     \Lim_{ \xToPInf } e^{ x } = +\infty, \quad \Lim_{ \xToMInf } e^{
       -x } = 0, \quad x \in \R.
@@ -1956,20 +1956,40 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 
 \start \Str{99} Wzór
 \begin{equation}
-  \label{eq:Leja-}
+  \label{eq:Leja-39}
   \dd{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }\,
   d\zeta
   = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
 \end{equation}
-można udowodnić na~dwa sposoby. W~obu przypadkach będziemy potrzebowali
-następującego twierdzenia (zob. str.~??, \cite{}). Jeśli w~przestrzeni
-metrycznej dane~są dwa nieprzecinające~się zbiory $C$ i~$K$, przy czym
-$C$ jest domknięty, a~$K$ zwarty, to infimum odległość między punktami
-tych zbiorów jest silnie większa od~0. ???? Dodatkowo jeśli zbiór $C$
-jest zwarty, to~odległość ta~osiąga wartość minimalną.
+można udowodnić na~dwa sposoby. W~obu przypadkach będziemy
+potrzebowali następującego twierdzenia (zob. str.~??, \cite{}). Jeśli
+w~przestrzeni metrycznej dane~są dwa nieprzecinające~się zbiory $C$
+i~$K$, przy czym $C$ jest domknięty, a~$K$ zwarty, to infimum
+odległość między punktami tych zbiorów jest silnie większa od~0. ????
+Dodatkowo jeśli zbiór $C$ jest zwarty, to~odległość ta~osiąga wartość
+minimalną.
 
 Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\set{ z }$ widzimy,
-że~odległość między tymi zbiorami $L > 0$.
+że~odległość między tymi zbiorami $L > 0$. Wynika stąd, że~dla
+$z' \in K( z, L / 2 )$ zachodzi
+$\abso{ 1 / ( \zeta - z' )^{ p + 1 } } \leq 1 / ( L / 2 )^{ p + 1 }$.
+Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
+  notacji, utożsamia tutaj krzywą $C$ z~jej obrazem.}
+\begin{equation}
+  \label{eq:Leja-40}
+  M = \max_{ w \in C } \abso{ \vp( w ) },
+\end{equation}
+widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
+$\vp( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
+funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione są
+założenia twierdzenia o~różniczkowaniu pod znakiem całki (zob.
+\cite{}), z~którego wynika wzór \eqref{eq:}.
+
+Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
+czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~0
+jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
+twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
+na~????? (zob. \cite{}).
 
 \vspace{\spaceFour}
 
@@ -1986,7 +2006,7 @@ w~pewnym zbiorze otwartym to~zbiór ten jest równy $\emptyset$
 albo~$D$. Rozpatrzmy zbiór $E$ takich punktów, że~$f( z )$ jest równa
 zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
 \begin{equation}
-  \label{eq:Leja-40}
+  \label{eq:Leja-41}
   E = \bigcup_{ z \in E } \Oc_{ z },
 \end{equation}
 gdzie $\Oc_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
@@ -1995,7 +2015,7 @@ i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
 do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
 $f'( z )$, stąd
 \begin{equation}
-  \label{eq:Leja-41}
+  \label{eq:Leja-42}
   f( w_{ 0 } ) = \Lim_{ \nToInfty } f( w_{ n } ) = 0.
 \end{equation}
 Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
@@ -2028,6 +2048,12 @@ podzielona między dwie linie.
 \vspace{\spaceFour}
 
 
+\start \Str{116} Pochodzenia nazwy \emph{potencjał logarytmiczny}
+wyjaśnia analiza przeprowadzona na~stronie~152.
+
+\vspace{\spaceFour}
+
+
 \start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
 wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
 w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
@@ -2038,7 +2064,7 @@ w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 \start \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4)
 na~stronie~124
 \begin{equation}
-  \label{eq:Leja-}
+  \label{eq:Leja-43}
   a_{ n } = \frac{ 1 }{ 2\pi i }
   \Int_{ K } \frac{ f( \zeta ) }{ ( \zeta - a )^{ n + 1 } } \, d\zeta,
   \quad n = 0, \pm 1, \pm 2, \ldots,
@@ -2046,15 +2072,27 @@ na~stronie~124
 gdzie $K$ jest dowolnym okręgiem leżącym wewnątrz pierścienia
 $0 < \abso{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
 \begin{equation}
-  \label{eq:Leja-}
+  \label{eq:Leja-44}
   a_{ -1 } = \frac{ 1 }{ 2\pi i } \Int_{ K } f( \zeta )\, d\zeta.
 \end{equation}
 Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
-obszaru ograniczonego przez $C$ i~$K$ ($K$ przyjmujemy jako tak mały
-by~zawierał~się wewnątrz~$C$\footnote{Czy pojęcie ,,znajdowania~się
-  wewnątrz konturu'' zostało już zdefiniowana. Topologiczne wnętrze
-  konturu zwykle jest puste, a~najpewniej zawsze musi być puste.}),
-więc~całki po~nich~są równe, a~stąd wynika wzór~(17).
+obszaru ograniczonego przez $C$ i~$K$ (promień okręgu $K$ przyjmujemy
+tak mały by~ten okrąg zawierał~się wewnątrz~$C$\footnote{Czy pojęcie
+  ,,znajdowania~się wewnątrz konturu'' zostało już zdefiniowana.
+  Topologiczne wnętrze konturu zwykle jest puste, a~najpewniej zawsze
+  musi być puste.}), więc~całki po~nich~są równe, a~stąd wynika
+wzór~(17).
+
+\vspace{\spaceFour}
+
+
+\start \Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza
+odnosi~się do~siły elektrostatycznej w~dwóch wymiarach przestrzennych.
+Wtedy istotnie potencjał pola ładunku punktowego wynosi
+$m \log(1 / \abso{ \vecr } )$, $\abso{ \vecr } = x^{ 2 } + y^{ 2 }$.
+Gdybyśmy rozważali sytuację trójwymiarową, wtedy ten potencjał miałby
+wartość $m / \abso{ \vecr }$,
+$\abso{ \vecr } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
 \vspace{\spaceFour}
 
@@ -2063,7 +2101,7 @@ więc~całki po~nich~są równe, a~stąd wynika wzór~(17).
 że~jeśli rozpatrzymy względną odległość między dwoma kolejnymi
 wykładnikami wynosi
 \begin{equation}
-  \label{eq:Leja-}
+  \label{eq:Leja-45}
   \frac{ \abso{ \la_{ n + 1 } - \la_{ n } } }{ \abso{ \la_{ n } } }
   \geq \theta > 0.
 \end{equation}
@@ -2074,7 +2112,7 @@ Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
 $i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
 możemy tylko powiedzieć, że
 \begin{equation}
-  \label{eq:Leja-}
+  \label{eq:Leja-46}
   \frac{ \abso{ \la_{ n + 1 } - \la_{ n } } }{ \abso{ \la_{ n } } }
   = \frac{ 1 }{ n }.
 \end{equation}
@@ -2163,14 +2201,17 @@ możemy tylko powiedzieć, że
     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
     140 & &  7 & $f |$ & $\abso{ f }$ \\
     143 & & 18 & w~otoczeniu punktu & \emph{w~otoczeniu punktu} \\
+    146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
+    146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
+           & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
+    146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
+           & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
+    146 & &  3 & kątem~$y$ & kątem~$\vp$ \\
     159 & 12 & & części & części otwartej \\
     159 & & 10 & części & części otwartej \\
     164 & 10 & & 102 & 101 \\
     166 &  6 & & potęgowych . & potęgowych. \\
     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
