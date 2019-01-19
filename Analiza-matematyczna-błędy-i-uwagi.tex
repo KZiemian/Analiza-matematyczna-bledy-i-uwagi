@@ -20,7 +20,7 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
 % \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
 % \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
@@ -1406,6 +1406,24 @@ wzór~(17).
 \vspace{\spaceFour}
 
 
+\start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
+książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
+w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
+\begin{equation}
+  \label{eq:Leja-}
+  \Res( f, z_{ 0 } )
+  = \frac{ 1 }{ ( n - 1 )! }
+  \lim_{ z \to z_{ 0 } } \dd{ n - 1 }{ }{ z } ( z - z_{ 0 } )^{ n } f( z ).
+\end{equation}
+Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
+jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
+przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
+będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
+do~wyprowadzenia wzoru~(18) ze~strony~133.
+
+\vspace{\spaceFour}
+
+
 \start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
 przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
 Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
@@ -1425,7 +1443,22 @@ dla~której mamy $f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun
 jednokrotny), jest jednokrotna w~odpowiednio mały otoczeniu $z_{ 0 }$
 należy rozumieć w~następujący sposób.
 
-Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie, że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$ dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć, że~$f( K( z_{ 0 }, \delta ) ) \neq K( f( z_{ 0 } ), \eta )$, bowiem $K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$.
+Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
+że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
+dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
+że~$f( K( z_{ 0 }, \delta ) ) \neq K( f( z_{ 0 } ), \eta )$, bowiem
+$K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak
+zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$
+jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
+jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
+że~$f( K( z_{ 0 }, \delta' ) )$ nie~musi być kulą.
+
+\vspace{\spaceFour}
+
+
+\start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie ,,skoro
+zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
+na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu''.
 
 \vspace{\spaceFour}
 
@@ -1438,6 +1471,14 @@ gdzie~$\abso{ \vecr }_{ 2 } = x^{ 2 } + y^{ 2 }$. Gdybyśmy rozważali
 sytuację trójwymiarową, wtedy ten potencjał miałby wartość
 $m / \abso{ \vecr }_{ 3 }$,
 gdzie~$\abso{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
+
+\vspace{\spaceFour}
+
+
+\start \Str{154} Uogólniona tu~definicja transformacji konforemnej
+sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
+że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
+z~zachowaniem zwrotu?
 
 \vspace{\spaceFour}
 
@@ -1461,6 +1502,71 @@ możemy tylko powiedzieć, że
   \frac{ \abso{ \la_{ n + 1 } - \la_{ n } } }{ \abso{ \la_{ n } } }
   = \frac{ 1 }{ n }.
 \end{equation}
+
+\vspace{\spaceFour}
+
+
+
+% ##################
+\begin{figure}[h]
+  \centering
+
+  \begin{tikzpicture}[scale=1.3]
+    \draw [gray, very thin] (-0.2, 1.1) -- (2.35, 1.1);
+
+
+
+    \draw [black] (0, 0) -- (0, 1.2);
+
+
+
+    \draw [black] (0.65, 0) -- (0.65, 0.25);
+
+    \draw [black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
+
+    \draw [black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
+
+
+
+    \draw [black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25,
+    1.2);
+
+    \draw [black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
+    1.2);
+
+    \draw [black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
+
+
+
+    \node at (-0.75, -0.3) {Rząd};
+
+    \node at (0, -0.3) {$0$};
+
+    \node at (0.65, -0.3) {$1$};
+
+    \node at (1.5, -0.3) {$2$};
+    
+  \end{tikzpicture}
+
+  \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
+    zespolonej a~jej $p$-krotnością.}
+
+  \label{fig:Leja-03}
+\end{figure}
+% ##################
+
+
+
+\start \Str{172} Przyjęty związek między $p$-krotnością funkcji,
+a~rzędem jej rozgałęzienia można zilustrować graficznie, tak jak
+zostało to~zrobione na~(\ref{fig:Leja-03}).
+
+\vspace{\spaceFour}
+
+
+\start \Str{172--174}
+
+
 
 \CenterTB{Błędy}
 \begin{center}
@@ -1527,7 +1633,6 @@ możemy tylko powiedzieć, że
     & Od góry & Od dołu & & \\
     \hline
     90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
-    92  & &  6 & \emph{krzywą} & \emph{krzywą kawałkami gładką} \\
     94  & &  6 & regularną & kawałkami gładką \\
     99  &  1 & & zewnątrz & na~zewnątrz \\
     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
@@ -1558,13 +1663,23 @@ możemy tylko powiedzieć, że
     159 & & 10 & części & części otwartej \\
     164 & 10 & & 102 & 101 \\
     166 &  6 & & potęgowych . & potęgowych. \\
+    170 & & 16 & monochromii & monodromii \\
+    173 & & 10 & est & jest \\
+    173 & &  9 & jsię & się \\
+    174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
+    174 & &  3 & \emph{rozgałęzienia} & \emph{rozgałęzienia} \\
     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
+    207 & &  6 & $( 1$ & $1$ \\
     % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    & & & 132 & 133 \\ % Funkcje monomorficzne.
     % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 \noi \\
 \StrWg{28}{5} \\
@@ -1581,6 +1696,9 @@ możemy tylko powiedzieć, że
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
 \Pow rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
+\StrWd{92}{6} \\
+\Jest \emph{krzywą} \\
+\Pow  \emph{krzywą kawałkami gładką} \\
 \StrWg{95}{5} \\
 \Jest linią \\
 \Pow dowolna linia łamana \\
@@ -1599,7 +1717,9 @@ w~powierzchnię boczną \\
 \Pow  kawałkami gładkich zamkniętych krzywych \\
 \StrWg{165}{2} \\
 \Jest niech brzeg tego obszaru zawiera odcinek \\
-\Pow  niech część wspólna brzegu tego obszaru i~osi $\textrm{im}\, z = 0$ tworzy odcinek \\
+\Pow niech część wspólna brzegu tego obszaru i~osi
+$\textrm{im}\, z = 0$
+tworzy odcinek \\
 \StrWd{165}{6} \\
 \Jest \emph{symetrii{ }{ } Riemanna-Schwarza} \\
 \Pow \emph{symetrii Riemanna-Schwarza}
