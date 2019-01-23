@@ -108,7 +108,7 @@
 % ----------------------------
 % Ustawienia różnych parametrów tekstu
 % ----------------------------
-\renewcommand{\arraystretch}{1.3}  % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
@@ -169,19 +169,58 @@
 
 % \vspace{\spaceFour}
 
-% \start \Str{6} Stwierdzenie, że~wszystkie funkcje pierwotne
-% różnią~się o~stałą, można zinterpretować w~błędny, acz bez~ustanku
-% powtarzany, sposób. Dwie funkcje pierwotne różnią~się o~stałą
-% dowolną na każdym przedziale spójnym, jednak jeśli dziedzina funkcji
-% składa~się z~dwóch lub więcej przedziałów spójnych, na każdym z~nich
-% można wybrać inną stałą dowolną.
+\start \Str{6} Pada tu~często przytaczanie stwierdzenie, że~dwie
+funkcje pierwotne zadanej funkcji~$f( x )$ różnią~się o~stałą, jednak
+rozumiane dosłownie, nie jest ono prawdziwe. Aby~wyjaśnić ten problem,
+wprowadźmy najpierw funkcje
+\begin{equation}
+  \label{eq:FichtenholzVolII-01}
+  \sgn( x )
+  =
+  \begin{cases}
+    1, &  x > 0, \\
+    0, &  x = 0, \\
+    -1, & x < 0.
+  \end{cases}
+\end{equation}
+Rozpatrzmy teraz funkcję rzeczywistą $f( x ) = 1 / x$, o~dziedzinie
+$\Dc( f ) = ( -\infty, 0 ) \cup ( 0, +\infty )$. Łatwo sprawdzić,
+że~funkcje $F_{ 1 }( x ) = \ln\abso{ x }$
+i~$F_{ 2 }( x ) = \ln\abso{ x } + \sgn( x )$ mają~dziedziny
+$\Dc( F_{ 1 } ) = \Dc( F_{ 2 } ) = \Dc( f )$ oraz
+\begin{equation}
+  \label{eq:FichtenholzVolII-02}
+  \dd{ }{ F_{ 1 }( x ) }{ x } = \dd{ }{ F_{ 2 }( x ) }{ x }
+  = \frac{ 1 }{ x } = f( x ).
+\end{equation}
+Pochodne $F'_{ i }( x )$, $i = 1, 2$ również mają dziedzinę równą
+$D( f ) = ( -\infty, 0 ) \cup ( 0, +\infty )$. Jednak funkcje
+$F_{ i }( x )$te nie różnią~się o~stałą
+\begin{equation}
+  \label{eq:FichtenholzVolII-03}
+  F_{ 2 }( x ) - F_{ 1 }( x ) = \sgn( x ).
+\end{equation}
 
-% \vspace{\spaceFour}
+Stwierdzenie, że~wszystkie funkcje pierwotne różnią~się o~stałą, można
+zinterpretować w~błędny, acz bez~ustanku powtarzany, sposób. Dwie
+funkcje pierwotne różnią~się o~stałą dowolną na każdym przedziale
+spójnym, jednak jeśli dziedzina funkcji składa~się z~dwóch lub więcej
+przedziałów spójnych, na każdym z~nich można wybrać inną stałą
+dowolną.
+
+\vspace{\spaceFour}
 
 
 % \start \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
 % wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
 % jakiś znany fakt z~algebry? \Dok
+
+% \vspace{\spaceFour}
+
+
+\start \Str{223}
+
+\vspace{\spaceFour}
 
 \CenterTB{Błędy}
 \begin{center}
@@ -234,8 +273,8 @@
     44  & &  1 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
     45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
     46  & &  8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
-    % & & & & \\
-    % & & & & \\
+    222 & &  5 & [9] jest rzeczywiście & jest oczywiście \\
+    224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
