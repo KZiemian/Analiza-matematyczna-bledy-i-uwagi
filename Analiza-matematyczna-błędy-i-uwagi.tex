@@ -171,7 +171,7 @@
 
 \start \Str{6} Pada tu~często przytaczanie stwierdzenie, że~dwie
 funkcje pierwotne zadanej funkcji~$f( x )$ różnią~się o~stałą, jednak
-rozumiane dosłownie, nie jest ono prawdziwe. Aby~wyjaśnić ten problem,
+rozumiane ściśle, nie jest ono prawdziwe. Aby~wyjaśnić ten problem,
 wprowadźmy najpierw funkcje
 \begin{equation}
   \label{eq:FichtenholzVolII-01}
@@ -190,7 +190,7 @@ i~$F_{ 2 }( x ) = \ln\abso{ x } + \sgn( x )$ mają~dziedziny
 $\Dc( F_{ 1 } ) = \Dc( F_{ 2 } ) = \Dc( f )$ oraz
 \begin{equation}
   \label{eq:FichtenholzVolII-02}
-  \dd{ }{ F_{ 1 }( x ) }{ x } = \dd{ }{ F_{ 2 }( x ) }{ x }
+  \de{ }{ F_{ 1 }( x ) }{ x } = \de{ }{ F_{ 2 }( x ) }{ x }
   = \frac{ 1 }{ x } = f( x ).
 \end{equation}
 Pochodne $F'_{ i }( x )$, $i = 1, 2$ również mają dziedzinę równą
@@ -200,13 +200,79 @@ $F_{ i }( x )$te nie różnią~się o~stałą
   \label{eq:FichtenholzVolII-03}
   F_{ 2 }( x ) - F_{ 1 }( x ) = \sgn( x ).
 \end{equation}
+Widzimy więc, iż~nie jest prawdą, że~dwie funkcje pierwotne różnią~się
+o~stałą. W~tym twierdzeniu kryje~się jednak ziarno prawdy, co~zostanie
+wyjaśnione poniżej.
 
-Stwierdzenie, że~wszystkie funkcje pierwotne różnią~się o~stałą, można
-zinterpretować w~błędny, acz bez~ustanku powtarzany, sposób. Dwie
-funkcje pierwotne różnią~się o~stałą dowolną na każdym przedziale
-spójnym, jednak jeśli dziedzina funkcji składa~się z~dwóch lub więcej
-przedziałów spójnych, na każdym z~nich można wybrać inną stałą
-dowolną.
+Na~początku ustalany oznaczenia i~definicje. W~dalszym ciągu $I$
+i~$I_{ \iota }$ oznaczać będą jeden z~następujących zbiorów
+$( a, b )$, $[ a, b ]$, $[ a, b )$, $( a, b ]$, $( -\infty, a )$,
+$( a, +\infty )$, $( -\infty, a ]$, $[ a, +\infty )$,
+$( -\infty, +\infty )$, $\abso{ a }, \abso{ b } < +\infty$. Funkcja
+$f( x ): I \to \R$ jest różniczkowalna, jeśli jest różniczkowalna
+we~wnętrzu zbioru~$I$ (czyli jednym z~odcinków otwartych $( a, b )$,
+$( -\infty, a )$, $( a, +\infty )$), jeśli zaś $I$ jest z~którejś
+strony domknięty, to~istnieje tam pochodna jednostronna.
+$F( x ): I \to \R$ jest funkcją pierwotną $f( x )$, jeśli
+\begin{equation}
+  \label{eq:FichtenholzVolII-04}
+  \de{ }{ F( x ) }{ x } = f( x ), \quad \forall x \in I.
+\end{equation}
+Udowadniam teraz ważne twierdzenie.
+
+\begin{twr}
+  \label{thm:FichtenholzVolII-01}
+  Każde dwie funkcje pierwotne funkcji $f: I \to \R$ różnią~się
+  o~funkcje stałą.
+\end{twr}
+\begin{proof}
+  Oznaczmy dowolne dwie funkcje pierwotne $f$ przez $F_{ 1 }$
+  oraz~$F_{ 2 }$ i~oznaczmy $G( x ) = F_{ 1 }( x ) - F_{ 2 }( x )$.
+  Zachodzi wówczas
+  \begin{equation}
+    \label{eq:FichtenholzVolII-05}
+    \de{ }{ G( x ) }{ x } = \de{ }{ }{ x } ( F_{ 1 }( x ) - F_{ 2 }( x ) )
+    = 0,
+    \quad \forall x \in I.
+  \end{equation}
+  Rozważmy dwa dowolne punkty $x_{ 1 }, x_{ 2 } \in I$. Wraz z~nimi
+  w~$I$ ~się cały odcinek $[ x_{ 1 }, x_{ 2 } ]$. Spełnione~są tym
+  samym założenia twierdzenia o~wartości średniej, na~mocy którego
+  \begin{equation}
+    \label{eq:FichtenholzVolII-06}
+    G( x_{ 2 } ) = G( x_{ 1 } ) + G'( c ) ( x_{ 2 } - x_{ 1 } ) = G( x_{ 1 } ),
+    \quad c \in ( x_{ 1 }, x_{ 2 } ).
+  \end{equation}
+\end{proof}
+\begin{wni}
+  \label{cor:FichtenholzVolII-02}
+  Niech $A = \bigcup_{ \iota \in \mc{I} } I_{ \iota }$, przy czym
+  $I_{ \iota } \cap I_{ \kappa } = \emptyset$ dla $\iota \neq \kappa$
+  i~niech $f: A \to \R$ będzie różniczkowalna na~każdym $I_{ \iota }$.
+  Wówczas dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową
+  $G( x )$, stałą na~każdym $I_{ \iota }$.
+\end{wni}
+\begin{proof}
+  Ponieważ zbiory $I_{ \iota }$~się nie przecinają, więc dla każdego
+  z~nich możemy zastosować twierdzenie \ref{thm:FichtenholzVolII-01},
+  więc funkcja $G( x )$ jest stała na tym zbiorze.
+\end{proof}
+Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
+funkcji określonej na zbiorze $A$ nie może zachodzić.
+
+Widzimy więc, że~problem jest bardziej złożony, niż~się powszechnie
+twierdzi. Błąd wynika zapewne stąd, iż~większość osób nie interesuje
+badanie tak ,,subtelnego'' przypadku, jakim jest dziedzina funkcji
+bardziej skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$
+pokazuje, że~sytuacja ta jest spotykana w~konkretnych, prostych
+rachunkach.
+
+Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
+ogólnej postaci? W~szczególności, czy~można zdefiniować w~sposób
+sensowny pochodną funkcji na~zbiorze, który nie jest postaci
+$\bigcup_{ \iota \in \mc{I} } I_{ \iota }$. Jeśli by tak było, to
+pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
+do~przewidzenia.
 
 \vspace{\spaceFour}
 
@@ -306,6 +372,45 @@ dowolną.
 
 \vspace{\spaceTwo}
 
+
+
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  P. J. Nahin \\
+  ,,Inside Interesting Integrals'',
+  \cite{NahinInterestingIntegrals2015} }
+
+
+\CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     %     & & & & \\
+%     %     & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+\noi
+\StrWg{vi}{3} \\
+\Jest \textbf{immediatly know they have encountered a~most interesting
+  character}: \\
+\Pow \textbf{\emph{immediatly know they have encountered a~most
+    interesting
+    character}:} \\
+% \newpage
+
+
+
+
+
+  
 
 
 
@@ -867,7 +972,7 @@ $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
 reparametryzacja $\vp: I_{ 1 } \to I$ taka,
 że~$t_{ 0 } = \vp( \tau_{ 0 } )$
-i~$\tfr{ \de }{ \de \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 } }
+i~$\tfr{ \difPL }{ \difPL \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 } }
 \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą, lecz z~pewną
 możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-27} powyżej
 jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
@@ -1437,7 +1542,7 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 \start \Str{99} Wzór
 \begin{equation}
   \label{eq:Leja-39}
-  \dd{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }\,
+  \de{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }\,
   d\zeta
   = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
 \end{equation}
@@ -1586,7 +1691,7 @@ w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
   \label{eq:Leja-}
   \Res( f, z_{ 0 } )
   = \frac{ 1 }{ ( n - 1 )! }
-  \lim_{ z \to z_{ 0 } } \dd{ n - 1 }{ }{ z } ( z - z_{ 0 } )^{ n } f( z ).
+  \lim_{ z \to z_{ 0 } } \de{ n - 1 }{ }{ z } ( z - z_{ 0 } )^{ n } f( z ).
 \end{equation}
 Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
 jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
