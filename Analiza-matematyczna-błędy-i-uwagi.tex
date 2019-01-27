@@ -247,13 +247,18 @@ Udowadniam teraz ważne twierdzenie.
 \begin{wni}
   \label{cor:FichtenholzVolII-02}
   Niech $A = \bigcup_{ \iota \in \mc{I} } I_{ \iota }$, przy czym
-  $I_{ \iota } \cap I_{ \kappa } = \emptyset$ dla $\iota \neq \kappa$
-  i~niech $f: A \to \R$ będzie różniczkowalna na~każdym $I_{ \iota }$.
-  Wówczas dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową
-  $G( x )$, stałą na~każdym $I_{ \iota }$.
+  $I_{ \iota } \cup I_{ \kappa }$ nie~jest przedziałem
+  dla~$\iota \neq \kappa$ i~niech $f: A \to \R$ będzie różniczkowalna
+  na~każdym $I_{ \iota }$. Wówczas dwie funkcje pierwotne~$f$
+  różnią~się o~funkcje schodkową $G( x )$, która jest stała na~każdym
+  $I_{ \iota }$.
 \end{wni}
 \begin{proof}
-  Ponieważ zbiory $I_{ \iota }$~się nie przecinają, więc dla każdego
+  Ponieważ suma dwóch $I_{ \iota }$ nie jest przedziałem, pochodna
+  jest dobrze określona\footnote{W~przeciwnym razie mogłoby dojść
+    do~sytuacji, że~$I_{ 1 } = (0, 1)$, $I_{ 2 } = [ 1, 2 )$, więc
+    $( 0, 2 ) \subset A$, lecz funkcja nie jest wszędzie
+    różniczkowalna, bo~pochodna w~$1$ nie istnieje.}, więc dla każdego
   z~nich możemy zastosować twierdzenie \ref{thm:FichtenholzVolII-01},
   więc funkcja $G( x )$ jest stała na tym zbiorze.
 \end{proof}
@@ -268,9 +273,14 @@ pokazuje, że~sytuacja ta jest spotykana w~konkretnych, prostych
 rachunkach.
 
 Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
-ogólnej postaci? W~szczególności, czy~można zdefiniować w~sposób
-sensowny pochodną funkcji na~zbiorze, który nie jest postaci
-$\bigcup_{ \iota \in \mc{I} } I_{ \iota }$. Jeśli by tak było, to
+ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
+funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
+w~$( a, b )$ (zob.~punkt~112, str.~196,
+\cite{FichtenholzRachunekRiCTomI2005}), co~potencjalnie może prowadzić
+do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie, czy~można
+zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze, który nie
+jest postaci $\bigcup_{ \iota \in \mc{I} } I_{ \iota }$ (przy zadanym
+ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było, to
 pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
 do~przewidzenia.
 
