@@ -245,7 +245,7 @@ Udowadniam teraz ważne twierdzenie.
   \end{equation}
 \end{proof}
 \begin{wni}
-  \label{cor:FichtenholzVolII-02}
+  \label{cor:FichtenholzVolII-01}
   Niech $A = \bigcup_{ \iota \in \mc{I} } I_{ \iota }$, przy czym
   $I_{ \iota } \cup I_{ \kappa }$ nie~jest przedziałem
   dla~$\iota \neq \kappa$ i~niech $f: A \to \R$ będzie różniczkowalna
@@ -262,15 +262,14 @@ Udowadniam teraz ważne twierdzenie.
   z~nich możemy zastosować twierdzenie \ref{thm:FichtenholzVolII-01},
   więc funkcja $G( x )$ jest stała na tym zbiorze.
 \end{proof}
-Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
-funkcji określonej na zbiorze $A$ nie może zachodzić.
 
-Widzimy więc, że~problem jest bardziej złożony, niż~się powszechnie
-twierdzi. Błąd wynika zapewne stąd, iż~większość osób nie interesuje
-badanie tak ,,subtelnego'' przypadku, jakim jest dziedzina funkcji
-bardziej skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$
-pokazuje, że~sytuacja ta jest spotykana w~konkretnych, prostych
-rachunkach.
+Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
+funkcji określonej na zbiorze $A$ nie może zachodzić. Widzimy teraz,
+że~problem jest bardziej złożony, niż~się powszechnie twierdzi. Błąd
+wynika zapewne stąd, iż~większość osób nie interesuje badanie tak
+,,subtelnego'' przypadku, jakim jest dziedzina funkcji bardziej
+skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$ pokazuje,
+że~sytuacja ta jest spotykana w~konkretnych, prostych rachunkach.
 
 Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
 ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
@@ -297,6 +296,7 @@ do~przewidzenia.
 \start \Str{223}
 
 \vspace{\spaceFour}
+
 
 \CenterTB{Błędy}
 \begin{center}
@@ -419,81 +419,12 @@ do~przewidzenia.
 
 
 
-\begin{center}
-  Walter Rudin \\
-  ,,Analiza rzeczywista i zespolona'', \cite{WRARZ}.
-\end{center}
+% % ######################################
+% \newpage
+% \section{Rachunek wariacyjny}
 
-
-Uwagi:
-
-\start \Str{132} Należy zauważyć, że wspomnian tu ,,miara
-rzeczywista'' ma oznaczać miarę zespoloną (czyli miarę której
-dziedzina zawiera się w ciele liczb zespolonych, bez nieskończoności)
-która przyjmuje tylko wartości rzeczywiste.
-
-
-
-Błędy:\\
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    % & & & & \\
-    27  & &  3 & fnkcji & funkcji \\
-    50  &  4 &  & Warunek (d) & Warunek (e) \\
-    50  & 13 &  & że$K \prec f  \prec V$ & że $K \prec f  \prec V$ \\
-    54  & & 16 & II i IV & II i VI \\
-    54  & & 15 & że więc & więc \\
-    64  & &  2 & $c_{ i } \chi_{ E_{ i } }$ & $c_{ i } \chi_{ V_{ i } }$ \\
-    95  &  5 & & $| \varphi - x_{ n } |^{ 2 } \leq | \varphi |^{ 2 }$
-           & $| \varphi - \hat{ x }_{ n } |^{ 2 } \leq | \varphi |^{ 2 }$ \\
-    95  &  8 & & $|| \hat{ x }_{ n } - x_{ m }||_{ 2 }$
-           & $|| \hat{ x }_{ n } - \hat{ x }_{ m }||_{ 2 }$ \\
-    99  & &  7 & $|| f - P ||_{ 2 } < \infty$
-           & $|| f - P ||_{ 2 } < \veps$ \\
-    132 &  & 15 & miary rzeczywistej & miary zespolonej rzeczywistej \\
-    140 & & 11 & Ponieważ $\lambda$ & Ponieważ $\Phi$ \\
-    168 & &  5 & $\{ E_{ i } )$ & $\{ E_{ i } \}$ \\
-    177 & &  5 & $= \int\limits^{ \infty }_{ -\infty } g( t ) dt \ldots$
-           & $= \int\limits^{ x }_{ -\infty } g( t ) dt \ldots$ \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-
-
-\begin{itemize}
-\item[--] Str. 51.
-  \begin{equation}
-    \mu( K ) = \inf\{ \Lambda f : K \prec f \} \, .
-    \tag{8}
-  \end{equation}
-\item[--] Str. 52.
-  \begin{equation}
-    \mu( K ) = \Lambda f .
-    \tag{9}
-  \end{equation}
-\item[--] Str. 52. \ldots co w zestawieniu z nierównością (9) daje
-  (8).
-\item[--] Str. 165. \ldots dla \emph{każdego} ciągu
-  $\{ E_{ i } \}$\ldots
-\end{itemize}
-
-
-
-
-
-% ######################################
-\newpage
-\section{Rachunek wariacyjny}
-
-\vspace{\spaceTwo}
-% ######################################
+% \vspace{\spaceTwo}
+% % ######################################
 
   
 
@@ -622,9 +553,9 @@ zespoloną. Sam zapis wyrażenia $\arg z$ sugeruje, że~argument jest
 zwykłą funkcją liczbową zmiennej~$z$, jednak
 z~definicji\footnote{Niezależnie którą~się przyjmuje.} wynika,
 że~istnieje jednak nieskończenie wiele liczb odpowiadających
-zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla $z = 0$ choć da~się
-  zdefiniować nieskończony zbiór argumentów~0, to pojęcie to nie jest
-  użyteczne i~nie będziemy~się nim zajmować.}. Są~one postaci
+zapisowi~$\arg z$, przy $z \neq 0$\footnote{Dla liczy~$0$ można uznać
+  dowolną liczbę rzeczywistą za~jej argument, ale~to pojęcie nie jest
+  użyteczne, więc nie będziemy~się nim zajmować.}. Są~one postaci
 \begin{equation}
   \label{eq:Leja-06}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2,\ld,
@@ -1027,8 +958,8 @@ oczywisty rezultat
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
-    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, \de u = \Int_{ 0 }^{
-      t } 0 \, \de u = 0, \quad t \geq 0.
+    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, du = \Int_{ 0 }^{ t
+    } 0 \, du = 0, \quad t \geq 0.
   \end{split}
 \end{equation}
 Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
@@ -1053,10 +984,10 @@ $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
 reparametryzacja $\vp: I_{ 1 } \to I$ taka,
 że~$t_{ 0 } = \vp( \tau_{ 0 } )$
-i~$\tfr{ \difPL }{ \difPL \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 } }
-\neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą, lecz z~pewną
-możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-27} powyżej
-jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
+i~$\tfr{ \difPL }{ \difPL \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 }
+} \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą, lecz
+z~pewną możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-27}
+powyżej jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
 reparametryzującej
 \begin{equation}
   \label{eq:Leja-31}
@@ -1148,10 +1079,10 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
     \node at (1.3 * \radius, -0.25) {$\mathfrak{Re}\, z$};
 
-    \node at (0.63, 1.3 * \radius) {$i\, \mathfrak{Im}\, z$};
+    \node at (0.55, 1.3 * \radius) {$\mathfrak{Im}\, z$};
 
 
-    \node at (-0.15, -0.2) {$0$};
+    \node at (-0.18, -0.23) {$0$};
 
     \node at (-\radius - 0.15, -0.25) {$-R$};
 
@@ -1538,9 +1469,9 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
     \node at (1.0, 0.65) {$\Gamma$};
 
 
-    \node at (0.5, \scale) {$i\, \mathfrak{Im}\, z$};
-
     \node at (\scale, -0.25) {$\mathfrak{Re}\, z$};
+
+    \node at (0.4, \scale) {$\mathfrak{Im}\, z$};
 
     \node at (-0.15, -0.2) {$0$};
 
@@ -1628,12 +1559,13 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
   = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
 \end{equation}
 można udowodnić na~dwa sposoby. W~obu przypadkach będziemy
-potrzebowali następującego twierdzenia (zob. str.~??, \cite{}). Jeśli
-w~przestrzeni metrycznej dane~są dwa nieprzecinające~się zbiory $C$
-i~$K$, przy czym $C$ jest domknięty, a~$K$ zwarty, to infimum
-odległość między punktami tych zbiorów jest silnie większa od~0. ????
-Dodatkowo jeśli zbiór $C$ jest zwarty, to~odległość ta~osiąga wartość
-minimalną.
+potrzebowali następującego twierdzenia (zob. str.~72,
+\cite{SchwartzKursAnalizyMatematycznejTomI1979}). Jeśli w~przestrzeni
+unormowanej nad~$\R$, o~skończonym wymiarze dane~są dwa
+nieprzecinające~się zbiory $C$ i~$K$, przy czym $C$ jest domknięty,
+a~$K$ zwarty, to infimum odległość między punktami tych zbiorów jest
+silnie większa od~$0$, co~więcej jest ono osiągane w~dla pewnej pary
+punktów $x \in C, y \in K$.
 
 Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\set{ z }$ widzimy,
 że~odległość między tymi zbiorami $L > 0$. Wynika stąd, że~dla
@@ -1648,14 +1580,24 @@ Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
 widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
 $\vp( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
 funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione są
-założenia twierdzenia o~różniczkowaniu pod znakiem całki (zob.
-\cite{}), z~którego wynika wzór \eqref{eq:Leja-39}.
+założenia twierdzenia o~różniczkowaniu pod znakiem całki
+(zob.~twr.~132,
+str.~659~\cite{SchwartzKursAnalizyMatematycznejTomI1979}), z~którego
+wynika wzór \eqref{eq:Leja-39}.
 
 Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
-czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~0
+czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$
 jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
-twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
-na~????? (zob. \cite{}).
+twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej, jeśli
+ta~pochodna jest jednostajnie ciągła (zob.~wniosek~3,
+str.~244~\cite{SchwartzKursAnalizyMatematycznejTomI1979}).
+Z~przytoczonego wyżej twierdzenia o~odległości między
+nieprzecinającym~się zbiorem zwartym i~domkniętym wiemy, że~mianownik
+pochodnej nie zeruje się nigdzie na~obrazie krzywej~$C$, więc pochodna
+jest dobrze określona w~każdym punkcie tego obrazu. Jako funkcja
+ciągła na~zbiorze zwartym jest jednostajnie ciągła, więc na mocy
+przytoczonego twierdzenia $r( \zeta, z )$ zmierza jednostajnie do~$0$
+względem zmiennej~$\zeta$.
 
 \vspace{\spaceFour}
 
@@ -1851,7 +1793,7 @@ wykładnikami wynosi
   \geq \theta > 0.
 \end{equation}
 W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
-której długość jest większa od~$theta$.
+której długość jest większa od~$\theta$.
 
 Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
 $i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
