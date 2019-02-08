@@ -185,10 +185,20 @@ $\Dc( f ) = \R \setminus \set{ 0 }$ oraz
     \quad &\Dc( F_{ 2 } ) = \R \setminus \set{ 0 }.
   \end{align}
 \end{subequations}
-Ponieważ $x / \abso{ x } = 1$ dla~$x > 0$ i~$x / \abso{ x } = -1$
-dla~$x < 0$, więc zachodzi równość
+Ponieważ $\Dc( x / \abso{ x } ) = \R \setminus \set{ 0 }$ i
 \begin{equation}
   \label{eq:FichtenholzVolII-02}
+  \frac{ x }{ \abso{ x } }
+  =
+  \begin{cases}
+    1, &x > 0, \\
+    -1, &x < 0.
+  \end{cases}
+\end{equation}
+$x / \abso{ x } = 1$ dla~$x > 0$ i~$x / \abso{ x } = -1$ dla~$x < 0$,
+więc zachodzi równość
+\begin{equation}
+  \label{eq:FichtenholzVolII-03}
   \de{ }{ F_{ 1 }( x ) }{ x } = \de{ }{ F_{ 2 }( x ) }{ x }
   = \frac{ 1 }{ x } = f( x ).
 \end{equation}
@@ -196,7 +206,7 @@ Pochodne $F'_{ i }( x )$, $i = 1, 2$ również mają dziedzinę równą
 $D( f ) = \R \setminus \set{ 0 }$. Jednak funkcje $F_{ i }( x )$ nie
 różnią~się o~funkcje stałą
 \begin{equation}
-  \label{eq:FichtenholzVolII-03}
+  \label{eq:FichtenholzVolII-04}
   F_{ 2 }( x ) - F_{ 1 }( x ) = \frac{ x }{ \abso{ x } }.
 \end{equation}
 Widzimy więc, iż~nie jest prawdą, że~dwie funkcje pierwotne różnią~się
@@ -214,7 +224,7 @@ $( -\infty, a )$, $( a, +\infty )$), jeśli zaś $I$ jest z~którejś
 strony domknięty, to~istnieje tam pochodna jednostronna.
 $F( x ): I \to \R$ jest funkcją pierwotną $f( x )$, jeśli
 \begin{equation}
-  \label{eq:FichtenholzVolII-04}
+  \label{eq:FichtenholzVolII-05}
   \de{ }{ F( x ) }{ x } = f( x ), \quad \forall x \in I.
 \end{equation}
 Udowadniam teraz ważne twierdzenie.
@@ -229,7 +239,7 @@ Udowadniam teraz ważne twierdzenie.
   oraz~$F_{ 2 }$ i~oznaczmy $G( x ) = F_{ 1 }( x ) - F_{ 2 }( x )$.
   Zachodzi wówczas
   \begin{equation}
-    \label{eq:FichtenholzVolII-05}
+    \label{eq:FichtenholzVolII-06}
     \de{ }{ G( x ) }{ x } = \de{ }{ }{ x } ( F_{ 1 }( x ) - F_{ 2 }( x ) )
     = 0,
     \quad \forall x \in I.
@@ -238,7 +248,7 @@ Udowadniam teraz ważne twierdzenie.
   w~$I$ ~się cały odcinek $[ x_{ 1 }, x_{ 2 } ]$. Spełnione~są tym
   samym założenia twierdzenia o~wartości średniej, na~mocy którego
   \begin{equation}
-    \label{eq:FichtenholzVolII-06}
+    \label{eq:FichtenholzVolII-07}
     G( x_{ 2 } ) = G( x_{ 1 } ) + G'( c ) ( x_{ 2 } - x_{ 1 } ) = G( x_{ 1 } ),
     \quad c \in ( x_{ 1 }, x_{ 2 } ).
   \end{equation}
@@ -292,20 +302,59 @@ do~przewidzenia.
 % \vspace{\spaceFour}
 
 
-\start \Str{223} Problem z~tym przykładem jest taki, że
-\begin{equation}
-  \label{eq:FichtenholzVolII-07}
-  \Sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }
-  \neq \Sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-    - \frac{ 1 }{ 1 - x^{ n } } \right).
-\end{equation}
-Gdyby tak równość zachodziło, to po pierwsze
+\start \textbf{Str.~223, punkt [363, 5)].} Problem z~tym przykładem
+jest taki, że
 \begin{equation}
   \label{eq:FichtenholzVolII-08}
-  ;;;  
+  \Sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+  \neq \Sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+    - \frac{ 1 }{ 1 - x^{ 2n } } \right).
 \end{equation}
+Gdyby tak równość zachodziła, to po pierwsze
+\begin{equation}
+  \label{eq:FichtenholzVolII-09}
+  \begin{split}
+    \Sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } } &=
+    \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } } + \frac{ 1 }{ 1 -
+      x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
+    + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
+    &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
+  \end{split}
+\end{equation}
+Wynika to z~tego, że~z~wyjątkiem $n = 1$
+\begin{equation}
+  \label{eq:FichtenholzVolII-10}
+  \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+  \neq \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
+\end{equation}
+Prawidłowa równość ma~postać
+\begin{equation}
+  \label{eq:FichtenholzVolII-11}
+  \Sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
+    ( 1 - x^{ 2n } ) }
+  \neq \Sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+    - \frac{ 1 }{ 1 - x^{ 2n } } \right),
+\end{equation}
+jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
+jest znacznie mniej elegancka i~zwięzła, niż~tego
+w~\eqref{eq:FichtenholzVolII-08}, wątpliwe więc, że~Fichtenholz chciał
+podać tu~ten przykład.
+
+Wydaje mi~się, że~nie jest to kwestia drobnej literówki we~wzorze
+\eqref{eq:FichtenholzVolII-08}, lecz~został tu~popełniony poważniejszy
+błąd, którego nie jestem w~stanie poprawić.
 
 \vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
 
 
 \CenterTB{Błędy}
@@ -361,8 +410,8 @@ Gdyby tak równość zachodziło, to po pierwsze
     46  & &  8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
     222 & &  5 & [9] jest rzeczywiście & jest oczywiście \\
     224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
-    % & & & & \\
-    % & & & & \\
+    226 & &  7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
+    227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -382,8 +431,8 @@ Gdyby tak równość zachodziło, to po pierwsze
 \end{center}
 \noi
 \StrWd{34}{3} \\
-\Jest Zróżniczkujmy (10) obustronnie\ld \\
-\Pow  Wykonując jawnie różniczkowanie w~(10)\ld \\
+\Jest Zróżniczkujmy (10) obustronnie \\
+\Pow  Wykonując jawnie różniczkowanie w~(10) \\
 \StrWd{71}{16} \\
 \Jest $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
 \right.$ \\
