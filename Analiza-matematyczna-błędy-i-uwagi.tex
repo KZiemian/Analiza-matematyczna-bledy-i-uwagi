@@ -466,7 +466,7 @@ szeregu od~0.
     226 & &  7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
     227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
     229 & &  9 & $< \frac{ 1 }{ 2^{ n } }$ & $\leq \frac{ 1 }{ 2^{ n } }$ \\
-    231 &  8 & & $1 ;$ & $1;$ \\
+    231 &  8 & & $1\; ;$ & $1;$ \\
     233 & &  5 & $\veps = \mc{E} - 1$ & $\veps < \mc{E} - 1$ \\
     233 & &  5 & $\mc{E} - \veps = 1$ & $\mc{E} - \veps > 1$ \\
     % & & & & \\
@@ -742,7 +742,7 @@ zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
   \label{eq:Leja-01}
   \begin{split}
-    \fr{ z }{ a } = \ovOne{ a } \cdot z.
+    \fr{ z }{ a } = \oneOv{ a } \cdot z.
   \end{split}
 \end{equation}
 Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
@@ -751,7 +751,7 @@ odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
   \label{eq:Leja-02}
   \begin{split}
-    \ovOne{ a + i0 } = \ovOne{ a } + i0 = \ovOne{ a },
+    \oneOv{ a + i0 } = \oneOv{ a } + i0 = \oneOv{ a },
   \end{split}
 \end{equation}
 więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
@@ -760,7 +760,7 @@ $1 / z$ wzorem
 \begin{equation}
   \label{eq:Leja-03}
   \begin{split}
-    \ovOne{ z } := \fr{ \zbar }{ z \zbar }.
+    \oneOv{ z } := \fr{ \zbar }{ z \zbar }.
   \end{split}
 \end{equation}
 Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
@@ -782,9 +782,9 @@ Tą tożsamość można udowodnić w~następujący sposób
   \label{eq:Leja-05}
   \begin{split}
     ( 1 / z ) / w = \left( \fr{ \zbar }{ z \zbar } \right) / w = \fr{
-      \zbar }{ z \zbar } \fr{ \wbar }{ w \wbar } = \ovOne{ z \zbar }
-    \ovOne{ w \wbar } ( \zbar \wbar ) = \ovOne{ z \zbar w \wbar } (
-    \zbar \wbar ) = \ovOne{ z w \zbar \wbar } ( \zbar \wbar ) = 1 / (
+      \zbar }{ z \zbar } \fr{ \wbar }{ w \wbar } = \oneOv{ z \zbar }
+    \oneOv{ w \wbar } ( \zbar \wbar ) = \oneOv{ z \zbar w \wbar } (
+    \zbar \wbar ) = \oneOv{ z w \zbar \wbar } ( \zbar \wbar ) = 1 / (
     z w ).
   \end{split}
 \end{equation}
@@ -1128,14 +1128,13 @@ iż~$\abso{ \be_{ n } } \leq \veps / 2 M_{ \al }$, dla~$n > p$. Teraz
 \begin{equation}
   \label{eq:Leja-27}
   \begin{split}
-    \abso{ r_{ n } } &= \ovOne{ n } \abso{ \al_{ n - 1 } \be_{ 0 } +
+    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \al_{ n - 1 } \be_{ 0 } +
       \al_{ n - 2 } \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } +
       \ld
       + \al_{ 0 } \be_{ n - 1 } } \\
-    &\leq \ovOne{ n } \abso{ \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
-      \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } } + \ovOne{ n }
-    \abso{ \al_{ n - p - 2 } \be_{ p + 1 } + \ld
-      + \al_{ 0 } \be_{ n - 1 } } \\
+    &\leq \oneOv{ n } \abso{ \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
+      \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } } + \oneOv{ n }
+    \abso{ \al_{ n - p - 2 } \be_{ p + 1 } + \ld + \al_{ 0 } \be_{ n - 1 } } \\
     &\leq \fr{ p + 1 }{ n } M_{ \al } M_{ \be } + \fr{ n - p - 1 }{ n
     } M_{ \al } \fr{ \veps }{ 2 M_{ \al } } = \fr{ p + 1 }{ n } M_{
       \al } M_{ \be } + \fr{ n - p - 1 }{ n }
