@@ -469,6 +469,11 @@ szeregu od~0.
     231 &  8 & & $1\; ;$ & $1;$ \\
     233 & &  5 & $\veps = \mc{E} - 1$ & $\veps < \mc{E} - 1$ \\
     233 & &  5 & $\mc{E} - \veps = 1$ & $\mc{E} - \veps > 1$ \\
+    234 & 11 & & $\Dc_{ n } > 1$ & $\Dc_{ n } \geq 1$ \\
+    238 & &  3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
+           & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -840,9 +845,9 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 
 
 \start \Str{12} Należy silniej niż w~tekście podkreślić,
-że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową,
-lecz~$n$-wartościową, nie można więc jej używać w~ten sam sposób
-co~funkcji jednowartościowych\footnote{Pisał już o~tym Frege,
+że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową, lecz~funkcją
+$n$-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
+jednowartościowych\footnote{Pisał już o~tym Frege,
   zob.\red{???odnśnik}.}. Zapomnienie o~tym prowadzi do~znanego
 paradoksu. Mamy mianowicie
 \begin{equation}
@@ -850,15 +855,40 @@ paradoksu. Mamy mianowicie
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 }
   = \sqrt{ ( -1 ) \cdot ( -1 ) } = \sqrt{ 1 } = 1.
 \end{equation}
-Jednak $\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy
-mnożenie nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc
-to co~się naprawdę dzieje w~powyższym wzorze przestaje być oczywisty.
-W~istocie zauważmy, że~wynik powyższych obliczeń można otrzymać
-w~następujący sposób
+
+Pojawiają~się tu dwa błędy, mające to~samo źródło. Po~pierwsze
+$\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy mnożenie
+nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc to co~się
+naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
+zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
+sposób
 \begin{equation}
   \label{eq:Leja-08}
   ( -i ) \cdot i = 1.
 \end{equation}
+Drugi błąd jest następując. Jeśli rozważamy~$1$ jako liczbę zespoloną,
+to
+\begin{equation}
+  \label{eq:Leja-09}
+  \sqrt{ 1 } = \set{ 1, -1 },
+\end{equation}
+czyli otrzymany poprzednio wynik $\sqrt{ 1 }$~,,$=$''~$1$, przedstawia
+tylko jeden element zbioru $\sqrt{ 1 }$.
+
+Wymaga to~pewnego komentarza. Jeśli będziemy rozpatrywać operację
+pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
+możliwe zdefiniowanie na~nim funkcji
+$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
+liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
+zespolone~$\C$, wówczas takiej funkcji jednowartościowej nie~da~się
+określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
+$-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
+niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
+nasze rozumowanie tylko do~zbioru liczb rzeczywistych,
+nieujemnych~$D$.
+
+Warto zwrócić uwagę, że~jednoznaczną funkcję
+$\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych podzbiorach $\C$. Wynika to~między innymi z~twierdzenia o~istnieniu jednoznacznych gałęzi logarytmu, zobacz str.~95 w~komentowanej tu~książce \cite{LejaFunkcjeZespolone2006}. Tym problemem nie będziemy~się w~tym miejscu szerzej zajmować.
 
 \vspace{\spaceFour}
 
@@ -2234,7 +2264,6 @@ algebraicznie.
     173 & & 10 & est & jest \\
     173 & &  9 & jsię & się \\
     174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
-    174 & &  3 & \emph{rozgałęzienia} & \emph{rozgałęzienia} \\
     178 &  2 & & 132 & 133 \\
     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
     207 & &  6 & $( 1$ & $1$ \\
