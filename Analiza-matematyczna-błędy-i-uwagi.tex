@@ -173,26 +173,26 @@
 funkcje pierwotne zadanej funkcji~$f( x )$ różnią~się o~stałą, jednak
 rozumiane ściśle, nie jest ono prawdziwe. Aby~wyjaśnić ten problem,
 rozpatrzmy funkcje funkcję rzeczywistą $f( x ) = 1 / x$, o~dziedzinie
-$\Dc( f ) = \R \setminus \set{ 0 }$ oraz
+$\Dc( f ) = \Rb \setminus \set{ 0 }$ oraz
 \begin{subequations}
   \begin{align}
     \label{eq:FichtenholzVolII-01a}
     F_{ 1 }( x )
-    = \ln\abso{ x }, \quad &\Dc( F_{ 1 } ) = \R \setminus \set{ 0 }, \\
+    = \ln\abso{ x }, \quad &\Dc( F_{ 1 } ) = \Rb \setminus \set{ 0 }, \\
     \label{eq:FichtenholzVolII-01b}
     F_{ 2 }( x )
     = \ln\abso{ x } + \frac{ x }{ \abso{ x } },
-    \quad &\Dc( F_{ 2 } ) = \R \setminus \set{ 0 }.
+    \quad &\Dc( F_{ 2 } ) = \Rb \setminus \set{ 0 }.
   \end{align}
 \end{subequations}
-Ponieważ $\Dc( x / \abso{ x } ) = \R \setminus \set{ 0 }$ i
+Ponieważ $\Dc( x / \abso{ x } ) = \Rb \setminus \set{ 0 }$ i
 \begin{equation}
   \label{eq:FichtenholzVolII-02}
   \frac{ x }{ \abso{ x } }
   =
   \begin{cases}
-    1, &x > 0, \\
-    -1, &x < 0.
+     1,   & x > 0, \\
+    -1,   & x < 0.
   \end{cases}
 \end{equation}
 $x / \abso{ x } = 1$ dla~$x > 0$ i~$x / \abso{ x } = -1$ dla~$x < 0$,
@@ -203,7 +203,7 @@ więc zachodzi równość
   = \frac{ 1 }{ x } = f( x ).
 \end{equation}
 Pochodne $F'_{ i }( x )$, $i = 1, 2$ również mają dziedzinę równą
-$D( f ) = \R \setminus \set{ 0 }$. Jednak funkcje $F_{ i }( x )$ nie
+$D( f ) = \Rb \setminus \set{ 0 }$. Jednak funkcje $F_{ i }( x )$ nie
 różnią~się o~funkcje stałą
 \begin{equation}
   \label{eq:FichtenholzVolII-04}
@@ -218,11 +218,11 @@ i~$I_{ \iota }$ oznaczać będą jeden z~następujących zbiorów
 $( a, b )$, $[ a, b ]$, $[ a, b )$, $( a, b ]$, $( -\infty, a )$,
 $( a, +\infty )$, $( -\infty, a ]$, $[ a, +\infty )$,
 $( -\infty, +\infty )$, $\abso{ a }, \abso{ b } < +\infty$. Funkcja
-$f( x ): I \to \R$ jest różniczkowalna, jeśli jest różniczkowalna
+$f( x ): I \to \Rb$ jest różniczkowalna, jeśli jest różniczkowalna
 we~wnętrzu zbioru~$I$ (czyli jednym z~odcinków otwartych $( a, b )$,
 $( -\infty, a )$, $( a, +\infty )$), jeśli zaś $I$ jest z~którejś
 strony domknięty, to~istnieje tam pochodna jednostronna.
-$F( x ): I \to \R$ jest funkcją pierwotną $f( x )$, jeśli
+$F( x ): I \to \Rb$ jest funkcją pierwotną $f( x )$, jeśli
 \begin{equation}
   \label{eq:FichtenholzVolII-05}
   \de{ }{ F( x ) }{ x } = f( x ), \quad \forall x \in I.
@@ -231,7 +231,7 @@ $F( x ): I \to \R$ jest funkcją pierwotną $f( x )$, jeśli
 Udowadniam teraz ważne twierdzenie.
 \begin{twr}
   \label{thm:FichtenholzVolII-01}
-  Każde dwie funkcje pierwotne funkcji $f: I \to \R$ różnią~się
+  Każde dwie funkcje pierwotne funkcji $f: I \to \Rb$ różnią~się
   o~funkcje stałą.
 \end{twr}
 \begin{proof}
@@ -253,7 +253,7 @@ Udowadniam teraz ważne twierdzenie.
     \quad c \in ( x_{ 1 }, x_{ 2 } ).
   \end{equation}
 \end{proof}
-Przypomnijmy, że~dowolny zbiór w~$\R$ można rozłożyć na~składowe
+Przypomnijmy, że~dowolny zbiór w~$\Rb$ można rozłożyć na~składowe
 spójne (jest to szczególny przypadek ogólnego twierdzenia dla
 przestrzeni topologicznych, zob.~str.~79,
 \cite{SchwartzKursAnalizyMatematycznejTomI1979}). Wynika stąd
@@ -262,7 +262,7 @@ następujący wniosek.
   \label{cor:FichtenholzVolII-01}
   Niech $A = \bigcup_{ \iota \in \mc{I} } I_{ \iota }$, przy czym
   każdy z~przedziałów $I_{ \iota }$ jest składową spójną $A$ i~niech
-  $f: A \to \R$ będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas
+  $f: A \to \Rb$ będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas
   dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową $G( x )$,
   która jest stała na~każdym $I_{ \iota }$.
 \end{wni}
@@ -312,15 +312,15 @@ do~przewidzenia.
 jest taki, że
 \begin{equation}
   \label{eq:FichtenholzVolII-08}
-  \Sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
-  \neq \Sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+  \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+  \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
     - \frac{ 1 }{ 1 - x^{ 2n } } \right).
 \end{equation}
 Gdyby tak równość zachodziła, to po pierwsze
 \begin{equation}
   \label{eq:FichtenholzVolII-09}
   \begin{split}
-    \Sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } } &=
+    \sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } } &=
     \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } } + \frac{ 1 }{ 1 -
       x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
     + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
@@ -336,9 +336,9 @@ Wynika to z~tego, że~z~wyjątkiem $n = 1$
 Prawidłowa równość ma~postać
 \begin{equation}
   \label{eq:FichtenholzVolII-11}
-  \Sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
+  \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
     ( 1 - x^{ 2n } ) }
-  \neq \Sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+  \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
     - \frac{ 1 }{ 1 - x^{ 2n } } \right),
 \end{equation}
 jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
@@ -361,7 +361,7 @@ wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
   Jeśli istnieje granica\footnote{Zakładamy przy tym, że~$b_{ n }$.}
   \begin{equation}
     \label{eq:FichtenholzVolII-12}
-    \Lim_{ \nToInfty } \frac{ a_{ n } }{ b_{ n } } = K
+    \Lim_{ n \to \infty } \frac{ a_{ n } }{ b_{ n } } = K
     \quad ( 0 \leq K \leq +\infty ),
   \end{equation}
   to, gdy $K < +\infty$, ze~zbieżności szeregu~(B) wynika zbieżność
@@ -374,13 +374,13 @@ wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
   Niech $K < +\infty$, wtedy istnieje takie~$N$, że~dla $n > N$
   \begin{equation}
     \label{eq:FichtenholzVolII-13}
-    \frac{ a_{ n } }{ b_{ n } } < K + \veps,
-    \quad K + \veps > 0,
+    \frac{ a_{ n } }{ b_{ n } } < K + \epsilon,
+    \quad K + \epsilon > 0,
   \end{equation}
   skąd
   \begin{equation}
     \label{eq:FichtenholzVolII-14}
-    a_{ n } < ( K + \veps ) b_{ n }.
+    a_{ n } < ( K + \epsilon ) b_{ n }.
   \end{equation}
   Z~tej równości wynika, że~zbieżność szeregu~(B) pociąga za~sobą
   zbieżność~(A), jak również, iż~rozbieżność szeregu~(A) implikuje
@@ -391,8 +391,8 @@ wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
   $n > N$
   \begin{equation}
     \label{eq:FichtenholzVolII-15}
-    a_{ n } > ( K - \veps ) b_{ n },
-    \quad K - \veps > 0.
+    a_{ n } > ( K - \epsilon ) b_{ n },
+    \quad K - \epsilon > 0.
   \end{equation}
   Z~tej nierówności wynika, że~zbieżność szeregu~(A) implikuje
   zbieżność szeregu~(B), zaś rozbieżność szeregu~(B) pociąga za~sobą
@@ -419,9 +419,9 @@ szeregu od~0.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    8   & & 11 & $< | \Del P | <$ & $\leq | \Del P | \leq$ \\
-    8   & &  7 & $< \fr{ | \Del P | }{ \Del x } <$
-           & $\leq \frac{ | \Del P | }{ \Del x } \leq$ \\
+    8   & & 11 & $< | \Delta P | <$ & $\leq | \Delta P | \leq$ \\
+    8   & &  7 & $< \fr{ | \Delta P | }{ \Delta x } <$
+           & $\leq \frac{ | \Delta P | }{ \Delta x } \leq$ \\
     12  & &  5 & $a^{ n }$ & $a_{ n }$ \\
     13  &  7 & & $( x - a )^{ k }\, dx$ & $\int ( x - a )^{ -k }\, dx$ \\
     18  & &  4 & $\fr{ 1 }{ 3 }$ & $\fr{ 1 }{ 2 }$ \\
@@ -442,8 +442,8 @@ szeregu od~0.
     35  & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
            & $x^{ 3 } + x^{ 2 } + x + 1$ \\
     36  & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\
-    39  &  3 & & $\sqrt[ m ]{ \fr{ \al x + \be }{ \ga x + \del } } dx$
-           & $\sqrt[ m ]{ \fr{ \al x + \be }{ \ga x + \del } }$ \\
+    39  &  3 & & $\sqrt[ m ]{ \fr{ \alpha x + \beta }{ \gamma x + \delta } } dx$
+           & $\sqrt[ m ]{ \fr{ \alpha x + \beta }{ \gamma x + \delta } }$ \\
     40  &  2 & & $\fr{ 2t - 1 }{ \sqrt{ 3 } }$
            & $\fr{ 2t + 1 }{ \sqrt{ 3 } }$ \\
     \hline
@@ -472,29 +472,30 @@ szeregu od~0.
     234 & 11 & & $\Dc_{ n } > 1$ & $\Dc_{ n } \geq 1$ \\
     238 & &  3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
            & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % 479 & 2 & & $\IntL_{ 0 }^{ +\infty }$
-    % & $\IntL_{ a }^{ +\infty }$ \\
-    % 479 & 4 & & $\IntL_{ a }^{ A } \fr{ dx }{ x }$
-    % & $\IntL_{ a }^{ A } \fr{ dx }{ x^{ \la } }$ \\
-    % 483 & 4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
-    % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % 479 & 2 & & $\IntL_{ 0 }^{ +\infty }$
+           % & $\IntL_{ a }^{ +\infty }$ \\
+           % 479 & 4 & & $\IntL_{ a }^{ A } \fr{ dx }{ x }$
+           % & $\IntL_{ a }^{ A } \fr{ dx }{ x^{ \la } }$ \\
+           % 483 & 4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
+           % & & & & \\
     \hline
   \end{tabular}
 \end{center}
 \noi
 \StrWd{34}{3} \\
 \Jest Zróżniczkujmy (10) obustronnie \\
-\Pow  Wykonując jawnie różniczkowanie w~(10) \\
+\Powin  Wykonując jawnie różniczkowanie w~(10) \\
 \StrWd{71}{16} \\
 \Jest $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
 \right.$ \\
-\Pow $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+\Powin
+$R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
 \right)$ \\
 
 \vspace{\spaceTwo}
@@ -528,11 +529,12 @@ szeregu od~0.
 \StrWg{vi}{3} \\
 \Jest \textbf{immediatly know they have encountered a~most interesting
   character}: \\
-\Pow \textbf{\emph{immediatly know they have encountered a~most
+\Powin \textbf{\emph{immediatly know they have encountered a~most
     interesting
     character}:} \\
 
 \vspace{\spaceTwo}
+
 
 
 
@@ -545,7 +547,7 @@ szeregu od~0.
 
 \CenterTB{Uwagi} \start Tyle błędów, że szybciej będzie napisać tę
 książkę od nowa.
-  
+
 \vspace{\spaceFour}
 
 
@@ -555,18 +557,19 @@ których korzysta. Ponadto dowody są w dużej mierze przeprowadzone
 bardzo pobieżnie i niewiele mówią czytelnikowi.
 
 
-\start Kwestia analityczności funkcji została tu~potraktowana pobieżnie. Dla
-funkcji takich jak $\cos$, $\sin$ etc. pokazano ich analityczność w~0,
-nic nie powiedziano o analityczności w innych punktach.
+\start Kwestia analityczności funkcji została tu~potraktowana
+pobieżnie. Dla funkcji takich jak $\cos$, $\sin$ etc. pokazano ich
+analityczność w~0, nic nie powiedziano o analityczności w innych
+punktach.
 
 \vspace{\spaceFour}
 
 
 \start W ogóle nie przedyskutowano problemu mnożenia szeregów.
 
-  
+
 \start Większość z definicji i twierdzeń Rozdziału VII da się uogólnić
-dla przypadku przetrzeni unormowanych.
+dla przypadku przestrzeni unormowanych.
 
 \start Str. 10. Wszystkie dowody ,,nie wprost'', są przypisane
 zasadzie \\ kontrapozycji.
@@ -592,17 +595,16 @@ zupełnie niezrozumiały.
 \start Str. 53. Czy w twierdzeniu o pochodnej funkcji odwrotnej jest
 ważna ciągłość tej funkcji?
 
-\start Str. 56. Dyskusja skierowania w rodzinie zbiorów $\Pi$,
-bardziej zaciemnia niż wyjasnia. Po przeanalizowaniu okazuje się, że w
-definicji $\limsup$ powinno być: \\$A_{ i } \prec A_{ j }
-\Leftrightarrow A_{ j } \subset A_{ i
-}$, choć z dyskusji wynika wręcz przeciwnie.
-  
+\start Str. 56. Dyskusja skierowania w rodzinie zbiorów $\Pi$, bardziej
+zaciemnia niż wyjasnia. Po przeanalizowaniu okazuje się, że w
+definicji $\limsup$ powinno być: \\
+$A_{ i } \prec A_{ j }\Leftrightarrow A_{ j } \subset A_{ i }$, choć z dyskusji wynika wręcz
+przeciwnie.
+
 \start Str. 57. Nie zdefiniowano na jakie odcinki dzielimy przedział
-$[ a, b
-]$. Okazuje się, że nie ma to znaczenia jeśli przyjmiemy miarę
-dowolnego odcinka $\mu ( \{ a, b \} ) = b -
-a$, jednak ta lekkomyślność jest rażąca.
+$[ a, b ]$. Okazuje się, że nie ma to znaczenia jeśli przyjmiemy miarę
+dowolnego odcinka $\mu ( \{ a, b \} ) = b - a$, jednak ta
+lekkomyślność jest rażąca.
 
 \start Str. 63. W dowodzie Twierdzenia.III.13 ,,potrzeba i nie
 potrzeba'' założenia $\varphi' \neq 0$, zależnie od rozpatrywanego
@@ -627,13 +629,14 @@ być domknięte.
 Dowodzi tylko punktowej zbieżności szeregu funkcji. Zbieżności
 jednostajnej należy dowodzić inną metodą.
 
-\start Str. 97. Dowód punktu (b) uwagii łatwo przeprowadzić przez
+\start Str. 97. Dowód punktu (b) uwagi łatwo przeprowadzić przez
 kontrapozycje, nie widzę jednak sposobu udowodnienia go w sposób
 analogiczny do punktu (a). W dowodzie tym kluczowe jest oszacowanie
-\\$|a_{n}(z_{1}-z_{0})^{n}|<M$. Jednak dla szeregu o niezerowym
-promieniu zbieżności nie być możliwe oszacowanie szeregu od góry albo
-od dołu. Za przykłąd może posłużyć zachowanie szeregów $\sum
-\frac{1}{n}z^{n}$ i $\sum nz^{n}$ w $z=1$. Oba są tam rozbieżne
+\\
+$| a_{n} (z_{1} - z_{ 0 })^{n}|<M$. Jednak dla szeregu o niezerowym promieniu
+zbieżności nie być możliwe oszacowanie szeregu od góry albo od dołu.
+Za przykład może posłużyć zachowanie szeregów $\sum \frac{1}{n} z^{n}$ i
+$\sum n z^{n}$ w $z=1$. Oba są tam rozbieżne
 
 \start Str. 98. Dowód twierdzenia Cauchy'ego-Hadamarda zawiera w sobie
 dowód kryterium Cauchy`ego zbieżności szeregów. Czyni to dowód bardzo
@@ -655,9 +658,9 @@ zagmatwanym i trudnym do zrozumienia.
 \begin{itemize}
 \item[--] Str. 23. \ldots 2$^{ \circ }$ identytywna\ldots
 \item[--] Str. 28. \emph{Ad} 2$^{ \circ }$: $| ( a'_{ n } + b'_{ n } ) - ( a_{ n } + b_{ n } ) |  \leq | a'_{ n } - a_{ n } | + | b'_{ n } - b_{ n } | <2 \, \varepsilon$, bo\\
-  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n
-  } ) \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \varepsilon )
-  \wedge | b'_{ n } - b_{ n } | <\varepsilon, \textrm{ dla } n > N )
+  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n } )
+  \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
+  \wedge | b'_{ n } - b_{ n } | < \epsilon, \textrm{ dla } n > N )
   \big)$.
 \item[--] Str. 32.
 \item[--] Str. 43. \ldots wynika z definicji odwzorowania ciągłego.
@@ -667,12 +670,11 @@ zagmatwanym i trudnym do zrozumienia.
   \textrm{\ldots}$$
 \item[--] Str. 112.
   $$\big( 0 \leq f \leq C \frac{ 1 }{ x^{ \mu } } \textrm{ ; } \mu
-  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f <
-  \infty \big) \textrm{;}$$
+  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big) \textrm{;}$$
 \item[--] Str. 112.
   $$\big( 0 \leq f \leq C \frac{ 1 }{ x ( \log x )^{ \mu } } \textrm{
-    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a
-  } f < \infty \big) \textrm{;}$$
+    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big)
+  \textrm{;}$$
 \item[--] Str. 125. \ldots
 \item[--] Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
 \end{itemize}
@@ -687,7 +689,7 @@ zagmatwanym i trudnym do zrozumienia.
 % \vspace{\spaceTwo}
 % % ######################################
 
-  
+
 
 
 
@@ -712,11 +714,11 @@ zagmatwanym i trudnym do zrozumienia.
 \CenterTB{Uwagi}
 
 \start W~książce często mówi~się o~prostej na~płaszczyźnie
-zespolonej~$\C$, jednak prawie zawsze chodzi o~prostą w~sensie
-płaszczyzny rzeczywistej $\C \simeq \R^{ 2 }$. W~dodatku ,,Wstęp
+zespolonej~$\Cb$, jednak prawie zawsze chodzi o~prostą w~sensie
+płaszczyzny rzeczywistej $\Cb \simeq \Rb^{ 2 }$. W~dodatku ,,Wstęp
 do~teorii funkcji analitycznych wielu zmiennych'' Józefa Siciaka
 wprowadza~się pojęcie prostej zespolonej, która w~przypadku
-płaszczyzny zespolonej~$\C$ jest po prostu jej równa.
+płaszczyzny zespolonej~$\Cb$ jest po prostu jej równa.
 
 \vspace{\spaceFour}
 
@@ -734,7 +736,7 @@ zwięzłego oznaczenie na~pierścień kołowy
 \start \Str{7} Powinna już tu być podana podstawowa własność jednostki
 urojonej~$i^{ 2 } = -1$, nie zaś dopiero na~stronie 9. Bez~tego, bądź
 jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
-liczby postaci $\al + \be i$.
+liczby postaci $\alpha + \beta i$.
 
 \vspace{\spaceFour}
 
@@ -780,7 +782,7 @@ Na~przykład, że~zachodzi
 \begin{equation}
   \label{eq:Leja-05}
   \begin{split}
-    ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \C.
+    ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cb.
   \end{split}
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
@@ -881,7 +883,7 @@ pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
 możliwe zdefiniowanie na~nim funkcji
 $\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
 liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
-zespolone~$\C$, wówczas takiej funkcji jednowartościowej nie~da~się
+zespolone~$\Cb$, wówczas takiej funkcji jednowartościowej nie~da~się
 określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
 $-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
 niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
@@ -890,7 +892,7 @@ nieujemnych~$D$.
 
 Warto zwrócić uwagę, że~jednoznaczną funkcję
 $\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
-podzbiorach $\C$. Wynika to~między innymi z~twierdzenia o~istnieniu
+podzbiorach $\Cb$. Wynika to~między innymi z~twierdzenia o~istnieniu
 jednoznacznych gałęzi logarytmu, zobacz str.~95 w~komentowanej
 tu~książce \cite{LejaFunkcjeZespolone2006}. Tym problemem nie
 będziemy~się w~tym miejscu szerzej zajmować.
@@ -908,16 +910,16 @@ wiem, jak należałoby to~poprawić.
 \vspace{\spaceFour}
 
 
-\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \al + i \be }$
+\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$
 kieruje~się chyba następującą myślą. Aby znaleźć te pierwiastki musimy
-obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \vp / 2$,
-$\theta_{ 1 } = \vp / 2 + \pi$. Można łatwo wyrazić $\cos \vp$
-i~$\sin \vp$ za~pomocą $\al$ i~$\be$. Teraz możemy obliczyć
+obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
+$\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
+i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
   \label{eq:Leja-11}
   \begin{split}
-    \cos \theta_{ 0 } = \cos \tfr{ \vp }{ 2 } = \onehalf ( 1 + \cos
-    \vp ),
+    \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 + \cos
+    \varphi ),
   \end{split}
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
@@ -925,12 +927,12 @@ wzorów
 \begin{equation}
   \label{eq:Leja-12}
   \begin{split}
-    \cos( \tfr{ \vp }{ 2 } + \pi ) = -\cos( \tfr{ \vp }{ 2 } ), \quad
-    \sin( \tfr{ \vp }{ 2 } + \pi ) = -\sin( \tfr{ \vp }{ 2 } ).
+    \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 } ), \quad
+    \sin( \tfr{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{ \varphi }{ 2 } ).
   \end{split}
 \end{equation}
 Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
-za~pomocą $\al$ i~$\be$.
+za~pomocą $\alpha$ i~$\beta$.
 
 \vspace{\spaceFour}
 
@@ -941,8 +943,8 @@ i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
   \label{eq:Leja-13}
   \begin{split}
-    \left( \Sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
-      \Sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \Sum_{ n = 0
+    \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
+      \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
     }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0
     } b_{ n } ) z^{ n }.
   \end{split}
@@ -970,7 +972,7 @@ zachodzi poniższa nierówność
 \begin{equation}
   \label{eq:Leja-14}
   \begin{split}
-    \abso{ C_{ n } - A_{ n } B } \leq \veps, \quad \forall \veps > 0,
+    \abso{ C_{ n } - A_{ n } B } \leq \epsilon, \quad \forall \epsilon > 0,
   \end{split}
 \end{equation}
 bowiem z~tego będzie wynikać
@@ -978,44 +980,44 @@ bowiem z~tego będzie wynikać
   \label{eq:Leja-15}
   \begin{split}
     \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{
-      A_{ n } B - AB } \leq 2\veps,
+      A_{ n } B - AB } \leq 2 \epsilon,
   \end{split}
 \end{equation}
-dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\veps > 0$. Teraz
+dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\epsilon > 0$. Teraz
 dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
-$\abso{ \be_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
+$\abso{ \beta_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
 \begin{equation}
   \label{eq:Leja-16}
   \begin{split}
-    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \be_{ n } + a_{ 1 }
-      \be_{ n - 1 } + \ld + a_{ n } \be_{ 0 } } \leq \abso{ a_{ 0 } }
-    \abso{ \be_{ n } } + \abso{ a_{ 1 } } \abso{ \be_{ n - 1 } } + \ld
+    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1 }
+      \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{ 0 } }
+    \abso{ \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n - 1 } } + \ld
     + \abso{ a_{ n - p + 1 } }
-    \abso{ \be_{ p + 1 } } \\
-    &+ \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 } } \leq
+    \abso{ \beta_{ p + 1 } } \\
+    &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq
     \fr{ \veps }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1
-      } } ) + \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 }
+      } } ) + \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 }
     }.
   \end{split}
 \end{equation}
-Pierwszy wyraz jest $\leq \veps / 2$. Dla drugiego wyrazu mamy
+Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
 \begin{equation}
   \label{eq:Leja-17}
   \begin{split}
-    \abso{ a_{ n - p } \be_{ p } + \ld + a_{ n } \be_{ 0 } } \leq
-    \abso{ a_{ n - p } } \abso{ \be_{ p } } + \ld + \abso{ a_{ n } }
-    \abso{ \be_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld +
+    \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq
+    \abso{ a_{ n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } }
+    \abso{ \beta_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld +
     \abso{ a_{ n } } ),
   \end{split}
 \end{equation}
-gdzie $M_{ p } = \max( \abso{ \be_{ 1 } }, \ld, \abso{ \be_{ p } } )$.
+gdzie $M_{ p } = \max( \abso{ \beta_{ 1 } }, \ld, \abso{ \beta_{ p } } )$.
 Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
-$n > q$ zachodzić $\abso{ a_{ n - p } } < \veps / ( 2 p M_{ p } )$.
+$n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$.
 Teraz dla każdego $n > \max( p, q )$ zachodzi
 \begin{equation}
   \label{eq:Leja-18}
   \begin{split}
-    \abso{ C_{ n } - AB } \leq \veps.
+    \abso{ C_{ n } - AB } \leq \epsilon.
   \end{split}
 \end{equation}
 Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
@@ -1038,17 +1040,17 @@ nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
   \label{eq:Leja-20}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \be_{ 0 } +
-    \be_{ 1 } + \ld + \be_{ n - 1 } ) + B ( \al_{ 0 } + \al_{ 1 } +
-    \ld + \al_{ n - 1 } ) + R_{ n },
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } +
+    \beta_{ 1 } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } + \alpha_{ 1 } +
+    \ld + \alpha_{ n - 1 } ) + R_{ n },
   \end{split}
 \end{equation}
 gdzie
 \begin{equation}
   \label{eq:Leja-21}
   \begin{split}
-    R_{ n } = n r_{ n } = \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
-    \be_{ 1 } + \ld + \al_{ 0 } \be_{ n - 1 }.
+    R_{ n } = n r_{ n } = \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 }
+    \beta_{ 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 }.
   \end{split}
 \end{equation}
 Łatwo~się o~jej prawdziwości przekonać, wypisując kilka pierwszych
@@ -1058,7 +1060,7 @@ Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
   \label{eq:Leja-22}
   \begin{split}
-    \Sum_{ i = 0 }^{ n } c_{ i } = \Sum_{ i = 0 }^{ n } ( a_{ i } b_{
+    \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
       0 } + a_{ i - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
     + a_{ 1 } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
     + \ld + a_{ n - 1 } ) b_{ 1 } \\
@@ -1071,7 +1073,7 @@ wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
 \begin{equation}
   \label{eq:Leja-23}
   \begin{split}
-    \Sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld +
+    \sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld +
     a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } ) b_{
       1 } + \ld
     + a_{ 0 } b_{ n } + c_{ n + 1 } \\
@@ -1092,8 +1094,8 @@ Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
   \label{eq:Leja-24}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \Sum_{
-      i = 0 }^{ n - 1 } \be_{ i } + B \Sum_{ i = 0 }^{ n - 1 } \al_{ i
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
+      i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i
     } + R_{ n } + C_{ n }.
   \end{split}
 \end{equation}
@@ -1102,31 +1104,31 @@ przypadków, łatwo zgadnąć, że
 \begin{equation}
   \label{eq:Leja-25}
   \begin{split}
-    C_{ n } = AB + A \be_{ n } + B \al_{ n } - R_{ n } + R_{ n + 1 }.
+    C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
   \end{split}
 \end{equation}
 Zacznijmy od~tego, że
-$b_{ n } = B_{ n } - B_{ n - 1 } = \be_{ n } - \be_{ n - 1 }$,
+$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
 korzystając więc, ze~wzoru \eqref{eq:Leja-19}
 \begin{equation}
   \label{eq:Leja-26}
   \begin{split}
     C_{ n } &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ld + A_{ 0 }
-    b_{ n } = ( A + \al_{ n } ) ( B + \be_{ 0 } ) + ( A + \al_{ n - 1
+    b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A + \alpha_{ n - 1
     } )
-    ( \be_{ 1 } - \be_{ 0 } ) \\
-    &+ ( A + \al_{ n - 2 } )( \be_{ 2 } - \be_{ 1 } ) + \ld + ( A +
-    \al_{ 0 } ) ( \be_{ n } - \be_{ n - 1 } )
-    = AB + B \al_{ n } + \al_{ n } \be_{ 0 } \\
-    &+ A \be_{ 0 } + A ( \be_{ 1 } - \be_{ 0 } + \be_{ 2 } - \be_{ 1 }
-    + \ld + \be_{ n } - \be_{ n - 1 } ) + \al_{ n - 1 } ( \be_{ 1 } -
-    \be_{ 0 } )
-    + \al_{ n - 2 } ( \be_{ 2 } - \be_{ 1 } ) \\
-    & + \ld + \al_{ 0 } ( \be_{ n } - \be_{ n - 1 } ) = AB + A \be_{ n
-    } + B \al_{ n } + \al_{ n } \be_{ 0 } + \al_{ n - 1 } \be_{ 1 } +
-    \al_{ n - 2 } \be_{ 2 } + \ld + \al_{ 0 } \be_{ n } \\
-    & - ( \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 } \be_{ 1 } + \ld +
-    \al_{ 0 } \be_{ n - 1 } ) = AB + A \be_{ n } + B \al_{ n } + R_{ n
+    ( \beta_{ 1 } - \beta_{ 0 } ) \\
+    &+ ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ld + ( A +
+    \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } )
+    = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \\
+    &+ A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 } - \beta_{ 1 }
+    + \ld + \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } -
+    \beta_{ 0 } )
+    + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \\
+    & + \ld + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = AB + A \beta_{ n
+    } + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{ n - 1 } \beta_{ 1 } +
+    \alpha_{ n - 2 } \beta_{ 2 } + \ld + \alpha_{ 0 } \beta_{ n } \\
+    & - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ld +
+    \alpha_{ 0 } \beta_{ n - 1 } ) = AB + A \beta_{ n } + B \alpha_{ n } + R_{ n
       + 1 } - R_{ n }.
   \end{split}
 \end{equation}
@@ -1135,11 +1137,11 @@ liczbie~$n + 1$. Tym samym
 \begin{equation}
   \label{eq:Leja-27}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \Sum_{
-      i = 0 }^{ n - 1 } \be_{ i } + B \Sum_{ i = 0 }^{ n - 1 } \al_{ i
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
+      i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i
     } + R_{ n } + C_{ n } \\
-    &= ( n + 1 ) AB + A \Sum_{ i = 0 }^{ n } \be_{ i } + B \Sum_{ i =
-      0 }^{ n } \al_{ i } + R_{ n + 1 }.
+    &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i =
+      0 }^{ n } \alpha_{ i } + R_{ n + 1 }.
   \end{split}
 \end{equation}
 
@@ -1147,34 +1149,34 @@ liczbie~$n + 1$. Tym samym
 
 
 \start \Str{22} Potrzebujemy jeszcze udowodnić,
-że~$\lim_{ \nToInfty } r_{ n } = 0$. Ponieważ $\al_{ n }$
-i~$\be_{ n }$ są zbieżne istnieją więc stałe $M_{ \al }$ i~$M_{ \be }$
+że~$\lim_{ n \to \infty } r_{ n } = 0$. Ponieważ $\alpha_{ n }$
+i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$ i~$M_{ \beta }$
 takie, że
 \begin{equation}
   \label{eq:Leja-28}
   \begin{split}
-    \abso{ M_{ \al } } \leq M_{ \al }, \quad \abso{ \be_{ n } } \leq
-    M_{ \be }.
+    \abso{ M_{ \alpha } } \leq M_{ \alpha }, \quad \abso{ \beta_{ n } } \leq
+    M_{ \beta }.
   \end{split}
 \end{equation}
-Ustalmy teraz $\veps > 0$. Skoro $\be_{ n }$ jest zbieżny do~0, więc
+Ustalmy teraz $\veps > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc
 możemy znaleźć taką liczbę~$p$,
-iż~$\abso{ \be_{ n } } \leq \veps / 2 M_{ \al }$, dla~$n > p$. Teraz
+iż~$\abso{ \beta_{ n } } \leq \veps / 2 M_{ \alpha }$, dla~$n > p$. Teraz
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
-    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \al_{ n - 1 } \be_{ 0 } +
-      \al_{ n - 2 } \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } +
+    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } +
+      \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } +
       \ld
-      + \al_{ 0 } \be_{ n - 1 } } \\
-    &\leq \oneOv{ n } \abso{ \al_{ n - 1 } \be_{ 0 } + \al_{ n - 2 }
-      \be_{ 1 } + \ld + \al_{ n - p - 1 } \be_{ p } } + \oneOv{ n }
-    \abso{ \al_{ n - p - 2 } \be_{ p + 1 } + \ld + \al_{ 0 } \be_{ n - 1 } } \\
-    &\leq \fr{ p + 1 }{ n } M_{ \al } M_{ \be } + \fr{ n - p - 1 }{ n
-    } M_{ \al } \fr{ \veps }{ 2 M_{ \al } } = \fr{ p + 1 }{ n } M_{
-      \al } M_{ \be } + \fr{ n - p - 1 }{ n }
+      + \alpha_{ 0 } \beta_{ n - 1 } } \\
+    &\leq \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 }
+      \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } } + \oneOv{ n }
+    \abso{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 } } \\
+    &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n
+    } M_{ \alpha } \fr{ \veps }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n } M_{
+      \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n }
     \fr{ \veps }{ 2 } \\
-    &\leq \fr{ \veps }{ 2 } + \fr{ p + 1 }{ n } M_{ \al } M_{ \be }.
+    &\leq \fr{ \veps }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
   \end{split}
 \end{equation}
 Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
@@ -1210,8 +1212,8 @@ starać o~większą jasność i~precyzję tekstów matematycznych.
 \vspace{\spaceFour}
 
 
-\start \Str{29} Jeśli funkcja $\vp( \tau )$ nie jest suriekcją
-na~przedział~$I$, to wedle przyjętej definicji~$z( \vp( \tau ) )$,
+\start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
+na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
 $\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
 może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
 jest żadnym problemem dla~rozwijanej tu~teorii.
@@ -1241,14 +1243,13 @@ w~miejscu''. Przykładem takie zachowania jest krzywa
     \end{cases}
   \end{split}
 \end{equation}
-Jest to krzywa klasy $\Cinfty( \R, \C )$, która dla~$t \geq 0$ stoi
+Jest to krzywa klasy $\Cc^{ \ }infty( \Rb, \Cb )$, która dla~$t \geq 0$ stoi
 w~punkcie $z = 0 + i 0$. Jeśli wzór na jej długość, dostaniemy
 oczywisty rezultat
 \begin{equation}
   \label{eq:Leja-31}
   \begin{split}
-    s( t ) = \Int_{ 0 }^{ t } \abso{ z'( u ) } \, du = \Int_{ 0 }^{ t
-    } 0 \, du = 0, \quad t \geq 0.
+    s( t ) = \int_{ 0 }^{ t } \abso{ z'( u ) } \, du = \int_{ 0 }^{ t } 0 \, du = 0, \quad t \geq 0.
   \end{split}
 \end{equation}
 Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
@@ -1261,7 +1262,7 @@ takiej sytuacji jest krzywa
 \begin{equation}
   \label{eq:Leja-32}
   \begin{split}
-    z( t ) = t^{ 3 } + i 0, \quad t \in \R.
+    z( t ) = t^{ 3 } + i 0, \quad t \in \Rb.
   \end{split}
 \end{equation}
 
@@ -1271,16 +1272,16 @@ i~\textbf{punkty osobliwe parametryzacja}
 $z( t_{ 0 } )$ jest punktem osobliwym parametryzacja krzywej $z( t )$,
 $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
-reparametryzacja $\vp: I_{ 1 } \to I$ taka,
-że~$t_{ 0 } = \vp( \tau_{ 0 } )$
-i~$\tfr{ \difPL }{ \difPL \tau } z( \vp( \tau ) )|_{ \tau = \tau_{ 0 }
+reparametryzacja $\varphi: I_{ 1 } \to I$ taka,
+że~$t_{ 0 } = \varphi( \tau_{ 0 } )$
+i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{ 0 }
 } \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą, lecz
 z~pewną możliwą dla niej parametryzacja. Przykład \eqref{eq:Leja-32}
 powyżej jest właśnie tego typu. Jeśli użyjemy do~niego funkcji
 reparametryzującej
 \begin{equation}
   \label{eq:Leja-33}
-  \vp( \tau ) =
+  \varphi( \tau ) =
   \begin{cases}
     -\sqrt[3]{ \abso{ \tau } }, & \tau \leq 0, \\
     \sqrt[3]{ \tau }, & \tau > 0,
@@ -1289,7 +1290,7 @@ reparametryzującej
 otrzymamy
 \begin{equation}
   \label{eq:Leja-34}
-  z( \vp( \tau ) ) = \tau, \quad \tau \in \R.
+  z( \varphi( \tau ) ) = \tau, \quad \tau \in \Rb.
 \end{equation}
 Natomiast w~przypadku \eqref{eq:Leja-30} mamy do~czynienia z~punktami
 osobliwymi krzywej, co~nie powinno nas dziwić. Problem polega tu
@@ -1301,7 +1302,7 @@ bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
 
 \start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
 niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
-błędne. Weźmy krzywą gładką na przedziale $[ \al, \be ]$ i~podzielmy
+błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$ i~podzielmy
 go dowolną ilością punktów w~dowolnych miejscach na~podprzedziały, co
 jest zgodne z~przyjętą definicją. Tym samym widzimy, że~krzywa ta
 składa~się z~dowolnej ilości łuków i~każdy punkt jej obrazu jest jej
@@ -1311,8 +1312,8 @@ nieróżniczkowalna w~punktach $t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
 Rozwiązanie tego problemu jest proste, należy przyjąć, że~każdy z~tych
 przedziałów był maksymalny w~następującym sensie. Jeśli krzywa
 $z( t )$ jest gładka w~przedziale $[ t_{ k - 1 }, t_{ k } ]$, to nie
-jest ona gładka w~przedziałach $[ t_{ k - 1 } - \veps, t_{ k } ]$
-i~$[ t_{ k - 1 }, t_{ k } + \veps ]$ dla wszystkich~$\veps > 0$.
+jest ona gładka w~przedziałach $[ t_{ k - 1 } - \epsilon, t_{ k } ]$
+i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
 
 \vspace{\spaceFour}
 
@@ -1445,10 +1446,10 @@ tak zmodyfikować definicję, by~do nich należały.
 \start \Str{42} W~definicji ciała liczb wymiernych jest pewna
 subtelność w~określeniu wyniku operacji dodawania, odejmowania,
 mnożenia i~dzielenia. Rozważmy najpierw przypadek dzielenia. Wielomian
-$P_{ 1 }( z ) = 1$ jest określony na~dziedzinie~$\C$. Jeśli podzielimy
+$P_{ 1 }( z ) = 1$ jest określony na~dziedzinie~$\Cb$. Jeśli podzielimy
 go~przez wielomian $Q_{ 1 }( z ) = z - 1$ to otrzymany iloraz
 $P_{ 1 }( z ) / Q_{ 1 }( z )$, to jest on określony na dziedzinie
-$\C \setminus 1$, widzimy więc, że~operacja dzielenia może prowadzić
+$\Cb \setminus 1$, widzimy więc, że~operacja dzielenia może prowadzić
 do~powstania funkcji o~nowej dziedzinie.
 
 Teraz zajmiemy~się subtelniejszym problemem. Rozważmy następujący
@@ -1461,16 +1462,16 @@ iloczyn
   \end{split}
 \end{equation}
 Ponieważ funkcja $1 / ( z - 1 )$ jest określona tylko dla $z \neq 1$,
-więc formalnie funkcja $W( z )$ ma~dziedzinę $\C \setminus 1$.
+więc formalnie funkcja $W( z )$ ma~dziedzinę $\Cb \setminus 1$.
 To~jedna mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
 okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne
 dziedziny. Z~tego problemu łatwo jednak wybrnąć.
 
 Jeśli daną funkcję wymierną~$f( z )$ która jest określony na~zbiorze
-$\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać
 w~postaci $P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$,
 wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
-$\C \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
   \ld, z_{ n } }$ poprzez
 \begin{equation}
   \label{eq:Leja-36}
@@ -1487,7 +1488,7 @@ funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \begin{equation}
   \label{eq:Leja-37}
   \begin{split}
-    f( z ) - \Sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
+    f( z ) - \sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
   \end{split}
 \end{equation}
 
@@ -1561,9 +1562,9 @@ różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
   = 1.
 \end{equation}
 Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
-$k( z ) \in \Z$. Jako różnica dwóch funkcji ciągłych jest to~funkcja
+$k( z ) \in \Zb$. Jako różnica dwóch funkcji ciągłych jest to~funkcja
 ciągła, jednak funkcja ciągła o~wartościach całkowitych musi być równa
-stałej, czyli $k( z ) = k \in \Z$.
+stałej, czyli $k( z ) = k \in \Zb$.
 
 \vspace{\spaceFour}
 
@@ -1587,13 +1588,13 @@ twierdzenia.
 przedstawia działanie funkcji analitycznej w~otoczeniu punktu
 $z_{ 0 }$ takiego, że~$f'( z_{ 0 } ) \neq 0$. Okazuje~się, że~w~pewnym
 otoczeniu tego punktu funkcja istotnie musi zachowywać~się tak, jak to
-tam przedstawiono. Aby~ninijesza analiza była prawomocna należy
+tam przedstawiono. Aby~niniejsza analiza była prawomocna należy
 założyć, że~funkcje $u( x, y )$, $v( x, y )$ są odpowiednio gładkie.
 Choć potem zostanie pokazane, że~są one klasy
-$\Cinfty( \Rtwo )$\footnote{Dokładniej: są one analityczne na~$\Rtwo$.
+$\Cc^{ \infty }( \Rbtwo )$\footnote{Dokładniej: są one analityczne na~$\Rbtwo$.
   Jednak do~tej pory nie znalazłem dowodu tego faktu w~książce
   Lejii.}, to tutaj wystarczy nam, że~są klasy
-$\Cone( \Rtwo )$\footnote{Należy sprawdzić, czy nie wystarczy zwykła
+$\Cone( \Rbtwo )$\footnote{Należy sprawdzić, czy nie wystarczy zwykła
   różniczkowalność.}.
 
 Zacznijmy od~uwagi ogólnej. Jeśli oznaczymy
@@ -1658,8 +1659,8 @@ poza tym punktem.
 \start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
 do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
 nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
-funkcja $\vp( x, y ) = \arg f( z )$, będzie sprawiać podobne
-trudności. Z~tego powodu również poziomica $\mu' = \vp( x, y )$ może
+funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
+trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$ może
 być znacznie bardziej skomplikowany obiektem, niż byśmy oczekiwali.
 
 Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
@@ -1785,7 +1786,7 @@ punktu~$\infty$.
 
 Istnieją po~temu dwa powody. Po pierwsze, zgodnie z~przyjęto
 definicjom jednospójności zbiór
-$\C \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
+$\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
 a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
 zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
 z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
@@ -1799,7 +1800,7 @@ z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur
 całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
 ,,do~nieskończoności'' (dla prostoty przyjmijmy $a = 1$). Przez to
 ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
-$\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \C$ takich, że
+$\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \Cb$ takich, że
 \begin{equation}
   \label{eq:Leja-39}
   \Lim_{ \RToInf } \gamma_{ R }( t_{ 1 } ) = \infty.
@@ -1817,8 +1818,8 @@ bowiem
 \begin{equation}
   \label{eq:Leja-40}
   \begin{split}
-    \Lim_{ \xToPInf } e^{ x } = +\infty, \quad \Lim_{ \xToMInf } e^{
-      -x } = 0, \quad x \in \R.
+    \Lim_{ x \to +\infty } e^{ x } = +\infty, \quad \Lim_{ x \to -\infty } e^{
+      -x } = 0, \quad x \in \Rb.
   \end{split}
 \end{equation}
 Trzeba by więc przyjąć, że~$\exp( \infty ) = \infty$, by~zachodził
@@ -1843,14 +1844,14 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 \start \Str{99} Wzór
 \begin{equation}
   \label{eq:Leja-41}
-  \de{ }{ }{ z } \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p } }\,
+  \de{ }{ }{ z } \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p } }\,
   d\zeta
-  = p \Int_{ C } \frac{ \vp( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
+  = p \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
 \end{equation}
 można udowodnić na~dwa sposoby. W~obu przypadkach będziemy
 potrzebowali następującego twierdzenia (zob. str.~72,
 \cite{SchwartzKursAnalizyMatematycznejTomI1979}). Jeśli w~przestrzeni
-unormowanej nad~$\R$, o~skończonym wymiarze dane~są dwa
+unormowanej nad~$\Rb$, o~skończonym wymiarze dane~są dwa
 nieprzecinające~się zbiory $C$ i~$K$, przy czym $C$ jest domknięty,
 a~$K$ zwarty, to infimum odległość między punktami tych zbiorów jest
 silnie większa od~$0$, co~więcej jest ono osiągane w~dla pewnej pary
@@ -1864,10 +1865,10 @@ Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
   notacji, utożsamia tutaj krzywą $C$ z~jej obrazem.}
 \begin{equation}
   \label{eq:Leja-42}
-  M = \max_{ w \in C } \abso{ \vp( w ) },
+  M = \max_{ w \in C } \abso{ \varphi( w ) },
 \end{equation}
 widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
-$\vp( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
+$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
 funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione są
 założenia twierdzenia o~różniczkowaniu pod znakiem całki
 (zob.~twr.~132,
@@ -2142,7 +2143,7 @@ możemy tylko powiedzieć, że
     \node at (0.65, -0.3) {$1$};
 
     \node at (1.5, -0.3) {$2$};
-    
+
   \end{tikzpicture}
 
   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
@@ -2179,12 +2180,12 @@ algebraicznie.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    7   & & 10 & $\al,\:\; \be$ & $\al, \be$ \\
+    7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
     7   & &  9 & $x,\! y$ & $x, y$ \\
     11  &  2 & & $\abso{ a b }$ & $ab$ \\
     11  &  3 & & $\abso{ \tfr{ a }{ b } }$ & $\tfr{ a }{ b }$ \\
-    22  &  1 & & $\al_{ n }$ & $\al_{ n - 1 }$ \\
-    22  &  1 & & $\be_{ n }$ & $\be_{ n - 1 }$ \\
+    22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
+    22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
     22  & 13 & & urojoną ? & urojoną? \\
     22  & 15 & & rzeczywistą~? & rzeczywistą? \\
     24  & 11 & & $a, \:\; b$ & $a, b$ \\
@@ -2258,9 +2259,10 @@ algebraicznie.
            & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
     146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
            & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
-    146 & &  3 & kątem~$y$ & kątem~$\vp$ \\
+    146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
     155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
     155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    159 & 10 & & krótko : & krótko: \\
     159 & 12 & & części & części otwartej \\
     159 & & 10 & części & części otwartej \\
     164 & 10 & & 102 & 101 \\
@@ -2284,45 +2286,45 @@ algebraicznie.
 \noi \\
 \StrWg{28}{5} \\
 \Jest nieograniczone \\
-\Pow  nieograniczone i~domknięte \\
+\Powin  nieograniczone i~domknięte \\
 \StrWg{36}{5} \\
 \Jest Ze~wzorów (9)~otrzymujemy \\
-\Pow  Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\Powin  Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
 \StrWg{56}{2} \\
 \Jest a~istnieją wartości~$w$, które \\
-\Pow  a~istnieje wartość~$w$, którą \\
+\Powin  a~istnieje wartość~$w$, którą \\
 \StrWg{75}{12} \\
 \Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
-\Pow rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+\Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
 \StrWd{92}{6} \\
 \Jest \emph{krzywą} \\
-\Pow  \emph{krzywą kawałkami gładką} \\
+\Powin  \emph{krzywą kawałkami gładką} \\
 \StrWg{95}{5} \\
 \Jest linią \\
-\Pow dowolna linia łamana \\
+\Powin dowolna linia łamana \\
 \StrWd{107}{12} \\
 \Jest dowolnym konturem zawartym \\
-\Pow  dowolną drogą całkowania zawartą \\
+\Powin  dowolną drogą całkowania zawartą \\
 \StrWd{108}{13} \\
 \Jest domkniętym \\
-\Pow  domkniętym i~ograniczonym \\
+\Powin  domkniętym i~ograniczonym \\
 \StrWd{119}{8} \\
 \Jest \emph{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
-\Pow \emph{jeśli~są równe na~brzegu $B$, to~są równe również
+\Powin \emph{jeśli~są równe na~brzegu $B$, to~są równe również
   w~obszarze~$D$} \\
 \StrWd{134}{16} \\
 \Jest krzywych zamkniętych \\
-\Pow  kawałkami gładkich zamkniętych krzywych \\
+\Powin  kawałkami gładkich zamkniętych krzywych \\
 \StrWg{165}{2} \\
 \Jest niech brzeg tego obszaru zawiera odcinek \\
-\Pow niech część wspólna brzegu tego obszaru i~osi
+\Powin niech część wspólna brzegu tego obszaru i~osi
 $\textrm{im}\, z = 0$
 tworzy odcinek \\
 \StrWd{165}{6} \\
 \Jest \emph{symetrii{ }{ } Riemanna-Schwarza} \\
-\Pow \emph{symetrii Riemanna-Schwarza}
+\Powin \emph{symetrii Riemanna-Schwarza}
 
 \vspace{\spaceTwo}
 
