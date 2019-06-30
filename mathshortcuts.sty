@@ -36,7 +36,6 @@
 
 
 % Ułamki
-% \newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
 \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
 % \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
 \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
@@ -84,8 +83,10 @@
 
 
 % Wartość bezwzględna i normy
-\newcommand{\abso}[1]{\left| \, #1 \, \right|}
-\newcommand{\abst}[1]{\left| #1 \right|}
+\newcommand{\abso}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
 % \providecommand{\absd}[1]{\left| #1 \right|}
 % Zupełnie nie wiem, czemu to jest \providecommand
 \newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
@@ -112,11 +113,10 @@
 \let\oldepsilon\epsilon
 \renewcommand{\epsilon}{\varepsilon}
 
-\newcommand{\veps}{\varepsilon}
 % \newcommand{\vp}{\varphi}
-\newcommand{\om}{\omega}
-\newcommand{\Om}{\Omega}
-\newcommand{\Si}{\Sigma}
+% \newcommand{\om}{\omega}
+% \newcommand{\Om}{\Omega}
+% \newcommand{\Si}{\Sigma}
 
 
 
@@ -145,6 +145,7 @@
 % \mc = \mathcal
 \newcommand{\Cc}{\mathcal{C}}
 \newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
 \newcommand{\Hc}{\mathcal{H}} % A co z \ell
 \newcommand{\lc}{\mathcal{l}}
 \newcommand{\Lc}{\mathcal{L}}
@@ -161,6 +162,7 @@
 \newcommand{\Mc}{\mathcal{M}}
 \newcommand{\Nc}{\mathcal{N}}
 \newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
 \newcommand{\Pc}{\mathcal{P}}
 \newcommand{\Zc}{\mathcal{Z}}
 

@@ -160,7 +160,7 @@ w~analizie matematycznej.
 
 \vspace{\spaceFour}
 
-  
+
 \start Udowodnić, że domknięcie podprzestrzeni, też jest
 podprzestrzenią. Czy nie można tego po prostu skwitować, że wynika to
 od razu, z tego że taka podprzestrzeń nie ma punktów izolowanych?
@@ -181,7 +181,7 @@ i~przydałaby mu się dodatkowa edycja.
 
 \vspace{\spaceFour}
 
-  
+
 \start Nie zdefiniowano pojęcia izometrii. To pojęcie jest tak
 oczywiste, że nie będziemy go tu przytaczać.
 
@@ -196,10 +196,10 @@ od całki Radona należy rozróżnić dwa jej aspekty. Po pierwsze
 $\mu^{ * }$ i $\mu_{ * }$ są zapewne miarami zewnętrznymi (co trzeba
 wykazać) których obcięcia do zbiorów mierzalnych~są miarami (co jest
 już jasne z teorii przedstawionej w~książce). Ponadto wiele dowodów
-nie wykorzystuje w ogóle funkcjonału $\mu( \vp )$ lecz jedynie fakt,
-że~dana miara, zgodnie z terminologią z~\cite{Rud86}, jest regularną
-miarą borelowską. Można więc tą część teorii uogólnić dla tego
-przypadku, jeśli tylko uda się znaleźć sposób na obejście
+nie wykorzystuje w ogóle funkcjonału $\mu( \varphi )$ lecz jedynie
+fakt, że~dana miara, zgodnie z terminologią z~\cite{Rud86}, jest
+regularną miarą borelowską. Można więc tą część teorii uogólnić dla
+tego przypadku, jeśli tylko uda się znaleźć sposób na obejście
 ograniczenia, że przestrzeń $X$ jest przeliczalna w~nieskończoności.
 Z~punktu widzenia praktyki nie jest to bardzo pilne, bowiem przypadek
 przestrzeni przeliczalnej w~nieskończoności obejmuje większość ważnych
@@ -207,7 +207,7 @@ przypadków.
 
 Z~drugiej strony, pojęcie takie jak nośnik miary, choć można go
 zdefiniować dla dowolnej całki na $X$ (wystarczy rozpatrzyć nośnik
-funkcjonału $\int \varphi \, \de \mu$) to bardziej naturalne jest
+funkcjonału $\int \varphi \, \diffPL \mu$) to bardziej naturalne jest
 spojrzenie na niego w świetle teorii dystrybucji. Rzeczywiście, jeżeli
 $X$ jest rozmaitością, to każda miara Radona definiuje sposób
 dystrybucję, bowiem jeśli ciąg funkcji $\varphi_{ n }$ zmierza do 0
@@ -224,13 +224,13 @@ w~stanie odpowiedzieć.
 \vspace{\spaceFour}
 
 
-\start \textbf{2.} Podrozdział~6. ,,Obraz miary w odwzorowaniu'' korzysta
-jawnie z~całki Radona i~funkcji ciągłych o~nośniku zwartym więc jego
-uogólnienie na regularne miary borelowskie może nie być możliwe (choć
-nie wydaje się to prawdopodobne). Ponieważ jednak formuły tutaj są
-znacznie ogólniejsze niż w~większości książek się rozważa przy
-twierdzeniu o zmianie zmiennych w~całce z~miarą Lebesgue'a na
-$\R^{ n }$, a~do tego ostatecznie dążymy.
+\start \textbf{2.} Podrozdział~6. ,,Obraz miary w odwzorowaniu''
+korzysta jawnie z~całki Radona i~funkcji ciągłych o~nośniku zwartym
+więc jego uogólnienie na regularne miary borelowskie może nie być
+możliwe (choć nie wydaje się to prawdopodobne). Ponieważ jednak
+formuły tutaj są znacznie ogólniejsze niż w~większości książek się
+rozważa przy twierdzeniu o zmianie zmiennych w~całce z~miarą
+Lebesgue'a na $\Rb^{ n }$, a~do tego ostatecznie dążymy.
 
 \vspace{\spaceFour}
 
@@ -279,9 +279,9 @@ popełnia, chyba, pewną nonszalancje. Wydaje się, że rozumował on tak:
 jeżeli $F$ jest otoczeniem w $E$, zaś $\V$ otoczeniem w $F$, to
 otwarty względem $F$ zbiór zawarty w $A$, jest też otwarty w $E$. Jest
 to absolutnie nieprawda. Świadczy o tym następujący kontrprzykład:
-rozpatrzmy w $\R$ odcinek $X = [ -2, 2 ]$ jest to otoczenie 0. Teraz
+rozpatrzmy w $\Rb$ odcinek $X = [ -2, 2 ]$ jest to otoczenie 0. Teraz
 zbiór $( -1, 2 ]$, jest zbiorem otwartym
-w $X$, jako ślad zbioru $( -1, 3 )$, nie jest jednak otwarty w~$\R$.\\
+w $X$, jako ślad zbioru $( -1, 3 )$, nie jest jednak otwarty w~$\Rb$.\\
 Dowód punktu c):\\
 Jeżeli $F$ jest otoczeniem $a$ w $E$, to zwiera zbiór otwarty $A$ w
 $E$, zaś $\V$ jest otoczeniem $a$ w $F$, to zawiera zbiór $B$,
@@ -292,7 +292,7 @@ $A \cap B_{ 1 } \subset \V$, jest otwarty zarówno w $E$ jak i w $F$.
 
 
 \start \Str{30} Funkcja $f( x ) = \fr{ \log( x ) }{ 1 - x }$ nie jest
-bijekcją odcinka $] 0, 1 [$ na $\R$, bowiem w całym tym przedziale
+bijekcją odcinka $] 0, 1 [$ na $\Rb$, bowiem w całym tym przedziale
 $f( x ) < -1$.
 
 \vspace{\spaceFour}
@@ -319,7 +319,7 @@ rozumowania.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{60} Poprawić dowód Twierdzenia 20.???!!!
 
 \vspace{\spaceFour}
@@ -357,7 +357,7 @@ współrzędnych jest zbieżny. Mamy wtedy:
   \lim_{ n \to \infty } v_{ n }
   = \lim_{ n \to \infty } \sum_{ i = 1 }^{ n } x_{ n }^{ i } e_{ i }
   = \sum_{ i = 1 }^{ n } \lim_{ n \to \infty }( x_{ n }^{ i } e_{ i } )
-  = \sum_{ i = 1 }^{ n } \lim_{ n \to \infty }( x_{ n }^{ i } ) e_{ i }  
+  = \sum_{ i = 1 }^{ n } \lim_{ n \to \infty }( x_{ n }^{ i } ) e_{ i }
 \end{equation*}
 na mocy ciągłości działań w przestrzeni liniowo topologicznej.
 Własność ta obowiązuje teraz w dowolnej bazie, ze względu na liniowy
@@ -431,14 +431,14 @@ Pobieżne przedstawienie tej konstrukcji.???!!!
 \start \Str{149} Aby dowód tego twierdzenia był kompletny należy
 skorzystać z poniższego lematu. \\
 Lemat. \\
-Jeżeli $\al$ jest niezerową formą nad przestrzenią Hilberta, a
+Jeżeli $\alpha$ jest niezerową formą nad przestrzenią Hilberta, a
 $\vec{ H }$
 jest jej jądrem, to $\vec{ H }^{ \bot }$ jest jednowymiarowa. \\
 Dowód. \\
-Jeżeli $\vec{ H }^{ \bot }$ nie jest jednowymiarowa to możemy znaleźć
-w niej dwa linowa niezależne wektory $u$, $v$. Rozważmy teraz
-niezerowy wektor $x = u -\fr{ \al( u ) }{ \al( v ) }v$. Jest
-oczywiście $\al( x ) = 0$,
+Jeżeli $\vec{ H }^{ \bot }$ nie jest jednowymiarowa to możemy znaleźć w
+niej dwa linowa niezależne wektory $u$, $v$. Rozważmy teraz niezerowy
+wektor $x = u -\fr{ \alpha( u ) }{ \alpha( v ) }v$. Jest oczywiście
+$\alpha( x ) = 0$,
 co jednak przeczy temu, że $\vec{ H } \cap \vec{ H }^{ \bot } =  0$. \\
 Uwaga. W przestrzeni skończenie wymiarowej, wynika to od razu z
 pięknego wzoru $\dim\im f = \dim X - \dim\ker f$, pozwalającego
@@ -463,8 +463,8 @@ pojęcie kanonicznej iniekcji podane jest zbyt zwięźle.
 \start \Str{160} W dowodzie tego arcyważnego twierdzenia jest pewna
 skrótowość. Należy bowiem skorzystać z ważnego związku:
 \begin{equation*}
-  || x || = \sup_{ || y^{ * } || \leq 1 } | x( y^{ * } ) | 
-  = \sup_{ || y^{ * } || \leq1 } | y^{ * }( x ) | \textrm{.}  
+  || x || = \sup_{ || y^{ * } || \leq 1 } | x( y^{ * } ) |
+  = \sup_{ || y^{ * } || \leq1 } | y^{ * }( x ) | \textrm{.}
 \end{equation*}
 Jest to w istocie wniosek z refleksywności przestrzeni Hilberta,
 bowiem na jego mocy $x$ można traktować jako odwzorowanie liniowe
@@ -472,7 +472,7 @@ ciągłe z przestrzeni dualnej w $K$. Korzystając dodatkowo z
 izomorfizmu przestrzeni Hilberta z jej dualną, mamy \linebreak
 zależność:
 \begin{equation*}
-  || x || = \sup_{ || y || \leq 1 } | ( y | x ) | \textrm{.}  
+  || x || = \sup_{ || y || \leq 1 } | ( y | x ) | \textrm{.}
 \end{equation*}
 Zauważenie tych związków nie jest banalne, ich udowodnienie, gdy już
 wiadomo z jakich twierdzeń skorzystać, już jest.
@@ -492,7 +492,7 @@ odwzorowanie pochodne''.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{229} W tym miejscu powinien być komentarz odnośnie tego
 jak podstępnym obiektem są pochodne cząstkowe w wybranych
 współrzędnych, choć problem ten się nie pojawia przy mechanicznym
@@ -535,12 +535,12 @@ Niech $E$ i $F$ będą teraz unormowanymi przestrzeniami wektorowymi.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{249} Zrób coś z wzorem (3.6.7).
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{387} Przedyskutuj to oszacowanie. Jest poprawne, nie jest
 tylko wspomniane, że jest przyjęte tak by łatwo było liczyć, nie by
 uzyskać optymalne oszacowanie, co w praktycznych rachunkach jest i tak
@@ -646,7 +646,7 @@ zachodzi:
 \end{equation*}
 Stąd mamy
 \begin{equation*}
-  \inf( e^{ + }, e^{ - } ) = e^{ + } + \inf( e^{ + } - e^{ + }, 
+  \inf( e^{ + }, e^{ - } ) = e^{ + } + \inf( e^{ + } - e^{ + },
   e^{ - } - e^{ + } ).
 \end{equation*}
 Łącząc to z podany w książce wywodem dowodzimy już bezpośrednio
@@ -672,18 +672,18 @@ przez $| \mu( \psi ) |$?
 
 
 \start \Str{423} W~dowodzie jest luka, trzeba bowiem wykazać,
-że~$\psi_{ 1 } = \inf( \psi, \vp )$ jest ciągła. Można to zrobić tak:
-jeżeli $\psi( x ) > \vp( x )$ (analogicznie dla
+że~$\psi_{ 1 } = \inf( \psi, \varphi )$ jest ciągła. Można to zrobić
+tak: jeżeli $\psi( x ) > \varphi( x )$ (analogicznie dla
 $\psi( x ) < \varphi( x )$) to z~ciągłości tych funkcji wynika,
-że~istnieje otoczenie punktu $x$ na którym $\psi > \vp$. W~tym
-otoczeniu $\psi_{ 1 } = \vp$ więc funkcja ta jest ciągła. Jeśli
-$\psi( x ) = \vp( x ) = a$ to dla każdego $\veps > 0$ istnieją
+że~istnieje otoczenie punktu $x$ na którym $\psi > \varphi$. W~tym
+otoczeniu $\psi_{ 1 } = \varphi$ więc funkcja ta jest ciągła. Jeśli
+$\psi( x ) = \varphi( x ) = a$ to dla każdego $\epsilon > 0$ istnieją
 otoczenia tego punktu $A$ i $B$, że
-$\psi( A ) \subset [ a - \veps, a + \veps ]$
-i~$\varphi( B ) \subset [ a - \veps, a + \veps ]$. W~takim razie na
-$A \cup B$
-$\inf( \psi( x ), \vp( x ) ) \subset [ a - \veps, a + \veps ]$, co
-dowodzi ciągłości. Wynik ten nie przenosi~się na infinimum już
+$\psi( A ) \subset [ a - \epsilon, a + \epsilon ]$
+i~$\varphi( B ) \subset [ a - \epsilon, a + \epsilon ]$. W~takim razie
+na $A \cup B$
+$\inf( \psi( x ), \varphi( x ) ) \subset [ a - \epsilon, a + \epsilon
+]$, co dowodzi ciągłości. Wynik ten nie przenosi~się na infinimum już
 przeliczalnego zbioru funkcji. Można bowiem dla funkcji
 charakterystycznej zbioru $[0, 1]$ rozważyć ciąg zmierzających do niej
 trapezów zawartych w przedziale
@@ -925,7 +925,7 @@ stronie pod koniec drugiego akapitu,
 $X^{ - }_{ h + 1, n } \cap X^{ + }_{ k, n } = \emptyset$. Jeżeli
 $h + 1 < k$ to
 $X^{ - }_{ h + 1, n } \cap X^{ + }_{ k, n } \subset N_{ n }$.
-  
+
 \start \Str{512} Nie jest wcale dla mnie oczywiste czemu zbiory
 $A_{ 2 k,\, n+ 1 }$ i~$A_{ 2 k + 1,\, n+ 1 }$ dają cały
 zbiór~$A_{ k,\, n }$, ale można chyba pokazać, że~dają prawie cały ten
@@ -944,7 +944,7 @@ możliwości poprawić.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{531} W dowodzie zakłada się, że~przestrzeń jest
 przeliczalna w~nieskończoności choć dowód nie~wydaje~się z~tego
 korzystać. Jednak w~definicji odwzorowania $\mu$\dywiz właściwego
@@ -956,7 +956,7 @@ nieskończoności oba te pojęcia pokrywają się.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{532} Udowodnić twierdzenie 73.
 
 \vspace{\spaceFour}
@@ -968,7 +968,7 @@ lukę.
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{544} Udowodnić twierdzenie 77.
 
 \vspace{\spaceFour}
@@ -1007,7 +1007,7 @@ w~przypisie, istnieje?
 
 \vspace{\spaceFour}
 
-  
+
 \start \Str{628} Nie~widzę z~czego wynika wniosek 2.
 
 \vspace{\spaceFour}
@@ -1059,8 +1059,8 @@ zastanowić. %
     27  &  7 & & $f_{ 0 }( x ) \neq \emptyset$
            & $f_{ 0 }( x ) = \emptyset$ \\
     31  &  3 & & gdy & gdyż \\
-    34  &  5 & & $( \forall a \in \R ) ( \forall \veps > 0 )$
-           & $( \forall \veps > 0 ) ( \forall a \in \R )$ \\
+    34  &  5 & & $( \forall a \in \Rb ) ( \forall \epsilon > 0 )$
+           & $( \forall \epsilon > 0 ) ( \forall a \in \Rb )$ \\
     36  & &  8 & funkcję & funkcję rzeczywistą \\
     37  &  1 & & $|| 0 || = \vec{ 0 }$ & $|| \vec{ 0 } || = 0$ \\
     37  &  5 & & $|| \vec{ x }_{ 1 } + \vec{ x }_{ 2 } + \ld + \vec{ x }_{ n } |$
@@ -1078,10 +1078,10 @@ zastanowić. %
     44  & 20 & & \emph{ośrodkowa} & \emph{ośrodkową} \\
     44  & 21 & & wszędzie gęstą & gęstą \\
     45  &  5 & & $B_{ 0 }( a, R )$ & $B_{ o }( a, R )$ \\
-    45  &  6 & & $\be_{ 0 }( a, R ) = B_{ 0 }( a, R ) \cap F$
-           & $\be_{ o }( a, R ) = B_{ o }( a, R ) \cap F$ \\
-    45  &  8 & & $\be( a_{ i }, R_{ i } )_{ i \in I}$
-           & $\be_{ o }( a_{ i }, R_{ i } )_{ i \in I}$ \\
+    45  &  6 & & $\beta_{ 0 }( a, R ) = B_{ 0 }( a, R ) \cap F$
+           & $\beta_{ o }( a, R ) = B_{ o }( a, R ) \cap F$ \\
+    45  &  8 & & $\beta( a_{ i }, R_{ i } )_{ i \in I }$
+           & $\beta_{ o }( a_{ i }, R_{ i } )_{ i \in I }$ \\
     \hline
   \end{tabular}
 
@@ -1109,7 +1109,7 @@ zastanowić. %
     52  &  2 & & otoczeń & otoczeń domkniętych \\
     52  & &  1 & $l \in$ & $x_{ n } \in$ \\
     53  &  7 & & metryczną; zbieżność & metryczną, zbieżność \\
-    56  & 12 & & $E_{ 1 } \ti E_{ 2 }$ & $E_{ 1 }$ i $E_{ 2 }$ \\
+    56  & 12 & & $E_{ 1 } \times E_{ 2 }$ & $E_{ 1 }$ i $E_{ 2 }$ \\
     56  & 21 & & przedział & zbiór \\
     59  & &  8 & \emph{na pewno nigdy} & \emph{nigdy} \\
     61  &  8 & & $[ -\fr{ 1 }{ 2 } \pi, \fr{ 1 }{ 2 } \pi [$
@@ -1123,8 +1123,8 @@ zastanowić. %
     71  & & 16 & $F$ & $E$ \\
     71  & & 10 & $B$ $\cap F$ & $B \cap F$ \\
     72  &  5 & & $d = \inf_{ \substack{ k_{ 1 } \in F_{ 2 } } } d( x_{ 1 },
-                 F_{ 2 } )$ 
-           & $d = \inf_{ \substack{ k_{ 1 } \in F_{ 2 } } } 
+                 F_{ 2 } )$
+           & $d = \inf_{ \substack{ k_{ 1 } \in F_{ 2 } } }
              d( x_{ 1 }, k_{ 1 } )$ \\
     72  &  8 & & $F$ & $E$ \\
     72  & 11 & & odwzorowania & przypadku \\
@@ -1151,10 +1151,10 @@ zastanowić. %
     80  &  2 & & \emph{częścią} & \emph{częścią spójną} \\
     80  & 12 & & do której należy & zawierająca \\
     82  &  4 & & $F_{ x }$ & $E_{ x }$ \\
-    83  & & 12 & $] f^{ - 1 }( \al ), f^{ -1 }( \al' ) [$
-           & $] a, f^{ -1 }( \al ) [$ \\
-    86  &  4 & & $\fr{ }{ 2 }$ & $\fr{ 1 }{ 2 }$ \\
-    93  & & 11 & $d[ f_{ \la }( a_{ \la } ), df_{ \la_{ 0 } }( a_{ \la_{ 0 } } ) ]$
+    83  & & 12 & $] f^{ - 1 }( \alpha ), f^{ -1 }( \alpha' ) [$
+           & $] a, f^{ -1 }( \alpha ) [$ \\
+    86  &  4 & & $\fr{ {} }{ 2 }$ & $\fr{ 1 }{ 2 }$ \\
+    93  & & 11 & $d[ f_{ \lambda }( a_{ \lambda } ), df_{ \lambda_{ 0 } }( a_{ \lambda_{ 0 } } ) ]$
            & $d[ f_{ \la }( a_{ \la } ), f_{ \la_{ 0 } }( a_{ \la_{ 0 } } ) ]$ \\
     94  & 17 & & $\big( \Sum_{ i = 1 }^{ n } | | u( \vec{ e }_{ i } ) | |$
            & $\big( \sum_{ i = 1 }^{ n } | | u( \vec{ e }_{ i } ) | | \big)$ \\
@@ -1162,7 +1162,7 @@ zastanowić. %
            & $\vec{ x }_{ n } + \vec{ y }_{ n }$ \\
     104 &  1 & & $| \vec{ y } || / \eta$ & $|| \vec{ y } || / \eta$ \\
     125 & &  1 & twierdzenie 44 & twierdzenie 53 \\
-    128 & &  8 & $x \in \veps [ a, b ]$ & $x \in [ a, b ]$ \\
+    128 & &  8 & $x \in \epsilon [ a, b ]$ & $x \in [ a, b ]$ \\
     129 & &  3 & nie jest & nie musi \\
     134 &  2 & & $d[ \tilde{ f }, \tilde{ f }_{ n } ]$
            & $d( \tilde{ f }, \tilde{ f }_{ n } )$ \\
@@ -1174,8 +1174,8 @@ zastanowić. %
     141 &  9 & & z ciągłości & wynika z ciągłości \\
     141 &  9 & & której można łatwo dowieść & co można łatwo pokazać \\
     141 & 18 & & \emph{hilbertowską} & \emph{prehilbertowską} \\
-    143 & & 11 & $d[ \vec{ b }, \fr{ 1 }{ 2 } ( \vec{ \al }, \vec{ \be }) ]$
-           & $d[ \vec{ b }, \fr{ 1 }{ 2 } ( \vec{ \al } + \vec{ \be }) ]$
+    143 & & 11 & $d[ \vec{ b }, \fr{ 1 }{ 2 } ( \vec{ \alpha }, \vec{ \beta }) ]$
+           & $d[ \vec{ b }, \fr{ 1 }{ 2 } ( \vec{ \alpha } + \vec{ \beta }) ]$
     \\
     146 & & 14 & \emph{jest dopełnieniem} & \emph{jest domknięciem} \\
     146 & & 13 & \emph{dopełnieniem} & \emph{domknięciem} \\
@@ -1191,7 +1191,7 @@ zastanowić. %
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\ 
+    & Od góry & Od dołu & & \\
     \hline
     149 &  6 & & \emph{dwuciągłą} & \emph{ciągłą} \\
     149 & 16 & & innymi słowy & stąd mamy \\
@@ -1222,8 +1222,8 @@ zastanowić. %
     171 & & 15 & $C_{ [ 0, 1 ] } \{ \lambda \}$
            & $C( [ 0, 1 ] \bs \{ \lambda \} )$ \\
     172 &  9 & & zwarte & zawarte \\
-    176 &  9 & & $\la_{ 0 } \in \ol{ \La }$
-           & $\la_{ 0 } \notin \ol{ \La }$ \\
+    176 &  9 & & $\lambda_{ 0 } \in \ol{ \Lc }$
+           & $\lambda_{ 0 } \notin \ol{ \Lc }$ \\
     180 &  1 & & $\Prod^{ \infty }_{ n = 1 } \fr{ 1 }{ n }$
            & $\Sum^{ \infty }_{ n = 1 } \frac{ 1 }{ n }$ \\
     180 &  2 & & twierdzeniu 82 & twierdzeniu 115 \\
@@ -1233,8 +1233,8 @@ zastanowić. %
     207 & 12 & & $\leq 0$ & $\geq 0$ \\
     213 &  1 & & $E$ także & $E$ \\
     214 & &  3 & był & obecny był \\
-    221 & &  2 & $\vec{ \al }_{ m } || \ora{ dx } ||$
-           & $\vec{ \al }_{ m } || \ora{ dx } || )$ \\
+    221 & &  2 & $\vec{ \alpha }_{ m } || \ora{ dx } ||$
+           & $\vec{ \alpha }_{ m } || \ora{ dx } || )$ \\
     224 & & 12 & $| B'( \vec{ x } ) \cdot \vec{ X } ||$
            & $|| B'( \vec{ x } ) \cdot \vec{ X } ||$ \\
     226 & 10 & & swoimi pochodnymi & swą pochodną \\
@@ -1270,8 +1270,8 @@ zastanowić. %
     260 &  9 & & przyjmując,~że & zauważając,~że \\
     265 & 15 & & $\fr{ \vec{ h }^{ \vec{ p } } }{ p! }$
            & $\fr{ \vec{ h }^{ \vec{ p } } }{ \vec{ p }! }$ \\
-    269 &  9 & & $\Lb( \ola{ E }, \R )$
-           & $\Lb( \ora{ E }, \R )$ \\
+    269 &  9 & & $\Lb( \ola{ E }, \Rb )$
+           & $\Lb( \ora{ E }, \Rb )$ \\
     276 &  6 & & $\vec{ c }$ & $c$ \\
     280 &  5 & & $Q^{ - } \circ P$ & $Q^{ -1 } \circ P$ \\
     280 & &  9 & ciągłe & różniczkowalne \\
@@ -1380,7 +1380,7 @@ zastanowić. %
     425 & 10 & & normy są addytywne & $\mu = \mu^{ + } - \mu^{ - }$ \\
     425 & 12 & & $|| \mu^{ + } ||$ & $|| \mu^{ + } ||_{ K }$ \\
     425 & &  2 & \emph{na $\mathcal{C}( X ) \geq 0$ nad
-                 $\mathcal{C}^{ + }( X )$} 
+                 $\mathcal{C}^{ + }( X )$}
            & \emph{dodatnia na $\mathcal{C}( X )$} \\
     431 & & 12 & $\geq$ & $=$ \\
     432 &  1 & & $\varphi \geq 1$ & $\varphi = 1$ \\
@@ -1395,8 +1395,8 @@ zastanowić. %
                  K_{ n } ) \leq$ & $\sum\limits^{ N }_{ n = 0 }
                                    \mu( O_{ n } \backslash K_{ n } ) =$ \\
     437 &  3 & & $\leq \sum\limits^{ N }_{ n = 0 } [ \mu( O_{ n } )
-                 - \mu( K_{ n } ) ]$ 
-           & $= \sum\limits^{ N }_{ n = 0 } [ \mu( O_{ n } ) 
+                 - \mu( K_{ n } ) ]$
+           & $= \sum\limits^{ N }_{ n = 0 } [ \mu( O_{ n } )
              - \mu( K_{ n } ) ]$ \\
     437 &  8 & & $\ol{ A_{ 0 } \cup A_{ 1 } \cup \ld \cup A_{ n } }$
            & $A_{ 0 } \cup A_{ 1 } \cup \ld \cup A_{ n }$ \\
@@ -1432,11 +1432,11 @@ zastanowić. %
     \hline
     459 & &  9 & $\V_{ a_{ i } }$ & $C_{ i }$ \\
     460 & 12 & & $K$ & $K_{ n }$ \\
-    460 & &  9 & $\ga$ & $\vec{ \ga }$ \\
-    462 & &  6 & $\mu( [ a - \veps, b + \veps [ )$
-           & $\mu( ] a - \veps, b + \veps [ )$ \\
-    462 & &  6 & $\mu( ] a - \veps, b + \veps ] )$
-           & $\mu( [ a - \veps, b + \veps ] )$ \\
+    460 & &  9 & $\gamma$ & $\vec{ \gamma }$ \\
+    462 & &  6 & $\mu( [ a - \epsilon, b + \epsilon [ )$
+           & $\mu( ] a - \epsilon, b + \epsilon [ )$ \\
+    462 & &  6 & $\mu( ] a - \epsilon, b + \epsilon ] )$
+           & $\mu( [ a - \epsilon, b + \epsilon ] )$ \\
     464 & 17 & & $\int || \vec{ f } - \vec{ g } ||$
            & $\int^{ * } || \vec{ f } - \vec{ g } ||$ \\
     464 & 19 & & $\int || \vec{ f } - \vec{ \gamma } ||$
@@ -1463,7 +1463,7 @@ zastanowić. %
     480 & 10 & & są zazwyczaj & są \\
     481 & 10 & & $] a, b [$ & $] a, b]$ \\
     482 & 14 & & $| g_{ i } |$ & $g_{ i }$ \\
-    483 & &  9 & $\Cc( X ) \otimes F$ & $\Cc( X ) \ot \vec{ F }$ \\
+    483 & &  9 & $\Cc( X ) \otimes F$ & $\Cc( X ) \otimes \vec{ F }$ \\
     487 & 10 & & \emph{jest zapewniona} & \emph{nie jest zapewniona} \\
     487 & 13 & & 32 przyjmując $p = 1$. & 32. \\
     487 & 16 & & $|| \vec{ f } ||^{ p } )$ & $|| \vec{ f } ||^{ p }$ \\
@@ -1473,7 +1473,7 @@ zastanowić. %
     497 & &  4 & zwarty & zawarty \\
     498 & 12 & & domknięcia zwartego & o domknięciu zwartym \\
     499 & & 12 & $\sigma$\dywiz algebrę & $\sigma$\dywiz algebrę
-                                          borelowską \\
+                                     borelowską \\
     500 & &  3 & $\mathcal{C}_{ + }( X )$ & $\mathcal{C}( X )$ \\
     500 & &  2 & $\Gamma_{ + }( X )$ & $\Gamma( X )$ \\
     500 &  1 & & $\Gamma_{ + }( X )$ & $\Gamma( X )$ \\
@@ -1506,7 +1506,7 @@ zastanowić. %
     511 & &  4 & $\leq \nu( K )$ & $= \nu( K )$ \\
     512 &  1 & & $M_{ n }$ & $M_{ n } \cup N_{ n }$ \\
     512 &  3 & & $M_{ n }$ & $M_{ n } \cup N_{ n }$ \\
-    512 & & 16 & $\vp\, \de \mu$ & $\int \vp\, \de \mu$ \\
+    512 & & 16 & $\varphi\, \diffPL \mu$ & $\int \varphi\, \diffPL \mu$ \\
     512 & & 13 & $\nu = \mu$ & $\nu \leq \mu$ \\
     517 & 15 & & majorantą & majorantą) \\
     522 &  4 & & Tak samo można & Można też \\
@@ -1530,7 +1530,7 @@ zastanowić. %
     530 &  4 & & nośnika & nośnikiem \\
     530 &  4 & & domknięcie & jest domknięcie \\
     530 & 10 & & $H^{ -1 }( A )$ & $H^{ -1 }( K )$ \\
-    531 &  3 & & $\vec{ \mu }( H^{ * } \vp )$ & $H^{ * } \vp$ \\
+    531 &  3 & & $\vec{ \mu }( H^{ * } \varphi )$ & $H^{ * } \varphi$ \\
     531 &  2 & & funkcji & nośnika funkcji \\
     % 531 & & 16 & zespoloną & rzeczywistą $\geq 0$ \\
     531 & & 10 & Ale & Teraz \\
@@ -1554,7 +1554,7 @@ zastanowić. %
     538 & & 11 & miary & normy \\
     545 &  6 & & unormowagą & unormowaną \\
     556 & &  1 & zwarte & lokalnie zwarta \\
-    559 & &  5 & $\mc{C}_{ H \ti K }$ & $\Gamma_{ H \ti K }$ \\
+    559 & &  5 & $\mc{C}_{ H \times K }$ & $\Gamma_{ H \times K }$ \\
     563 & 14 & & z~dołu & z~góry \\
     563 & & 10 & twierdzenie & wynik twierdzenia \\
     563 & &  5 & twierdzenia 59 & twierdzenia 45 \\
@@ -1569,7 +1569,7 @@ zastanowić. %
            & \emph{$\mu$\dywiz mierzalny} \\
     571 & &  5 & \emph{$\nu$\dywiz całkowalny}
            & \emph{$\nu$\dywiz mierzalny} \\
-    573 &  3 & & $( \la \ot \mu )$\dywiz prawie
+    573 &  3 & & $( \la \otimes \mu )$\dywiz prawie
            & $\la$\dywiz prawie \\
     575 & 10 & & $\vec{ P }_{ l }$ & $P_{ l }$ \\
     575 & 11 & & $d_{ p }$ & $\vec{ d }_{ p }$ \\
@@ -1590,19 +1590,19 @@ zastanowić. %
     592 & 11 & & ma & może mieć \\
     593 &  8 & & ($ t $!) & $ t $! \\
     593 & & 15 & \emph{niezerową} & \emph{zerową} \\
-    593 & & 10 & $\R_{ 2 }$ & $\R_{ 1 }$ \\
+    593 & & 10 & $\Rb_{ 2 }$ & $\Rb_{ 1 }$ \\
     593 & &  5 & $M_{ [ c_{ i }, } c_{ i + 1 ] }$
            & $M_{ [ c_{ i }, c_{ i + 1 } ] }$ \\
-    594 &  2 & & $\R^{ 2 }$ & $\R_{ 1 }$ \\
+    594 &  2 & & $\Rb^{ 2 }$ & $\Rb_{ 1 }$ \\
     594 & &  3 & funkcji & funkcji ciągłej \\
     599 &  7 & & (4.9.38) & (4.8.38) \\
-    609 &  3 & & $\int || \vec{ f } || \vp_{ b } d\la$
-           & $\int^{ * } || \vec{ f } || \vp_{ b } d\la$ \\
-    609 &  5 & & $\int || \vec{ f } || \vp_{ b' } d\la$
-           & $\int^{ * } || \vec{ f } || \vp_{ b' } d\la$ \\
-    609 &  5 & & $\Int_{ | a, b' [ } || \vec{ f } || d\la$
+    609 &  3 & & $\int || \vec{ f } || \varphi_{ b } d\lambda$
+           & $\int^{ * } || \vec{ f } || \varphi_{ b } d\lambda$ \\
+    609 &  5 & & $\int || \vec{ f } || \varphi_{ b' } d\lambda$
+           & $\int^{ * } || \vec{ f } || \varphi_{ b' } d\lambda$ \\
+    609 &  5 & & $\Int_{ | a, b' [ } || \vec{ f } || d\lambda$
            & $\Int_{ | a, b' [ }{^{ * }}
-             || \vec{ f } || d\la$ \\ \hline
+             || \vec{ f } || d\lambda$ \\ \hline
   \end{tabular}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1640,7 +1640,7 @@ zastanowić. %
     666 &  4 & & wyprowadzony & podany \\
     & & & & \\
     564 &  8 & & $\vec{ E }$.
-           & $\vec{ E }$, gdzie $\vec{ x }_{ n } \in B( a_{ n }, \vp )$. \\
+           & $\vec{ E }$, gdzie $\vec{ x }_{ n } \in B( a_{ n }, \varphi )$. \\
            % Coś tu jest nie tak
     \hline
   \end{tabular}
@@ -1649,201 +1649,200 @@ zastanowić. %
 \noi
 \StrWd{20}{19} \\
 \Jest Należy zawsze używać $\preceq$ \\
-\Pow  Należy używać $\preceq$ raczej niż \\
+\Powin  Należy używać $\preceq$ raczej niż \\
 \StrWd{10}{6} \\
 \Jest nie zawierają $n$ elementów \\
-\Pow  nie zawierają $n$\dywiz tego elementu \\
+\Powin  nie zawierają $n$\dywiz tego elementu \\
 \StrWg{41}{5} \\
 \Jest rozważany zbiór jest skończony, a~kiedy nieskończony \\
-\Pow  rozważana ilość zbiorów jest skończona, a~kiedy nieskończona \\
+\Powin  rozważana ilość zbiorów jest skończona, a~kiedy nieskończona \\
 \StrWg{34}{9} \\
 \Jest $+\infty$ tak wybraną, że $p / 10^{ b } \leq \eta$ \\
 $+\infty$, zaś $b$ jest liczbą rzeczywistą tak wybraną,
 że~$1 / 10^{ b } \leq \eta$ \\
 \StrWd{46}{15} \\
 \Jest dopełnionej w~początku współrzędnych prostą rzeczywistą \\
-\Pow będącej dopełnieniem początku układu współrzędnych do~prostej
+\Powin będącej dopełnieniem początku układu współrzędnych do~prostej
 rzeczywistej \\
 \StrWd{49}{17} \\
 \Jest $B_{ 1 }( 1 )$ zawiera także pewien zbiór, otwarty w~sensie
 drugiej
 metryki, do~którego także należy to zero przestrzeni \\
-\Pow ten zbiór jest też względem drugiej metryki i~zawiera zero
+\Powin ten zbiór jest też względem drugiej metryki i~zawiera zero
 przestrzeni \\ % to jakoś źle brzmi
 \StrWd{63}{18} \\
 \Jest podzbiorów domkniętych \\
-\Pow  zstępujących podzbiorów domkniętych \\
+\Powin  zstępujących podzbiorów domkniętych \\
 \StrWd{63}{17} \\
 \Jest Na~mocy twierdzenia~20 \\
-\Pow  Na~mocy wniosku~1 z~twierdzenia~21 \\
+\Powin  Na~mocy wniosku~1 z~twierdzenia~21 \\
 \StrWd{70}{19} \\
 \Jest współrzędnych w~przedziale zwartym \\
-\Pow  układu współrzędnych do~przedziału zwartego \\
+\Powin  układu współrzędnych do~przedziału zwartego \\
 \StrWd{83}{13} \\
-\Jest $\al' > \al$ \\
-\Pow  $\al' > \al$, zawartego w~przedziale $| \al, \be |$ \\
+\Jest $\alpha' > \alpha$ \\
+\Powin  $\alpha' > \alpha$, zawartego w~przedziale $| \alpha, \beta |$ \\
 \StrWd{139}{9} \\
 \Jest pierwszy wyraz po~prawej stronie we~wzorze \\
-\Pow  lewa strona wzoru \\
+\Powin  lewa strona wzoru \\
 \StrWg{142}{13} \\
 \Jest dochodzimy wprost do~wzoru \\
-\Pow  otrzymujemy pierwszy ze~wzorów \\
+\Powin  otrzymujemy pierwszy ze~wzorów \\
 \StrWg{146}{13} \\
 \Jest algebraicznymi \\
-\Pow algebraicznymi; w~szczególności oznacza to, że~rzutowania na~te
+\Powin algebraicznymi; w~szczególności oznacza to, że~rzutowania na~te
 podprzestrzenie jest~liniowe \\
 \StrWd{163}{1} \\
 \Jest
 $|| \vec{ x } + \vec{ y } || = || \vec{ x } || + || \vec{ y } ||$
 $+ 2 \mathrm{Re}( \vec{ x } | \vec{ y } )$ \\
-\Pow $|| \vec{ x } + \vec{ y } ||^{ 2 } = || \vec{ x } ||^{ 2 }
+\Powin $|| \vec{ x } + \vec{ y } ||^{ 2 } = || \vec{ x } ||^{ 2 }
 + || \vec{ y } ||^{ 2 }$ $+ 2 \mathrm{Re}( \vec{ x } | \vec{ y } )$ \\
 \StrWg{165}{9} \\
 \Jest i \\
-\Pow i~wraz z~pierwszą częścią dowodu wykazuje, \\
+\Powin i~wraz z~pierwszą częścią dowodu wykazuje, \\
 \StrWg{200}{18} \\
 \Jest obie te granice nie są równe \\
-\Pow  jeśli co~najmniej jedna z~tych granic nie~jest równa \\
+\Powin  jeśli co~najmniej jedna z~tych granic nie~jest równa \\
 \StrWg{245}{8} \\
 \Jest funkcja \\
-\Pow  funkcja $x \mapsto f'( x )$ jest jednostajnie ciągła \\
+\Powin  funkcja $x \mapsto f'( x )$ jest jednostajnie ciągła \\
 \StrWd{259}{12} \\
 \Jest \emph{$\Omega \subset E$ w zbiór $F$} \\
-\Pow $\Omega \subset E$ przestrzeni afinicznej unormowanej
-w~przestrzeń
+\Powin $\Omega \subset E$ przestrzeni afinicznej unormowanej w~przestrzeń
 afiniczną unormowaną~$F$ \\
 \StrWd{280}{10} \\
 \Jest Odwzorowanie to~jest ciągłe \\
-\Pow  Wynika stąd, że~odwzorowanie to~jest ciągłe \\
+\Powin  Wynika stąd, że~odwzorowanie to~jest ciągłe \\
 \StrWd{374}{10} \\
 \Jest Punkty te~nie muszą \\
-\Pow  Punkty te~można umieścić znajdować~się \\
+\Powin  Punkty te~można umieścić znajdować~się \\
 \StrWg{379}{7} \\
 \Jest \emph{Riemanna} (niekoniecznie\ldots zwartym) \\
-\Pow  \emph{Riemanna} \\
+\Powin  \emph{Riemanna} \\
 \StrWd{387}{14} \\
 \Jest po~całym tym przedziale \\
-\Pow  po~wszystkich tych przedziałach \\
+\Powin  po~wszystkich tych przedziałach \\
 \StrWd{390}{2} \\
 \Jest Przekonamy~się \\
-\Pow  O~jej istnieniu przekonamy~się \\
+\Powin  O~jej istnieniu przekonamy~się \\
 \StrWd{393}{12} \\
 \Jest (4.2.21)~i~biorąc pod~uwagę (3.2.19), \\
-\Pow (4.2.21), \\
+\Powin (4.2.21), \\
 \StrWd{396}{14} \\
 \Jest ciągła na przedziale $[ a', b' ]$ funkcja $\varphi$ \\
-\Pow  funkcja $\varphi$ ciągła na przedziale $[ a', b' ]$ \\
+\Powin  funkcja $\varphi$ ciągła na przedziale $[ a', b' ]$ \\
 \StrWg{399}{7} \\
 \Jest Gdy przestrzeń~$X$ jest zwarta, wtedy~dochodzimy tego \\
-\Pow  Z~własności zbiorów zwartych wynika \\
+\Powin  Z~własności zbiorów zwartych wynika \\
 \StrWg{407}{5} \\
 \Jest pojęcie \\
-\Pow  pojęcie i~udowodnimy związane z~nim twierdzenie \\
+\Powin  pojęcie i~udowodnimy związane z~nim twierdzenie \\
 \StrWg{413}{12} \\
 \Jest \emph{przy ciągłym $\vec{ p }$ jest sumą mnogościową domknięcia
   zbioru punktów $a_{ \nu }$ i~nośnika
   funkcji $\vec{ p }$.} \\
-\Pow \emph{zawiera~się w~sumie mnogościowej domknięcia zbioru punktów
-  $a_{ \nu }$ i~nośnika funkcji $\vec{ p }$, zaś~przy $\vec{ p }$
+\Powin \emph{zawiera~się w~sumie mnogościowej domknięcia zbioru
+  punktów $a_{ \nu }$ i~nośnika funkcji $\vec{ p }$, zaś~przy
+  $\vec{ p }$
   ciągłym jest ich sumą.} \\
 \StrWd{415}{14} \\
 \Jest \emph{lokalnie zwartą\ldots} \\
-\Pow  \emph{lokalnie zwartą, przeliczalną w~nieskończoności\ldots} \\
+\Powin  \emph{lokalnie zwartą, przeliczalną w~nieskończoności\ldots} \\
 \StrWg{436}{17} \\
 \Jest $\complement ( [ a, b ] )$ \\
-\Pow $\complement ( [ a, b ] )$ i~niech~$D$ będzie wspomnianym wyżej
+\Powin $\complement ( [ a, b ] )$ i~niech~$D$ będzie wspomnianym wyżej
 zbiorem. \\
 \StrWd{438}{14} \\
 \Jest pseudomierzalny (niekoniecznie o mierze skończonej). \\
-\Pow pseudomierzalny. Zbiór ten~ma miarę skończoną ze~względu
+\Powin pseudomierzalny. Zbiór ten~ma miarę skończoną ze~względu
 na~własność~(4.3.12) i~skończoną miarę kompaktu $K$. \\
 \StrWd{439}{4} \\
 \Jest \emph{jeżeli wszystkie $\mu( A_{ n } )$~są nieskończone.} \\
-\Pow \emph{jeżeli dla~nieskończenie wielu $A_{ n }$ zachodzi
+\Powin \emph{jeżeli dla~nieskończenie wielu $A_{ n }$ zachodzi
   $\mu( A_{ n } ) = +\infty$.} \\
 \StrWg{451}{18} \\
 \Jest zbioru~$X$ w~mierzalny, zgodnie z~wnioskiem~1,
 zbiór $\vec{ F } \times \vec{ F }$ \\
-\Pow zbioru $X$ w~zbiór $\vec{ F } \times \vec{ F }$, mierzalnego
-zgodnie
+\Powin zbioru $X$ w~zbiór $\vec{ F } \times \vec{ F }$, mierzalnego zgodnie
 z~wnioskiem~1 \\
 \StrWg{467}{4} \\
-\Jest w odwzorowaniu $f_{ \delta }$ jest sumą kompaktów $K_{ i }$,
-a~zatem jest domknięty, więc~obcięcie $f_{ \delta }$ funkcji $f$
-do~$K_{ \delta }$
+\Jest w odwzorowaniu $f_{ \delta }$ jest sumą kompaktów $K_{ i }$, a~zatem
+jest domknięty, więc~obcięcie $f_{ \delta }$ funkcji $f$ do~$K_{ \delta }$
 jest ciągłe na~$K_{ \delta }$. \\
-\Pow przez obcięcie $f_{ \delta }$ funkcji $f$ do~$K_{ \delta }$ jest
-sumą kompaktów $K_{ i }$, a~zatem jest domknięty, więc~$f_{ \delta }$
+\Powin przez obcięcie $f_{ \delta }$ funkcji $f$ do~$K_{ \delta }$ jest sumą
+kompaktów $K_{ i }$, a~zatem jest domknięty, więc~$f_{ \delta }$
 jest ciągłe na~$K_{ \delta }$. \\
 \StrWd{481}{14} \\
 \Jest zbiór otwarty $\mathcal{V}$ kompaktu $K$\ldots \\
-\Pow otwarte otoczenie $\mathcal{V}$ kompaktu $K$ o~domknięciu
+\Powin otwarte otoczenie $\mathcal{V}$ kompaktu $K$ o~domknięciu
 zwartym\ldots \\
 \StrWg{510}{5} \\
 \Jest Pierwsza część twierdzenia nie została jednak jeszcze
 udowodniona\ldots \\
-\Pow  Nie kończy to jednak dowodu pierwszej części twierdzenia\ldots \\
+\Powin  Nie kończy to jednak dowodu pierwszej części twierdzenia\ldots \\
 \StrWd{511}{14} \\
 \Jest dolna $\mu$\dywiz miara zbioru $M_{ n }$ jest bowiem równa zeru. \\
-\Pow  więc miara wewnętrzna zbioru $M_{ n }$ jest równa zeru. \\
+\Powin  więc miara wewnętrzna zbioru $M_{ n }$ jest równa zeru. \\
 \StrWg{529}{16} \\
 \Jest kulę zwartą o~środku w~punkcie~$b$ \\
-\Pow  otoczenie zwarte punktu~$b$ \\
+\Powin  otoczenie zwarte punktu~$b$ \\
 \StrWd{529}{2} \\
 \Jest każda kula o~środku w~punkcie~$b$ \\
-\Pow każde otoczenie punktu~$b$
+\Powin każde otoczenie punktu~$b$
 \StrWd{532}{11} \\
 \Jest z~nierówności wypukłości\ldots\\
-\Pow  z~własności wypukłości i~wartości średniej\ldots \\
+\Powin  z~własności wypukłości i~wartości średniej\ldots \\
 \StrWd{532}{18} \\
 \Jest \emph{oraz, przy założeniach twierdzenia 72, istniej
   $K( H \mu )$\ldots} \\
-\Pow \emph{oraz $H$~i~$K$ spełniają założenia twierdzenia~72,
+\Powin \emph{oraz $H$~i~$K$ spełniają założenia twierdzenia~72,
   tak~że~istniej $K( H \mu )$\ldots}\\
 \StrWg{539}{10} \\
 \Jest W~konsekwencji\ldots \\
-\Pow  Pokażemy, że~w~konsekwencji tego\ldots \\
+\Powin  Pokażemy, że~w~konsekwencji tego\ldots \\
 \StrWd{563}{12} \\
 \Jest obie funkcje~są równe zeru. \\
-\Pow  funkcja $\psi$ jest równa zeru. \\
+\Powin  funkcja $\psi$ jest równa zeru. \\
 \StrWd{563}{11} \\
 \Jest jest majoryzowany przez funkcję $f$, równą $f( a )$. \\
-\Pow  jest równy $f( a )$.\\
+\Powin  jest równy $f( a )$.\\
 \StrWg{563}{14} \\
 \Jest lokalnie zwartymi \\
-\Pow  lokalnie zwartymi, przeliczalnymi w~nieskończoności \\
+\Powin  lokalnie zwartymi, przeliczalnymi w~nieskończoności \\
 \StrWd{578}{2} \\
 \Jest a~więc funkcja regularna\ldots \\
-\Pow  więc każda funkcja regularna jest borelowska\ldots \\
+\Powin  więc każda funkcja regularna jest borelowska\ldots \\
 \StrWd{586}{4} \\
 \Jest funkcją dowolną\ldots \\
-\Pow  dowolną funkcją lokalnie $\mu$\dywiz całkowalną\ldots \\
+\Powin  dowolną funkcją lokalnie $\mu$\dywiz całkowalną\ldots \\
 \StrWg{592}{18} \\
 \Jest rosnącą i~w~ogólny przypadku silnie rosnącą. \\
-\Pow  rosnącą, lecz~w~ogólny przypadku nie silnie rosnącą. \\
+\Powin  rosnącą, lecz~w~ogólny przypadku nie silnie rosnącą. \\
 \StrWg{593}{6} \\
 \Jest sprawa polega na tym, że nawet\ldots \\
-\Pow  nawet\ldots \\
+\Powin  nawet\ldots \\
 \StrWg{605}{8} \\
 \Jest $[ a, b ]$ \\
-\Pow  $[ a', b' ]$, zawierającym zbiór $\xi( [ \alpha, \beta ] )$ \\
+\Powin  $[ a', b' ]$, zawierającym zbiór $\xi( [ \alpha, \beta ] )$ \\
 \StrWd{607}{10} \\
 \Jest nie miałoby sensu jako całka funkcji ciągłej. \\
-\Pow  nie miałoby sensu. \\
+\Powin  nie miałoby sensu. \\
 \StrWg{610}{10} \\
 \Jest całek posługiwaliśmy się\ldots \\
-\Pow  niewłaściwej całek posłużymy~się\ldots \\
+\Powin  niewłaściwej całek posłużymy~się\ldots \\
 \StrWg{637}{18} \\
 \Jest \emph{zdefiniowaną}\ldots \\
-\Pow  \emph{gdzie $D( u )$ jest~zdefiniowane}\ldots \\
+\Powin  \emph{gdzie $D( u )$ jest~zdefiniowane}\ldots \\
 \StrWg{646}{9} \\
 \Jest \emph{funkcją pierwotną pola sfery jest $S_{ N } R^{ N - 1 }$,
   znikającą przy $R = 0$}\ldots \\
-\Pow \emph{jest to~funkcja pierwotna pola sfery $S_{ N } R^{ N - 1 }$,
+\Powin \emph{jest to~funkcja pierwotna pola sfery
+  $S_{ N } R^{ N - 1 }$,
   znikająca przy $R = 0$}\ldots \\
 \StrWg{651}{16} \\
 \Jest twierdzenia~13\ldots \\
-\Pow twierdzenia~26, rozdział~III\ldots \\
+\Powin twierdzenia~26, rozdział~III\ldots \\
 
 
 
@@ -1862,8 +1861,7 @@ udowodniona\ldots \\
 
 
 
-\start Str. 195. \ldots iloczyn skalarny
-$\langle \cdot \,, \cdot \rangle$\ldots
+\start Str. 195. \ldots iloczyn skalarny $\langle \cdot \,, \cdot \rangle$\ldots
 
 \start Str. 198. Odwzorowanie $\gamma$ jest więc także iniektywne.
 
@@ -1959,8 +1957,8 @@ przeciwne do założenia $a \in \overline{ A }$
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    61  & & 13 & $\veps_{ \sigma^{ 1 } \sigma }$
-           & $\veps_{ \sigma^{ -1 } \sigma }$ \\
+    61  & & 13 & $\epsilon_{ \sigma^{ 1 } \sigma }$
+           & $\epsilon_{ \sigma^{ -1 } \sigma }$ \\
     65  & &  1 & forma \ldots & forma \\
     66  &  7 & & liczbie${ N \choose p } =  C^{ p }_{ N } $
            & liczbie ${ N \choose p } =  C^{ p }_{ N } $ \\

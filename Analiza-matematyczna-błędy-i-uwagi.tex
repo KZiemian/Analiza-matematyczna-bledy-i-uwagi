@@ -191,8 +191,8 @@ Ponieważ $\Dc( x / \abso{ x } ) = \Rb \setminus \set{ 0 }$ i
   \frac{ x }{ \abso{ x } }
   =
   \begin{cases}
-     1,   & x > 0, \\
-    -1,   & x < 0.
+    1,   & x > 0, \\
+    -1, & x < 0.
   \end{cases}
 \end{equation}
 $x / \abso{ x } = 1$ dla~$x > 0$ i~$x / \abso{ x } = -1$ dla~$x < 0$,
@@ -262,9 +262,9 @@ następujący wniosek.
   \label{cor:FichtenholzVolII-01}
   Niech $A = \bigcup_{ \iota \in \mc{I} } I_{ \iota }$, przy czym
   każdy z~przedziałów $I_{ \iota }$ jest składową spójną $A$ i~niech
-  $f: A \to \Rb$ będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas
-  dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową $G( x )$,
-  która jest stała na~każdym $I_{ \iota }$.
+  $f: A \to \Rb$ będzie różniczkowalna na~każdym $I_{ \iota }$.
+  Wówczas dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową
+  $G( x )$, która jest stała na~każdym $I_{ \iota }$.
 \end{wni}
 \begin{proof}
   Ponieważ suma dwóch różnych $I_{ \iota }$ nie przedziałem zawartym
@@ -467,8 +467,8 @@ szeregu od~0.
     227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
     229 & &  9 & $< \frac{ 1 }{ 2^{ n } }$ & $\leq \frac{ 1 }{ 2^{ n } }$ \\
     231 &  8 & & $1\; ;$ & $1;$ \\
-    233 & &  5 & $\veps = \mc{E} - 1$ & $\veps < \mc{E} - 1$ \\
-    233 & &  5 & $\mc{E} - \veps = 1$ & $\mc{E} - \veps > 1$ \\
+    233 & &  5 & $\epsilon = \mc{E} - 1$ & $\epsilon < \mc{E} - 1$ \\
+    233 & &  5 & $\mc{E} - \epsilon = 1$ & $\mc{E} - \epsilon > 1$ \\
     234 & 11 & & $\Dc_{ n } > 1$ & $\Dc_{ n } \geq 1$ \\
     238 & &  3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
            & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
@@ -526,12 +526,18 @@ $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
 %   \end{tabular}
 % \end{center}
 \noi
-\StrWg{vi}{3} \\
-\Jest \textbf{immediatly know they have encountered a~most interesting
-  character}: \\
-\Powin \textbf{\emph{immediatly know they have encountered a~most
-    interesting
-    character}:} \\
+\StrWg{vi}{1} \\
+\Jest \textbf{\emph{This book is~dedicated to all who, when they read
+    the~following line form John le~Carr\'{e}'s 1989 Cold War spy
+    novel}} \\
+\Powin \textbf{This book is~dedicated to all who, when they read
+  the~following line form John le~Carr\'{e}'s 1989 Cold War spy
+  novel} \\
+\StrWg{vi}{8} \\
+\Jest \emph{\textbf{as well as to all who understand how frustrating is
+    the~lament in Anthony Zee's books}} \\
+\Powin \textbf{as well as to all who understand how frustrating is
+  the~lament in Anthony Zee's books} \\
 
 \vspace{\spaceTwo}
 
@@ -595,11 +601,11 @@ zupełnie niezrozumiały.
 \start Str. 53. Czy w twierdzeniu o pochodnej funkcji odwrotnej jest
 ważna ciągłość tej funkcji?
 
-\start Str. 56. Dyskusja skierowania w rodzinie zbiorów $\Pi$, bardziej
-zaciemnia niż wyjasnia. Po przeanalizowaniu okazuje się, że w
+\start Str. 56. Dyskusja skierowania w rodzinie zbiorów $\Pi$,
+bardziej zaciemnia niż wyjasnia. Po przeanalizowaniu okazuje się, że w
 definicji $\limsup$ powinno być: \\
-$A_{ i } \prec A_{ j }\Leftrightarrow A_{ j } \subset A_{ i }$, choć z dyskusji wynika wręcz
-przeciwnie.
+$A_{ i } \prec A_{ j }\Leftrightarrow A_{ j } \subset A_{ i }$, choć z
+dyskusji wynika wręcz przeciwnie.
 
 \start Str. 57. Nie zdefiniowano na jakie odcinki dzielimy przedział
 $[ a, b ]$. Okazuje się, że nie ma to znaczenia jeśli przyjmiemy miarę
@@ -633,10 +639,11 @@ jednostajnej należy dowodzić inną metodą.
 kontrapozycje, nie widzę jednak sposobu udowodnienia go w sposób
 analogiczny do punktu (a). W dowodzie tym kluczowe jest oszacowanie
 \\
-$| a_{n} (z_{1} - z_{ 0 })^{n}|<M$. Jednak dla szeregu o niezerowym promieniu
-zbieżności nie być możliwe oszacowanie szeregu od góry albo od dołu.
-Za przykład może posłużyć zachowanie szeregów $\sum \frac{1}{n} z^{n}$ i
-$\sum n z^{n}$ w $z=1$. Oba są tam rozbieżne
+$| a_{n} (z_{1} - z_{ 0 })^{n}|<M$. Jednak dla szeregu o niezerowym
+promieniu zbieżności nie być możliwe oszacowanie szeregu od góry albo
+od dołu. Za przykład może posłużyć zachowanie szeregów
+$\sum \frac{1}{n} z^{n}$ i $\sum n z^{n}$ w $z=1$. Oba są tam
+rozbieżne
 
 \start Str. 98. Dowód twierdzenia Cauchy'ego-Hadamarda zawiera w sobie
 dowód kryterium Cauchy`ego zbieżności szeregów. Czyni to dowód bardzo
@@ -658,8 +665,8 @@ zagmatwanym i trudnym do zrozumienia.
 \begin{itemize}
 \item[--] Str. 23. \ldots 2$^{ \circ }$ identytywna\ldots
 \item[--] Str. 28. \emph{Ad} 2$^{ \circ }$: $| ( a'_{ n } + b'_{ n } ) - ( a_{ n } + b_{ n } ) |  \leq | a'_{ n } - a_{ n } | + | b'_{ n } - b_{ n } | <2 \, \varepsilon$, bo\\
-  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n } )
-  \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
+  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n
+  } ) \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
   \wedge | b'_{ n } - b_{ n } | < \epsilon, \textrm{ dla } n > N )
   \big)$.
 \item[--] Str. 32.
@@ -670,11 +677,12 @@ zagmatwanym i trudnym do zrozumienia.
   \textrm{\ldots}$$
 \item[--] Str. 112.
   $$\big( 0 \leq f \leq C \frac{ 1 }{ x^{ \mu } } \textrm{ ; } \mu
-  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big) \textrm{;}$$
+  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f <
+  \infty \big) \textrm{;}$$
 \item[--] Str. 112.
   $$\big( 0 \leq f \leq C \frac{ 1 }{ x ( \log x )^{ \mu } } \textrm{
-    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big)
-  \textrm{;}$$
+    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a
+  } f < \infty \big) \textrm{;}$$
 \item[--] Str. 125. \ldots
 \item[--] Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
 \end{itemize}
@@ -985,7 +993,7 @@ bowiem z~tego będzie wynikać
 \end{equation}
 dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\epsilon > 0$. Teraz
 dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
-$\abso{ \beta_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
+$\abso{ \beta_{ n } } < \epsilon / 2K$. Teraz zachodzi nierówność
 \begin{equation}
   \label{eq:Leja-16}
   \begin{split}
@@ -995,7 +1003,7 @@ $\abso{ \beta_{ n } } < \veps / 2K$. Teraz zachodzi nierówność
     + \abso{ a_{ n - p + 1 } }
     \abso{ \beta_{ p + 1 } } \\
     &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq
-    \fr{ \veps }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1
+    \fr{ \epsilon }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1
       } } ) + \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 }
     }.
   \end{split}
@@ -1159,9 +1167,9 @@ takie, że
     M_{ \beta }.
   \end{split}
 \end{equation}
-Ustalmy teraz $\veps > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc
+Ustalmy teraz $\epsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc
 możemy znaleźć taką liczbę~$p$,
-iż~$\abso{ \beta_{ n } } \leq \veps / 2 M_{ \alpha }$, dla~$n > p$. Teraz
+iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$. Teraz
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
@@ -1173,14 +1181,14 @@ iż~$\abso{ \beta_{ n } } \leq \veps / 2 M_{ \alpha }$, dla~$n > p$. Teraz
       \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } } + \oneOv{ n }
     \abso{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 } } \\
     &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n
-    } M_{ \alpha } \fr{ \veps }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n } M_{
+    } M_{ \alpha } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n } M_{
       \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n }
-    \fr{ \veps }{ 2 } \\
-    &\leq \fr{ \veps }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
+    \fr{ \epsilon }{ 2 } \\
+    &\leq \fr{ \epsilon }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
   \end{split}
 \end{equation}
 Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
-drugi człon jest również mniejszy od~$\veps / 2$, co~kończy dowód.
+drugi człon jest również mniejszy od~$\epsilon / 2$, co~kończy dowód.
 
 \vspace{\spaceFour}
 
