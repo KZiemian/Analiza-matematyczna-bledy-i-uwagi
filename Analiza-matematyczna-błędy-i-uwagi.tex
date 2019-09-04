@@ -309,8 +309,9 @@ Rozwiązanie to~polega na~ograniczeniu~się do~argumentów
 zawierających~się w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie
 wyprowadzenia wzoru na~pierwiastek $n$-tego stopnia (str.~11--12)
 staje~się to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie
-byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się bardzo
-niewygodnie (pierwsze znaki tego znaleźć można na~stronach 59--60).
+byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się
+bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
+59--60).
 
 \vspace{\spaceFour}
 
@@ -351,13 +352,14 @@ tylko jeden element zbioru $\sqrt{ 1 }$.
 Wymaga to~pewnego komentarza. Jeśli będziemy rozpatrywać operację
 pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
 możliwe zdefiniowanie na~nim funkcji
-$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją liczbową,
-jednowartościową. Kiedy jednak rozpatrujemy liczby zespolone~$\Cb$,
-wówczas takiej funkcji jednowartościowej nie~da~się określić na~całej
-płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy $-1$, co musimy
-robić w~zbiorze liczb zespolonych, to~popełniamy niespójność
-w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy nasze
-rozumowanie tylko do~zbioru liczb rzeczywistych, nieujemnych~$D$.
+$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
+liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
+zespolone~$\Cb$, wówczas takiej funkcji jednowartościowej nie~da~się
+określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
+$-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
+niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
+nasze rozumowanie tylko do~zbioru liczb rzeczywistych,
+nieujemnych~$D$.
 
 Warto zwrócić uwagę, że~jednoznaczną funkcję
 $\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
@@ -373,24 +375,24 @@ będziemy~się w~tym miejscu szerzej zajmować.
 \start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
 momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
 $\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
-$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych obliczeń
-polega na~tym, by~z~niego nie korzystać. W~tym momencie nie wiem, jak
-należałoby to~poprawić.
+$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
+obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
+wiem, jak należałoby to~poprawić.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$ kieruje~się
-chyba następującą myślą. Aby znaleźć te pierwiastki musimy obliczyć
-funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
+\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$
+kieruje~się chyba następującą myślą. Aby znaleźć te pierwiastki musimy
+obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
 $\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
 i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
   \label{eq:Leja-11}
   \begin{split}
-    \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 + \cos
-    \varphi ),
+    \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 +
+    \cos \varphi ),
   \end{split}
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
@@ -398,9 +400,9 @@ wzorów
 \begin{equation}
   \label{eq:Leja-12}
   \begin{split}
-    \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 } ),
-    \quad \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{ \varphi }{ 2 }
-    ).
+    \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 }
+    ), \quad \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{
+      \varphi }{ 2 } ).
   \end{split}
 \end{equation}
 Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
@@ -416,9 +418,10 @@ i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
   \label{eq:Leja-13}
   \begin{split}
-    \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left( \sum_{ m = 0
-      }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0 }^{ \infty } ( a_{ n }
-    b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ n } ) z^{ n }.
+    \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
+      \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
+    }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0
+    } b_{ n } ) z^{ n }.
   \end{split}
 \end{equation}
 Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
@@ -446,15 +449,16 @@ zachodzi poniższa nierówność
 \begin{equation}
   \label{eq:Leja-14}
   \begin{split}
-    \abso{ C_{ n } - A_{ n } B } \leq \epsilon, \quad \forall \epsilon > 0,
+    \abso{ C_{ n } - A_{ n } B } \leq \epsilon, \quad \forall \epsilon
+    > 0,
   \end{split}
 \end{equation}
 bowiem z~tego będzie wynikać
 \begin{equation}
   \label{eq:Leja-15}
   \begin{split}
-    \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{ A_{
-        n } B - AB } \leq 2 \epsilon,
+    \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{
+      A_{ n } B - AB } \leq 2 \epsilon,
   \end{split}
 \end{equation}
 dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\epsilon > 0$. Teraz
@@ -463,30 +467,32 @@ $\abso{ \beta_{ n } } < \epsilon / 2K$. Teraz zachodzi nierówność
 \begin{equation}
   \label{eq:Leja-16}
   \begin{split}
-    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1 }
-      \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{ 0 } } \abso{
-      \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n - 1
+    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1
+      } \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{
+        0 } } \abso{ \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n
+        - 1
       } } + \ld + \abso{ a_{ n - p + 1 } } \abso{ \beta_{ p + 1 } } \\
-    &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq \fr{ \epsilon
-    }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1 } } ) +
-    \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } }.
+    &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } }
+    \leq \fr{ \epsilon }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n
+        - p + 1 } } ) + \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n }
+      \beta_{ 0 } }.
   \end{split}
 \end{equation}
 Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
 \begin{equation}
   \label{eq:Leja-17}
   \begin{split}
-    \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{
-        n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } } \abso{ \beta_{
-        0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld + \abso{ a_{ n }
-    } ),
+    \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq
+    \abso{ a_{ n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } }
+    \abso{ \beta_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld +
+    \abso{ a_{ n } } ),
   \end{split}
 \end{equation}
 gdzie
 $M_{ p } = \max( \abso{ \beta_{ 1 } }, \ld, \abso{ \beta_{ p } } )$.
 Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
-$n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$. Teraz
-dla każdego $n > \max( p, q )$ zachodzi
+$n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$.
+Teraz dla każdego $n > \max( p, q )$ zachodzi
 \begin{equation}
   \label{eq:Leja-18}
   \begin{split}
@@ -514,17 +520,17 @@ nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
   \label{eq:Leja-20}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } + \beta_{ 1
-    } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ld + \alpha_{ n - 1
-    } ) + R_{ n },
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } +
+    \beta_{ 1 } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } +
+    \alpha_{ 1 } + \ld + \alpha_{ n - 1 } ) + R_{ n },
   \end{split}
 \end{equation}
 gdzie
 \begin{equation}
   \label{eq:Leja-21}
   \begin{split}
-    R_{ n } = n r_{ n } = \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } +
-    \ld + \alpha_{ 0 } \beta_{ n - 1 }.
+    R_{ n } = n r_{ n } = \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n -
+      2 } \beta_{ 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 }.
   \end{split}
 \end{equation}
 Łatwo~się o~jej prawdziwości przekonać, wypisując kilka pierwszych
@@ -534,9 +540,9 @@ Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
   \label{eq:Leja-22}
   \begin{split}
-    \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{ 0 } +
-    a_{ i - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ i } ) &= ( a_{ 0 } + a_{ 1
-    } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
+    \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
+      0 } + a_{ i - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
+    + a_{ 1 } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
     + \ld + a_{ n - 1 } ) b_{ 1 } \\
     &+ \ld + a_{ 0 } b_{ n }.
   \end{split}
@@ -547,9 +553,9 @@ wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
 \begin{equation}
   \label{eq:Leja-23}
   \begin{split}
-    \sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld + a_{ n
-    } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } ) b_{ 1 } +
-    \ld
+    \sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld +
+    a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } ) b_{
+      1 } + \ld
     + a_{ 0 } b_{ n } + c_{ n + 1 } \\
     &= ( a_{ 0 } + a_{ 1 } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{
       1 }
@@ -568,9 +574,9 @@ Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
   \label{eq:Leja-24}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{ i
-      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i } + R_{
-      n } + C_{ n }.
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
+      i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+    \alpha_{ i } + R_{ n } + C_{ n }.
   \end{split}
 \end{equation}
 Następny krok jest trochę długi. Przeliczając kilka pierwszych
@@ -578,30 +584,34 @@ przypadków, łatwo zgadnąć, że
 \begin{equation}
   \label{eq:Leja-25}
   \begin{split}
-    C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
+    C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n +
+      1 }.
   \end{split}
 \end{equation}
 Zacznijmy od~tego, że
-$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$, korzystając
-więc, ze~wzoru \eqref{eq:Leja-19}
+$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
+korzystając więc, ze~wzoru \eqref{eq:Leja-19}
 \begin{equation}
   \label{eq:Leja-26}
   \begin{split}
     C_{ n } &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ld + A_{ 0 }
-    b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A + \alpha_{ n - 1 } )
+    b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A +
+    \alpha_{ n - 1 } )
     ( \beta_{ 1 } - \beta_{ 0 } ) \\
-    &+ ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ld + ( A + \alpha_{ 0 }
-    ) ( \beta_{ n } - \beta_{ n - 1 } )
+    &+ ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ld + (
+    A + \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } )
     = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \\
-    &+ A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 } - \beta_{ 1 } + \ld +
-    \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } - \beta_{ 0 } )
+    &+ A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 } -
+    \beta_{ 1 } + \ld + \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n -
+      1 } ( \beta_{ 1 } - \beta_{ 0 } )
     + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \\
-    & + \ld + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = AB + A \beta_{ n } + B
-    \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{ n - 1 } \beta_{ 1 } +
+    & + \ld + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = AB + A
+    \beta_{ n } + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{
+      n - 1 } \beta_{ 1 } +
     \alpha_{ n - 2 } \beta_{ 2 } + \ld + \alpha_{ 0 } \beta_{ n } \\
-    & - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ 0 }
-    \beta_{ n - 1 } ) = AB + A \beta_{ n } + B \alpha_{ n } + R_{ n + 1 } - R_{ n
-    }.
+    & - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
+    + \ld + \alpha_{ 0 } \beta_{ n - 1 } ) = AB + A \beta_{ n } + B
+    \alpha_{ n } + R_{ n + 1 } - R_{ n }.
   \end{split}
 \end{equation}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ld + C_{ n }$ odpowiada
@@ -609,11 +619,12 @@ liczbie~$n + 1$. Tym samym
 \begin{equation}
   \label{eq:Leja-27}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{ i
-      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
+      i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+    \alpha_{ i
     } + R_{ n } + C_{ n } \\
-    &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i = 0 }^{ n
-    } \alpha_{ i } + R_{ n + 1 }.
+    &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i
+      = 0 }^{ n } \alpha_{ i } + R_{ n + 1 }.
   \end{split}
 \end{equation}
 
@@ -628,26 +639,31 @@ i~$M_{ \beta }$ takie, że
 \begin{equation}
   \label{eq:Leja-28}
   \begin{split}
-    \abso{ M_{ \alpha } } \leq M_{ \alpha }, \quad \abso{ \beta_{ n } } \leq M_{ \beta }.
+    \abso{ M_{ \alpha } } \leq M_{ \alpha }, \quad \abso{ \beta_{ n }
+    } \leq M_{ \beta }.
   \end{split}
 \end{equation}
-Ustalmy teraz $\epsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc możemy
-znaleźć taką liczbę~$p$,
-iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$. Teraz
+Ustalmy teraz $\epsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0,
+więc możemy znaleźć taką liczbę~$p$,
+iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$.
+Teraz
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
-    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n
-        - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } + \ld
+    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0
+      } + \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 }
+      \beta_{ p } + \ld
       + \alpha_{ 0 } \beta_{ n - 1 } } \\
-    &\leq \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } +
-      \ld + \alpha_{ n - p - 1 } \beta_{ p } } + \oneOv{ n }
+    &\leq \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n
+        - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } } +
+    \oneOv{ n }
     \abso{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 } } \\
-    &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n } M_{ \alpha
-    } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{
-      n - p - 1 }{ n }
+    &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1
+    }{ n } M_{ \alpha } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1
+    }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n }
     \fr{ \epsilon }{ 2 } \\
-    &\leq \fr{ \epsilon }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
+    &\leq \fr{ \epsilon }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{
+      \beta }.
   \end{split}
 \end{equation}
 Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
@@ -665,10 +681,10 @@ wymieniony osobno.
 
 
 
-\start \Str{28--29} Jest to przykład bałaganu pojęciowego najczystszego
-rodzaju. Najpierw na~stronie~28 definiuje~się krzywą jako zbiór
-punktów, by na~stronie następnej stronie zwraca~się uwagę, że~należy
-odróżnić krzywą od~jej zbioru punktów.
+\start \Str{28--29} Jest to przykład bałaganu pojęciowego
+najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
+jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
+że~należy odróżnić krzywą od~jej zbioru punktów.
 
 Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
 punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
@@ -688,9 +704,9 @@ starać o~większą jasność i~precyzję tekstów matematycznych.
 
 \start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
 na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
-$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów, może
-być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie jest
-żadnym problemem dla~rozwijanej tu~teorii.
+$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
+może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
+jest żadnym problemem dla~rozwijanej tu~teorii.
 
 \vspace{\spaceFour}
 
@@ -719,8 +735,8 @@ w~miejscu''. Przykładem takie zachowania jest krzywa
   \end{split}
 \end{equation}
 Jest to krzywa klasy $\Cc^{ \ }infty( \Rb, \Cb )$, która
-dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej długość,
-dostaniemy oczywisty rezultat
+dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej
+długość, dostaniemy oczywisty rezultat
 \begin{equation}
   \label{eq:Leja-31}
   \begin{split}
@@ -750,10 +766,11 @@ $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
 reparametryzacja $\varphi: I_{ 1 } \to I$ taka,
 że~$t_{ 0 } = \varphi( \tau_{ 0 } )$
-i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{ 0 } } \neq 0$.
-Widzimy więc, że~tu problemem nie jest z~krzywą, lecz z~pewną możliwą
-dla niej parametryzacja. Przykład \eqref{eq:Leja-32} powyżej jest
-właśnie tego typu. Jeśli użyjemy do~niego funkcji reparametryzującej
+i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{
+    0 } } \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą,
+lecz z~pewną możliwą dla niej parametryzacja. Przykład
+\eqref{eq:Leja-32} powyżej jest właśnie tego typu. Jeśli użyjemy
+do~niego funkcji reparametryzującej
 \begin{equation}
   \label{eq:Leja-33}
   \varphi( \tau ) =
@@ -780,12 +797,13 @@ bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
 
 \start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
 niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
-błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$ i~podzielmy go
-dowolną ilością punktów w~dowolnych miejscach na~podprzedziały, co
-jest zgodne z~przyjętą definicją. Tym samym widzimy, że~krzywa ta
-składa~się z~dowolnej ilości łuków i~każdy punkt jej obrazu jest jej
-wierzchołkiem. To~samo stosuje~się do krzywej która jest
-nieróżniczkowalna w~punktach $t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
+błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$
+i~podzielmy go dowolną ilością punktów w~dowolnych miejscach
+na~podprzedziały, co jest zgodne z~przyjętą definicją. Tym samym
+widzimy, że~krzywa ta składa~się z~dowolnej ilości łuków i~każdy punkt
+jej obrazu jest jej wierzchołkiem. To~samo stosuje~się do krzywej
+która jest nieróżniczkowalna w~punktach
+$t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
 
 Rozwiązanie tego problemu jest proste, należy przyjąć, że~każdy z~tych
 przedziałów był maksymalny w~następującym sensie. Jeśli krzywa
@@ -840,13 +858,11 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
     \draw[help lines, ->] (0,-0.25) -- (0,1.3 * \radius);
 
-    \draw [line width = 1pt, decoration = {
-      markings,
-      mark = at position 0.295 with {\arrow[line width=1.2pt]{>}},
-      mark = at position 0.6 with {\arrow[line width=1.2pt]{>}},},
-    postaction = {decorate}
-    ]
-    (-\radius, 0) -- (\radius, 0) arc (0:180:\radius) -- cycle;
+    \draw [line width = 1pt, decoration = { markings, mark = at
+      position 0.295 with {\arrow[line width=1.2pt]{>}}, mark = at
+      position 0.6 with {\arrow[line width=1.2pt]{>}},}, postaction =
+    {decorate} ] (-\radius, 0) -- (\radius, 0) arc (0:180:\radius) --
+    cycle;
 
 
     \node at (1.35 * \radius,0) [below] {$\mathfrak{Re}\, z$};
@@ -949,17 +965,17 @@ iloczyn
   \end{split}
 \end{equation}
 Ponieważ funkcja $1 / ( z - 1 )$ jest określona tylko dla $z \neq 1$,
-więc formalnie funkcja $W( z )$ ma~dziedzinę $\Cb \setminus 1$. To~jedna
-mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
-okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne dziedziny.
-Z~tego problemu łatwo jednak wybrnąć.
+więc formalnie funkcja $W( z )$ ma~dziedzinę $\Cb \setminus 1$.
+To~jedna mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
+okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne
+dziedziny. Z~tego problemu łatwo jednak wybrnąć.
 
 Jeśli daną funkcję wymierną~$f( z )$ która jest określony na~zbiorze
-$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać w~postaci
-$P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$, wówczas
-zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
-$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 }, \ld, z_{
-    n } }$ poprzez
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać
+w~postaci $P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$,
+wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
+  \ld, z_{ n } }$ poprzez
 \begin{equation}
   \label{eq:Leja-36}
   \begin{split}
@@ -1038,10 +1054,10 @@ bo~powstaje problem, co oznacza ciągłość funkcji wielowartościowej?
 
 Ostatecznie, zgodnie z~tym co zostało napisane o~$\arg z$, mamy dwa
 wyjścia, jeśli chcemy określić gałąź logarytmu na~całej płaszczyźnie.
-Albo~argumenty liczb zespolonych zmienia~się od~$-\infty$ do~$+\infty$ i~gałąź
-logarytmu przestaje być jednoznaczna, albo~ograniczamy ich zakres
-na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi mieć skok,
-a~więc przestaje być ciągła.
+Albo~argumenty liczb zespolonych zmienia~się od~$-\infty$ do~$+\infty$
+i~gałąź logarytmu przestaje być jednoznaczna, albo~ograniczamy ich
+zakres na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi
+mieć skok, a~więc przestaje być ciągła.
 
 \vspace{\spaceFour}
 
@@ -1162,8 +1178,9 @@ poza tym punktem.
 do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
 nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
 funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
-trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$ może
-być znacznie bardziej skomplikowany obiektem, niż byśmy oczekiwali.
+trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
+może być znacznie bardziej skomplikowany obiektem, niż byśmy
+oczekiwali.
 
 Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
 poziomice powinny być dobrze określone. Może warto będzie do~tego
@@ -1239,7 +1256,7 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
   \begin{tikzpicture}[scale=1.35]
     \def\axissize{2.5}
 
-    \def\R{2.}
+    \def\R{2.8}
 
 
 
@@ -1251,33 +1268,31 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
 
 
-    \filldraw[black] (1.5,0) circle (1.5pt) node [below] {1};
+    \filldraw[black] (1.3,0) circle (1.5pt) node [below] {1};
 
-    \draw[line width = 0.9pt, decoration =
-    { markings,
-      mark = at position 0.2 with {\arrow[line width=1.2pt]{>}},
-      mark = at position 0.6 with {\arrow [line width=1.1pt]{>}},},
-    postaction = {decorate}
-    ]
-    (1.5,0) arc (0:50:1.5) -- (50:\R);
+    \draw[line width = 0.9pt, decoration = { markings, mark = at
+      position 0.3 with {\arrow[line width=1.2pt]{>}}, mark = at
+      position 0.75 with {\arrow [line width=1.1pt]{>}},}, postaction
+    = {decorate} ] (1.3,0) arc (0:53:1.3) -- (53:\R);
 
 
-
-    \filldraw[black] (0.57, 0.82) circle (1pt) node [left]
+    \filldraw[black] (53:1.3) circle (1.1pt) node [left]
     {$e^{ i \varphi }$};
 
-    \filldraw[black] (0.57 * \R,0.82 * \R) circle (1.5pt) node
-    [anchor=west] {$R\, e^{ i \varphi }$};
+    \filldraw[black] (53:\R) circle (1.5pt) node [right]
+    {$R\, e^{ i \varphi }$};
 
-    \node at (1.0, 0.65) {$\Gamma$};
+
+
+    \node at (1.33,0.8) {$\Gamma$};
+
 
 
     \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
 
-    \node at (0.4, \axissize) {$\mathfrak{Im}\, z$};
+    \node at (0.4,\axissize) {$\mathfrak{Im}\, z$};
 
-    \node at (-0.15, -0.2) {$0$};
-
+    \node at (-0.15,-0.2) {$0$};
   \end{tikzpicture}
 
   \caption{Przykładowy kontur po~którym można całkować funkcje
@@ -1291,27 +1306,28 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
 \start \Str{95} W~twierdzeniu o~istnieniu jednoznacznej gałęzi
 logarytmu zakładamy, że~dany obszar~$D$ jest jednospójny i~nie zawiera
-$0$ i~$\infty$. Dlaczego musi byś jednospójny jest oczywiste, kontrprzykład
-z~okręgiem ze~stron~59--60 pokazuje, gdzie leży problem.
+$0$ i~$\infty$. Dlaczego musi byś jednospójny jest oczywiste,
+kontrprzykład z~okręgiem ze~stron~59--60 pokazuje, gdzie leży problem.
 Wykluczenie~$0$ też jest jasne, mówienie o~analityczności $1 / \zeta$
 w~zerze nie ma sensu. Większe problemy stwarza potrzeba usunięcia
 punktu~$\infty$.
 
 Istnieją po~temu dwa powody. Po pierwsze, zgodnie z~przyjęto
 definicjom jednospójności zbiór
-$\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny, a~twierdzenie dla
-niego jawnie nie zachodzi. Jeśli z~rozważanego zbioru wykluczymy $0$
-i~$\infty$ to, aby był jednospójny musimy z~niego wykluczyć też odpowiedni
-zbiór ,,łączący'' te~dwa punkty, np.~prostą $\Real\, z < 0$,
-wykluczający tym samym z~rozważań wszystkie nieporządne zbiory.
+$\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
+a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
+zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
+z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
+np.~prostą $\Real\, z < 0$, wykluczający tym samym z~rozważań
+wszystkie nieporządne zbiory.
 
 Drugi powód jest następujący. Rozpatrzmy jak na
 rysunku~(\ref{fig:Leja-02}) płaszczyznę zespoloną bez osi
 $\Real\, z \leq 0$. Można sobie zadać pytanie, czy~wartość całki
-z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur całkowania
-$\gamma_{ R }$ o~początku $a$ rozciągamy ,,do~nieskończoności'' (dla
-prostoty przyjmijmy $a = 1$). Przez to ostatnie stwierdzenie
-rozumiemy, że~rozważamy rodzinę konturów
+z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur
+całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
+,,do~nieskończoności'' (dla prostoty przyjmijmy $a = 1$). Przez to
+ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
 $\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \Cb$ takich, że
 \begin{equation}
   \label{eq:Leja-39}
@@ -1334,9 +1350,9 @@ istnieje bowiem żaden naturalny wybór wartości $\exp( \infty )$, bowiem
   \end{split}
 \end{equation}
 Trzeba by więc przyjąć, że~$\exp( \infty ) = \infty$, by~zachodził wzór
-$\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę, decyzja by
-wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się jako dobrze
-uzasadniona.
+$\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę, decyzja
+by wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się jako
+dobrze uzasadniona.
 
 \vspace{\spaceFour}
 
@@ -1381,18 +1397,18 @@ Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
   M = \max_{ w \in C } \abso{ \varphi( w ) },
 \end{equation}
 widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
-$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
-funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione są
-założenia twierdzenia o~różniczkowaniu pod znakiem całki
+$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$
+przez funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione
+są założenia twierdzenia o~różniczkowaniu pod znakiem całki
 (zob.~twr.~132,
 str.~659~\cite{SchwartzKursAnalizyMatematycznejTomI1979}), z~którego
 wynika wzór \eqref{eq:Leja-42}.
 
 Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
-czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$ jednostajnie
-względem $\zeta$. Jest to w~istocie szczególny przypadek twierdzenie,
-że~iloraz różnicowy dąży jednostajnie do~pochodnej z~przyrostem
-$\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
+czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$
+jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
+twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
+z~przyrostem $\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
 (zob.~wniosek~3,
 str.~244~\cite{SchwartzKursAnalizyMatematycznejTomI1979}).
 Z~przytoczonego wyżej twierdzenia o~odległości między
@@ -1408,9 +1424,9 @@ względem zmiennej~$\zeta$.
 
 
 \start \StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy
-zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest dowolną
-liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się, że~poprawna
-definicja~to
+zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest
+dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
+że~poprawna definicja~to
 \begin{equation}
   \label{eq:Leja-43}
   \binom{ \mu }{ n } := \frac{ \mu ( \mu - 1 ) ( \mu - 2 ) \cdot \ldots
@@ -1560,10 +1576,10 @@ Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
 że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
 dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
 że~$f( K( z_{ 0 }, \delta ) ) \neq K( f( z_{ 0 } ), \eta )$, bowiem
-$K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak zbiór
-$K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$ jest otwarty,
-więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która jest
-otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
+$K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak
+zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$
+jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
+jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
 że~$f( K( z_{ 0 }, \delta' ) )$ nie~musi być kulą.
 
 \vspace{\spaceFour}
@@ -1612,8 +1628,8 @@ W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
 której długość jest większa od~$\theta$.
 
 Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
-$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności możemy tylko
-powiedzieć, że
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
+możemy tylko powiedzieć, że
 \begin{equation}
   \label{eq:Leja-50}
   \frac{ \abso{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \abso{ \lambda_{ n } } }
@@ -1650,6 +1666,7 @@ powiedzieć, że
     \draw[black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
 
 
+
     % Trzeci graf
     \draw[black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25, 1.2);
 
@@ -1668,7 +1685,6 @@ powiedzieć, że
     \node at (0.65, -0.3) {$1$};
 
     \node at (1.5, -0.3) {$2$};
-
   \end{tikzpicture}
 
   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
@@ -1828,13 +1844,14 @@ poprawić??????????????????
   \end{tabular}
 
 \end{center}
-\noi \\
+\vspace{0.5em}
+\noindent
 \StrWg{28}{5} \\
-\Jest nieograniczone \\
-\Powin  nieograniczone i~domknięte \\
+\Jest  nieograniczone \\
+\Powin nieograniczone i~domknięte \\
 \StrWg{36}{5} \\
-\Jest Ze~wzorów (9)~otrzymujemy \\
-\Powin  Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\Jest  Ze~wzorów (9)~otrzymujemy \\
+\Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
 \StrWg{56}{2} \\
 \Jest a~istnieją wartości~$w$, które \\
 \Powin  a~istnieje wartość~$w$, którą \\
