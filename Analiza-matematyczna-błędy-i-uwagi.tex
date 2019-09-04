@@ -22,9 +22,6 @@
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
@@ -60,10 +57,8 @@
 \usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
 \usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
-% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
@@ -192,6 +187,7 @@ płaszczyzny zespolonej~$\Cb$ jest po prostu jej równa.
 \vspace{\spaceFour}
 
 
+
 \start W~analizie zespolonej jest praktycznie użyteczne wprowadzenie
 zwięzłego oznaczenie na~otoczenie pierścieniowe
 \begin{equation}
@@ -202,12 +198,14 @@ zwięzłego oznaczenie na~otoczenie pierścieniowe
 \vspace{\spaceFour}
 
 
+
 \start \Str{7} Powinna już tu być podana podstawowa własność jednostki
 urojonej~$i^{ 2 } = -1$, nie zaś dopiero na~stronie 9. Bez~tego, bądź
 jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
 liczby postaci $\alpha + \beta i$.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{8--9} Aby~wyrażenie $1 / z = \zbar / ( z \zbar )$ miało
@@ -269,12 +267,14 @@ Tą tożsamość można udowodnić w~następujący sposób
 \vspace{\spaceFour}
 
 
+
 \start \Str{9--10} Według wszystkich mi znanych historycznych prac na
 temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
 badania rozwiązań równania \emph{trzeciego} stopnia, nie zaś równań
 kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{10} Przy określaniu argumentu liczby zespolonej pierwszy
@@ -309,11 +309,11 @@ Rozwiązanie to~polega na~ograniczeniu~się do~argumentów
 zawierających~się w~przedziale $( -\pi, \pi ]$. Jednak już na~poziomie
 wyprowadzenia wzoru na~pierwiastek $n$-tego stopnia (str.~11--12)
 staje~się to~nieprzyjemnie ograniczające. Oprócz tego, funkcja ta nie
-byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się
-bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
-59--60).
+byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się bardzo
+niewygodnie (pierwsze znaki tego znaleźć można na~stronach 59--60).
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{12} Należy silniej niż w~tekście podkreślić,
@@ -351,14 +351,13 @@ tylko jeden element zbioru $\sqrt{ 1 }$.
 Wymaga to~pewnego komentarza. Jeśli będziemy rozpatrywać operację
 pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
 możliwe zdefiniowanie na~nim funkcji
-$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
-liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
-zespolone~$\Cb$, wówczas takiej funkcji jednowartościowej nie~da~się
-określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
-$-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
-niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
-nasze rozumowanie tylko do~zbioru liczb rzeczywistych,
-nieujemnych~$D$.
+$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją liczbową,
+jednowartościową. Kiedy jednak rozpatrujemy liczby zespolone~$\Cb$,
+wówczas takiej funkcji jednowartościowej nie~da~się określić na~całej
+płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy $-1$, co musimy
+robić w~zbiorze liczb zespolonych, to~popełniamy niespójność
+w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy nasze
+rozumowanie tylko do~zbioru liczb rzeczywistych, nieujemnych~$D$.
 
 Warto zwrócić uwagę, że~jednoznaczną funkcję
 $\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
@@ -370,14 +369,16 @@ będziemy~się w~tym miejscu szerzej zajmować.
 \vspace{\spaceFour}
 
 
+
 \start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
 momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
 $\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
-$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
-obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
-wiem, jak należałoby to~poprawić.
+$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych obliczeń
+polega na~tym, by~z~niego nie korzystać. W~tym momencie nie wiem, jak
+należałoby to~poprawić.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$ kieruje~się
@@ -388,8 +389,8 @@ i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
   \label{eq:Leja-11}
   \begin{split}
-    \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 + \cos \varphi
-    ),
+    \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 + \cos
+    \varphi ),
   \end{split}
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
@@ -397,14 +398,16 @@ wzorów
 \begin{equation}
   \label{eq:Leja-12}
   \begin{split}
-    \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 } ), \quad \sin(
-    \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{ \varphi }{ 2 } ).
+    \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 } ),
+    \quad \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{ \varphi }{ 2 }
+    ).
   \end{split}
 \end{equation}
 Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
 za~pomocą $\alpha$ i~$\beta$.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
@@ -414,9 +417,8 @@ i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
   \label{eq:Leja-13}
   \begin{split}
     \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left( \sum_{ m = 0
-      }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0 }^{ \infty }
-    ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ n } )
-    z^{ n }.
+      }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0 }^{ \infty } ( a_{ n }
+    b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ n } ) z^{ n }.
   \end{split}
 \end{equation}
 Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
@@ -426,11 +428,13 @@ jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 \vspace{\spaceFour}
 
 
+
 \start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
 Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
 wartość tej granicy wynika z~twierdzenia Abela.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{20--21} Dowód twierdzenia Mertensa jest według mnie
@@ -459,14 +463,13 @@ $\abso{ \beta_{ n } } < \epsilon / 2K$. Teraz zachodzi nierówność
 \begin{equation}
   \label{eq:Leja-16}
   \begin{split}
-    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1
-      } \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{
-        0 } } \abso{ \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n - 1
+    \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1 }
+      \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{ 0 } } \abso{
+      \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n - 1
       } } + \ld + \abso{ a_{ n - p + 1 } } \abso{ \beta_{ p + 1 } } \\
-    &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq \fr{
-      \epsilon }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1
-      } } ) + \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0
-      } }.
+    &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq \fr{ \epsilon
+    }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n - p + 1 } } ) +
+    \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } }.
   \end{split}
 \end{equation}
 Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
@@ -474,16 +477,16 @@ Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
   \label{eq:Leja-17}
   \begin{split}
     \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{
-        n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } } \abso{
-      \beta_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld + \abso{
-      a_{ n } } ),
+        n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } } \abso{ \beta_{
+        0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld + \abso{ a_{ n }
+    } ),
   \end{split}
 \end{equation}
 gdzie
 $M_{ p } = \max( \abso{ \beta_{ 1 } }, \ld, \abso{ \beta_{ p } } )$.
 Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
-$n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$.
-Teraz dla każdego $n > \max( p, q )$ zachodzi
+$n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$. Teraz
+dla każdego $n > \max( p, q )$ zachodzi
 \begin{equation}
   \label{eq:Leja-18}
   \begin{split}
@@ -494,6 +497,7 @@ Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
 zakończony.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty,
@@ -510,9 +514,9 @@ nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
   \label{eq:Leja-20}
   \begin{split}
-    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } +
-    \beta_{ 1 } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } +
-    \alpha_{ 1 } + \ld + \alpha_{ n - 1 } ) + R_{ n },
+    C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } + \beta_{ 1
+    } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ld + \alpha_{ n - 1
+    } ) + R_{ n },
   \end{split}
 \end{equation}
 gdzie
@@ -565,8 +569,8 @@ Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
   \label{eq:Leja-24}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{ i
-      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
-    \alpha_{ i } + R_{ n } + C_{ n }.
+      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i } + R_{
+      n } + C_{ n }.
   \end{split}
 \end{equation}
 Następny krok jest trochę długi. Przeliczając kilka pierwszych
@@ -578,29 +582,26 @@ przypadków, łatwo zgadnąć, że
   \end{split}
 \end{equation}
 Zacznijmy od~tego, że
-$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
-korzystając więc, ze~wzoru \eqref{eq:Leja-19}
+$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$, korzystając
+więc, ze~wzoru \eqref{eq:Leja-19}
 \begin{equation}
   \label{eq:Leja-26}
   \begin{split}
     C_{ n } &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ld + A_{ 0 }
-    b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A +
-    \alpha_{ n - 1 } )
+    b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A + \alpha_{ n - 1 } )
     ( \beta_{ 1 } - \beta_{ 0 } ) \\
     &+ ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ld + ( A + \alpha_{ 0 }
     ) ( \beta_{ n } - \beta_{ n - 1 } )
     = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \\
     &+ A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 } - \beta_{ 1 } + \ld +
-    \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } -
-    \beta_{ 0 } )
+    \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } - \beta_{ 0 } )
     + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \\
     & + \ld + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = AB + A \beta_{ n } + B
-    \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{ n - 1 } \beta_{
-      1 } +
+    \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{ n - 1 } \beta_{ 1 } +
     \alpha_{ n - 2 } \beta_{ 2 } + \ld + \alpha_{ 0 } \beta_{ n } \\
     & - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ 0 }
-    \beta_{ n - 1 } ) = AB + A \beta_{ n } + B \alpha_{ n } + R_{ n +
-      1 } - R_{ n }.
+    \beta_{ n - 1 } ) = AB + A \beta_{ n } + B \alpha_{ n } + R_{ n + 1 } - R_{ n
+    }.
   \end{split}
 \end{equation}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ld + C_{ n }$ odpowiada
@@ -609,8 +610,7 @@ liczbie~$n + 1$. Tym samym
   \label{eq:Leja-27}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{ i
-      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
-    \alpha_{ i
+      = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 } \alpha_{ i
     } + R_{ n } + C_{ n } \\
     &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i = 0 }^{ n
     } \alpha_{ i } + R_{ n + 1 }.
@@ -618,6 +618,7 @@ liczbie~$n + 1$. Tym samym
 \end{equation}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{22} Potrzebujemy jeszcze udowodnić,
@@ -632,21 +633,19 @@ i~$M_{ \beta }$ takie, że
 \end{equation}
 Ustalmy teraz $\epsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc możemy
 znaleźć taką liczbę~$p$,
-iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$.
-Teraz
+iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$. Teraz
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
-    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } +
-      \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 }
-      \beta_{ p } + \ld
+    \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n
+        - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } + \ld
       + \alpha_{ 0 } \beta_{ n - 1 } } \\
     &\leq \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } +
       \ld + \alpha_{ n - p - 1 } \beta_{ p } } + \oneOv{ n }
     \abso{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 } } \\
-    &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n } M_{
-      \alpha } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n }
-    M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n }
+    &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n } M_{ \alpha
+    } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{
+      n - p - 1 }{ n }
     \fr{ \epsilon }{ 2 } \\
     &\leq \fr{ \epsilon }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
   \end{split}
@@ -657,6 +656,7 @@ drugi człon jest również mniejszy od~$\epsilon / 2$, co~kończy dowód.
 \vspace{\spaceFour}
 
 
+
 \start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
 przy omawianiu własności przecięć zbiorów domkniętych, jest tu
 wymieniony osobno.
@@ -664,10 +664,11 @@ wymieniony osobno.
 \vspace{\spaceFour}
 
 
-\start \Str{28--29} Jest to przykład bałaganu pojęciowego
-najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
-jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
-że~należy odróżnić krzywą od~jej zbioru punktów.
+
+\start \Str{28--29} Jest to przykład bałaganu pojęciowego najczystszego
+rodzaju. Najpierw na~stronie~28 definiuje~się krzywą jako zbiór
+punktów, by na~stronie następnej stronie zwraca~się uwagę, że~należy
+odróżnić krzywą od~jej zbioru punktów.
 
 Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
 punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
@@ -684,13 +685,15 @@ starać o~większą jasność i~precyzję tekstów matematycznych.
 \vspace{\spaceFour}
 
 
+
 \start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
 na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
-$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
-może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
-jest żadnym problemem dla~rozwijanej tu~teorii.
+$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów, może
+być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie jest
+żadnym problemem dla~rozwijanej tu~teorii.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$
@@ -716,8 +719,8 @@ w~miejscu''. Przykładem takie zachowania jest krzywa
   \end{split}
 \end{equation}
 Jest to krzywa klasy $\Cc^{ \ }infty( \Rb, \Cb )$, która
-dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej
-długość, dostaniemy oczywisty rezultat
+dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej długość,
+dostaniemy oczywisty rezultat
 \begin{equation}
   \label{eq:Leja-31}
   \begin{split}
@@ -747,11 +750,10 @@ $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
 reparametryzacja $\varphi: I_{ 1 } \to I$ taka,
 że~$t_{ 0 } = \varphi( \tau_{ 0 } )$
-i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{
-    0 } } \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą,
-lecz z~pewną możliwą dla niej parametryzacja. Przykład
-\eqref{eq:Leja-32} powyżej jest właśnie tego typu. Jeśli użyjemy
-do~niego funkcji reparametryzującej
+i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{ 0 } } \neq 0$.
+Widzimy więc, że~tu problemem nie jest z~krzywą, lecz z~pewną możliwą
+dla niej parametryzacja. Przykład \eqref{eq:Leja-32} powyżej jest
+właśnie tego typu. Jeśli użyjemy do~niego funkcji reparametryzującej
 \begin{equation}
   \label{eq:Leja-33}
   \varphi( \tau ) =
@@ -775,15 +777,15 @@ bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
 \vspace{\spaceFour}
 
 
+
 \start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
 niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
-błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$
-i~podzielmy go dowolną ilością punktów w~dowolnych miejscach
-na~podprzedziały, co jest zgodne z~przyjętą definicją. Tym samym
-widzimy, że~krzywa ta składa~się z~dowolnej ilości łuków i~każdy punkt
-jej obrazu jest jej wierzchołkiem. To~samo stosuje~się do krzywej
-która jest nieróżniczkowalna w~punktach
-$t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
+błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$ i~podzielmy go
+dowolną ilością punktów w~dowolnych miejscach na~podprzedziały, co
+jest zgodne z~przyjętą definicją. Tym samym widzimy, że~krzywa ta
+składa~się z~dowolnej ilości łuków i~każdy punkt jej obrazu jest jej
+wierzchołkiem. To~samo stosuje~się do krzywej która jest
+nieróżniczkowalna w~punktach $t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
 
 Rozwiązanie tego problemu jest proste, należy przyjąć, że~każdy z~tych
 przedziałów był maksymalny w~następującym sensie. Jeśli krzywa
@@ -794,12 +796,13 @@ i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
 \vspace{\spaceFour}
 
 
+
 \start \Str{32} Podana tu definicji krzywej zorientowanej dodatnio
 jest z~praktycznego punktu widzenie
 wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, w~którym
   byłby problem z~określeniem czy~kontur jest dodatnio zorientowany
-  czy też nie.}, jednak nieścisła. Wystarczy zadać pytanie, czy idziemy
-po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
+  czy też nie.}, jednak nieścisła. Wystarczy zadać pytanie, czy
+idziemy po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
 
 Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
 dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
@@ -833,32 +836,31 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
   \begin{tikzpicture}
     \def\radius{2.75}
 
-    \draw [help lines, ->] (-1.3 * \radius, 0) -- (1.3 * \radius, 0);
+    \draw[help lines, ->] (-1.35 * \radius,0) -- (1.35 * \radius,0);
 
-    \draw [help lines, ->] (0, -0.25) -- (0, 1.3 * \radius);
+    \draw[help lines, ->] (0,-0.25) -- (0,1.3 * \radius);
 
-    \draw [line width = 1pt,
-    decoration = {
+    \draw [line width = 1pt, decoration = {
       markings,
-      mark=at position 0.3 with {\arrow [line width=1.2pt]{>}},
-      mark=at position 0.8 with {\arrow [line width=1.2pt]{>}}
-    },
-    postaction = {decorate}]
-    (-\radius, 0) -- (\radius, 0) arc (0:180:\radius);
+      mark = at position 0.295 with {\arrow[line width=1.2pt]{>}},
+      mark = at position 0.6 with {\arrow[line width=1.2pt]{>}},},
+    postaction = {decorate}
+    ]
+    (-\radius, 0) -- (\radius, 0) arc (0:180:\radius) -- cycle;
 
 
-    \node at (1.3 * \radius, -0.25) {$\mathfrak{Re}\, z$};
+    \node at (1.35 * \radius,0) [below] {$\mathfrak{Re}\, z$};
 
-    \node at (0.55, 1.3 * \radius) {$\mathfrak{Im}\, z$};
+    \node at (0,1.3 * \radius) [right] {$\mathfrak{Im}\, z$};
 
 
-    \node at (-0.18, -0.23) {$0$};
+    \node at (0,0) [below left] {$0$};
 
-    \node at (-\radius - 0.15, -0.25) {$-R$};
+    \node at (-\radius - 0.15,0) [below] {$-R$};
 
-    \node at (\radius, -0.25) {$R$};
+    \node at (\radius,0) [below] {$R$};
 
-    \node at (0.85 * \radius, 2) {$\Gamma$};
+    \node at (0.55 * \radius,2.75) {$\Gamma$};
 
   \end{tikzpicture}
 
@@ -891,6 +893,7 @@ by~chyba zbyt daleko od~słów Lejii.
 \vspace{\spaceFour}
 
 
+
 \start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
 południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
 wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
@@ -901,11 +904,13 @@ konsekwentnie.
 \vspace{\spaceFour}
 
 
+
 \start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
 symetryczne względem pewnej prostej, to~łączący je odcinek jest
 prostopadły do~tej prostej.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{36} Nazwanie prostych \textbf{okręgami niewłaściwymi}
@@ -916,11 +921,13 @@ przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 \vspace{\spaceFour}
 
 
+
 \start \Str{38} Nie jestem pewien czy z~definicji wynika, że~do danych
 pęków należą odpowiednie proste (okręgi niewłaściwe), czy też należy
 tak zmodyfikować definicję, by~do nich należały.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{42} W~definicji ciała liczb wymiernych jest pewna
@@ -942,17 +949,17 @@ iloczyn
   \end{split}
 \end{equation}
 Ponieważ funkcja $1 / ( z - 1 )$ jest określona tylko dla $z \neq 1$,
-więc formalnie funkcja $W( z )$ ma~dziedzinę $\Cb \setminus 1$.
-To~jedna mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
-okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne
-dziedziny. Z~tego problemu łatwo jednak wybrnąć.
+więc formalnie funkcja $W( z )$ ma~dziedzinę $\Cb \setminus 1$. To~jedna
+mogłoby prowadzić do~niepotrzebnych komplikacji, na~przykład
+okazałoby~się, że~$W( z ) \neq z - 2$ bo funkcje te mają różne dziedziny.
+Z~tego problemu łatwo jednak wybrnąć.
 
 Jeśli daną funkcję wymierną~$f( z )$ która jest określony na~zbiorze
-$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać
-w~postaci $P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$,
-wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
-$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
-  \ld, z_{ n } }$ poprzez
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ n } }$ można zapisać w~postaci
+$P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$, wówczas
+zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
+$\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 }, \ld, z_{
+    n } }$ poprzez
 \begin{equation}
   \label{eq:Leja-36}
   \begin{split}
@@ -961,6 +968,7 @@ $\Cb \setminus \set{ z_{ 1 }, z_{ 2 }, \ld, z_{ i - 1 }, z_{ i + 1 },
 \end{equation}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest
@@ -973,6 +981,7 @@ funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \end{equation}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{56} Definicja okresu funkcji zmiennej zespolonej jest
@@ -989,11 +998,13 @@ z~okresów przyjąć, nie jest łatwe.
 \vspace{\spaceFour}
 
 
+
 \start \Str{56} Ze~wzoru (20) rzeczywiście wynika, że~$\sin$ i~$\cos$
 mają okres $2\pi$, ale~nie wynika, iż~dla którejś z~nich nie~istnieje
 mniejsza liczba dodatnia o~tej własności.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{58} Napotykamy tu ten sam problem, jaki omówiliśmy już
@@ -1008,12 +1019,14 @@ używać w~zwykły sposób.
 \vspace{\spaceFour}
 
 
+
 \start \Str{59} Zamiast rozumieć przez $a^{ b }$ każdą z~liczb podanej
 postaci, lepiej byłoby oznaczać zbiór wszystkich tych liczb.
 Oczywiście, należy uważać na~wymienione już w~przypadku funkcji
 wielowartościowych problemy.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{59--60} We~fragmencie o~gałęziach logarytmu należałoby
@@ -1025,12 +1038,13 @@ bo~powstaje problem, co oznacza ciągłość funkcji wielowartościowej?
 
 Ostatecznie, zgodnie z~tym co zostało napisane o~$\arg z$, mamy dwa
 wyjścia, jeśli chcemy określić gałąź logarytmu na~całej płaszczyźnie.
-Albo~argumenty liczb zespolonych zmienia~się od~$-\infty$ do~$+\infty$
-i~gałąź logarytmu przestaje być jednoznaczna, albo~ograniczamy ich
-zakres na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi
-mieć skok, a~więc przestaje być ciągła.
+Albo~argumenty liczb zespolonych zmienia~się od~$-\infty$ do~$+\infty$ i~gałąź
+logarytmu przestaje być jednoznaczna, albo~ograniczamy ich zakres
+na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi mieć skok,
+a~więc przestaje być ciągła.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{60} Nie udowodniono tu, że~dwie dowolne gałęzie logarytmu
@@ -1049,10 +1063,12 @@ stałej, czyli $k( z ) = k \in \Zb$.
 \vspace{\spaceFour}
 
 
+
 \start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
 traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
@@ -1062,6 +1078,7 @@ wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
 twierdzenia.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{73} Przedyskutujemy tu~czy rysunek~(36) poprawnie
@@ -1109,9 +1126,11 @@ zagadnienia tego nie będziemy omawiać.
 \vspace{\spaceFour}
 
 
+
 \start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
@@ -1120,11 +1139,13 @@ policz~$\abso{ z }^{ 2 } + 1$.
 \vspace{\spaceFour}
 
 
+
 \start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
 po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
 to~jednak jasno z~rysunku.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
@@ -1136,19 +1157,20 @@ poza tym punktem.
 \vspace{\spaceFour}
 
 
+
 \start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
 do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
 nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
 funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
-trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
-może być znacznie bardziej skomplikowany obiektem, niż byśmy
-oczekiwali.
+trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$ może
+być znacznie bardziej skomplikowany obiektem, niż byśmy oczekiwali.
 
 Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
 poziomice powinny być dobrze określone. Może warto będzie do~tego
 zagadnienia powrócić i~zanalizować je dokładnie?
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
@@ -1165,12 +1187,14 @@ zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny czas.
 \vspace{\spaceFour}
 
 
+
 \start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
 tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
 krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
 dać~się aproksymować ją przez linię łamaną.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
@@ -1190,11 +1214,13 @@ zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 \vspace{\spaceFour}
 
 
+
 \start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
 zostało one w~żaden sposób jasno zdefiniowane, pozostając na~poziomie
 intuicji matematycznej.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
@@ -1211,42 +1237,44 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
   \centering
 
   \begin{tikzpicture}[scale=1.35]
-    \def\scale{2.5} \def\R{2.6}
+    \def\axissize{2.5}
 
-    \draw [help lines, ->] (0, 0) -- (\scale, 0);
+    \def\R{2.}
 
-    \draw [help lines, ->] (0, -0.5) -- (0, \scale);
 
-    \draw [dashed] (-0.6 * \scale, 0) -- (0, 0);
 
-    \draw [line width = 0.9pt,
-    decoration =
+    \draw[help lines, ->] (0,0) -- (\axissize,0);
+
+    \draw[help lines, ->] (0,-0.5) -- (0,\axissize);
+
+    \draw[dashed] (-0.6 * \axissize,0) -- (0,0);
+
+
+
+    \filldraw[black] (1.5,0) circle (1.5pt) node [below] {1};
+
+    \draw[line width = 0.9pt, decoration =
     { markings,
-      mark=at position 0.2 with {\arrow [line width=1.2pt]{>}},
-      mark=at position 0.6 with {\arrow [line width=1.1pt]{>}}
-    },
-    postaction = {decorate}]
-    (1, 0) arc (0:55:1) -- (0.57 * \R, 0.82 * \R);
-
-    % Kod w elispie do obliczania funkcji trygonometrycznych
-    % (cos (* pi (/ 55.0 180)))
-    % (sin (* pi (/ 55.0 180)))
+      mark = at position 0.2 with {\arrow[line width=1.2pt]{>}},
+      mark = at position 0.6 with {\arrow [line width=1.1pt]{>}},},
+    postaction = {decorate}
+    ]
+    (1.5,0) arc (0:50:1.5) -- (50:\R);
 
 
-    \filldraw [black] (1, 0) circle (1.5pt) node [anchor=north] {1};
 
-    \filldraw [black] (0.57, 0.82) circle (1pt) node [anchor=east]
+    \filldraw[black] (0.57, 0.82) circle (1pt) node [left]
     {$e^{ i \varphi }$};
 
-    \filldraw [black] (0.57 * \R, 0.82 * \R) circle (1.5pt) node
+    \filldraw[black] (0.57 * \R,0.82 * \R) circle (1.5pt) node
     [anchor=west] {$R\, e^{ i \varphi }$};
 
     \node at (1.0, 0.65) {$\Gamma$};
 
 
-    \node at (\scale, -0.25) {$\mathfrak{Re}\, z$};
+    \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
 
-    \node at (0.4, \scale) {$\mathfrak{Im}\, z$};
+    \node at (0.4, \axissize) {$\mathfrak{Im}\, z$};
 
     \node at (-0.15, -0.2) {$0$};
 
@@ -1263,28 +1291,27 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
 \start \Str{95} W~twierdzeniu o~istnieniu jednoznacznej gałęzi
 logarytmu zakładamy, że~dany obszar~$D$ jest jednospójny i~nie zawiera
-$0$ i~$\infty$. Dlaczego musi byś jednospójny jest oczywiste,
-kontrprzykład z~okręgiem ze~stron~59--60 pokazuje, gdzie leży problem.
+$0$ i~$\infty$. Dlaczego musi byś jednospójny jest oczywiste, kontrprzykład
+z~okręgiem ze~stron~59--60 pokazuje, gdzie leży problem.
 Wykluczenie~$0$ też jest jasne, mówienie o~analityczności $1 / \zeta$
 w~zerze nie ma sensu. Większe problemy stwarza potrzeba usunięcia
 punktu~$\infty$.
 
 Istnieją po~temu dwa powody. Po pierwsze, zgodnie z~przyjęto
 definicjom jednospójności zbiór
-$\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
-a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
-zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
-z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
-np.~prostą $\Real\, z < 0$, wykluczający tym samym z~rozważań
-wszystkie nieporządne zbiory.
+$\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny, a~twierdzenie dla
+niego jawnie nie zachodzi. Jeśli z~rozważanego zbioru wykluczymy $0$
+i~$\infty$ to, aby był jednospójny musimy z~niego wykluczyć też odpowiedni
+zbiór ,,łączący'' te~dwa punkty, np.~prostą $\Real\, z < 0$,
+wykluczający tym samym z~rozważań wszystkie nieporządne zbiory.
 
 Drugi powód jest następujący. Rozpatrzmy jak na
 rysunku~(\ref{fig:Leja-02}) płaszczyznę zespoloną bez osi
 $\Real\, z \leq 0$. Można sobie zadać pytanie, czy~wartość całki
-z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur
-całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
-,,do~nieskończoności'' (dla prostoty przyjmijmy $a = 1$). Przez to
-ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
+z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur całkowania
+$\gamma_{ R }$ o~początku $a$ rozciągamy ,,do~nieskończoności'' (dla
+prostoty przyjmijmy $a = 1$). Przez to ostatnie stwierdzenie
+rozumiemy, że~rozważamy rodzinę konturów
 $\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \Cb$ takich, że
 \begin{equation}
   \label{eq:Leja-39}
@@ -1298,21 +1325,21 @@ od~wartości~$\varphi$.
 
 Jakkolwiek można by więc nadać sens logarytmowi od~$\infty$, to~byłby
 wówczas pewien problem z~zależnością $\exp( \log z ) = z$. Nie
-istnieje bowiem żaden naturalny wybór wartości $\exp( \infty )$,
-bowiem
+istnieje bowiem żaden naturalny wybór wartości $\exp( \infty )$, bowiem
 \begin{equation}
   \label{eq:Leja-40}
   \begin{split}
-    \Lim_{ x \to +\infty } e^{ x } = +\infty, \quad \Lim_{ x \to
-      -\infty } e^{ -x } = 0, \quad x \in \Rb.
+    \Lim_{ x \to +\infty } e^{ x } = +\infty, \quad \Lim_{ x \to -\infty } e^{ -x } = 0, \quad x
+    \in \Rb.
   \end{split}
 \end{equation}
-Trzeba by więc przyjąć, że~$\exp( \infty ) = \infty$, by~zachodził
-wzór $\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę,
-decyzja by wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się
-jako dobrze uzasadniona.
+Trzeba by więc przyjąć, że~$\exp( \infty ) = \infty$, by~zachodził wzór
+$\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę, decyzja by
+wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się jako dobrze
+uzasadniona.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{96} Dowód, że~w~obszarze jednospójnym funkcja
@@ -1324,6 +1351,7 @@ analityczna. Dopiero gdy dowiedziemy, że~każda funkcja analityczna
 jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{99} Wzór
@@ -1353,18 +1381,18 @@ Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
   M = \max_{ w \in C } \abso{ \varphi( w ) },
 \end{equation}
 widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
-$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$
-przez funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione
-są założenia twierdzenia o~różniczkowaniu pod znakiem całki
+$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$ przez
+funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione są
+założenia twierdzenia o~różniczkowaniu pod znakiem całki
 (zob.~twr.~132,
 str.~659~\cite{SchwartzKursAnalizyMatematycznejTomI1979}), z~którego
 wynika wzór \eqref{eq:Leja-42}.
 
 Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
-czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$
-jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
-twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
-z~przyrostem $\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
+czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$ jednostajnie
+względem $\zeta$. Jest to w~istocie szczególny przypadek twierdzenie,
+że~iloraz różnicowy dąży jednostajnie do~pochodnej z~przyrostem
+$\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
 (zob.~wniosek~3,
 str.~244~\cite{SchwartzKursAnalizyMatematycznejTomI1979}).
 Z~przytoczonego wyżej twierdzenia o~odległości między
@@ -1378,10 +1406,11 @@ względem zmiennej~$\zeta$.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy
-zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest
-dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
-że~poprawna definicja~to
+zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest dowolną
+liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się, że~poprawna
+definicja~to
 \begin{equation}
   \label{eq:Leja-43}
   \binom{ \mu }{ n } := \frac{ \mu ( \mu - 1 ) ( \mu - 2 ) \cdot \ldots
@@ -1389,6 +1418,7 @@ dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
 \end{equation}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{102} Pokazano tu, że~jeśli funkcja analityczna ma~0
@@ -1418,11 +1448,10 @@ $f'( z )$, stąd
 Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
 i~powtarzając powyższe rozumowanie otrzymujemy,
 że~$f'( w_{ 0 } ) = 0$. Kontynuując to~rozumowanie pokazujemy,
-że~$f^{ ( k ) }( w_{ 0 } ) = 0$, $k = 0, 1, 2, \ldots$ Ponieważ
-znikają wszystkie wyrazy rozwinięcia $f( z )$ w~szereg Taylora
-w~punkcie $w_{ 0 }$ i~szereg ten musi mieć niezerowy promień
-zbieżności, funkcja~$f( z )$ znika pewnym otoczeniu~$w_{ 0 }$ i~tym
-samym $w \in E$.
+że~$f^{ ( k ) }( w_{ 0 } ) = 0$, $k = 0, 1, 2, \ldots$ Ponieważ znikają
+wszystkie wyrazy rozwinięcia $f( z )$ w~szereg Taylora w~punkcie
+$w_{ 0 }$ i~szereg ten musi mieć niezerowy promień zbieżności,
+funkcja~$f( z )$ znika pewnym otoczeniu~$w_{ 0 }$ i~tym samym $w \in E$.
 
 Ponieważ $E$ jest jednocześnie otwarty i~domknięty w~$D$, a~$D$ jako
 obszar jest zbiorem spójnym, $E = \emptyset$ lub $E = D$.
@@ -1438,11 +1467,13 @@ poprzedniego lematu znika w~całym~$D$.
 \vspace{\spaceFour}
 
 
+
 \start \textbf{Str.~106, wiersze 1--2.} Nierówność
 $\abso{ f( z' ) } > \abso{ f( z_{ 0 } ) }$ jest bardzo brzydko
 podzielona między dwie linie.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{116} Pochodzenia nazwy \emph{potencjał logarytmiczny}
@@ -1451,11 +1482,13 @@ wyjaśnia analiza przeprowadzona na~stronie~152.
 \vspace{\spaceFour}
 
 
+
 \start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
 wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
 w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4)
@@ -1483,6 +1516,7 @@ wzór~(17).
 \vspace{\spaceFour}
 
 
+
 \start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
 książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
 w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
@@ -1501,6 +1535,7 @@ do~wyprowadzenia wzoru~(18) ze~strony~133.
 \vspace{\spaceFour}
 
 
+
 \start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
 przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
 Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
@@ -1515,6 +1550,7 @@ $f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 \vspace{\spaceFour}
 
 
+
 \start \Str{144} Twierdzenie, że~funkcja analityczna $f( z )$,
 dla~której mamy $f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun
 jednokrotny), jest jednokrotna w~odpowiednio mały otoczeniu $z_{ 0 }$
@@ -1524,13 +1560,14 @@ Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
 że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
 dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
 że~$f( K( z_{ 0 }, \delta ) ) \neq K( f( z_{ 0 } ), \eta )$, bowiem
-$K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak
-zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$
-jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
-jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
+$K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak zbiór
+$K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$ jest otwarty,
+więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która jest
+otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
 że~$f( K( z_{ 0 }, \delta' ) )$ nie~musi być kulą.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie ,,skoro
@@ -1538,6 +1575,7 @@ zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
 na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu''.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza
@@ -1552,12 +1590,14 @@ gdzie~$\abso{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 \vspace{\spaceFour}
 
 
+
 \start \Str{154} Uogólniona tu~definicja transformacji konforemnej
 sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
 że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
 z~zachowaniem zwrotu?
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{162} Nazwa \emph{szereg lukowy} bierze~się zapewne stąd,
@@ -1572,8 +1612,8 @@ W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
 której długość jest większa od~$\theta$.
 
 Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
-$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
-możemy tylko powiedzieć, że
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności możemy tylko
+powiedzieć, że
 \begin{equation}
   \label{eq:Leja-50}
   \frac{ \abso{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \abso{ \lambda_{ n } } }
@@ -1583,11 +1623,13 @@ możemy tylko powiedzieć, że
 \vspace{\spaceFour}
 
 
+
 \start \Str{163} Już tutaj należałoby wprowadzić pojęcia
 \textbf{środka elementu}, \textbf{koła elementu} i~\textbf{promienia
   elementu}. Pojęcia te pojawiają~się dopiero na~stronach~175 i~176.
 
 \vspace{\spaceFour}
+
 
 
 % ##################
@@ -1596,26 +1638,25 @@ możemy tylko powiedzieć, że
 
   \begin{tikzpicture}[scale=1.3]
     % Pierwszy graf
-    \draw [black] (0, 0) -- (0, 1.2);
+    \draw[black] (0, 0) -- (0, 1.2);
 
 
 
     % Drugi graf
-    \draw [black] (0.65, 0) -- (0.65, 0.25);
+    \draw[black] (0.65, 0) -- (0.65, 0.25);
 
-    \draw [black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
+    \draw[black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
 
-    \draw [black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
+    \draw[black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
 
 
     % Trzeci graf
-    \draw [black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25,
+    \draw[black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25, 1.2);
+
+    \draw[black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
     1.2);
 
-    \draw [black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
-    1.2);
-
-    \draw [black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
+    \draw[black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
 
 
 
@@ -1648,14 +1689,28 @@ zostało to~zrobione na~(\ref{fig:Leja-03}).
 \vspace{\spaceFour}
 
 
+
 \start \Str{172--174}
 
 \vspace{\spaceFour}
 
 
+
 \start \Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
 ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości
 algebraicznie.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{269} Dowód kryterium Cauchy'ego wydaje mi się błędy bądź
+niepotrzebnie skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
+poprawić??????????????????
+
+\vspace{\spaceFour}
+
+
 
 \CenterTB{Błędy}
 \begin{center}
@@ -1760,6 +1815,10 @@ algebraicznie.
     178 &  2 & & 132 & 133 \\
     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
     207 & &  6 & $( 1$ & $1$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
