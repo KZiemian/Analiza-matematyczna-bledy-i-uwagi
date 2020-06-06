@@ -1,8 +1,8 @@
 % Autor: Kamil Ziemian
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,17 +16,17 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -40,7 +40,7 @@
 
 
 % ------------------------------
-% Często przydatne pakiety
+% Często używane pakiety
 % ------------------------------
 % \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 % \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
@@ -62,15 +62,22 @@
 \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
-\usepackage{tikz}  % Potężny pakiet PGF/TikZ.
+
+
+
+% ---------------
+% Wspaniały pakiet PGF/TikZ
+% ---------------
+\usepackage{tikz}
+
 \usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
 % pakietu TikZ
 
 
 
-% ----------
+% ---------------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ----------
+% ---------------
 \newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % ,,twr'' do pisania twierdzeń matematycznych
 \newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
@@ -78,10 +85,9 @@
 
 
 
-% ----------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% ------------------------------
+% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
+% ------------------------------
 \usepackage{analizamatematyczna}  % Pakiet napisany między innymi
 % dla tego pliku.
 \usepackage{latexshortcuts}
@@ -90,9 +96,9 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -100,20 +106,25 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% wierszami w tabelach
 
 
 
-% ----------------------------
-% Pakiet "hyperref"
-% Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% do bibliografii na hiperlinki
+
+
+
+
+
 
 
 
@@ -126,6 +137,11 @@
 % \author{}
 % \date{}
 % --------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -171,7 +187,7 @@
 % ####################
 \Work{ % Autor i tytuł dzieła
   Franciszek Leja \\
-  ,,Funkcje zespolone'', \cite{LejaFunkcjeZespolone2006} }
+  „Funkcje zespolone”, \cite{LejaFunkcjeZespolone2006} }
 % Sprawdź tu wszystkie eqref.
 
 
@@ -722,8 +738,8 @@ kanoniczny jest nieprawdziwe.
 
 Powód tego jest dość oczywisty. Jeśli krzywa ma~\textbf{punkty
   osobliwe}, czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest
-sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona ,,stała
-w~miejscu''. Przykładem takie zachowania jest krzywa
+sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona „stała
+w~miejscu”. Przykładem takie zachowania jest krzywa
 \begin{equation}
   \label{eq:Leja-30}
   \begin{split}
@@ -749,7 +765,7 @@ zmiennej~$s$, czyli jej długości.
 
 Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
 da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
-możliwe, jeśli tych punktów jest ,,odpowiednio mało''. Przykładem
+możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem
 takiej sytuacji jest krzywa
 \begin{equation}
   \label{eq:Leja-32}
@@ -820,7 +836,7 @@ jest z~praktycznego punktu widzenie
 wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, w~którym
   byłby problem z~określeniem czy~kontur jest dodatnio zorientowany
   czy też nie.}, jednak nieścisła. Wystarczy zadać pytanie, czy
-idziemy po~krzywej ,,głową do~góry'', czy~,,głową do~dołu''?
+idziemy po~krzywej „głową do~góry”, czy~„głową do~dołu”?
 
 Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
 dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
@@ -828,9 +844,9 @@ ciągła (w~tej zresztą ogólnej formie pojęcie orientacji jest
 tu~podane). W~pełni ścisłe sformułowanie tego problemu nie jest wcale
 łatwe. W~tej chwili najbardziej obiecujące wydaje mi~się podejście
 w~którym najpierw definiuje~się orientację okręgu jednostkowego,
-później zaś ,,homotopie zachowujące orientację'', za~krzywą
-zorientowaną dodatnio uznać taką, która jest ,,homotopijna
-z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio''. O~ile
+później zaś „homotopie zachowujące orientację”, za~krzywą
+zorientowaną dodatnio uznać taką, która jest „homotopijna
+z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio”. O~ile
 jednak zdefiniowanie okręgu zorientowanego dodatnio nie jest trudne,
 to~podanie w~sposób ścisły i~wystarczająco ogólnych takich homotopii
 przekracza moją wiedzę i~zdolności.
@@ -849,7 +865,10 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
 % ##################
 \begin{figure}
+
   \centering
+
+  \label{fig:Leja-01}
 
   \begin{tikzpicture}
     \def\radius{2.75}
@@ -882,7 +901,6 @@ jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
   \caption{Jeden z~podstawowych konturów całkowania~$\Gamma$.}
 
-  \label{fig:Leja-01}
 \end{figure}
 % ##################
 
@@ -1241,9 +1259,9 @@ intuicji matematycznej.
 
 
 \start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
-,,drogi całkowania'', jednak nie jest ono zdefiniowane. Przez
+„drogi całkowania”, jednak nie jest ono zdefiniowane. Przez
 \textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką. Dla
-wygody będziemy czasem mówili po~prostu o~,,drodze''.
+wygody będziemy czasem mówili po~prostu o~„drodze”.
 
 \vspace{\spaceFour}
 
@@ -1251,6 +1269,9 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
 
 % ##################
 \begin{figure}
+
+  \label{fig:Leja-02}
+
   \centering
 
   \begin{tikzpicture}[scale=1.35]
@@ -1296,9 +1317,8 @@ wygody będziemy czasem mówili po~prostu o~,,drodze''.
   \end{tikzpicture}
 
   \caption{Przykładowy kontur po~którym można całkować funkcje
-    $1 / \zeta$ ,,od~1 do~nieskończoności''.}
+    $1 / \zeta$ „od~1 do~nieskończoności”.}
 
-  \label{fig:Leja-02}
 \end{figure}
 % ##################
 
@@ -1317,7 +1337,7 @@ definicjom jednospójności zbiór
 $\Cb \cup \set{ \infty } \setminus \set{ 0 }$ byłby jednospójny,
 a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
 zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
-z~niego wykluczyć też odpowiedni zbiór ,,łączący'' te~dwa punkty,
+z~niego wykluczyć też odpowiedni zbiór „łączący” te~dwa punkty,
 np.~prostą $\Real\, z < 0$, wykluczający tym samym z~rozważań
 wszystkie nieporządne zbiory.
 
@@ -1326,7 +1346,7 @@ rysunku~(\ref{fig:Leja-02}) płaszczyznę zespoloną bez osi
 $\Real\, z \leq 0$. Można sobie zadać pytanie, czy~wartość całki
 z~$1 / \zeta$ po~konturze $\gamma_{ R }$ jest zbieżna, gdy kontur
 całkowania $\gamma_{ R }$ o~początku $a$ rozciągamy
-,,do~nieskończoności'' (dla prostoty przyjmijmy $a = 1$). Przez to
+„do~nieskończoności” (dla prostoty przyjmijmy $a = 1$). Przez to
 ostatnie stwierdzenie rozumiemy, że~rozważamy rodzinę konturów
 $\gamma_{ R }: [ t_{ 0 }, t_{ 1 } ] \to \Cb$ takich, że
 \begin{equation}
@@ -1524,7 +1544,7 @@ $0 < \abso{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
 Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
 obszaru ograniczonego przez $C$ i~$K$ (promień okręgu $K$ przyjmujemy
 tak mały by~ten okrąg zawierał~się wewnątrz~$C$\footnote{Czy pojęcie
-  ,,znajdowania~się wewnątrz konturu'' zostało już zdefiniowana.
+  „znajdowania~się wewnątrz konturu” zostało już zdefiniowana.
   Topologiczne wnętrze konturu zwykle jest puste, a~najpewniej zawsze
   musi być puste.}), więc~całki po~nich~są równe, a~stąd wynika
 wzór~(17).
@@ -1586,9 +1606,9 @@ jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
 
 
 
-\start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie ,,skoro
+\start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro
 zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
-na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu''.
+na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
 \vspace{\spaceFour}
 
@@ -1650,7 +1670,10 @@ możemy tylko powiedzieć, że
 
 % ##################
 \begin{figure}[h]
+
   \centering
+
+  \label{fig:Leja-03}
 
   \begin{tikzpicture}[scale=1.3]
     % Pierwszy graf
@@ -1690,7 +1713,6 @@ możemy tylko powiedzieć, że
   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
     zespolonej a~jej $p$-krotnością.}
 
-  \label{fig:Leja-03}
 \end{figure}
 % ##################
 
@@ -1730,6 +1752,7 @@ poprawić??????????????????
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1784,6 +1807,8 @@ poprawić??????????????????
     90  &  2 & & \emph{krzywą zamkniętą} & \emph{konturem} \\
     \hline
   \end{tabular}
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
