@@ -340,604 +340,574 @@ Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
   = \sqrt{ 1 } = 1.
 \end{equation}
 
-% Pojawiają~się tu dwa błędy, mające to~samo źródło. Po~pierwsze
-% $\sqrt{ -1 } = \set{ i, -i }$ więc w~równaniu powyżej mamy mnożenie
-% nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc to co~się
-% naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
-% zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
-% sposób
-% \begin{equation}
-%   \label{eq:Leja-09}
-%   ( -i ) \cdot i = 1.
-% \end{equation}
-% Drugi błąd jest następując. Jeśli rozważamy~$1$ jako liczbę zespoloną,
-% to
-% \begin{equation}
-%   \label{eq:Leja-10}
-%   \sqrt{ 1 } = \set{ 1, -1 },
-% \end{equation}
-% czyli otrzymany poprzednio wynik $\sqrt{ 1 }$~„$=$”~$1$, przedstawia
-% tylko jeden element zbioru $\sqrt{ 1 }$.
-
-% Wymaga to~pewnego komentarza. Jeśli będziemy rozpatrywać operację
-% pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
-% możliwe zdefiniowanie na~nim funkcji
-% $\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
-% liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
-% zespolone~$\Cb$, wówczas takiej funkcji jednowartościowej nie~da~się
-% określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
-% $-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
-% niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
-% nasze rozumowanie tylko do~zbioru liczb rzeczywistych,
-% nieujemnych~$D$.
-
-% Warto zwrócić uwagę, że~jednoznaczną funkcję
-% $\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
-% podzbiorach $\Cb$. Wynika to~między innymi z~twierdzenia o~istnieniu
-% jednoznacznych gałęzi logarytmu, zobacz str.~95 w~komentowanej
-% tu~książce \cite{LejaFunkcjeZespolone2006}. Tym problemem nie
-% będziemy~się w~tym miejscu szerzej zajmować.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
-% momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
-% $\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
-% $\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
-% obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
-% wiem, jak należałoby to~poprawić.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$
-% kieruje~się chyba następującą myślą. Aby znaleźć te pierwiastki musimy
-% obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
-% $\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
-% i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
-% \begin{equation}
-%   \label{eq:Leja-11}
-%   \begin{split}
-%     \cos \theta_{ 0 } = \cos \tfr{ \varphi }{ 2 } = \onehalf ( 1 +
-%     \cos \varphi ),
-%   \end{split}
-% \end{equation}
-% podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
-% wzorów
-% \begin{equation}
-%   \label{eq:Leja-12}
-%   \begin{split}
-%     \cos( \tfr{ \varphi }{ 2 } + \pi ) = -\cos( \tfr{ \varphi }{ 2 }
-%     ), \quad \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfr{
-%       \varphi }{ 2 } ).
-%   \end{split}
-% \end{equation}
-% Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
-% za~pomocą $\alpha$ i~$\beta$.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
-% iloczyn Cauchy'ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
-% i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
-% \begin{equation}
-%   \label{eq:Leja-13}
-%   \begin{split}
-%     \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
-%       \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
-%     }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ld + a_{ 0
-%     } b_{ n } ) z^{ n }.
-%   \end{split}
-% \end{equation}
-% Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
-% matematycznie niepoprawne dla~pewnych szeregów potęgowych. Dostarczają
-% jednak uzasadnienia dla tego sposobu mnożenia szeregów.
-
-% \vspace{\spaceFour}
-
-
+Pojawiają~się tu dwa błędy, mające to~samo źródło. Po~pierwsze
+$\sqrt{ -1 } = \{ i, -i \}$ więc w~równaniu powyżej mamy mnożenie
+nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc to co~się
+naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
+zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
+sposób
+\begin{equation}
+  \label{eq:Leja-09}
+  ( -i ) \cdot i = 1.
+\end{equation}
+Drugi błąd jest następując. Jeśli rozważamy~$1$ jako liczbę zespoloną,
+to
+\begin{equation}
+  \label{eq:Leja-10}
+  \sqrt{ 1 } = \{ 1, -1 \},
+\end{equation}
+czyli otrzymany poprzednio wynik $\sqrt{ 1 }$~„$=$”~$1$, przedstawia
+tylko jeden element zbioru $\sqrt{ 1 }$.
+
+Wymaga to~pewnego komentarza. Jeśli będziemy rozpatrywać operację
+pierwiastkowania na~zbiorze $D = \{ x \, | \, x \geq 0 \}$, to jest
+możliwe zdefiniowanie na~nim funkcji
+$\sqrt{ \cdot }: x \mapsto \sqrt{ x }$, która jest zwykłą funkcją
+liczbową, jednowartościową. Kiedy jednak rozpatrujemy liczby
+zespolone~$\Cbb$, wówczas takiej funkcji jednowartościowej nie~da~się
+określić na~całej płaszczyźnie zespolonej. Jeśli więc pierwiastkujemy
+$-1$, co musimy robić w~zbiorze liczb zespolonych, to~popełniamy
+niespójność w~rozumowaniu, gdy~pierwiastkując~$1$ nagle ograniczamy
+nasze rozumowanie tylko do~zbioru liczb rzeczywistych,
+nieujemnych~$D$.
+
+Warto zwrócić uwagę, że~jednoznaczną funkcję
+$\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
+podzbiorach $\Cbb$. Wynika to~między innymi z~twierdzenia o~istnieniu
+jednoznacznych gałęzi logarytmu, zobacz str.~95 w~komentowanej
+tu~książce \cite{LejaFunkcjeZespolone2006}. Tym problemem nie
+będziemy~się w~tym miejscu szerzej zajmować.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
+momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
+$\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
+$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
+obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
+wiem, jak należałoby to~poprawić.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$
+kieruje~się chyba następującą myślą. Aby znaleźć te pierwiastki musimy
+obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
+$\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
+i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
+\begin{equation}
+  \label{eq:Leja-11}
+    \cos \theta_{ 0 } = \cos \tfrac{ \varphi }{ 2 } = \frac{ 1 }{ 2 } ( 1 + \cos \varphi ),
+\end{equation}
+podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
+wzorów
+\begin{equation}
+  \label{eq:Leja-12}
+  \cos( \tfrac{ \varphi }{ 2 } + \pi ) = -\cos( \tfrac{ \varphi }{ 2 } ), \quad
+  \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfrac{ \varphi }{ 2 } ).
+\end{equation}
+Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
+za~pomocą $\alpha$ i~$\beta$.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
+iloczyn Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
+i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
+\begin{equation}
+  \label{eq:Leja-13}
+    \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
+      \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
+    }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
+    } b_{ n } ) z^{ n }.
+\end{equation}
+Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
+matematycznie niepoprawne dla~pewnych szeregów potęgowych. Dostarczają
+jednak uzasadnienia dla tego sposobu mnożenia szeregów.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
+Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
+wartość tej granicy wynika z~twierdzenia Abela.
+
+\vspace{\spaceFour}
+
+
 
-% \start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
-% Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
-% wartość tej granicy wynika z~twierdzenia Abela.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{20--21} Dowód twierdzenia Mertensa jest według mnie
-% przeprowadzony zbyt szybko, dlatego tutaj postaramy~się go uzupełnić
-% w~kilku miejscach.
-
-% Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
-% zachodzi poniższa nierówność
-% \begin{equation}
-%   \label{eq:Leja-14}
-%   \begin{split}
-%     \abso{ C_{ n } - A_{ n } B } \leq \epsilon, \quad \forall \epsilon
-%     > 0,
-%   \end{split}
-% \end{equation}
-% bowiem z~tego będzie wynikać
-% \begin{equation}
-%   \label{eq:Leja-15}
-%   \begin{split}
-%     \abso{ C_{ n } - AB } \leq \abso{ C_{ n } - A_{ n } B } + \abso{
-%       A_{ n } B - AB } \leq 2 \epsilon,
-%   \end{split}
-% \end{equation}
-% dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\epsilon > 0$. Teraz
-% dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
-% $\abso{ \beta_{ n } } < \epsilon / 2K$. Teraz zachodzi nierówność
-% \begin{equation}
-%   \label{eq:Leja-16}
-%   \begin{split}
-%     \abso{ C_{ n } - A_{ n } B } &= \abso{ a_{ 0 } \beta_{ n } + a_{ 1
-%       } \beta_{ n - 1 } + \ld + a_{ n } \beta_{ 0 } } \leq \abso{ a_{
-%         0 } } \abso{ \beta_{ n } } + \abso{ a_{ 1 } } \abso{ \beta_{ n
-%         - 1
-%       } } + \ld + \abso{ a_{ n - p + 1 } } \abso{ \beta_{ p + 1 } } \\
-%     &+ \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } }
-%     \leq \fr{ \epsilon }{ 2K } ( \abso{ a_{ 0 } } + \ld + \abso{ a_{ n
-%         - p + 1 } } ) + \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n }
-%       \beta_{ 0 } }.
-%   \end{split}
-% \end{equation}
-% Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
-% \begin{equation}
-%   \label{eq:Leja-17}
-%   \begin{split}
-%     \abso{ a_{ n - p } \beta_{ p } + \ld + a_{ n } \beta_{ 0 } } \leq
-%     \abso{ a_{ n - p } } \abso{ \beta_{ p } } + \ld + \abso{ a_{ n } }
-%     \abso{ \beta_{ 0 } } \leq M_{ p } ( \abso{ a_{ n - p } } + \ld +
-%     \abso{ a_{ n } } ),
-%   \end{split}
-% \end{equation}
-% gdzie
-% $M_{ p } = \max( \abso{ \beta_{ 1 } }, \ld, \abso{ \beta_{ p } } )$.
-% Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
-% $n > q$ zachodzić $\abso{ a_{ n - p } } < \epsilon / ( 2 p M_{ p } )$.
-% Teraz dla każdego $n > \max( p, q )$ zachodzi
-% \begin{equation}
-%   \label{eq:Leja-18}
-%   \begin{split}
-%     \abso{ C_{ n } - AB } \leq \epsilon.
-%   \end{split}
-% \end{equation}
-% Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
-% zakończony.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty,
-% dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
-% Po~pierwsze dowód formuły
-% \begin{equation}
-%   \label{eq:Leja-19}
-%   \begin{split}
-%     \fr{ C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } }{ n } = AB + A q_{ n }
-%     + B p_{ n } + r_{ n },
-%   \end{split}
-% \end{equation}
-% nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
-% \begin{equation}
-%   \label{eq:Leja-20}
-%   \begin{split}
-%     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } = n AB + A ( \beta_{ 0 } +
-%     \beta_{ 1 } + \ld + \beta_{ n - 1 } ) + B ( \alpha_{ 0 } +
-%     \alpha_{ 1 } + \ld + \alpha_{ n - 1 } ) + R_{ n },
-%   \end{split}
-% \end{equation}
-% gdzie
-% \begin{equation}
-%   \label{eq:Leja-21}
-%   \begin{split}
-%     R_{ n } = n r_{ n } = \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n -
-%       2 } \beta_{ 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 }.
-%   \end{split}
-% \end{equation}
-% Łatwo~się o~jej prawdziwości przekonać, wypisując kilka pierwszych
-% wyrazów.
-
-% Musimy jednak najpierw wykazać wynik pomocniczy:
-% \begin{equation}
-%   \label{eq:Leja-22}
-%   \begin{split}
-%     \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
-%       0 } + a_{ i - 1 } b_{ 1 } + \ld + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
-%     + a_{ 1 } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
-%     + \ld + a_{ n - 1 } ) b_{ 1 } \\
-%     &+ \ld + a_{ 0 } b_{ n }.
-%   \end{split}
-% \end{equation}
-% Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
-% przypadków. Dowód przeprowadzimy indukcyjnie. Przypadek $n = 0$
-% wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
-% \begin{equation}
-%   \label{eq:Leja-23}
-%   \begin{split}
-%     \sum_{ i = 0 }^{ n + 1 } c_{ i } &= ( a_{ 0 } + a_{ 1 } + \ld +
-%     a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } ) b_{
-%       1 } + \ld
-%     + a_{ 0 } b_{ n } + c_{ n + 1 } \\
-%     &= ( a_{ 0 } + a_{ 1 } + \ld + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{
-%       1 }
-%     + \ld + a_{ n - 1 } ) b_{ 1 } + \ld + a_{ 0 } b_{ n } \\
-%     &+ a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ld + a_{ 0 } b_{ n + 1
-%     }
-%     = ( a_{ 0 } + a_{ 1 } + \ld + a_{ n } + a_{ n + 1 } ) b_{ 0 } \\
-%     &+ ( a_{ 0 } + a_{ 1 } + \ld + a_{ n - 1 } + a_{ n } ) b_{ 1 } +
-%     \ld + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
-%   \end{split}
-% \end{equation}
-
-% Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-16}, który również
-% przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
-% Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
-% \begin{equation}
-%   \label{eq:Leja-24}
-%   \begin{split}
-%     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
-%       i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
-%     \alpha_{ i } + R_{ n } + C_{ n }.
-%   \end{split}
-% \end{equation}
-% Następny krok jest trochę długi. Przeliczając kilka pierwszych
-% przypadków, łatwo zgadnąć, że
-% \begin{equation}
-%   \label{eq:Leja-25}
-%   \begin{split}
-%     C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n +
-%       1 }.
-%   \end{split}
-% \end{equation}
-% Zacznijmy od~tego, że
-% $b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
-% korzystając więc, ze~wzoru \eqref{eq:Leja-19}
-% \begin{equation}
-%   \label{eq:Leja-26}
-%   \begin{split}
-%     C_{ n } &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ld + A_{ 0 }
-%     b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A +
-%     \alpha_{ n - 1 } )
-%     ( \beta_{ 1 } - \beta_{ 0 } ) \\
-%     &+ ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ld + (
-%     A + \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } )
-%     = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \\
-%     &+ A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 } -
-%     \beta_{ 1 } + \ld + \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n -
-%       1 } ( \beta_{ 1 } - \beta_{ 0 } )
-%     + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \\
-%     & + \ld + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = AB + A
-%     \beta_{ n } + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{
-%       n - 1 } \beta_{ 1 } +
-%     \alpha_{ n - 2 } \beta_{ 2 } + \ld + \alpha_{ 0 } \beta_{ n } \\
-%     & - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
-%     + \ld + \alpha_{ 0 } \beta_{ n - 1 } ) = AB + A \beta_{ n } + B
-%     \alpha_{ n } + R_{ n + 1 } - R_{ n }.
-%   \end{split}
-% \end{equation}
-% Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ld + C_{ n }$ odpowiada
-% liczbie~$n + 1$. Tym samym
-% \begin{equation}
-%   \label{eq:Leja-27}
-%   \begin{split}
-%     C_{ 0 } + C_{ 1 } + \ld + C_{ n - 1 } + C_{ n } &= n AB + A \sum_{
-%       i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
-%     \alpha_{ i
-%     } + R_{ n } + C_{ n } \\
-%     &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i
-%       = 0 }^{ n } \alpha_{ i } + R_{ n + 1 }.
-%   \end{split}
-% \end{equation}
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{22} Potrzebujemy jeszcze udowodnić,
-% że~$\lim_{ n \to \infty } r_{ n } = 0$. Ponieważ $\alpha_{ n }$
-% i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
-% i~$M_{ \beta }$ takie, że
-% \begin{equation}
-%   \label{eq:Leja-28}
-%   \begin{split}
-%     \abso{ M_{ \alpha } } \leq M_{ \alpha }, \quad \abso{ \beta_{ n }
-%     } \leq M_{ \beta }.
-%   \end{split}
-% \end{equation}
-% Ustalmy teraz $\epsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0,
-% więc możemy znaleźć taką liczbę~$p$,
-% iż~$\abso{ \beta_{ n } } \leq \epsilon / 2 M_{ \alpha }$, dla~$n > p$.
-% Teraz
-% \begin{equation}
-%   \label{eq:Leja-29}
-%   \begin{split}
-%     \abso{ r_{ n } } &= \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0
-%       } + \alpha_{ n - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 }
-%       \beta_{ p } + \ld
-%       + \alpha_{ 0 } \beta_{ n - 1 } } \\
-%     &\leq \oneOv{ n } \abso{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n
-%         - 2 } \beta_{ 1 } + \ld + \alpha_{ n - p - 1 } \beta_{ p } } +
-%     \oneOv{ n }
-%     \abso{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ld + \alpha_{ 0 } \beta_{ n - 1 } } \\
-%     &\leq \fr{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1
-%     }{ n } M_{ \alpha } \fr{ \epsilon }{ 2 M_{ \alpha } } = \fr{ p + 1
-%     }{ n } M_{ \alpha } M_{ \beta } + \fr{ n - p - 1 }{ n }
-%     \fr{ \epsilon }{ 2 } \\
-%     &\leq \fr{ \epsilon }{ 2 } + \fr{ p + 1 }{ n } M_{ \alpha } M_{
-%       \beta }.
-%   \end{split}
-% \end{equation}
-% Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
-% drugi człon jest również mniejszy od~$\epsilon / 2$, co~kończy dowód.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
-% przy omawianiu własności przecięć zbiorów domkniętych, jest tu
-% wymieniony osobno.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{28--29} Jest to przykład bałaganu pojęciowego
-% najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
-% jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
-% że~należy odróżnić krzywą od~jej zbioru punktów.
-
-% Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
-% punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
-% należy zdefiniować krzywą jako funkcję zespoloną~$z( t )$, ciągłą
-% na~pewnym przedziale~$I$ i~różną od~stałej. Wówczas wzór~(1)
-% na~stronie~28 przedstawia zbiór punktów tej krzywej.
-
-% Ponadto Leja wydaje~się używać pojęcia krzywej zarówno
-% dla~odwzorowania, jak i~dla jego obrazu, która interpretacja jest
-% właściwa wynika zwykle jasno z~kontekstu. Nie będziemy~się starali
-% doprecyzować jego słów w~każdej z~tych sytuacji, jednak warto~się
-% starać o~większą jasność i~precyzję tekstów matematycznych.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
-% na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
-% $\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
-% może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
-% jest żadnym problemem dla~rozwijanej tu~teorii.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$
-% w~definicji krzywej gładkiej. W~geometrii różniczkowej, krzywą o~tej
-% własności nazywa~się \textbf{regularną}. Jeśli rozważana krzywa nie
-% jest regularna, to może~się zdarzyć, że~funkcja~$s( t )$ nie jest
-% monotoniczne rosnąc, lecz tylko niemalejąca i~na przedziałach stała,
-% tym samym nieodwracalna i~stwierdzenie, iż~istnieje parametr
-% kanoniczny jest nieprawdziwe.
-
-% Powód tego jest dość oczywisty. Jeśli krzywa ma~\textbf{punkty
-%   osobliwe}, czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest
-% sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona „stała
-% w~miejscu”. Przykładem takie zachowania jest krzywa
-% \begin{equation}
-%   \label{eq:Leja-30}
-%   \begin{split}
-%     z( t ) =
-%     \begin{cases}
-%       t^{ 2 } + i 0, & t \leq 0, \\
-%       0 + i 0, & t > 0.
-%     \end{cases}
-%   \end{split}
-% \end{equation}
-% Jest to krzywa klasy $\Cc^{ \ }infty( \Rb, \Cb )$, która
-% dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej
-% długość, dostaniemy oczywisty rezultat
-% \begin{equation}
-%   \label{eq:Leja-31}
-%   \begin{split}
-%     s( t ) = \int_{ 0 }^{ t } \abso{ z'( u ) } \, du = \int_{ 0 }^{ t } 0 \,
-%     du = 0, \quad t \geq 0.
-%   \end{split}
-% \end{equation}
-% Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
-% zmiennej~$s$, czyli jej długości.
-
-% Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
-% da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
-% możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem
-% takiej sytuacji jest krzywa
-% \begin{equation}
-%   \label{eq:Leja-32}
-%   \begin{split}
-%     z( t ) = t^{ 3 } + i 0, \quad t \in \Rb.
-%   \end{split}
-% \end{equation}
-
-% Z~tego względu rozróżnia~się \textbf{punkty osobliwe krzywej}
-% i~\textbf{punkty osobliwe parametryzacja}
-% \cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999}. Punkt
-% $z( t_{ 0 } )$ jest punktem osobliwym parametryzacja krzywej $z( t )$,
-% $t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
-%   skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
-% reparametryzacja $\varphi: I_{ 1 } \to I$ taka,
-% że~$t_{ 0 } = \varphi( \tau_{ 0 } )$
-% i~$\tfr{ \difPL }{ \difPL \tau } z( \varphi( \tau ) )|_{ \tau = \tau_{
-%     0 } } \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą,
-% lecz z~pewną możliwą dla niej parametryzacja. Przykład
-% \eqref{eq:Leja-32} powyżej jest właśnie tego typu. Jeśli użyjemy
-% do~niego funkcji reparametryzującej
-% \begin{equation}
-%   \label{eq:Leja-33}
-%   \varphi( \tau ) =
-%   \begin{cases}
-%     -\sqrt[3]{ \abso{ \tau } }, & \tau \leq 0, \\
-%     \sqrt[3]{ \tau }, & \tau > 0,
-%   \end{cases}
-% \end{equation}
-% otrzymamy
-% \begin{equation}
-%   \label{eq:Leja-34}
-%   z( \varphi( \tau ) ) = \tau,
-%   \quad
-%   \tau \in \Rb.
-% \end{equation}
-% Natomiast w~przypadku \eqref{eq:Leja-30} mamy do~czynienia z~punktami
-% osobliwymi krzywej, co~nie powinno nas dziwić. Problem polega tu
-% bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
-% że~krzywa od pewnego momentu stoi w~miejscu.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
-% niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
-% błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$
-% i~podzielmy go dowolną ilością punktów w~dowolnych miejscach
-% na~podprzedziały, co jest zgodne z~przyjętą definicją. Tym samym
-% widzimy, że~krzywa ta składa~się z~dowolnej ilości łuków i~każdy punkt
-% jej obrazu jest jej wierzchołkiem. To~samo stosuje~się do krzywej
-% która jest nieróżniczkowalna w~punktach
-% $t_{ 1 }, t_{ 2 }, \ld, t_{ p - 1 }$.
-
-% Rozwiązanie tego problemu jest proste, należy przyjąć, że~każdy z~tych
-% przedziałów był maksymalny w~następującym sensie. Jeśli krzywa
-% $z( t )$ jest gładka w~przedziale $[ t_{ k - 1 }, t_{ k } ]$, to nie
-% jest ona gładka w~przedziałach $[ t_{ k - 1 } - \epsilon, t_{ k } ]$
-% i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{32} Podana tu definicji krzywej zorientowanej dodatnio
-% jest z~praktycznego punktu widzenie
-% wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, w~którym
-%   byłby problem z~określeniem czy~kontur jest dodatnio zorientowany
-%   czy też nie.}, jednak nieścisła. Wystarczy zadać pytanie, czy
-% idziemy po~krzywej „głową do~góry”, czy~„głową do~dołu”?
-
-% Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
-% dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
-% ciągła (w~tej zresztą ogólnej formie pojęcie orientacji jest
-% tu~podane). W~pełni ścisłe sformułowanie tego problemu nie jest wcale
-% łatwe. W~tej chwili najbardziej obiecujące wydaje mi~się podejście
-% w~którym najpierw definiuje~się orientację okręgu jednostkowego,
-% później zaś „homotopie zachowujące orientację”, za~krzywą
-% zorientowaną dodatnio uznać taką, która jest „homotopijna
-% z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio”. O~ile
-% jednak zdefiniowanie okręgu zorientowanego dodatnio nie jest trudne,
-% to~podanie w~sposób ścisły i~wystarczająco ogólnych takich homotopii
-% przekracza moją wiedzę i~zdolności.
-
-% Dla zupełności zdefiniujemy tutaj \textbf{dodatnio zorientowany okrąg
-%   jednostkowy}. Definicja najkrótsza polega na~wskazaniu, że~okrąg ten
-% jest dany przez parametryzację $z( t ) = e^{ i t }$. Można podać
-% bardziej satysfakcjonujące definicje, bo~głębiej uzasadniające czemu
-% ta parametryzacja jest dodatnia, lecz biorąc pod uwagę, że~nie udało
-% mi~się zdefiniować odpowiednich homotopii i~tym samym główny problem
-% jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
-
-% \vspace{\spaceFour}
-
-
-
-% % ##################
-% \begin{figure}
-
-%   \centering
-
-%   \label{fig:Leja-01}
-
-%   \begin{tikzpicture}
-%     \def\radius{2.75}
-
-%     \draw[help lines, ->] (-1.35 * \radius,0) -- (1.35 * \radius,0);
-
-%     \draw[help lines, ->] (0,-0.25) -- (0,1.3 * \radius);
-
-%     \draw [line width = 1pt, decoration = { markings, mark = at
-%       position 0.295 with {\arrow[line width=1.2pt]{>}}, mark = at
-%       position 0.6 with {\arrow[line width=1.2pt]{>}},}, postaction =
-%     {decorate} ] (-\radius, 0) -- (\radius, 0) arc (0:180:\radius) --
-%     cycle;
-
-
-%     \node at (1.35 * \radius,0) [below] {$\mathfrak{Re}\, z$};
-
-%     \node at (0,1.3 * \radius) [right] {$\mathfrak{Im}\, z$};
-
-
-%     \node at (0,0) [below left] {$0$};
-
-%     \node at (-\radius - 0.15,0) [below] {$-R$};
-
-%     \node at (\radius,0) [below] {$R$};
-
-%     \node at (0.55 * \radius,2.75) {$\Gamma$};
-
-%   \end{tikzpicture}
-
-%   \caption{Jeden z~podstawowych konturów całkowania~$\Gamma$.}
-
-% \end{figure}
-% % ##################
-
-
-
-% \start \Str{32} Ze~względów praktycznych lepiej jest przyjąć,
-% że~kontur jest kawałkami gładką, a~nie po~prostu gładką, zorientowaną
-% dodatnio krzywą Jordana. W~praktyce bowiem do~najczęściej używanych
-% konturów są takie, które są tylko kawałkami gładkie, przykładem niech
-% będzie kontur~$\Gamma$ z~rysunku~(\ref{fig:Leja-01}).
-
-% W~tej chwili nie umiem rozstrzygnąć, czy~istnieje gładkie odwzorowanie
-% takie, że~jego obraz pokrywa~się z~kształtem~$\Gamma$ na~płaszczyźnie
-% zespolonej. Jednak nie jest to ważne, bowiem wykonując całkowanie
-% używa~się standardowo parametryzacji $\Gamma$, która gładka nie jest
-% (liniowej na~osi rzeczywistej, trygonometrycznej na~okręgu) i~nie
-% ma~żadnej praktycznej potrzeby by~taką była.
-
-% Należy zauważyć, że~pojęcie konturu używa~się w~praktyce nawet
-% w~ogólniejszych przypadkach, kiedy rozpatrywane krzywe mają punkty
-% wielokrotne. Takie jednak poszerzenie pojęcia konturu, odeszłoby
-% by~chyba zbyt daleko od~słów Lejii.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
-% południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
-% wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
-% Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny
-% i~wydaje~się, że~terminologia ta jest używana w~całej książce
-% konsekwentnie.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
-% symetryczne względem pewnej prostej, to~łączący je odcinek jest
-% prostopadły do~tej prostej.
-
-% \vspace{\spaceFour}
+\start \Str{20--21} Dowód twierdzenia Mertensa jest według mnie
+przeprowadzony zbyt szybko, dlatego tutaj postaramy~się go uzupełnić
+w~kilku miejscach.
+
+Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
+zachodzi poniższa nierówność
+\begin{equation}
+  \label{eq:Leja-14}
+    \absOne{ C_{ n } - A_{ n } B } \leq \varepsilon, \quad \forall \varepsilon > 0,
+\end{equation}
+bowiem z~tego będzie wynikać
+\begin{equation}
+  \label{eq:Leja-15}
+  \absOne{ C_{ n } - AB }
+  \leq \absOne{ C_{ n } - A_{ n } B } + \absOne{ A_{ n } B - AB } \leq 2 \varepsilon,
+\end{equation}
+dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\varepsilon > 0$. Teraz
+dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
+$\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
+\begin{equation}
+  \label{eq:Leja-16}
+  \begin{split}
+    \absOne{ C_{ n } - A_{ n } B }
+    &=
+      \absOne{ a_{ 0 } \beta_{ n } + a_{ 1 } \beta_{ n - 1 } + \ldots + a_{ n } \beta_{ 0 } }
+      \leq
+      \absOne{ a_{ 0 } } \absOne{ \beta_{ n } }
+      + \absOne{ a_{ 1 } } \absOne{ \beta_{ n - 1 } } + \ldots
+      + \absOne{ a_{ n - p + 1 } } \absOne{ \beta_{ p + 1 } } \, + \\
+    &\hspace{1.5em} + \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }
+      \leq
+      \frac{ \varepsilon }{ 2K }
+      ( \absOne{ a_{ 0 } } + \ldots + \absOne{ a_{ n - p + 1 } } )
+      + \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }.
+  \end{split}
+\end{equation}
+Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
+\begin{equation}
+  \label{eq:Leja-17}
+  \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }
+  \leq
+  \absOne{ a_{ n - p } } \absOne{ \beta_{ p } } + \ldots + \absOne{ a_{ n } }
+  \absOne{ \beta_{ 0 } }
+  \leq M_{ p } ( \absOne{ a_{ n - p } } + \ldots + \absOne{ a_{ n } } ),
+\end{equation}
+gdzie
+$M_{ p } = \max( \absOne{ \beta_{ 1 } }, \ldots, \absOne{ \beta_{ p } } )$.
+Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
+$n > q$ zachodzić $\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$.
+Teraz dla każdego $n > \max( p, q )$ zachodzi
+\begin{equation}
+  \label{eq:Leja-18}
+  \absOne{ C_{ n } - AB } \leq \varepsilon.
+\end{equation}
+Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
+zakończony.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty,
+dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
+Po~pierwsze dowód formuły
+\begin{equation}
+  \label{eq:Leja-19}
+  \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n }
+  = AB + A q_{ n } + B p_{ n } + r_{ n },
+\end{equation}
+nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
+\begin{equation}
+  \label{eq:Leja-20}
+  C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 }
+  = n AB + A ( \beta_{ 0 } + \beta_{ 1 } + \ldots + \beta_{ n - 1 } )
+  + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ldots + \alpha_{ n - 1 } ) + R_{ n },
+\end{equation}
+gdzie
+\begin{equation}
+  \label{eq:Leja-21}
+  R_{ n } = n r_{ n } =
+  \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 }.
+\end{equation}
+Łatwo~się o~jej prawdziwości przekonać, wypisując kilka pierwszych
+wyrazów.
+
+Musimy jednak najpierw wykazać wynik pomocniczy:
+\begin{equation}
+  \label{eq:Leja-22}
+  \begin{split}
+    \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
+      0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
+    + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
+    + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
+    &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
+  \end{split}
+\end{equation}
+Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
+przypadków. Dowód przeprowadzimy indukcyjnie. Przypadek $n = 0$
+wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
+\begin{equation}
+  \label{eq:Leja-23}
+  \begin{split}
+    \sum_{ i = 0 }^{ n + 1 } c_{ i }
+    &= ( a_{ 0 } + a_{ 1 } + \ldots +
+    a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } ) b_{
+      1 } + \ldots + a_{ 0 } b_{ n } + c_{ n + 1 } \, + \\
+    &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{
+      1 }
+    + \ldots + a_{ n - 1 } ) b_{ 1 } + \ldots + a_{ 0 } b_{ n } \, + \\
+    &\hspace{1.5em}
+      + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1
+    }
+    = ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
+    &\hspace{1.5em} + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 } +
+    \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
+  \end{split}
+\end{equation}
+
+Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-16}, który również
+przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
+Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
+\begin{equation}
+  \label{eq:Leja-24}
+  \begin{split}
+    C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
+    &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+      \alpha_{ i } + R_{ n } + C_{ n }.
+  \end{split}
+\end{equation}
+Następny krok jest trochę długi. Przeliczając kilka pierwszych
+przypadków, łatwo zgadnąć, że
+\begin{equation}
+  \label{eq:Leja-25}
+    C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
+\end{equation}
+Zacznijmy od~tego, że
+$b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
+korzystając więc, ze~wzoru \eqref{eq:Leja-19}
+\begin{equation}
+  \label{eq:Leja-26}
+  \begin{split}
+    C_{ n }
+    &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ldots + A_{ 0 }
+      b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A + \alpha_{ n - 1 } )
+      ( \beta_{ 1 } - \beta_{ 0 } ) \, + \\
+    &\hspace{1.5em} + ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ldots
+      + ( A + \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } )
+      = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \, + \\
+    &\hspace{1.5em} + A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 }
+      - \beta_{ 1 } + \ldots + \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } - \beta_{ 0 } )
+      + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \, + \\
+    &\hspace{1.5em} + \ldots + \alpha_{ 0 } ( \beta_{ n } - \beta_{ n - 1 } ) = \\
+    &=
+      AB + A \beta_{ n } + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } + \alpha_{ n - 1 } \beta_{ 1 }
+      + \alpha_{ n - 2 } \beta_{ 2 } + \ldots + \alpha_{ 0 } \beta_{ n } - \\
+    &\hspace{1.5em} - ( \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
+      + \ldots + \alpha_{ 0 } \beta_{ n - 1 } ) = \\
+    &= AB + A \beta_{ n } + B \alpha_{ n } + R_{ n + 1 } - R_{ n }.
+  \end{split}
+\end{equation}
+Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ldots + C_{ n }$ odpowiada
+liczbie~$n + 1$. Tym samym
+\begin{equation}
+  \label{eq:Leja-27}
+  \begin{split}
+    C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
+    &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+      \alpha_{ i } + R_{ n } + C_{ n } = \\
+    &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i = 0 }^{ n } \alpha_{ i }
+      + R_{ n + 1 }.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{22} Potrzebujemy jeszcze udowodnić,
+że~$\lim_{ n \to \infty } r_{ n } = 0$. Ponieważ $\alpha_{ n }$
+i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
+i~$M_{ \beta }$ takie, że
+\begin{equation}
+  \label{eq:Leja-28}
+    \absOne{ M_{ \alpha } } \leq M_{ \alpha }, \quad \absOne{ \beta_{ n } } \leq M_{ \beta }.
+\end{equation}
+Ustalmy teraz $\varepsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0,
+więc możemy znaleźć taką liczbę~$p$,
+iż~$\absOne{ \beta_{ n } } \leq \varepsilon / 2 M_{ \alpha }$, dla~$n > p$.
+Teraz
+\begin{equation}
+  \label{eq:Leja-29}
+  \begin{split}
+    \absOne{ r_{ n } }
+    &=
+      \frac{ 1 }{ n } \absOne{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
+      + \ldots + \alpha_{ n - p - 1 } \beta_{ p } + \ldots + \alpha_{ 0 } \beta_{ n - 1 } } \leq \\
+    &\leq \frac{ 1 }{ n } \absOne{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
+      + \ldots + \alpha_{ n - p - 1 } \beta_{ p } } + \frac{ 1 }{ n }
+    \absOne{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 } } \leq \\
+    &\leq \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta }
+      + \frac{ n - p - 1 }{ n } M_{ \alpha } \frac{ \epsilon }{ 2 M_{ \alpha } }
+      = \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \frac{ n - p - 1 }{ n }
+    \frac{ \varepsilon }{ 2 } \leq \\
+    &\leq \frac{ \varepsilon }{ 2 } + \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
+  \end{split}
+\end{equation}
+Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
+drugi człon jest również mniejszy od~$\varepsilon / 2$, co~kończy dowód.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
+przy omawianiu własności przecięć zbiorów domkniętych, jest tu
+wymieniony osobno.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{28--29} Jest to przykład bałaganu pojęciowego
+najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
+jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
+że~należy odróżnić krzywą od~jej zbioru punktów.
+
+Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
+punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
+należy zdefiniować krzywą jako funkcję zespoloną~$z( t )$, ciągłą
+na~pewnym przedziale~$I$ i~różną od~stałej. Wówczas wzór~(1)
+na~stronie~28 przedstawia zbiór punktów tej krzywej.
+
+Ponadto Leja wydaje~się używać pojęcia krzywej zarówno
+dla~odwzorowania, jak i~dla jego obrazu, która interpretacja jest
+właściwa wynika zwykle jasno z~kontekstu. Nie będziemy~się starali
+doprecyzować jego słów w~każdej z~tych sytuacji, jednak warto~się
+starać o~większą jasność i~precyzję tekstów matematycznych.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
+na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
+$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
+może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
+jest żadnym problemem dla~rozwijanej tu~teorii.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$
+w~definicji krzywej gładkiej. W~geometrii różniczkowej, krzywą o~tej
+własności nazywa~się \textbf{regularną}. Jeśli rozważana krzywa nie
+jest regularna, to może~się zdarzyć, że~funkcja~$s( t )$ nie jest
+monotoniczne rosnąc, lecz tylko niemalejąca i~na przedziałach stała,
+tym samym nieodwracalna i~stwierdzenie, iż~istnieje parametr
+kanoniczny jest nieprawdziwe.
+
+Powód tego jest dość oczywisty. Jeśli krzywa ma~\textbf{punkty
+  osobliwe}, czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest
+sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona „stała
+w~miejscu”. Przykładem takie zachowania jest krzywa
+\begin{equation}
+  \label{eq:Leja-30}
+  z( t ) =
+  \begin{cases}
+    t^{ 2 } + i 0, & t \leq 0, \\
+    0 + i 0, & t > 0.
+  \end{cases}
+\end{equation}
+Jest to krzywa klasy $\Ccal^{ \infty }( \Rbb, \Cbb )$ NIE JEST, która
+dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej
+długość, dostaniemy oczywisty rezultat
+\begin{equation}
+  \label{eq:Leja-31}
+  \begin{split}
+    s( t ) = \int_{ 0 }^{ t } \absOne{ z'( u ) } \, du = \int_{ 0 }^{ t } 0 \,
+    du = 0, \quad t \geq 0.
+  \end{split}
+\end{equation}
+Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
+zmiennej~$s$, czyli jej długości.
+
+Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
+da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
+możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem
+takiej sytuacji jest krzywa
+\begin{equation}
+  \label{eq:Leja-32}
+  z( t ) = t^{ 3 } + i 0, \quad t \in \Rbb.
+\end{equation}
+
+Z~tego względu rozróżnia~się \textbf{punkty osobliwe krzywej}
+i~\textbf{punkty osobliwe parametryzacja}
+\cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999}. Punkt
+$z( t_{ 0 } )$ jest punktem osobliwym parametryzacja krzywej $z( t )$,
+$t \in I = [ a, b ]$\footnote{Przedział ten może też być otwarty,
+  skończony bądź nieskończony.}, jeśli $z'( t_{ 0 } ) = 0$ i~istnieje
+reparametryzacja $\varphi: I_{ 1 } \to I$ taka,
+że~$t_{ 0 } = \varphi( \tau_{ 0 } )$
+i~$\tfrac{ \dPL }{ \dPL \tau } z\big( \varphi( \tau ) \big)|_{ \tau = \tau_{
+    0 } } \neq 0$. Widzimy więc, że~tu problemem nie jest z~krzywą,
+lecz z~pewną możliwą dla niej parametryzacja. Przykład
+\eqref{eq:Leja-32} powyżej jest właśnie tego typu. Jeśli użyjemy
+do~niego funkcji reparametryzującej
+\begin{equation}
+  \label{eq:Leja-33}
+  \varphi( \tau ) =
+  \begin{cases}
+    -\sqrt[3]{ \absOne{ \tau } }, & \tau \leq 0, \\
+    \sqrt[3]{ \tau }, & \tau > 0,
+  \end{cases}
+\end{equation}
+otrzymamy
+\begin{equation}
+  \label{eq:Leja-34}
+  z\big( \varphi( \tau ) \big) = \tau, \quad \tau \in \Rbb.
+\end{equation}
+Natomiast w~przypadku \eqref{eq:Leja-30} mamy do~czynienia z~punktami
+osobliwymi krzywej, co~nie powinno nas dziwić. Problem polega tu
+bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
+że~krzywa od pewnego momentu stoi w~miejscu.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
+niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
+błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$
+i~podzielmy go dowolną ilością punktów w~dowolnych miejscach
+na~podprzedziały, co jest zgodne z~przyjętą definicją. Tym samym
+widzimy, że~krzywa ta składa~się z~dowolnej ilości łuków i~każdy punkt
+jej obrazu jest jej wierzchołkiem. To~samo stosuje~się do krzywej
+która jest nieróżniczkowalna w~punktach
+$t_{ 1 }, t_{ 2 }, \ldots, t_{ p - 1 }$.
+
+Rozwiązanie tego problemu jest proste, należy przyjąć, że~każdy z~tych
+przedziałów był maksymalny w~następującym sensie. Jeśli krzywa
+$z( t )$ jest gładka w~przedziale $[ t_{ k - 1 }, t_{ k } ]$, to nie
+jest ona gładka w~przedziałach $[ t_{ k - 1 } - \epsilon, t_{ k } ]$
+i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{32} Podana tu definicji krzywej zorientowanej dodatnio
+jest z~praktycznego punktu widzenie
+wystarczająca\footnote{Ja~przynajmniej nie znam przypadku, w~którym
+  byłby problem z~określeniem czy~kontur jest dodatnio zorientowany
+  czy też nie.}, jednak nieścisła. Wystarczy zadać pytanie, czy
+idziemy po~krzywej „głową do~góry”, czy~„głową do~dołu”?
+
+Przedstawione pojęcie orientacji krzywej intuicyjnie powinno działać
+dla każdej krzywej, niezależnie od~tego czy jest gładka czy tylko
+ciągła (w~tej zresztą ogólnej formie pojęcie orientacji jest
+tu~podane). W~pełni ścisłe sformułowanie tego problemu nie jest wcale
+łatwe. W~tej chwili najbardziej obiecujące wydaje mi~się podejście
+w~którym najpierw definiuje~się orientację okręgu jednostkowego,
+później zaś „homotopie zachowujące orientację”, za~krzywą
+zorientowaną dodatnio uznać taką, która jest „homotopijna
+z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio”. O~ile
+jednak zdefiniowanie okręgu zorientowanego dodatnio nie jest trudne,
+to~podanie w~sposób ścisły i~wystarczająco ogólnych takich homotopii
+przekracza moją wiedzę i~zdolności.
+
+Dla zupełności zdefiniujemy tutaj \textbf{dodatnio zorientowany okrąg
+  jednostkowy}. Definicja najkrótsza polega na~wskazaniu, że~okrąg ten
+jest dany przez parametryzację $z( t ) = e^{ i t }$. Można podać
+bardziej satysfakcjonujące definicje, bo~głębiej uzasadniające czemu
+ta parametryzacja jest dodatnia, lecz biorąc pod uwagę, że~nie udało
+mi~się zdefiniować odpowiednich homotopii i~tym samym główny problem
+jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\begin{figure}
+
+  \centering
+
+  \label{fig:Leja-01}
+
+  \begin{tikzpicture}
+    \def\radius{2.75}
+
+    \draw[help lines, ->] (-1.35 * \radius,0) -- (1.35 * \radius,0);
+
+    \draw[help lines, ->] (0,-0.25) -- (0,1.3 * \radius);
+
+    \draw [line width = 1pt, decoration = { markings, mark = at
+      position 0.295 with {\arrow[line width=1.2pt]{>}}, mark = at
+      position 0.6 with {\arrow[line width=1.2pt]{>}},}, postaction =
+    {decorate} ] (-\radius, 0) -- (\radius, 0) arc (0:180:\radius) --
+    cycle;
+
+
+    \node at (1.35 * \radius,0) [below] {$\mathfrak{Re}\, z$};
+
+    \node at (0,1.3 * \radius) [right] {$\mathfrak{Im}\, z$};
+
+
+    \node at (0,0) [below left] {$0$};
+
+    \node at (-\radius - 0.15,0) [below] {$-R$};
+
+    \node at (\radius,0) [below] {$R$};
+
+    \node at (0.55 * \radius,2.75) {$\Gamma$};
+
+  \end{tikzpicture}
+
+  \caption{Jeden z~podstawowych konturów całkowania~$\Gamma$.}
+
+\end{figure}
+% ##################
+
+
+
+
+
+\start \Str{32} Ze~względów praktycznych lepiej jest przyjąć,
+że~kontur jest kawałkami gładką, a~nie po~prostu gładką, zorientowaną
+dodatnio krzywą Jordana. W~praktyce bowiem do~najczęściej używanych
+konturów są takie, które są tylko kawałkami gładkie, przykładem niech
+będzie kontur~$\Gamma$ z~rysunku~(\ref{fig:Leja-01}).
+
+W~tej chwili nie umiem rozstrzygnąć, czy~istnieje gładkie odwzorowanie
+takie, że~jego obraz pokrywa~się z~kształtem~$\Gamma$ na~płaszczyźnie
+zespolonej. Jednak nie jest to ważne, bowiem wykonując całkowanie
+używa~się standardowo parametryzacji $\Gamma$, która gładka nie jest
+(liniowej na~osi rzeczywistej, trygonometrycznej na~okręgu) i~nie
+ma~żadnej praktycznej potrzeby by~taką była.
+
+Należy zauważyć, że~pojęcie konturu używa~się w~praktyce nawet
+w~ogólniejszych przypadkach, kiedy rozpatrywane krzywe mają punkty
+wielokrotne. Takie jednak poszerzenie pojęcia konturu, odeszłoby
+by~chyba zbyt daleko od~słów Lejii.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
+południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
+wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
+Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny
+i~wydaje~się, że~terminologia ta jest używana w~całej książce
+konsekwentnie.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
+symetryczne względem pewnej prostej, to~łączący je odcinek jest
+prostopadły do~tej prostej.
+
+\vspace{\spaceFour}
 
 
 
