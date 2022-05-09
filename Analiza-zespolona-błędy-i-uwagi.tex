@@ -1339,70 +1339,69 @@ jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 
 
 
-% \start \Str{99} Wzór
-% \begin{equation}
-%   \label{eq:Leja-41}
-%   \de{ }{ }{ z } \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p } }\,
-%   d\zeta
-%   = p \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p + 1 } }\, d\zeta,
-% \end{equation}
-% można udowodnić na~dwa sposoby. W~obu przypadkach będziemy
-% potrzebowali następującego twierdzenia (zob. str.~72,
-% \cite{SchwartzKursAnalizyMatematycznejTomI1979}). Jeśli w~przestrzeni
-% unormowanej nad~$\Rb$, o~skończonym wymiarze dane~są dwa
-% nieprzecinające~się zbiory $C$ i~$K$, przy czym $C$ jest domknięty,
-% a~$K$ zwarty, to infimum odległość między punktami tych zbiorów jest
-% silnie większa od~$0$, co~więcej jest ono osiągane w~dla pewnej pary
-% punktów $x \in C, y \in K$.
+\start \Str{99} Wzór
+\begin{equation}
+  \label{eq:Leja-41}
+  \frac{ }{ dz } \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p } } \, d\zeta
+  = p \int_{ C } \frac{ \varphi( \zeta ) }{ ( \zeta - z )^{ p + 1 } } \, d\zeta,
+\end{equation}
+można udowodnić na~dwa sposoby. W~obu przypadkach będziemy
+potrzebowali następującego twierdzenia (zob. str.~72,
+\cite{SchwartzKursAnalizyMatematycznejVolI1979}). Jeśli w~przestrzeni
+unormowanej nad~$\Rbb$, o~skończonym wymiarze dane~są dwa
+nieprzecinające~się zbiory $C$ i~$K$, przy czym $C$ jest domknięty,
+a~$K$ zwarty, to infimum odległość między punktami tych zbiorów jest
+silnie większa od~$0$, co~więcej jest ono osiągane w~dla pewnej pary
+punktów $x \in C, y \in K$.
 
-% Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\set{ z }$ widzimy,
-% że~odległość między tymi zbiorami $L > 0$. Wynika stąd, że~dla
-% $z' \in K( z, L / 2 )$ zachodzi
-% $\abso{ 1 / ( \zeta - z' )^{ p + 1 } } \leq 1 / ( L / 2 )^{ p + 1 }$.
-% Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
-%   notacji, utożsamia tutaj krzywą $C$ z~jej obrazem.}
-% \begin{equation}
-%   \label{eq:Leja-42}
-%   M = \max_{ w \in C } \abso{ \varphi( w ) },
-% \end{equation}
-% widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
-% $\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$
-% przez funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione
-% są założenia twierdzenia o~różniczkowaniu pod znakiem całki
-% (zob.~twr.~132,
-% str.~659~\cite{SchwartzKursAnalizyMatematycznejTomI1979}), z~którego
-% wynika wzór \eqref{eq:Leja-42}.
+Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\{ z \}$ widzimy,
+że~odległość między tymi zbiorami $L > 0$. Wynika stąd, że~dla
+$z' \in K( z, L / 2 )$ zachodzi
+$\absOne{ 1 / ( \zeta - z' )^{ p + 1 } } \leq 1 / ( L / 2 )^{ p + 1 }$.
+Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
+  notacji, utożsamia tutaj krzywą $C$ z~jej obrazem.}
+\begin{equation}
+  \label{eq:Leja-42}
+  M = \max_{ w \in C } \absOne{ \varphi( w ) },
+\end{equation}
+widzimy więc, że~dla $z' \in K( z, L / 2 )$ pochodna po~$z'$ funkcji
+$\varphi( \zeta ) / ( \zeta - z' )^{ p }$ jest majoryzowana na~$C$
+przez funkcję całkowalną $p M / ( L / 2 )^{ p + 1 }$, więc spełnione
+są założenia twierdzenia o~różniczkowaniu pod znakiem całki
+(zob.~twr.~132,
+str.~659~\cite{SchwartzKursAnalizyMatematycznejVolI1979}), z~którego
+wynika wzór \eqref{eq:Leja-42}.
 
-% Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
-% czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$
-% jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
-% twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
-% z~przyrostem $\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
-% (zob.~wniosek~3,
-% str.~244~\cite{SchwartzKursAnalizyMatematycznejTomI1979}).
-% Z~przytoczonego wyżej twierdzenia o~odległości między
-% nieprzecinającym~się zbiorem zwartym i~domkniętym wiemy, że~mianownik
-% pochodnej nie zeruje się nigdzie na~obrazie krzywej~$C$, więc pochodna
-% jest dobrze określona w~każdym punkcie tego obrazu. Jako funkcja
-% ciągła na~zbiorze zwartym jest jednostajnie ciągła, więc na mocy
-% przytoczonego twierdzenia $r( \zeta, z )$ zmierza jednostajnie do~$0$
-% względem zmiennej~$\zeta$.
+Drugi dowód, ten którego przeprowadzenie zostawił Leja jako ćwiczenie
+czytelnikom, wymaga pokazania, że~$r( \zeta, z )$ dąży do~$0$
+jednostajnie względem $\zeta$. Jest to w~istocie szczególny przypadek
+twierdzenie, że~iloraz różnicowy dąży jednostajnie do~pochodnej
+z~przyrostem $\vec{ h }$, jeśli ta~pochodna jest jednostajnie ciągła
+(zob.~wniosek~3,
+str.~244~\cite{SchwartzKursAnalizyMatematycznejVolI1979}).
+Z~przytoczonego wyżej twierdzenia o~odległości między
+nieprzecinającym~się zbiorem zwartym i~domkniętym wiemy, że~mianownik
+pochodnej nie zeruje się nigdzie na~obrazie krzywej~$C$, więc pochodna
+jest dobrze określona w~każdym punkcie tego obrazu. Jako funkcja
+ciągła na~zbiorze zwartym jest jednostajnie ciągła, więc na mocy
+przytoczonego twierdzenia $r( \zeta, z )$ zmierza jednostajnie do~$0$
+względem zmiennej~$\zeta$.
 
-% \vspace{\spaceFour}
-
+\vspace{\spaceFour}
 
 
-% \start \StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy
-% zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest
-% dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
-% że~poprawna definicja~to
-% \begin{equation}
-%   \label{eq:Leja-43}
-%   \binom{ \mu }{ n } := \frac{ \mu ( \mu - 1 ) ( \mu - 2 ) \cdot \ldots
-%     \cdot ( \mu - n + 1 ) }{ n! }.
-% \end{equation}
 
-% \vspace{\spaceFour}
+\start \StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy
+zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest
+dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
+że~poprawna definicja~to
+\begin{equation}
+  \label{eq:Leja-43}
+  \binom{ \mu }{ n } :=
+  \frac{ \mu ( \mu - 1 ) ( \mu - 2 ) \cdot \ldots \cdot ( \mu - n + 1 ) }{ n! }.
+\end{equation}
+
+\vspace{\spaceFour}
 
 
 
