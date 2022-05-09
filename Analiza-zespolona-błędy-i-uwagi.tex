@@ -320,7 +320,7 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 $n$-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
 jednowartościowych\footnote{Pisał już o~tym Frege, zobacz część
   poświęcona jego filozofii w~G. E. M. Anscombe P. T. Geach,
-  \emph{Trzej filozofowie} \cite{AnscombeGeachTrzejFilozofowie1981}.}.
+  \textit{Trzej filozofowie} \cite{AnscombeGeachTrzejFilozofowie1981}.}.
 Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
 \begin{equation}
   \label{eq:Leja-08}
@@ -1405,464 +1405,484 @@ dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
 
 
 
-% \start \Str{102} Pokazano tu, że~jeśli funkcja analityczna ma~0
-% skończonego rzędu, to~pewnym jego otoczeniu nie przyjmuje wartości~0.
-% Z~tego chyba jednak nie wynika od~razu, że~jeśli zeruje~się na~zbiorze
-% posiadającym punkt skupienia wewnątrz obszaru określoności~$D$,
-% to~zeruje~się w~całym~$D$.
-
-% Aby to udowodnić potrzebne nam będzie następujący lemat. Jeśli funkcja
-% analitycznej $f( z )$ określona w~obszarze~$D$, jest równa zeru
-% w~pewnym zbiorze otwartym to~zbiór ten jest równy $\emptyset$
-% albo~$D$. Rozpatrzmy zbiór $E$ takich punktów, że~$f( z )$ jest równa
-% zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
-% \begin{equation}
-%   \label{eq:Leja-44}
-%   E = \bigcup_{ z \in E } \Oc_{ z },
-% \end{equation}
-% gdzie $\Oc_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
-% w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia zbioru $E$
-% i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
-% do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
-% $f'( z )$, stąd
-% \begin{equation}
-%   \label{eq:Leja-45}
-%   f( w_{ 0 } ) = \Lim_{ n \to \infty } f( w_{ n } ) = 0.
-% \end{equation}
-% Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
-% i~powtarzając powyższe rozumowanie otrzymujemy,
-% że~$f'( w_{ 0 } ) = 0$. Kontynuując to~rozumowanie pokazujemy,
-% że~$f^{ ( k ) }( w_{ 0 } ) = 0$, $k = 0, 1, 2, \ldots$ Ponieważ znikają
-% wszystkie wyrazy rozwinięcia $f( z )$ w~szereg Taylora w~punkcie
-% $w_{ 0 }$ i~szereg ten musi mieć niezerowy promień zbieżności,
-% funkcja~$f( z )$ znika pewnym otoczeniu~$w_{ 0 }$ i~tym samym $w \in E$.
-
-% Ponieważ $E$ jest jednocześnie otwarty i~domknięty w~$D$, a~$D$ jako
-% obszar jest zbiorem spójnym, $E = \emptyset$ lub $E = D$.
-
-% Przejdźmy do~dowodu zasadniczego twierdzenia. Jeśli funkcja $f( z )$
-% zeruje~się na zbiorze posiadającym punkt skupienia $z_{ 0 } \in D$, to
-% w~$z_{ 0 }$ muszą znikać wszystkie wyrazy jej szeregu Taylora, na~mocy
-% tego co pokazał Leja. Ponownie korzystając z~tego, że~promień
-% zbieżności tego szeregu jest niezerowy, widzimy, że~funkcja~$f( z )$
-% znika w~kole otwartym o~niezerowym promieniu, więc na~mocy
-% poprzedniego lematu znika w~całym~$D$.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \textbf{Str.~106, wiersze 1--2.} Nierówność
-% $\abso{ f( z' ) } > \abso{ f( z_{ 0 } ) }$ jest bardzo brzydko
-% podzielona między dwie linie.
-
-% \vspace{\spaceFour}
-
-
-
-% \start \Str{116} Pochodzenia nazwy \emph{potencjał logarytmiczny}
-% wyjaśnia analiza przeprowadzona na~stronie~152.
+\start \Str{102} Pokazano tu, że~jeśli funkcja analityczna ma~0
+skończonego rzędu, to~pewnym jego otoczeniu nie przyjmuje wartości~0.
+Z~tego chyba jednak nie wynika od~razu, że~jeśli zeruje~się na~zbiorze
+posiadającym punkt skupienia wewnątrz obszaru określoności~$D$,
+to~zeruje~się w~całym~$D$.
+
+Aby to udowodnić potrzebne nam będzie następujący lemat. Jeśli funkcja
+analitycznej $f( z )$ określona w~obszarze~$D$, jest równa zeru
+w~pewnym zbiorze otwartym to~zbiór ten jest równy $\emptyset$
+albo~$D$. Rozpatrzmy zbiór $E$ takich punktów, że~$f( z )$ jest równa
+zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
+\begin{equation}
+  \label{eq:Leja-44}
+  E = \bigcup_{ z \in E } \Ocal_{ z },
+\end{equation}
+gdzie $\Ocal_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
+w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia zbioru $E$
+i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
+do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
+$f'( z )$, stąd
+\begin{equation}
+  \label{eq:Leja-45}
+  f( w_{ 0 } ) = \lim\limits_{ n \to \infty } f( w_{ n } ) = 0.
+\end{equation}
+Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
+i~powtarzając powyższe rozumowanie otrzymujemy,
+że~$f'( w_{ 0 } ) = 0$. Kontynuując to~rozumowanie pokazujemy,
+że~$f^{ ( k ) }( w_{ 0 } ) = 0$, $k = 0, 1, 2, \ldots$ Ponieważ znikają
+wszystkie wyrazy rozwinięcia $f( z )$ w~szereg Taylora w~punkcie
+$w_{ 0 }$ i~szereg ten musi mieć niezerowy promień zbieżności,
+funkcja~$f( z )$ znika pewnym otoczeniu~$w_{ 0 }$ i~tym samym $w \in E$.
+
+Ponieważ $E$ jest jednocześnie otwarty i~domknięty w~$D$, a~$D$ jako
+obszar jest zbiorem spójnym, $E = \emptyset$ lub $E = D$.
+
+Przejdźmy do~dowodu zasadniczego twierdzenia. Jeśli funkcja $f( z )$
+zeruje~się na zbiorze posiadającym punkt skupienia $z_{ 0 } \in D$, to
+w~$z_{ 0 }$ muszą znikać wszystkie wyrazy jej szeregu Taylora, na~mocy
+tego co pokazał Leja. Ponownie korzystając z~tego, że~promień
+zbieżności tego szeregu jest niezerowy, widzimy, że~funkcja~$f( z )$
+znika w~kole otwartym o~niezerowym promieniu, więc na~mocy
+poprzedniego lematu znika w~całym~$D$.
+
+\vspace{\spaceFour}
+
+
+
+\start \textbf{Str.~106, wiersze 1--2.} Nierówność
+$\absOne{ f( z' ) } > \absOne{ f( z_{ 0 } ) }$ jest bardzo brzydko
+podzielona między dwie linie.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{116} Pochodzenia nazwy \textit{potencjał logarytmiczny}
+wyjaśnia analiza przeprowadzona na~stronie~152.
+
+\vspace{\spaceFour}
 
-% \vspace{\spaceFour}
 
 
+\start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
+wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
+w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
+
+\vspace{\spaceFour}
+
 
-% \start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
-% wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
-% w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
-
-% \vspace{\spaceFour}
+
+\start \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4)
+na~stronie~124
+\begin{equation}
+  \label{eq:Leja-46}
+  a_{ n } =
+  \frac{ 1 }{ 2\pi i }
+  \int\limits_{ K } \frac{ f( \zeta ) }{ ( \zeta - a )^{ n + 1 } } \, d\zeta,
+  \quad n = 0, \pm 1, \pm 2, \ldots,
+\end{equation}
+gdzie $K$ jest dowolnym okręgiem leżącym wewnątrz pierścienia
+$0 < \absOne{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
+\begin{equation}
+  \label{eq:Leja-47}
+  a_{ -1 } = \frac{ 1 }{ 2\pi i } \int\limits_{ K } f( \zeta ) \, d\zeta.
+\end{equation}
+Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
+obszaru ograniczonego przez $C$ i~$K$ (promień okręgu $K$ przyjmujemy
+tak mały by~ten okrąg zawierał~się wewnątrz~$C$\footnote{Czy pojęcie
+  „znajdowania~się wewnątrz konturu” zostało już zdefiniowana.
+  Topologiczne wnętrze konturu zwykle jest puste, a~najpewniej zawsze
+  musi być puste.}), więc~całki po~nich~są równe, a~stąd wynika
+wzór~(17).
 
+\vspace{\spaceFour}
 
 
-% \start \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4)
-% na~stronie~124
-% \begin{equation}
-%   \label{eq:Leja-46}
-%   a_{ n } = \frac{ 1 }{ 2\pi i }
-%   \Int_{ K } \frac{ f( \zeta ) }{ ( \zeta - a )^{ n + 1 } } \, d\zeta,
-%   \quad n = 0, \pm 1, \pm 2, \ldots,
-% \end{equation}
-% gdzie $K$ jest dowolnym okręgiem leżącym wewnątrz pierścienia
-% $0 < \abso{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
-% \begin{equation}
-%   \label{eq:Leja-47}
-%   a_{ -1 } = \frac{ 1 }{ 2\pi i } \Int_{ K } f( \zeta )\, d\zeta.
-% \end{equation}
-% Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
-% obszaru ograniczonego przez $C$ i~$K$ (promień okręgu $K$ przyjmujemy
-% tak mały by~ten okrąg zawierał~się wewnątrz~$C$\footnote{Czy pojęcie
-%   „znajdowania~się wewnątrz konturu” zostało już zdefiniowana.
-%   Topologiczne wnętrze konturu zwykle jest puste, a~najpewniej zawsze
-%   musi być puste.}), więc~całki po~nich~są równe, a~stąd wynika
-% wzór~(17).
 
-% \vspace{\spaceFour}
+\start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
+książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
+w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
+\begin{equation}
+  \label{eq:Leja-48}
+  \Res( f, z_{ 0 } ) =
+  \frac{ 1 }{ ( n - 1 )! }
+  \lim\limits_{ z \to z_{ 0 } }
+  \frac{ d^{ n - 1 } }{ dz^{ n - 1 } } ( z - z_{ 0 } )^{ n } f( z ).
+\end{equation}
+Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
+jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
+przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
+będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
+do~wyprowadzenia wzoru~(18) ze~strony~133.
 
+\vspace{\spaceFour}
 
 
-% \start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
-% książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
-% w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
-% \begin{equation}
-%   \label{eq:Leja-48}
-%   \Res( f, z_{ 0 } )
-%   = \frac{ 1 }{ ( n - 1 )! }
-%   \lim_{ z \to z_{ 0 } } \de{ n - 1 }{ }{ z } ( z - z_{ 0 } )^{ n } f( z ).
-% \end{equation}
-% Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
-% jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
-% przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
-% będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
-% do~wyprowadzenia wzoru~(18) ze~strony~133.
 
-% \vspace{\spaceFour}
+\start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
+przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
+Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
+analityczna jest ciągła, zaś~funkcja ciągła zawsze przekształca zbiór
+spójny na~zbiór spójny.
 
+Z~twierdzenia udowodnionego na~stronie~143 wynika, że~jeśli
+$z_{ 0 } \in D$ to~$f( D )$ zawiera punkt $f( z_{ 0 } )$ wraz z~pewnym
+kołem~$\absOne{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
+$f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 
+\vspace{\spaceFour}
 
-% \start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
-% przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
-% Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
-% analityczna jest ciągła, zaś~funkcja ciągła zawsze przekształca zbiór
-% spójny na~zbiór spójny.
 
-% Z~twierdzenia udowodnionego na~stronie~143 wynika, że~jeśli
-% $z_{ 0 } \in D$ to~$f( D )$ zawiera punkt $f( z_{ 0 } )$ wraz z~pewnym
-% kołem~$\abso{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
-% $f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 
-% \vspace{\spaceFour}
+\start \Str{144} Twierdzenie, że~funkcja analityczna $f( z )$,
+dla~której mamy $f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun
+jednokrotny), jest jednokrotna w~odpowiednio mały otoczeniu $z_{ 0 }$
+należy rozumieć w~następujący sposób.
 
+Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
+że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
+dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
+że~$f\big( K( z_{ 0 }, \delta ) \big) \neq K( f( z_{ 0 } ), \eta )$, bowiem
+$K( f( z_{ 0 } ), \eta ) \subsetneq f\big( K( z_{ 0 }, \delta ) \big)$. Jednak
+zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }\big( K( f( z_{ 0 } ), \eta ) \big)$
+jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
+jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
+że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
 
+\vspace{\spaceFour}
 
-% \start \Str{144} Twierdzenie, że~funkcja analityczna $f( z )$,
-% dla~której mamy $f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun
-% jednokrotny), jest jednokrotna w~odpowiednio mały otoczeniu $z_{ 0 }$
-% należy rozumieć w~następujący sposób.
 
-% Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
-% że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
-% dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
-% że~$f( K( z_{ 0 }, \delta ) ) \neq K( f( z_{ 0 } ), \eta )$, bowiem
-% $K( f( z_{ 0 } ), \eta ) \subsetneq f( K( z_{ 0 }, \delta ) )$. Jednak
-% zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }( K( f( z_{ 0 } ), \eta ) )$
-% jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
-% jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
-% że~$f( K( z_{ 0 }, \delta' ) )$ nie~musi być kulą.
 
-% \vspace{\spaceFour}
+\start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro
+zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
+na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
+\vspace{\spaceFour}
 
 
-% \start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro
-% zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
-% na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
-% \vspace{\spaceFour}
+\start \Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza
+odnosi~się do~siły elektrostatycznej w~dwóch wymiarach przestrzennych.
+Wtedy istotnie potencjał pola ładunku punktowego wynosi
+$m \log(1 / \absOne{ \vecr }_{ 2 } )$,
+gdzie~$\absOne{ \vecr }_{ 2 } = x^{ 2 } + y^{ 2 }$. Gdybyśmy rozważali
+sytuację trójwymiarową, wtedy ten potencjał miałby wartość
+$m / \absOne{ \vecr }_{ 3 }$,
+gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
+\vspace{\spaceFour}
 
 
-% \start \Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza
-% odnosi~się do~siły elektrostatycznej w~dwóch wymiarach przestrzennych.
-% Wtedy istotnie potencjał pola ładunku punktowego wynosi
-% $m \log(1 / \abso{ \vecr }_{ 2 } )$,
-% gdzie~$\abso{ \vecr }_{ 2 } = x^{ 2 } + y^{ 2 }$. Gdybyśmy rozważali
-% sytuację trójwymiarową, wtedy ten potencjał miałby wartość
-% $m / \abso{ \vecr }_{ 3 }$,
-% gdzie~$\abso{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
-% \vspace{\spaceFour}
+\start \Str{154} Uogólniona tu~definicja transformacji konforemnej
+sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
+że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
+z~zachowaniem zwrotu?
 
+\vspace{\spaceFour}
 
 
-% \start \Str{154} Uogólniona tu~definicja transformacji konforemnej
-% sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
-% że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
-% z~zachowaniem zwrotu?
 
-% \vspace{\spaceFour}
+\start \Str{162} Nazwa \textit{szereg lukowy} bierze~się zapewne stąd,
+że~jeśli rozpatrzymy względną odległość między dwoma kolejnymi
+wykładnikami wynosi
+\begin{equation}
+  \label{eq:Leja-49}
+  \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } }
+  \geq \theta > 0.
+\end{equation}
+W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
+której długość jest większa od~$\theta$.
 
+Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
+możemy tylko powiedzieć, że
+\begin{equation}
+  \label{eq:Leja-50}
+  \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } }
+  = \frac{ 1 }{ n }.
+\end{equation}
 
+\vspace{\spaceFour}
 
-% \start \Str{162} Nazwa \emph{szereg lukowy} bierze~się zapewne stąd,
-% że~jeśli rozpatrzymy względną odległość między dwoma kolejnymi
-% wykładnikami wynosi
-% \begin{equation}
-%   \label{eq:Leja-49}
-%   \frac{ \abso{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \abso{ \lambda_{ n } } }
-%   \geq \theta > 0.
-% \end{equation}
-% W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
-% której długość jest większa od~$\theta$.
 
-% Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
-% $i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
-% możemy tylko powiedzieć, że
-% \begin{equation}
-%   \label{eq:Leja-50}
-%   \frac{ \abso{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \abso{ \lambda_{ n } } }
-%   = \frac{ 1 }{ n }.
-% \end{equation}
 
-% \vspace{\spaceFour}
+\start \Str{163} Już tutaj należałoby wprowadzić pojęcia
+\textbf{środka elementu}, \textbf{koła elementu} i~\textbf{promienia
+  elementu}. Pojęcia te pojawiają~się dopiero na~stronach~175 i~176.
 
+\vspace{\spaceFour}
 
 
-% \start \Str{163} Już tutaj należałoby wprowadzić pojęcia
-% \textbf{środka elementu}, \textbf{koła elementu} i~\textbf{promienia
-%   elementu}. Pojęcia te pojawiają~się dopiero na~stronach~175 i~176.
 
-% \vspace{\spaceFour}
 
 
+% ##################
+\begin{figure}[h]
 
-% % ##################
-% \begin{figure}[h]
+  \centering
 
-%   \centering
+  \label{fig:Leja-03}
 
-%   \label{fig:Leja-03}
+  \begin{tikzpicture}[scale=1.3]
+    % Pierwszy graf
+    \draw[black] (0, 0) -- (0, 1.2);
 
-%   \begin{tikzpicture}[scale=1.3]
-%     % Pierwszy graf
-%     \draw[black] (0, 0) -- (0, 1.2);
 
 
+    % Drugi graf
+    \draw[black] (0.65, 0) -- (0.65, 0.25);
 
-%     % Drugi graf
-%     \draw[black] (0.65, 0) -- (0.65, 0.25);
+    \draw[black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
 
-%     \draw[black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
+    \draw[black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
 
-%     \draw[black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
 
 
+    % Trzeci graf
+    \draw[black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25, 1.2);
 
-%     % Trzeci graf
-%     \draw[black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25, 1.2);
+    \draw[black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
+    1.2);
 
-%     \draw[black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
-%     1.2);
+    \draw[black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
 
-%     \draw[black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
 
 
+    % Oznaczenia
+    \node at (-0.75, -0.3) {Rząd};
 
-%     % Oznaczenia
-%     \node at (-0.75, -0.3) {Rząd};
+    \node at (0, -0.3) {$0$};
 
-%     \node at (0, -0.3) {$0$};
+    \node at (0.65, -0.3) {$1$};
 
-%     \node at (0.65, -0.3) {$1$};
+    \node at (1.5, -0.3) {$2$};
+  \end{tikzpicture}
 
-%     \node at (1.5, -0.3) {$2$};
-%   \end{tikzpicture}
+  \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
+    zespolonej a~jej $p$-krotnością.}
 
-%   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
-%     zespolonej a~jej $p$-krotnością.}
+\end{figure}
+% ##################
 
-% \end{figure}
-% % ##################
 
 
 
 
+\start \Str{172} Przyjęty związek między $p$-krotnością funkcji,
+a~rzędem jej rozgałęzienia można zilustrować graficznie, tak jak
+zostało to~zrobione na~(\ref{fig:Leja-03}).
 
-% \start \Str{172} Przyjęty związek między $p$-krotnością funkcji,
-% a~rzędem jej rozgałęzienia można zilustrować graficznie, tak jak
-% zostało to~zrobione na~(\ref{fig:Leja-03}).
+\vspace{\spaceFour}
 
-% \vspace{\spaceFour}
 
 
+\start \Str{172--174}
 
-% \start \Str{172--174}
+\vspace{\spaceFour}
 
-% \vspace{\spaceFour}
 
 
+\start \Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
+ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości
+algebraicznie.
 
-% \start \Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
-% ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości
-% algebraicznie.
+\vspace{\spaceFour}
 
-% \vspace{\spaceFour}
 
 
+\start \Str{269} Dowód kryterium Cauchy'ego wydaje mi się błędy bądź
+niepotrzebnie skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
+poprawić??????????????????
 
-% \start \Str{269} Dowód kryterium Cauchy'ego wydaje mi się błędy bądź
-% niepotrzebnie skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
-% poprawić??????????????????
+\vspace{\spaceFour}
 
-% \vspace{\spaceFour}
 
 
 
-% \CenterTB{Błędy}
-% \begin{center}
 
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
-%     7   & &  9 & $x,\! y$ & $x, y$ \\
-%     11  &  2 & & $\abso{ a b }$ & $ab$ \\
-%     11  &  3 & & $\abso{ \tfr{ a }{ b } }$ & $\tfr{ a }{ b }$ \\
-%     22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
-%     22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
-%     22  & 13 & & urojoną ? & urojoną? \\
-%     22  & 15 & & rzeczywistą~? & rzeczywistą? \\
-%     24  & 11 & & $a, \:\; b$ & $a, b$ \\
-%     25  & &  6 & $\tr{re}\, z < 0$ & $\tr{re}\, z = 0$ \\
-%     27  & &  9 & wniosek~: & wniosek: \\
-%     27  &  6 & & zbieżny, & zbieżny. \\
-%     27  & &  2 & Spójność & $N$-spójność \\
-%     29  &  6 & & otwarty~: & otwarty: \\
-%     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
-%     30  & & 11 & $t$ & $( t - t_{ 0 } )$ \\
-%     36  &  2 & & $\tr{re}( \ol{ p } - \la^{ 2 } \ol{ q } ) z$
-%            & $\tr{re}[( \ol{ p } - \la^{ 2 } \ol{ q } ) z]$ \\
-%     36  &  4 & & $\left| \frac{ z - ( p - \uplambda^{ 2 } q) }{ 1
-%                  - \uplambda^{ 2 } } \right|^{ 2 }$
-%            & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
-%              - \uplambda^{ 2 } } \right|^{ 2 }$ \\
-%     39  &  2 & & $\abso{ b - c }$ ? & $\abso{ b - c }$? \\
-%     45  & 13 & & \emph{wewnętrzną ,} & \emph{wewnętrzną,} \\
-%     47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
-%     49  & & 13 & $\sqrt[n]{ \abso{ a_{ n } } } z$
-%            & $\sqrt[n]{ \abso{ a_{ n } } } | z |$ \\
-%     53  &  7 & & $s$ ? & $s$? \\
-%     54  & 10 & & słabszym : & słabszym: \\
-%     56  & &  4 & w~zbiorze & \emph{w~zbiorze} \\
-%     57  &  9 & & 31 & 31) \\
-%     64  &  5 & & krótko : & krótko: \\
-%     65  & & 14 & \emph{jeśli ma} & \emph{ma} \\
-%     68  & 16 & & $\pd{}{ f }{ z } - i \pd{}{ f }{ y }$
-%            & $\pd{}{ f }{ x } - i \pd{}{ f }{ y }$ \\
-%     69  & & 13 & $a_{ n }$ & $\abso{ a_{ n } }$ \\
-%     73  & 13 & & $iw$ & $iv$ \\
-%     75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
-%            & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
-%     75  & &  3 & $c z - d$ & $c z + d$ \\
-%     75  & & 16 & $ab - bc$ & $ad - bc$ \\
-%     79  & &  5 & okręgów~: & okręgów: \\
-%     80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
-%     80  & & 10 & prostą~: & prostą: \\
-%     90  &  2 & & \emph{krzywą zamkniętą} & \emph{konturem} \\
-%     \hline
-%   \end{tabular}
-
-
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
-%     94  & &  6 & regularną & kawałkami gładką \\
-%     99  &  1 & & zewnątrz & na~zewnątrz \\
-%     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
-%            & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
-%     102 & &  7 & części & części otwartej \\
-%     105 & &  6 & zerowych : & zerowych: \\
-%     106 & &  2 & \emph{jest w~środku} & \emph{w~środku} \\
-%     106 & &  1 & \emph{równa} & \emph{jest równa} \\
-%     107 &  6 & & $\abso{ z } \leq r$ & $\abso{ z } = r$ \\
-%     131 & 11 & & myś & myśl \\
-%     126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{
-%                  ( z - z_{ 0 } )^{ n + 1 } }$
-%            & $\frac{ ( z - z_{ 0 } )^{ n } }{
-%              ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
-%     132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
-%     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
-%     140 & &  7 & $f |$ & $\abso{ f }$ \\
-%     143 & & 18 & w~otoczeniu punktu & \emph{w~otoczeniu punktu} \\
-%     146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
-%     146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
-%            & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
-%     146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
-%            & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
-%     146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
-%     155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
-%     155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
-%     159 & 10 & & krótko : & krótko: \\
-%     159 & 12 & & części & części otwartej \\
-%     159 & & 10 & części & części otwartej \\
-%     164 & 10 & & 102 & 101 \\
-%     166 &  6 & & potęgowych . & potęgowych. \\
-%     170 & & 16 & monochromii & monodromii \\
-%     173 & & 10 & est & jest \\
-%     173 & &  9 & jsię & się \\
-%     174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
-%     178 &  2 & & 132 & 133 \\
-%     199 &  3 & & $\nu = 1 $ & $k = 1$ \\
-%     207 & &  6 & $( 1$ & $1$ \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-
-% \end{center}
-% \vspace{0.5em}
-% \noindent
-% \StrWg{28}{5} \\
-% \Jest  nieograniczone \\
-% \Powin nieograniczone i~domknięte \\
-% \StrWg{36}{5} \\
-% \Jest  Ze~wzorów (9)~otrzymujemy \\
-% \Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
-% \StrWg{56}{2} \\
-% \Jest a~istnieją wartości~$w$, które \\
-% \Powin  a~istnieje wartość~$w$, którą \\
-% \StrWg{75}{12} \\
-% \Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
-% płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
-% \Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
-% w~powierzchnię boczną \\
-% \StrWd{92}{6} \\
-% \Jest \emph{krzywą} \\
-% \Powin  \emph{krzywą kawałkami gładką} \\
-% \StrWg{95}{5} \\
-% \Jest linią \\
-% \Powin dowolna linia łamana \\
-% \StrWd{107}{12} \\
-% \Jest dowolnym konturem zawartym \\
-% \Powin  dowolną drogą całkowania zawartą \\
-% \StrWd{108}{13} \\
-% \Jest domkniętym \\
-% \Powin  domkniętym i~ograniczonym \\
-% \StrWd{119}{8} \\
-% \Jest \emph{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
-% \Powin \emph{jeśli~są równe na~brzegu $B$, to~są równe również
-%   w~obszarze~$D$} \\
-% \StrWd{134}{16} \\
-% \Jest krzywych zamkniętych \\
-% \Powin  kawałkami gładkich zamkniętych krzywych \\
-% \StrWg{165}{2} \\
-% \Jest niech brzeg tego obszaru zawiera odcinek \\
-% \Powin niech część wspólna brzegu tego obszaru i~osi
-% $\textrm{im}\, z = 0$
-% tworzy odcinek \\
-% \StrWd{165}{6} \\
-% \Jest \emph{symetrii{ }{ } Riemanna-Schwarza} \\
-% \Powin \emph{symetrii Riemanna-Schwarza}
-
-% \vspace{\spaceTwo}
 
+
+
+
+
+% ##################
+\newpage
+\CenterBoldFont{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
+    7   & &  9 & $x,\! y$ & $x, y$ \\
+    11  &  2 & & $\absOne{ a b }$ & $ab$ \\
+    11  &  3 & & $\absOne{ \tfrac{ a }{ b } }$ & $\tfrac{ a }{ b }$ \\
+    22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
+    22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
+    22  & 13 & & urojoną ? & urojoną? \\
+    22  & 15 & & rzeczywistą~? & rzeczywistą? \\
+    24  & 11 & & $a, \:\; b$ & $a, b$ \\
+    25  & &  6 & $\textrm{re}\, z < 0$ & $\textrm{re}\, z = 0$???? \\
+    27  & &  9 & wniosek~: & wniosek: \\
+    27  &  6 & & zbieżny, & zbieżny. \\
+    27  & &  2 & Spójność & $N$-spójność \\
+    29  &  6 & & otwarty~: & otwarty: \\
+    30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
+    30  & & 11 & $t$ & $( t - t_{ 0 } )$ \\
+    % 36  &  2 & & $\tr{re}( \ol{ p } - \la^{ 2 } \ol{ q } ) z$
+    %        & $\tr{re}[( \ol{ p } - \la^{ 2 } \ol{ q } ) z]$ \\
+    % 36  &  4 & & $\left| \frac{ z - ( p - \uplambda^{ 2 } q) }{ 1
+    %              - \uplambda^{ 2 } } \right|^{ 2 }$
+    %        & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
+    %          - \uplambda^{ 2 } } \right|^{ 2 }$ \\
+    % 39  &  2 & & $\abso{ b - c }$ ? & $\abso{ b - c }$? \\
+    % 45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
+    % 47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
+    % 49  & & 13 & $\sqrt[n]{ \abso{ a_{ n } } } z$
+    %        & $\sqrt[n]{ \abso{ a_{ n } } } | z |$ \\
+    % 53  &  7 & & $s$ ? & $s$? \\
+    % 54  & 10 & & słabszym : & słabszym: \\
+    % 56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
+    % 57  &  9 & & 31 & 31) \\
+    % 64  &  5 & & krótko : & krótko: \\
+    % 65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
+    % 68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
+    %        & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
+    % 69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
+    % 73  & 13 & & $iw$ & $iv$ \\
+    % 75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+    %        & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    % 75  & &  3 & $c z - d$ & $c z + d$ \\
+    % 75  & & 16 & $ab - bc$ & $ad - bc$ \\
+    % 79  & &  5 & okręgów~: & okręgów: \\
+    % 80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    % 80  & & 10 & prostą~: & prostą: \\
+    % 90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %                             & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
+  %   94  & &  6 & regularną & kawałkami gładką \\
+  %   99  &  1 & & zewnątrz & na~zewnątrz \\
+  %   102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
+  %          & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
+  %   102 & &  7 & części & części otwartej \\
+  %   105 & &  6 & zerowych : & zerowych: \\
+  %   106 & &  2 & \textit{jest w~środku} & \textit{w~środku} \\
+  %   106 & &  1 & \textit{równa} & \textit{jest równa} \\
+  %   107 &  6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
+  %   131 & 11 & & myś & myśl \\
+  %   126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{
+  %                ( z - z_{ 0 } )^{ n + 1 } }$
+  %          & $\frac{ ( z - z_{ 0 } )^{ n } }{
+  %            ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
+  %   132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
+  %   134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
+  %   140 & &  7 & $f |$ & $\abso{ f }$ \\
+  %   143 & & 18 & w~otoczeniu punktu & \emph{w~otoczeniu punktu} \\
+  %   146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
+  %   146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
+  %          & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
+  %   146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
+  %          & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
+  %   146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
+  %   155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+  %   155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+  %   159 & 10 & & krótko : & krótko: \\
+  %   159 & 12 & & części & części otwartej \\
+  %   159 & & 10 & części & części otwartej \\
+  %   164 & 10 & & 102 & 101 \\
+  %   166 &  6 & & potęgowych . & potęgowych. \\
+  %   170 & & 16 & monochromii & monodromii \\
+  %   173 & & 10 & est & jest \\
+  %   173 & &  9 & jsię & się \\
+  %   174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
+  %   178 &  2 & & 132 & 133 \\
+  %   199 &  3 & & $\nu = 1 $ & $k = 1$ \\
+  %   207 & &  6 & $( 1$ & $1$ \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   \hline
+  % \end{tabular}
+
+\end{center}
+
+\vspace{0.5em}
+
+
+\noindent
+\StrWg{28}{5} \\
+\Jest  nieograniczone \\
+\Powin nieograniczone i~domknięte \\
+\StrWg{36}{5} \\
+\Jest  Ze~wzorów (9)~otrzymujemy \\
+\Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\StrWg{56}{2} \\
+\Jest a~istnieją wartości~$w$, które \\
+\Powin  a~istnieje wartość~$w$, którą \\
+\StrWg{75}{12} \\
+\Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
+płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
+\Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+w~powierzchnię boczną \\
+\StrWd{92}{6} \\
+\Jest  \emph{krzywą} \\
+\Powin \emph{krzywą kawałkami gładką} \\
+\StrWg{95}{5} \\
+\Jest linią \\
+\Powin dowolna linia łamana \\
+\StrWd{107}{12} \\
+\Jest dowolnym konturem zawartym \\
+\Powin  dowolną drogą całkowania zawartą \\
+\StrWd{108}{13} \\
+\Jest  domkniętym \\
+\Powin domkniętym i~ograniczonym \\
+\StrWd{119}{8} \\
+\Jest  \textit{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
+\Powin \textit{jeśli~są równe na~brzegu $B$, to~są równe również
+  w~obszarze~$D$} \\
+\StrWd{134}{16} \\
+\Jest  krzywych zamkniętych \\
+\Powin kawałkami gładkich zamkniętych krzywych \\
+\StrWg{165}{2} \\
+\Jest  niech brzeg tego obszaru zawiera odcinek \\
+\Powin niech część wspólna brzegu tego obszaru i~osi
+$\textrm{im}\, z = 0$
+tworzy odcinek \\
+\StrWd{165}{6} \\
+\Jest  \textit{symetrii{ }{ } Riemanna-Schwarza} \\
+\Powin \textit{symetrii Riemanna-Schwarza}
+
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
