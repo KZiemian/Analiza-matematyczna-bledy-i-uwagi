@@ -95,6 +95,16 @@
 
 
 
+
+% ------------------------------
+% Commands for use within this file only
+% ------------------------------
+\newcommand{\re}{\textrm{re}}
+
+
+
+
+
 % ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
 % ---------------------------------------------------------------------
@@ -182,9 +192,9 @@
 
 \start W~książce często mówi~się o~prostej na~płaszczyźnie
 zespolonej~$\Cbb$, jednak prawie zawsze chodzi o~prostą w~sensie
-płaszczyzny rzeczywistej $\Cbb \simeq \Rbb^{ 2 }$. W~dodatku \textit{Wstęp
-  do~teorii funkcji analitycznych wielu zmiennych} Józefa Siciaka
-wprowadza~się pojęcie prostej zespolonej, która w~przypadku
+płaszczyzny rzeczywistej $\Cbb \simeq \Rbb^{ 2 }$. W~dodatku
+\textit{Wstęp do~teorii funkcji analitycznych wielu zmiennych} Józefa
+Siciaka wprowadza~się pojęcie prostej zespolonej, która w~przypadku
 płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
 
 \vspace{\spaceFour}
@@ -219,7 +229,7 @@ mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
 zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
   \label{eq:Leja-02}
-    \frac{ z }{ a } = \frac{ 1 }{ a } \cdot z.
+  \frac{ z }{ a } = \frac{ 1 }{ a } \cdot z.
 \end{equation}
 Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
 niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
@@ -230,11 +240,11 @@ odwrotność liczby jest liczbą rzeczywistą daną wzorem
   = \frac{ 1 }{ a },
 \end{equation}
 więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
-reguł mnożenia. Teraz możemy \textit{zdefiniować} dla~$z \neq 0$ liczbę
-$1 / z$ wzorem
+reguł mnożenia. Teraz możemy \textit{zdefiniować} dla~$z \neq 0$
+liczbę $1 / z$ wzorem
 \begin{equation}
   \label{eq:Leja-04}
-    \frac{ 1 }{ z } := \frac{ \zbar }{ z \zbar }.
+  \frac{ 1 }{ z } := \frac{ \zbar }{ z \zbar }.
 \end{equation}
 Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
 wynika z~pojęć już wprowadzonych. Gdy $z = 0$ wtedy $z \zbar = 0$,
@@ -246,7 +256,7 @@ zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
 Na~przykład, że~zachodzi
 \begin{equation}
   \label{eq:Leja-05}
-    ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cbb.
+  ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cbb.
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
 \begin{equation}
@@ -283,9 +293,9 @@ zespoloną. Sam zapis wyrażenia $\arg z$ sugeruje, że~argument jest
 zwykłą funkcją liczbową zmiennej~$z$, jednak
 z~definicji\footnote{Niezależnie którą~się przyjmuje.} wynika,
 że~istnieje jednak nieskończenie wiele liczb odpowiadających
-zapisowi\footnote{Dla liczy~$0$ można uznać
-  dowolną liczbę rzeczywistą za~jej argument, ale~to pojęcie nie jest
-  użyteczne, więc nie będziemy~się nim zajmować.}~$\arg z$, przy $z \neq 0$. Są~one postaci
+zapisowi\footnote{Dla liczy~$0$ można uznać dowolną liczbę rzeczywistą
+  za~jej argument, ale~to pojęcie nie jest użyteczne, więc nie
+  będziemy~się nim zajmować.}~$\arg z$, przy $z \neq 0$. Są~one postaci
 \begin{equation}
   \label{eq:Leja-07}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2, \ldots,
@@ -320,8 +330,9 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 $n$-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
 jednowartościowych\footnote{Pisał już o~tym Frege, zobacz część
   poświęcona jego filozofii w~G. E. M. Anscombe P. T. Geach,
-  \textit{Trzej filozofowie} \cite{AnscombeGeachTrzejFilozofowie1981}.}.
-Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
+  \textit{Trzej filozofowie}
+  \cite{AnscombeGeachTrzejFilozofowie1981}.}. Zapomnienie o~tym
+prowadzi do~znanego paradoksu. Mamy mianowicie
 \begin{equation}
   \label{eq:Leja-08}
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } = \sqrt{ ( -1 ) \cdot ( -1 ) }
@@ -329,8 +340,8 @@ Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
 \end{equation}
 
 Pojawiają~się tu dwa błędy, mające to~samo źródło. Po~pierwsze
-$\sqrt{ -1 } = \{ i, -i \}$ więc w~równaniu powyżej mamy mnożenie
-nie liczb zespolonych, lecz zbiorów liczb zespolonych, więc to co~się
+$\sqrt{ -1 } = \{ i, -i \}$ więc w~równaniu powyżej mamy mnożenie nie
+liczb zespolonych, lecz zbiorów liczb zespolonych, więc to co~się
 naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
 zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
 sposób
@@ -381,14 +392,14 @@ wiem, jak należałoby to~poprawić.
 
 
 
-\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$
-kieruje~się chyba następującą myślą. Aby znaleźć te pierwiastki musimy
-obliczyć funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
+\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$ kieruje~się
+chyba następującą myślą. Aby znaleźć te pierwiastki musimy obliczyć
+funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
 $\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
 i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
   \label{eq:Leja-11}
-    \cos \theta_{ 0 } = \cos \tfrac{ \varphi }{ 2 } = \frac{ 1 }{ 2 } ( 1 + \cos \varphi ),
+  \cos \theta_{ 0 } = \cos \tfrac{ \varphi }{ 2 } = \frac{ 1 }{ 2 } ( 1 + \cos \varphi ),
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
 wzorów
@@ -409,10 +420,10 @@ iloczyn Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
 i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
   \label{eq:Leja-13}
-    \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
-      \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
-    }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
-    } b_{ n } ) z^{ n }.
+  \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
+    \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
+  }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
+  } b_{ n } ) z^{ n }.
 \end{equation}
 Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
 matematycznie niepoprawne dla~pewnych szeregów potęgowych. Dostarczają
@@ -438,7 +449,7 @@ Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
 zachodzi poniższa nierówność
 \begin{equation}
   \label{eq:Leja-14}
-    \absOne{ C_{ n } - A_{ n } B } \leq \varepsilon, \quad \forall \varepsilon > 0,
+  \absOne{ C_{ n } - A_{ n } B } \leq \varepsilon, \quad \forall \varepsilon > 0,
 \end{equation}
 bowiem z~tego będzie wynikać
 \begin{equation}
@@ -478,8 +489,9 @@ Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
 gdzie
 $M_{ p } = \max( \absOne{ \beta_{ 1 } }, \ldots, \absOne{ \beta_{ p } } )$.
 Ponieważ~$p$ jest ustalone możemy dobrać takie $q$, że~dla każdego
-$n > q$ zachodzić $\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$.
-Teraz dla każdego $n > \max( p, q )$ zachodzi
+$n > q$ zachodzić
+$\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$. Teraz dla każdego
+$n > \max( p, q )$ zachodzi
 \begin{equation}
   \label{eq:Leja-18}
   \absOne{ C_{ n } - AB } \leq \varepsilon.
@@ -520,10 +532,10 @@ Musimy jednak najpierw wykazać wynik pomocniczy:
   \label{eq:Leja-22}
   \begin{split}
     \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
-      0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
-    + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
-    + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
-    &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
+    0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
+                                                        + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
+                                                        + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
+                                                      &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
   \end{split}
 \end{equation}
 Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
@@ -534,17 +546,17 @@ wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
   \begin{split}
     \sum_{ i = 0 }^{ n + 1 } c_{ i }
     &= ( a_{ 0 } + a_{ 1 } + \ldots +
-    a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } ) b_{
+      a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } ) b_{
       1 } + \ldots + a_{ 0 } b_{ n } + c_{ n + 1 } \, + \\
     &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{
       1 }
-    + \ldots + a_{ n - 1 } ) b_{ 1 } + \ldots + a_{ 0 } b_{ n } \, + \\
+      + \ldots + a_{ n - 1 } ) b_{ 1 } + \ldots + a_{ 0 } b_{ n } \, + \\
     &\hspace{1.5em}
       + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1
-    }
-    = ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
+      }
+      = ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
     &\hspace{1.5em} + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 } +
-    \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
+      \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
   \end{split}
 \end{equation}
 
@@ -563,7 +575,7 @@ Następny krok jest trochę długi. Przeliczając kilka pierwszych
 przypadków, łatwo zgadnąć, że
 \begin{equation}
   \label{eq:Leja-25}
-    C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
+  C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
 \end{equation}
 Zacznijmy od~tego, że
 $b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
@@ -613,12 +625,12 @@ i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
 i~$M_{ \beta }$ takie, że
 \begin{equation}
   \label{eq:Leja-28}
-    \absOne{ M_{ \alpha } } \leq M_{ \alpha }, \quad \absOne{ \beta_{ n } } \leq M_{ \beta }.
+  \absOne{ M_{ \alpha } } \leq M_{ \alpha }, \quad \absOne{ \beta_{ n } } \leq M_{ \beta }.
 \end{equation}
-Ustalmy teraz $\varepsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0,
-więc możemy znaleźć taką liczbę~$p$,
-iż~$\absOne{ \beta_{ n } } \leq \varepsilon / 2 M_{ \alpha }$, dla~$n > p$.
-Teraz
+Ustalmy teraz $\varepsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc możemy
+znaleźć taką liczbę~$p$,
+iż~$\absOne{ \beta_{ n } } \leq \varepsilon / 2 M_{ \alpha }$,
+dla~$n > p$. Teraz
 \begin{equation}
   \label{eq:Leja-29}
   \begin{split}
@@ -628,11 +640,11 @@ Teraz
       + \ldots + \alpha_{ n - p - 1 } \beta_{ p } + \ldots + \alpha_{ 0 } \beta_{ n - 1 } } \leq \\
     &\leq \frac{ 1 }{ n } \absOne{ \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 }
       + \ldots + \alpha_{ n - p - 1 } \beta_{ p } } + \frac{ 1 }{ n }
-    \absOne{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 } } \leq \\
+      \absOne{ \alpha_{ n - p - 2 } \beta_{ p + 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 } } \leq \\
     &\leq \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta }
       + \frac{ n - p - 1 }{ n } M_{ \alpha } \frac{ \epsilon }{ 2 M_{ \alpha } }
       = \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta } + \frac{ n - p - 1 }{ n }
-    \frac{ \varepsilon }{ 2 } \leq \\
+      \frac{ \varepsilon }{ 2 } \leq \\
     &\leq \frac{ \varepsilon }{ 2 } + \frac{ p + 1 }{ n } M_{ \alpha } M_{ \beta }.
   \end{split}
 \end{equation}
@@ -651,10 +663,10 @@ wymieniony osobno.
 
 
 
-\start \Str{28--29} Jest to przykład bałaganu pojęciowego
-najczystszego rodzaju. Najpierw na~stronie~28 definiuje~się krzywą
-jako zbiór punktów, by na~stronie następnej stronie zwraca~się uwagę,
-że~należy odróżnić krzywą od~jej zbioru punktów.
+\start \Str{28--29} Jest to przykład bałaganu pojęciowego najczystszego
+rodzaju. Najpierw na~stronie~28 definiuje~się krzywą jako zbiór
+punktów, by na~stronie następnej stronie zwraca~się uwagę, że~należy
+odróżnić krzywą od~jej zbioru punktów.
 
 Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
 punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
@@ -717,8 +729,8 @@ zmiennej~$s$, czyli jej długości.
 
 Jednak sama obecność punktów osobliwych, nie oznacza, że~krzywej nie
 da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
-możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem
-takiej sytuacji jest krzywa
+możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem takiej
+sytuacji jest krzywa
 \begin{equation}
   \label{eq:Leja-32}
   z( t ) = t^{ 3 } + i 0, \quad t \in \Rbb.
@@ -792,12 +804,12 @@ ciągła (w~tej zresztą ogólnej formie pojęcie orientacji jest
 tu~podane). W~pełni ścisłe sformułowanie tego problemu nie jest wcale
 łatwe. W~tej chwili najbardziej obiecujące wydaje mi~się podejście
 w~którym najpierw definiuje~się orientację okręgu jednostkowego,
-później zaś „homotopie zachowujące orientację”, za~krzywą
-zorientowaną dodatnio uznać taką, która jest „homotopijna
-z~zachowaniem orientacji z~okręgiem zorientowanym dodatnio”. O~ile
-jednak zdefiniowanie okręgu zorientowanego dodatnio nie jest trudne,
-to~podanie w~sposób ścisły i~wystarczająco ogólnych takich homotopii
-przekracza moją wiedzę i~zdolności.
+później zaś „homotopie zachowujące orientację”, za~krzywą zorientowaną
+dodatnio uznać taką, która jest „homotopijna z~zachowaniem orientacji
+z~okręgiem zorientowanym dodatnio”. O~ile jednak zdefiniowanie okręgu
+zorientowanego dodatnio nie jest trudne, to~podanie w~sposób ścisły
+i~wystarczająco ogólnych takich homotopii przekracza moją wiedzę
+i~zdolności.
 
 Dla zupełności zdefiniujemy tutaj \textbf{dodatnio zorientowany okrąg
   jednostkowy}. Definicja najkrótsza polega na~wskazaniu, że~okrąg ten
@@ -922,8 +934,8 @@ mnożenia i~dzielenia. Rozważmy najpierw przypadek dzielenia. Wielomian
 $P_{ 1 }( z ) = 1$ jest określony na~dziedzinie~$\Cbb$. Jeśli
 podzielimy go~przez wielomian $Q_{ 1 }( z ) = z - 1$ to otrzymany
 iloraz $P_{ 1 }( z ) / Q_{ 1 }( z )$, to jest on określony na
-dziedzinie $\Cbb \setminus 1$, widzimy więc, że~operacja dzielenia może
-prowadzić do~powstania funkcji o~nowej dziedzinie.
+dziedzinie $\Cbb \setminus 1$, widzimy więc, że~operacja dzielenia
+może prowadzić do~powstania funkcji o~nowej dziedzinie.
 
 Teraz zajmiemy~się subtelniejszym problemem. Rozważmy następujący
 iloczyn
@@ -943,10 +955,11 @@ Jeśli daną funkcję wymierną~$f( z )$ która jest określony na~zbiorze
 $\Cbb \setminus \{ z_{ 1 }, z_{ 2 }, \ldots, z_{ n } \}$ można zapisać
 w~postaci $P( z ) / Q( z )$ i~$z_{ i }$ nie jest zerem wielomianu $Q$,
 wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
-$\Cbb \setminus \{ z_{ 1 }, z_{ 2 }, \ldots, z_{ i - 1 }, z_{ i + 1 }, \ldots, z_{ n } \}$ poprzez
+$\Cbb \setminus \{ z_{ 1 }, z_{ 2 }, \ldots, z_{ i - 1 }, z_{ i + 1 }, \ldots,
+z_{ n } \}$ poprzez
 \begin{equation}
   \label{eq:Leja-36}
-    f( z_{ i } ) := \frac{ P( z_{ i } ) }{ Q( z_{ i } ) }.
+  f( z_{ i } ) := \frac{ P( z_{ i } ) }{ Q( z_{ i } ) }.
 \end{equation}
 
 \vspace{\spaceFour}
@@ -1033,194 +1046,195 @@ różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
   \label{eq:Leja-38}
   e^{ l_{ i }( z ) } = e^{ l_{ j }( z ) }
   \iff e^{ l_{ i }( z ) } / e^{ l_{ j }( z ) } = e^{ l_{ i }( z ) - l_{ j }( z ) }
-  = 1.
-\end{equation}
-Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
-$k( z ) \in \Zbb$. Jako różnica dwóch funkcji ciągłych jest to~funkcja
-ciągła, jednak funkcja ciągła o~wartościach całkowitych musi być równa
-stałej, czyli $k( z ) = k \in \Zbb$.
+    = 1.
+  \end{equation}
+  Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
+  $k( z ) \in \Zbb$. Jako różnica dwóch funkcji ciągłych jest
+  to~funkcja ciągła, jednak funkcja ciągła o~wartościach całkowitych
+  musi być równa stałej, czyli $k( z ) = k \in \Zbb$.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
-traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
+  \start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
+  traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
-zespoloną, a~formalną kluczowe jest to, że~zakłada~się w~nim, iż
-pochodne cząstkowe istnieją i~są ciągłe. Założenie to zostało podane
-wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
-twierdzenia.
+  \start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
+  zespoloną, a~formalną kluczowe jest to, że~zakłada~się w~nim, iż
+  pochodne cząstkowe istnieją i~są ciągłe. Założenie to zostało podane
+  wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
+  twierdzenia.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{73} Przedyskutujemy tu~czy rysunek~(36) poprawnie
-przedstawia działanie funkcji analitycznej w~otoczeniu punktu
-$z_{ 0 }$ takiego, że~$f'( z_{ 0 } ) \neq 0$. Okazuje~się, że~w~pewnym
-otoczeniu tego punktu funkcja istotnie musi zachowywać~się tak, jak to
-tam przedstawiono. Aby~niniejsza analiza była prawomocna należy
-założyć, że~funkcje $u( x, y )$, $v( x, y )$ są odpowiednio gładkie.
-Choć potem zostanie pokazane, że~są one klasy
-$\Ccal^{ \infty }( \Rbb^{ 2 } )$\footnote{Dokładniej: są one analityczne
-  na~$\Rbb^{ 2 }$. Jednak do~tej pory nie znalazłem dowodu tego faktu
-  w~książce Lejii.}, to tutaj wystarczy nam, że~są klasy
-$\Ccal^{ 1 }( \Rbb^{ 2 } )$\footnote{Należy sprawdzić, czy nie wystarczy zwykła
-  różniczkowalność.}.
+  \start \Str{73} Przedyskutujemy tu~czy rysunek~(36) poprawnie
+  przedstawia działanie funkcji analitycznej w~otoczeniu punktu
+  $z_{ 0 }$ takiego, że~$f'( z_{ 0 } ) \neq 0$. Okazuje~się,
+  że~w~pewnym otoczeniu tego punktu funkcja istotnie musi
+  zachowywać~się tak, jak to tam przedstawiono. Aby~niniejsza analiza
+  była prawomocna należy założyć, że~funkcje $u( x, y )$, $v( x, y )$
+  są odpowiednio gładkie. Choć potem zostanie pokazane, że~są one
+  klasy $\Ccal^{ \infty }( \Rbb^{ 2 } )$\footnote{Dokładniej: są one
+    analityczne na~$\Rbb^{ 2 }$. Jednak do~tej pory nie znalazłem
+    dowodu tego faktu w~książce Lejii.}, to tutaj wystarczy nam, że~są
+  klasy $\Ccal^{ 1 }( \Rbb^{ 2 } )$\footnote{Należy sprawdzić, czy nie
+    wystarczy zwykła różniczkowalność.}.
 
-Zacznijmy od~uwagi ogólnej. Jeśli oznaczymy
-$z_{ 0 } = x_{ 0 } + i y_{ 0 }$, $c = u( x_{ 0 }, y_{ 0 } )$
-i~$c' = v( x_{ 0 }, y_{ 0 } )$, to~równania $c = u( x, y )$
-i~$c' = v( x, y )$ wyznaczają poziomice funkcji $u( x, y )$
-do~wartości~$c$ i~$v( x, y )$ do~wartości~$c'$. Ze~wzoru (18)
-na~stronie~72 wiemy, że~jeśli $f'( z_{ 0 } ) \neq 0$, to macierz
-Jacobiego odwzorowania $( u( x, y ), v( x, y ) )$ jest w tym punkcie
-nieosobliwa. Na~mocy twierdzenia o~lokalnym odwracaniu odwzorowań
-istnieje otoczenie punktu $z_{ 0 } \in \Vcal$ takie, że~na
-$f( \Vcal )$ istnieje odwzorowanie $f^{ -1 }$, które jest tak
-gładkie jak funkcje $u( x, y )$ i~$v( x, y )$. Na~podstawie tego oraz
-równań Cauchy'ego-Riemanna można pokazać, że~na zbiorze $\Vcal$
-sytuacja musi wyglądać tak, jak na rysunku~(36).
+  Zacznijmy od~uwagi ogólnej. Jeśli oznaczymy
+  $z_{ 0 } = x_{ 0 } + i y_{ 0 }$, $c = u( x_{ 0 }, y_{ 0 } )$
+  i~$c' = v( x_{ 0 }, y_{ 0 } )$, to~równania $c = u( x, y )$
+  i~$c' = v( x, y )$ wyznaczają poziomice funkcji $u( x, y )$
+  do~wartości~$c$ i~$v( x, y )$ do~wartości~$c'$. Ze~wzoru (18)
+  na~stronie~72 wiemy, że~jeśli $f'( z_{ 0 } ) \neq 0$, to macierz
+  Jacobiego odwzorowania $( u( x, y ), v( x, y ) )$ jest w tym punkcie
+  nieosobliwa. Na~mocy twierdzenia o~lokalnym odwracaniu odwzorowań
+  istnieje otoczenie punktu $z_{ 0 } \in \Vcal$ takie, że~na
+  $f( \Vcal )$ istnieje odwzorowanie $f^{ -1 }$, które jest tak
+  gładkie jak funkcje $u( x, y )$ i~$v( x, y )$. Na~podstawie tego
+  oraz równań Cauchy'ego-Riemanna można pokazać, że~na zbiorze $\Vcal$
+  sytuacja musi wyglądać tak, jak na rysunku~(36).
 
-Jako, że~nie musi to być całkiem oczywiste tutaj przedstawimy dyskusję
-kilku wynikających stąd własności. Kąt pod jakim przecinają~się
-poziomice, jak pokazano w~książce, wynika z~równań
-Cauchy'ego-Riemanna. Poziomica $c = u( x, y )$ (analogicznie
-rozumujemy dla $c' = v( x, y )$) jest obrazem przez funkcję $f^{ -1 }$
-przecięcia prostej $u = c$ i~zbioru $f( \Vcal )$, na~mocy więc
-bijektywności~$f^{ -1 }$ pokrywają one cały zbiór $\Vcal$. Ich
-gładkość zaś~wynika z~gładkości~$f^{ -1 }$. Co więcej, ponieważ
-w~zbiorze $f( \Vcal )$ proste $c = u$ i~$c' = v$ przecinają~się
-tylko raz, więc na~mocy injektywności $f$, również odpowiadające
-im~poziomice przecinają~się tylko raz w~zbiorze~$\Vcal$.
+  Jako, że~nie musi to być całkiem oczywiste tutaj przedstawimy
+  dyskusję kilku wynikających stąd własności. Kąt pod jakim
+  przecinają~się poziomice, jak pokazano w~książce, wynika z~równań
+  Cauchy'ego-Riemanna. Poziomica $c = u( x, y )$ (analogicznie
+  rozumujemy dla $c' = v( x, y )$) jest obrazem przez funkcję
+  $f^{ -1 }$ przecięcia prostej $u = c$ i~zbioru $f( \Vcal )$, na~mocy
+  więc bijektywności~$f^{ -1 }$ pokrywają one cały zbiór $\Vcal$. Ich
+  gładkość zaś~wynika z~gładkości~$f^{ -1 }$. Co więcej, ponieważ
+  w~zbiorze $f( \Vcal )$ proste $c = u$ i~$c' = v$ przecinają~się
+  tylko raz, więc na~mocy injektywności $f$, również odpowiadające
+  im~poziomice przecinają~się tylko raz w~zbiorze~$\Vcal$.
 
-Nie ma potrzeby zajmować~się globalnym kształtem poziomic, więc
-zagadnienia tego nie będziemy omawiać.
+  Nie ma potrzeby zajmować~się globalnym kształtem poziomic, więc
+  zagadnienia tego nie będziemy omawiać.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
+  \start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
-policz~$\absOne{ z }^{ 2 } + 1$.
+  \start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
+  policz~$\absOne{ z }^{ 2 } + 1$.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
-po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
-to~jednak jasno z~rysunku.
+  \start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
+  po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
+  to~jednak jasno z~rysunku.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
-różna od~0, jest problematyczne, bowiem nie jest wcale jasne,
-czy~można przypisać jakiś sens pochodnej w~punkcie $z = -d / c$.
-Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
-poza tym punktem.
+  \start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
+  różna od~0, jest problematyczne, bowiem nie jest wcale jasne,
+  czy~można przypisać jakiś sens pochodnej w~punkcie $z = -d / c$.
+  Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
+  poza tym punktem.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
-do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
-nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
-funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
-trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
-może być znacznie bardziej skomplikowany obiektem, niż byśmy
-oczekiwali.
+  \start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
+  do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
+  nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
+  funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
+  trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
+  może być znacznie bardziej skomplikowany obiektem, niż byśmy
+  oczekiwali.
 
-Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
-poziomice powinny być dobrze określone. Może warto będzie do~tego
-zagadnienia powrócić i~zanalizować je dokładnie?
+  Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
+  poziomice powinny być dobrze określone. Może warto będzie do~tego
+  zagadnienia powrócić i~zanalizować je dokładnie?
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
-całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
-że~rzeczywiście równa jest ona liczbie obiegów, liczonych ze~zwrotem,
-wokół punktu~$a$ krzywej zamkniętej~$C$.
+  \start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
+  całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
+  że~rzeczywiście równa jest ona liczbie obiegów, liczonych
+  ze~zwrotem, wokół punktu~$a$ krzywej zamkniętej~$C$.
 
-Należy też dodać komentarz, że~okrążenie punktu przez krzywą liczymy
-ze~znakiem plus, gdy~podczas okrążania krzywa jest zorientowana
-dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
-zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze krzywej
-zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny czas.
+  Należy też dodać komentarz, że~okrążenie punktu przez krzywą liczymy
+  ze~znakiem plus, gdy~podczas okrążania krzywa jest zorientowana
+  dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
+  zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze
+  krzywej zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny
+  czas.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
-tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
-krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
-dać~się aproksymować ją przez linię łamaną.
+  \start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
+  tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
+  krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
+  dać~się aproksymować ją przez linię łamaną.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
-zadziwiająco dużo twierdzeń z~topologii płaszczyzny i~krzywych,
-których dowody wcale nie~są dla mnie oczywiste. Po pierwsze,
-że~istnieją łuki regularne~$l_{ i }$ łączące kontur~$C_{ 0 }$
-z~konturami $C_{ i }$ i~że~powstała w~wyniku tej konstrukcji krzywa
-jest wciąż kawałkami gładka. Po~drugie należy udowodnić, że~w~tej
-nowej krzywej znajdują~się wszystkie krzywe $-C_{ i }$ i~po każdej
-z~nich całkujemy dokładnie raz, brak zaś w~ogóle $C_{ i }$.
-Po~trzecie, że~po~każdym z~łuków $l_{ i }$ całkujemy dokładnie dwa
-razy, obiegając je w~dwóch przeciwnych kierunkach.
+  \start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
+  zadziwiająco dużo twierdzeń z~topologii płaszczyzny i~krzywych,
+  których dowody wcale nie~są dla mnie oczywiste. Po pierwsze,
+  że~istnieją łuki regularne~$l_{ i }$ łączące kontur~$C_{ 0 }$
+  z~konturami $C_{ i }$ i~że~powstała w~wyniku tej konstrukcji krzywa
+  jest wciąż kawałkami gładka. Po~drugie należy udowodnić, że~w~tej
+  nowej krzywej znajdują~się wszystkie krzywe $-C_{ i }$ i~po każdej
+  z~nich całkujemy dokładnie raz, brak zaś w~ogóle $C_{ i }$.
+  Po~trzecie, że~po~każdym z~łuków $l_{ i }$ całkujemy dokładnie dwa
+  razy, obiegając je w~dwóch przeciwnych kierunkach.
 
-Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc jest
-zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
+  Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc
+  jest zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
-zostało one w~żaden sposób jasno zdefiniowane, pozostając na~poziomie
-intuicji matematycznej.
+  \start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
+  zostało one w~żaden sposób jasno zdefiniowane, pozostając
+  na~poziomie intuicji matematycznej.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
-\start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
-„drogi całkowania”, jednak nie jest ono zdefiniowane. Przez
-\textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką. Dla
-wygody będziemy czasem mówili po~prostu o~„drodze”.
+  \start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
+  „drogi całkowania”, jednak nie jest ono zdefiniowane. Przez
+  \textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką.
+  Dla wygody będziemy czasem mówili po~prostu o~„drodze”.
 
-\vspace{\spaceFour}
+  \vspace{\spaceFour}
 
 
 
 
 
-% ##################
-\begin{figure}
+  % ##################
+  \begin{figure}
 
-  \label{fig:Leja-02}
+    \label{fig:Leja-02}
 
-  \centering
+    \centering
 
   \begin{tikzpicture}[scale=1.35]
     \def\axissize{2.5}
@@ -1288,8 +1302,8 @@ $( \Cbb \cup \{ \infty \} ) \setminus \{ 0 \}$ byłby jednospójny,
 a~twierdzenie dla niego jawnie nie zachodzi. Jeśli z~rozważanego
 zbioru wykluczymy $0$ i~$\infty$ to, aby był jednospójny musimy
 z~niego wykluczyć też odpowiedni zbiór „łączący” te~dwa punkty,
-np.~prostą $\Real z < 0$, wykluczający tym samym z~rozważań
-wszystkie nieporządne zbiory.
+np.~prostą $\Real z < 0$, wykluczający tym samym z~rozważań wszystkie
+nieporządne zbiory.
 
 Drugi powód jest następujący. Rozpatrzmy jak na
 rysunku~(\ref{fig:Leja-02}) płaszczyznę zespoloną bez osi
@@ -1357,8 +1371,8 @@ punktów $x \in C, y \in K$.
 Stosując to twierdzenie, dla~obrazu krzywej~$C$ i~$\{ z \}$ widzimy,
 że~odległość między tymi zbiorami $L > 0$. Wynika stąd, że~dla
 $z' \in K( z, L / 2 )$ zachodzi
-$\absOne{ 1 / ( \zeta - z' )^{ p + 1 } } \leq 1 / ( L / 2 )^{ p + 1 }$.
-Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
+$\absOne{ 1 / ( \zeta - z' )^{ p + 1 } } \leq 1 / ( L / 2 )^{ p + 1
+}$. Oznaczają\footnote{Ponieważ nie mogę wymyślić bardziej użytecznej
   notacji, utożsamia tutaj krzywą $C$ z~jej obrazem.}
 \begin{equation}
   \label{eq:Leja-42}
@@ -1420,9 +1434,9 @@ zeru w~otoczeniu każdego z~nich. Jest to zbiór otwarty, gdyż
   \label{eq:Leja-44}
   E = \bigcup_{ z \in E } \Ocal_{ z },
 \end{equation}
-gdzie $\Ocal_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$ znika
-w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia zbioru $E$
-i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
+gdzie $\Ocal_{ z }$ jest takim otoczeniem punktu $z$, że~$f( z )$
+znika w~nim. Niech teraz $w_{ 0 } \in D$ będzie punktem skupienia
+zbioru $E$ i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
 do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
 $f'( z )$, stąd
 \begin{equation}
@@ -1545,12 +1559,14 @@ należy rozumieć w~następujący sposób.
 Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
 że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
 dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
-że~$f\big( K( z_{ 0 }, \delta ) \big) \neq K( f( z_{ 0 } ), \eta )$, bowiem
+że~$f\big( K( z_{ 0 }, \delta ) \big) \neq K( f( z_{ 0 } ), \eta )$,
+bowiem
 $K( f( z_{ 0 } ), \eta ) \subsetneq f\big( K( z_{ 0 }, \delta ) \big)$. Jednak
-zbiór $K( z_{ 0 }, \delta ) \cap f^{ -1 }\big( K( f( z_{ 0 } ), \eta ) \big)$
-jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która
-jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy jednak,
-że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
+zbiór
+$K( z_{ 0 }, \delta ) \cap f^{ -1 }\big( K( f( z_{ 0 } ), \eta )
+\big)$ jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$,
+która jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy
+jednak, że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
 
 \vspace{\spaceFour}
 
@@ -1598,8 +1614,8 @@ W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
 której długość jest większa od~$\theta$.
 
 Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
-$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności
-możemy tylko powiedzieć, że
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności możemy
+tylko powiedzieć, że
 \begin{equation}
   \label{eq:Leja-50}
   \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } }
@@ -1738,35 +1754,35 @@ poprawić??????????????????
     29  &  6 & & otwarty~: & otwarty: \\
     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
     30  & & 11 & $t$ & $( t - t_{ 0 } )$ Dokończ komentarze poniżej \\
-    % 36  &  2 & & $\tr{re}( \ol{ p } - \la^{ 2 } \ol{ q } ) z$
-    %        & $\tr{re}[( \ol{ p } - \la^{ 2 } \ol{ q } ) z]$ \\
-    % 36  &  4 & & $\left| \frac{ z - ( p - \uplambda^{ 2 } q) }{ 1
-    %              - \uplambda^{ 2 } } \right|^{ 2 }$
-    %        & $\left| z - \frac{ ( p - \uplambda^{ 2 } q) }{ 1
-    %          - \uplambda^{ 2 } } \right|^{ 2 }$ \\
-    % 39  &  2 & & $\abso{ b - c }$ ? & $\abso{ b - c }$? \\
-    % 45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
-    % 47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
-    % 49  & & 13 & $\sqrt[n]{ \abso{ a_{ n } } } z$
-    %        & $\sqrt[n]{ \abso{ a_{ n } } } | z |$ \\
-    % 53  &  7 & & $s$ ? & $s$? \\
-    % 54  & 10 & & słabszym : & słabszym: \\
-    % 56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
-    % 57  &  9 & & 31 & 31) \\
-    % 64  &  5 & & krótko : & krótko: \\
-    % 65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
-    % 68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
-    %        & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
-    % 69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
-    % 73  & 13 & & $iw$ & $iv$ \\
-    % 75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
-    %        & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
-    % 75  & &  3 & $c z - d$ & $c z + d$ \\
-    % 75  & & 16 & $ab - bc$ & $ad - bc$ \\
-    % 79  & &  5 & okręgów~: & okręgów: \\
-    % 80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
-    % 80  & & 10 & prostą~: & prostą: \\
-    % 90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    36  &  2 & & $\re( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z$
+           & $\re[ ( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z ]$ \\
+    36  &  4 & & $\left| \frac{ z - ( p - \lambda^{ 2 } q) }
+                 { 1 - \lambda^{ 2 } } \right|^{ 2 }$
+           & $\left| z - \frac{ ( p - \lambda^{ 2 } q) }
+             { 1 - \lambda^{ 2 } } \right|^{ 2 }$ \\
+    39  &  2 & & $\absOne{ b - c }$ ? & $\absOne{ b - c }$? \\
+    45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
+    47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
+    49  & & 13 & $\sqrt[n]{ \absOne{ a_{ n } } } z$
+           & $\sqrt[n]{ \absOne{ a_{ n } } } | z |$ \\
+    53  &  7 & & $s$ ? & $s$? \\
+    54  & 10 & & słabszym : & słabszym: \\
+    56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
+    57  &  9 & & 31 & 31) \\
+    64  &  5 & & krótko : & krótko: \\
+    65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
+    68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
+           & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
+    69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
+    73  & 13 & & $iw$ & $iv$ \\
+    75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+           & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    75  & &  3 & $c z - d$ & $c z + d$ \\
+    75  & & 16 & $ab - bc$ & $ad - bc$ \\
+    79  & &  5 & okręgów~: & okręgów: \\
+    80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    80  & & 10 & prostą~: & prostą: \\
+    90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
     \hline
   \end{tabular}
 
@@ -1797,7 +1813,7 @@ poprawić??????????????????
     132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
     140 & &  7 & $f |$ & $\absOne{ f }$ \\
-    143 & & 18 & w~otoczeniu punktu & \emph{w~otoczeniu punktu} \\
+    143 & & 18 & w~otoczeniu punktu & \textit{w~otoczeniu punktu} \\
     146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
     146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
            & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
@@ -1843,22 +1859,22 @@ poprawić??????????????????
 \Jest  Ze~wzorów (9)~otrzymujemy \\
 \Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
 \StrWg{56}{2} \\
-\Jest a~istnieją wartości~$w$, które \\
-\Powin  a~istnieje wartość~$w$, którą \\
+\Jest  a~istnieją wartości~$w$, które \\
+\Powin a~istnieje wartość~$w$, którą \\
 \StrWg{75}{12} \\
-\Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
+\Jest  rozciętej wzdłuż jednego południka na~pas nieograniczony
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
 \Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
 \StrWd{92}{6} \\
-\Jest  \emph{krzywą} \\
-\Powin \emph{krzywą kawałkami gładką} \\
+\Jest  \textit{krzywą} \\
+\Powin \textit{krzywą kawałkami gładką} \\
 \StrWg{95}{5} \\
-\Jest linią \\
+\Jest  linią \\
 \Powin dowolna linia łamana \\
 \StrWd{107}{12} \\
-\Jest dowolnym konturem zawartym \\
-\Powin  dowolną drogą całkowania zawartą \\
+\Jest  dowolnym konturem zawartym \\
+\Powin dowolną drogą całkowania zawartą \\
 \StrWd{108}{13} \\
 \Jest  domkniętym \\
 \Powin domkniętym i~ograniczonym \\
@@ -1872,8 +1888,7 @@ w~powierzchnię boczną \\
 \StrWg{165}{2} \\
 \Jest  niech brzeg tego obszaru zawiera odcinek \\
 \Powin niech część wspólna brzegu tego obszaru i~osi
-$\textrm{im}\, z = 0$
-tworzy odcinek \\
+$\textrm{im}\, z = 0$ tworzy odcinek \\
 \StrWd{165}{6} \\
 \Jest  \textit{symetrii{ }{ } Riemanna-Schwarza} \\
 \Powin \textit{symetrii Riemanna-Schwarza}
