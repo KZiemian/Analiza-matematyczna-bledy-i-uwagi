@@ -188,7 +188,9 @@
 % Sprawdź tu wszystkie eqref.
 
 
+% ##################
 \CenterBoldFont{Uwagi}
+
 
 \start W~książce często mówi~się o~prostej na~płaszczyźnie
 zespolonej~$\Cbb$, jednak prawie zawsze chodzi o~prostą w~sensie
@@ -204,7 +206,7 @@ płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
 \start W~analizie zespolonej jest praktycznie użyteczne wprowadzenie
 zwięzłego oznaczenie na~otoczenie pierścieniowe
 \begin{equation}
-  \label{eq:Leja-01}
+  \label{eq:LejaFZ-01}
   \Pier(a, r, R) := \{ z \;|\; r < \absOne{ z - a } < R \}.
 \end{equation}
 
@@ -228,14 +230,14 @@ sens, należy chyba postępować w~następujący sposób\footnote{Leja
 mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
 zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
-  \label{eq:Leja-02}
+  \label{eq:LejaFZ-02}
   \frac{ z }{ a } = \frac{ 1 }{ a } \cdot z.
 \end{equation}
 Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
 niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
 odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
-  \label{eq:Leja-03}
+  \label{eq:LejaFZ-03}
   \frac{ 1 }{ a + i0 } = \frac{ 1 }{ a } + i0
   = \frac{ 1 }{ a },
 \end{equation}
@@ -243,7 +245,7 @@ więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
 reguł mnożenia. Teraz możemy \textit{zdefiniować} dla~$z \neq 0$
 liczbę $1 / z$ wzorem
 \begin{equation}
-  \label{eq:Leja-04}
+  \label{eq:LejaFZ-04}
   \frac{ 1 }{ z } := \frac{ \zbar }{ z \zbar }.
 \end{equation}
 Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
@@ -255,13 +257,12 @@ Teraz należy sprawdzić, czy tak wprowadzone dzielenie przez liczbę
 zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
 Na~przykład, że~zachodzi
 \begin{equation}
-  \label{eq:Leja-05}
+  \label{eq:LejaFZ-05}
   ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cbb.
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
 \begin{equation}
-  \label{eq:Leja-06}
-  \begin{split}
+  \label{eq:LejaFZ-06}
     ( 1 / z ) / w =
     \left( \frac{ \zbar }{ z \zbar } \right) / w
     = \frac{ \zbar }{ z \zbar } \frac{ \wbar }{ w \wbar }
@@ -269,7 +270,6 @@ Tą tożsamość można udowodnić w~następujący sposób
     = \frac{ 1 }{ z \zbar w \wbar } ( \zbar \wbar )
     = \frac{ 1 }{ z w \zbar \wbar } ( \zbar \wbar )
     = 1 / ( z w ).
-  \end{split}
 \end{equation}
 
 \vspace{\spaceFour}
@@ -297,7 +297,7 @@ zapisowi\footnote{Dla liczy~$0$ można uznać dowolną liczbę rzeczywistą
   za~jej argument, ale~to pojęcie nie jest użyteczne, więc nie
   będziemy~się nim zajmować.}~$\arg z$, przy $z \neq 0$. Są~one postaci
 \begin{equation}
-  \label{eq:Leja-07}
+  \label{eq:LejaFZ-07}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2, \ldots,
 \end{equation}
 gdzie $\Arg z$ jest już zwyczajną funkcją liczbową.
@@ -334,7 +334,7 @@ jednowartościowych\footnote{Pisał już o~tym Frege, zobacz część
   \cite{AnscombeGeachTrzejFilozofowie1981}.}. Zapomnienie o~tym
 prowadzi do~znanego paradoksu. Mamy mianowicie
 \begin{equation}
-  \label{eq:Leja-08}
+  \label{eq:LejaFZ-08}
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } = \sqrt{ ( -1 ) \cdot ( -1 ) }
   = \sqrt{ 1 } = 1.
 \end{equation}
@@ -346,13 +346,13 @@ naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
 zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
 sposób
 \begin{equation}
-  \label{eq:Leja-09}
+  \label{eq:LejaFZ-09}
   ( -i ) \cdot i = 1.
 \end{equation}
 Drugi błąd jest następując. Jeśli rozważamy~$1$ jako liczbę zespoloną,
 to
 \begin{equation}
-  \label{eq:Leja-10}
+  \label{eq:LejaFZ-10}
   \sqrt{ 1 } = \{ 1, -1 \},
 \end{equation}
 czyli otrzymany poprzednio wynik $\sqrt{ 1 }$~„$=$”~$1$, przedstawia
@@ -398,13 +398,13 @@ funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
 $\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
 i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
-  \label{eq:Leja-11}
+  \label{eq:LejaFZ-11}
   \cos \theta_{ 0 } = \cos \tfrac{ \varphi }{ 2 } = \frac{ 1 }{ 2 } ( 1 + \cos \varphi ),
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
 wzorów
 \begin{equation}
-  \label{eq:Leja-12}
+  \label{eq:LejaFZ-12}
   \cos( \tfrac{ \varphi }{ 2 } + \pi ) = -\cos( \tfrac{ \varphi }{ 2 } ), \quad
   \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfrac{ \varphi }{ 2 } ).
 \end{equation}
@@ -419,9 +419,9 @@ za~pomocą $\alpha$ i~$\beta$.
 iloczyn Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
 i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
-  \label{eq:Leja-13}
-  \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right) \left(
-    \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
+  \label{eq:LejaFZ-13}
+  \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right)
+  \left( \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
   }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
   } b_{ n } ) z^{ n }.
 \end{equation}
@@ -448,12 +448,12 @@ w~kilku miejscach.
 Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
 zachodzi poniższa nierówność
 \begin{equation}
-  \label{eq:Leja-14}
+  \label{eq:LejaFZ-14}
   \absOne{ C_{ n } - A_{ n } B } \leq \varepsilon, \quad \forall \varepsilon > 0,
 \end{equation}
 bowiem z~tego będzie wynikać
 \begin{equation}
-  \label{eq:Leja-15}
+  \label{eq:LejaFZ-15}
   \absOne{ C_{ n } - AB }
   \leq \absOne{ C_{ n } - A_{ n } B } + \absOne{ A_{ n } B - AB } \leq 2 \varepsilon,
 \end{equation}
@@ -461,7 +461,7 @@ dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\varepsilon > 0$. Teraz
 dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
 $\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
 \begin{equation}
-  \label{eq:Leja-16}
+  \label{eq:LejaFZ-16}
   \begin{split}
     \absOne{ C_{ n } - A_{ n } B }
     &=
@@ -479,7 +479,7 @@ $\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
 \end{equation}
 Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
 \begin{equation}
-  \label{eq:Leja-17}
+  \label{eq:LejaFZ-17}
   \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }
   \leq
   \absOne{ a_{ n - p } } \absOne{ \beta_{ p } } + \ldots + \absOne{ a_{ n } }
@@ -493,7 +493,7 @@ $n > q$ zachodzić
 $\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$. Teraz dla każdego
 $n > \max( p, q )$ zachodzi
 \begin{equation}
-  \label{eq:Leja-18}
+  \label{eq:LejaFZ-18}
   \absOne{ C_{ n } - AB } \leq \varepsilon.
 \end{equation}
 Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
@@ -507,20 +507,20 @@ zakończony.
 dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
 Po~pierwsze dowód formuły
 \begin{equation}
-  \label{eq:Leja-19}
+  \label{eq:LejaFZ-19}
   \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n }
   = AB + A q_{ n } + B p_{ n } + r_{ n },
 \end{equation}
 nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
-  \label{eq:Leja-20}
+  \label{eq:LejaFZ-20}
   C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 }
   = n AB + A ( \beta_{ 0 } + \beta_{ 1 } + \ldots + \beta_{ n - 1 } )
   + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ldots + \alpha_{ n - 1 } ) + R_{ n },
 \end{equation}
 gdzie
 \begin{equation}
-  \label{eq:Leja-21}
+  \label{eq:LejaFZ-21}
   R_{ n } = n r_{ n } =
   \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 }.
 \end{equation}
@@ -529,20 +529,20 @@ wyrazów.
 
 Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
-  \label{eq:Leja-22}
+  \label{eq:LejaFZ-22}
   \begin{split}
     \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
-    0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } ) &= ( a_{ 0 }
-                                                        + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
-                                                        + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
-                                                      &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
+    0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } )
+    &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
+      + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
+    &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
   \end{split}
 \end{equation}
 Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
 przypadków. Dowód przeprowadzimy indukcyjnie. Przypadek $n = 0$
 wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
 \begin{equation}
-  \label{eq:Leja-23}
+  \label{eq:LejaFZ-23}
   \begin{split}
     \sum_{ i = 0 }^{ n + 1 } c_{ i }
     &= ( a_{ 0 } + a_{ 1 } + \ldots +
@@ -564,24 +564,22 @@ Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-16}, który również
 przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
 Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
-  \label{eq:Leja-24}
-  \begin{split}
+  \label{eq:LejaFZ-24}
     C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
-    &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+    = n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
       \alpha_{ i } + R_{ n } + C_{ n }.
-  \end{split}
 \end{equation}
 Następny krok jest trochę długi. Przeliczając kilka pierwszych
 przypadków, łatwo zgadnąć, że
 \begin{equation}
-  \label{eq:Leja-25}
+  \label{eq:LejaFZ-25}
   C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
 \end{equation}
 Zacznijmy od~tego, że
 $b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
 korzystając więc, ze~wzoru \eqref{eq:Leja-19}
 \begin{equation}
-  \label{eq:Leja-26}
+  \label{eq:LejaFZ-26}
   \begin{split}
     C_{ n }
     &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ldots + A_{ 0 }
@@ -605,7 +603,7 @@ korzystając więc, ze~wzoru \eqref{eq:Leja-19}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ldots + C_{ n }$ odpowiada
 liczbie~$n + 1$. Tym samym
 \begin{equation}
-  \label{eq:Leja-27}
+  \label{eq:LejaFZ-27}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
     &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
@@ -624,7 +622,7 @@ liczbie~$n + 1$. Tym samym
 i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
 i~$M_{ \beta }$ takie, że
 \begin{equation}
-  \label{eq:Leja-28}
+  \label{eq:LejaFZ-28}
   \absOne{ M_{ \alpha } } \leq M_{ \alpha }, \quad \absOne{ \beta_{ n } } \leq M_{ \beta }.
 \end{equation}
 Ustalmy teraz $\varepsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc możemy
@@ -632,7 +630,7 @@ znaleźć taką liczbę~$p$,
 iż~$\absOne{ \beta_{ n } } \leq \varepsilon / 2 M_{ \alpha }$,
 dla~$n > p$. Teraz
 \begin{equation}
-  \label{eq:Leja-29}
+  \label{eq:LejaFZ-29}
   \begin{split}
     \absOne{ r_{ n } }
     &=
@@ -707,7 +705,7 @@ Powód tego jest dość oczywisty. Jeśli krzywa ma~\textbf{punkty
 sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona „stała
 w~miejscu”. Przykładem takie zachowania jest krzywa
 \begin{equation}
-  \label{eq:Leja-30}
+  \label{eq:LejaFZ-30}
   z( t ) =
   \begin{cases}
     t^{ 2 } + i 0, & t \leq 0, \\
@@ -718,10 +716,10 @@ Jest to krzywa klasy $\Ccal^{ \infty }( \Rbb, \Cbb )$ NIE JEST, która
 dla~$t \geq 0$ stoi w~punkcie $z = 0 + i 0$. Jeśli wzór na jej
 długość, dostaniemy oczywisty rezultat
 \begin{equation}
-  \label{eq:Leja-31}
+  \label{eq:LejaFZ-31}
   \begin{split}
-    s( t ) = \int_{ 0 }^{ t } \absOne{ z'( u ) } \, du = \int_{ 0 }^{ t } 0 \,
-    du = 0, \quad t \geq 0.
+    s( t ) = \int_{ 0 }^{ t } \absOne{ z'( u ) } \, du
+    = \int_{ 0 }^{ t } 0 \, du = 0, \quad t \geq 0.
   \end{split}
 \end{equation}
 Widzimy więc, że~krzywej tej nie da~się sparametryzować za~pomocą
@@ -732,7 +730,7 @@ da~się przedstawić w~postaci równania kanonicznego. Jest to wciąż
 możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem takiej
 sytuacji jest krzywa
 \begin{equation}
-  \label{eq:Leja-32}
+  \label{eq:LejaFZ-32}
   z( t ) = t^{ 3 } + i 0, \quad t \in \Rbb.
 \end{equation}
 
@@ -750,7 +748,7 @@ lecz z~pewną możliwą dla niej parametryzacja. Przykład
 \eqref{eq:Leja-32} powyżej jest właśnie tego typu. Jeśli użyjemy
 do~niego funkcji reparametryzującej
 \begin{equation}
-  \label{eq:Leja-33}
+  \label{eq:LejaFZ-33}
   \varphi( \tau ) =
   \begin{cases}
     -\sqrt[3]{ \absOne{ \tau } }, & \tau \leq 0, \\
@@ -759,7 +757,7 @@ do~niego funkcji reparametryzującej
 \end{equation}
 otrzymamy
 \begin{equation}
-  \label{eq:Leja-34}
+  \label{eq:LejaFZ-34}
   z\big( \varphi( \tau ) \big) = \tau, \quad \tau \in \Rbb.
 \end{equation}
 Natomiast w~przypadku \eqref{eq:Leja-30} mamy do~czynienia z~punktami
@@ -940,7 +938,7 @@ może prowadzić do~powstania funkcji o~nowej dziedzinie.
 Teraz zajmiemy~się subtelniejszym problemem. Rozważmy następujący
 iloczyn
 \begin{equation}
-  \label{eq:Leja-35}
+  \label{eq:LejaFZ-35}
   W_{ 1 }( z ) =
   \frac{ P_{ 1 }( z ) }{ Q_{ 1 }( z ) } ( z - 1 ) ( z - 2 )
   = \frac{ 1 }{ z - 1 } ( z - 1 ) ( z - 2 ) = z - 2.
@@ -958,7 +956,7 @@ wówczas zawsze rozszerzamy ją do~funkcji określonej na~zbiorze
 $\Cbb \setminus \{ z_{ 1 }, z_{ 2 }, \ldots, z_{ i - 1 }, z_{ i + 1 }, \ldots,
 z_{ n } \}$ poprzez
 \begin{equation}
-  \label{eq:Leja-36}
+  \label{eq:LejaFZ-36}
   f( z_{ i } ) := \frac{ P( z_{ i } ) }{ Q( z_{ i } ) }.
 \end{equation}
 
@@ -969,7 +967,7 @@ z_{ n } \}$ poprzez
 \start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest
 funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \begin{equation}
-  \label{eq:Leja-37}
+  \label{eq:LejaFZ-37}
   f( z ) - \sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
 \end{equation}
 
@@ -1043,7 +1041,7 @@ mieć skok, a~więc przestaje być ciągła.
 \start \Str{60} Nie udowodniono tu, że~dwie dowolne gałęzie logarytmu
 różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
 \begin{equation}
-  \label{eq:Leja-38}
+  \label{eq:LejaFZ-38}
   e^{ l_{ i }( z ) } = e^{ l_{ j }( z ) }
   \iff e^{ l_{ i }( z ) } / e^{ l_{ j }( z ) } = e^{ l_{ i }( z ) - l_{ j }( z ) }
     = 1.
@@ -1236,50 +1234,50 @@ różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
 
     \centering
 
-  \begin{tikzpicture}[scale=1.35]
-    \def\axissize{2.5}
+    \begin{tikzpicture}[scale=1.35]
+      \def\axissize{2.5}
 
-    \def\R{2.8}
-
-
-
-    \draw[help lines, ->] (0,0) -- (\axissize,0);
-
-    \draw[help lines, ->] (0,-0.5) -- (0,\axissize);
-
-    \draw[dashed] (-0.6 * \axissize,0) -- (0,0);
+      \def\R{2.8}
 
 
 
-    \filldraw[black] (1.3,0) circle (1.5pt) node [below] {1};
+      \draw[help lines, ->] (0,0) -- (\axissize,0);
 
-    \draw[line width = 0.9pt, decoration = { markings, mark = at
-      position 0.3 with {\arrow[line width=1.2pt]{>}}, mark = at
-      position 0.75 with {\arrow [line width=1.1pt]{>}},}, postaction
-    = {decorate} ] (1.3,0) arc (0:53:1.3) -- (53:\R);
+      \draw[help lines, ->] (0,-0.5) -- (0,\axissize);
 
-
-    \filldraw[black] (53:1.3) circle (1.1pt) node [left]
-    {$e^{ i \varphi }$};
-
-    \filldraw[black] (53:\R) circle (1.5pt) node [right]
-    {$R\, e^{ i \varphi }$};
+      \draw[dashed] (-0.6 * \axissize,0) -- (0,0);
 
 
 
-    \node at (1.33,0.8) {$\Gamma$};
+      \filldraw[black] (1.3,0) circle (1.5pt) node [below] {1};
+
+      \draw[line width = 0.9pt, decoration = { markings, mark = at
+        position 0.3 with {\arrow[line width=1.2pt]{>}}, mark = at
+        position 0.75 with {\arrow [line width=1.1pt]{>}},}, postaction
+      = {decorate} ] (1.3,0) arc (0:53:1.3) -- (53:\R);
+
+
+      \filldraw[black] (53:1.3) circle (1.1pt) node [left]
+      {$e^{ i \varphi }$};
+
+      \filldraw[black] (53:\R) circle (1.5pt) node [right]
+      {$R\, e^{ i \varphi }$};
 
 
 
-    \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
+      \node at (1.33,0.8) {$\Gamma$};
 
-    \node at (0.4,\axissize) {$\mathfrak{Im}\, z$};
 
-    \node at (-0.15,-0.2) {$0$};
-  \end{tikzpicture}
 
-  \caption{Przykładowy kontur po~którym można całkować funkcje
-    $1 / \zeta$ „od~1 do~nieskończoności”.}
+      \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
+
+      \node at (0.4,\axissize) {$\mathfrak{Im}\, z$};
+
+      \node at (-0.15,-0.2) {$0$};
+    \end{tikzpicture}
+
+    \caption{Przykładowy kontur po~którym można całkować funkcje
+      $1 / \zeta$ „od~1 do~nieskończoności”.}
 
 \end{figure}
 % ##################
@@ -1902,6 +1900,30 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 
 
 
+% % ####################
+% \Work{ % Autor i tytuł dzieła
+% B. W. Szabat \\
+% ,,Wstęp do analizy zespolonej'',
+% \cite{SzabatWstepDoAnalizyZespolonej1974} }
+
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     17  &  5 & & dal & dal\dywiz \\
+%     25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
+%     %     & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \vspace{\spaceTwo}
 
 
 

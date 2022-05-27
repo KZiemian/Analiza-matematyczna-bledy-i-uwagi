@@ -170,6 +170,34 @@
 
 
 
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Grigorij Michajłowicz Fichtenholz \\
+  „Rachunek różniczkowy i~całkowy. Tom~I”,
+  \cite{FichtenholzRachunekRozniczkowyETCVolI2005} }
+
+
+
+
+Str. 303.
+$\displaystyle \sum_{ i = 1 }^{ n } a_{ i }^{2} \sum_{ i = 1 }^{ n } b_{ i }^{
+  2 }
+- \{ \sum_{ i = 1 }^{ n } a_{ i } b_{ i } \}^{ 2 } \geq 0$, \\
+Str. 371. $\displaystyle z'_{ x } = \frac{ x }{ p }\textrm{,} \quad
+z'_{ y } = \frac{ y }{ q }\textrm{.}$ \\
+Str. 376. \ldots ale równa jest 0, gdy\ldots
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
 
 
 % ############################
@@ -209,16 +237,16 @@ Ponieważ $\Dcal( x / \absOne{ x } ) = \Rbb \setminus \{ 0 \}$ i
     -1, & x < 0.
   \end{cases}
 \end{equation}
-$x / \absOne{ x } = 1$ dla~$x > 0$ i~$x / \absOne{ x } = -1$ dla~$x < 0$,
-więc zachodzi równość
+$x / \absOne{ x } = 1$ dla~$x > 0$ i~$x / \absOne{ x } = -1$
+dla~$x < 0$, więc zachodzi równość
 \begin{equation}
   \label{eq:FichtenholzVolII-03}
   \frac{ d F_{ 1 }( x ) }{ dx } = \frac{ d F_{ 2 }( x ) }{ dx }
   = \frac{ 1 }{ x } = f( x ).
 \end{equation}
 Pochodne $F'_{ i }( x )$, $i = 1, 2$ również mają dziedzinę równą
-$\Dcal( f ) = \Rbb \setminus \{ 0 \}$. Jednak funkcje $F_{ i }( x )$ nie
-różnią~się o~funkcje stałą
+$\Dcal( f ) = \Rbb \setminus \{ 0 \}$. Jednak funkcje $F_{ i }( x )$
+nie różnią~się o~funkcje stałą
 \begin{subequations}
   \begin{align}
     \label{eq:FichtenholzVolII-04-A}
@@ -235,12 +263,13 @@ Na~początku ustalany oznaczenia i~definicje. W~dalszym ciągu $I$
 i~$I_{ \iota }$ oznaczać będą jeden z~następujących zbiorów
 $( a, b )$, $[ a, b ]$, $[ a, b )$, $( a, b ]$, $( -\infty, a )$,
 $( a, +\infty )$, $( -\infty, a ]$, $[ a, +\infty )$,
-$( -\infty, +\infty )$, $\absOne{ a }, \absOne{ b } < +\infty$. Funkcja
-$f( x ): I \to \Rbb$ jest różniczkowalna, jeśli jest różniczkowalna
-we~wnętrzu zbioru~$I$ (czyli jednym z~odcinków otwartych $( a, b )$,
-$( -\infty, a )$, $( a, +\infty )$), jeśli zaś $I$ jest z~którejś
-strony domknięty, to~istnieje tam pochodna jednostronna.
-$F( x ): I \to \Rbb$ jest funkcją pierwotną $f( x )$, jeśli
+$( -\infty, +\infty )$, $\absOne{ a }, \absOne{ b } < +\infty$.
+Funkcja $f( x ): I \to \Rbb$ jest różniczkowalna, jeśli jest
+różniczkowalna we~wnętrzu zbioru~$I$ (czyli jednym z~odcinków
+otwartych $( a, b )$, $( -\infty, a )$, $( a, +\infty )$), jeśli zaś
+$I$ jest z~którejś strony domknięty, to~istnieje tam pochodna
+jednostronna. $F( x ): I \to \Rbb$ jest funkcją pierwotną $f( x )$,
+jeśli
 \begin{equation}
   \label{eq:FichtenholzVolII-05}
   \frac{ d F( x ) }{ dx } = f( x ), \quad \forall x \in I.
@@ -303,11 +332,11 @@ następujący wniosek.
 \begin{corollary}
   \label{cor:FichtenholzVolII-01}
 
-  Niech $A = \bigcup_{ \iota \in \Ical } I_{ \iota }$, przy czym
-  każdy z~przedziałów $I_{ \iota }$ jest składową spójną $A$ i~niech
-  $f: A \to \Rbb$ będzie różniczkowalna na~każdym $I_{ \iota }$.
-  Wówczas dwie funkcje pierwotne~$f$ różnią~się o~funkcje schodkową
-  $g( x )$, która jest stała na~każdym $I_{ \iota }$.
+  Niech $A = \bigcup_{ \iota \in \Ical } I_{ \iota }$, przy czym każdy z~przedziałów
+  $I_{ \iota }$ jest składową spójną $A$ i~niech $f: A \to \Rbb$
+  będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas dwie funkcje
+  pierwotne~$f$ różnią~się o~funkcje schodkową $g( x )$, która jest
+  stała na~każdym $I_{ \iota }$.
 
 \end{corollary}
 
@@ -344,12 +373,12 @@ Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
 ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
 funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
 w~$( a, b )$ (zob.~punkt~112, str.~196,
-\cite{FichtenholzRachunekRozniczkowyVolI2005}), co~potencjalnie może prowadzić
-do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie, czy~można
-zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze, który nie
-jest postaci $\bigcup_{ \iota \in \Ical } I_{ \iota }$ (przy zadanym
-ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było, to
-pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
+\cite{FichtenholzRachunekRozniczkowyETCVolI2005}), co~potencjalnie
+może prowadzić do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie,
+czy~można zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze,
+który nie jest postaci $\bigcup_{ \iota \in \Ical } I_{ \iota }$ (przy
+zadanym ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było,
+to pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
 do~przewidzenia.
 
 \vspace{\spaceFour}
@@ -380,7 +409,7 @@ Gdyby tak równość zachodziła, to po pierwsze
     &=
       \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } }
       + \frac{ 1 }{ 1 - x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
-    + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
+      + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
     &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
   \end{split}
 \end{equation}
@@ -776,57 +805,69 @@ jednostajnej należy dowodzić inną metodą.
 
 
 
-\start Str. 97. Dowód punktu (b) uwagi łatwo przeprowadzić przez
+\start \Str{97} Dowód punktu (b) uwagi łatwo przeprowadzić przez
 kontrapozycje, nie widzę jednak sposobu udowodnienia go w sposób
-analogiczny do punktu (a). W dowodzie tym kluczowe jest oszacowanie
-\\
+analogiczny do punktu (a). W dowodzie tym kluczowe jest oszacowanie \\
 $| a_{ n } ( z_{ 1 } - z_{ 0 } )^{ n } | < M$. Jednak dla szeregu o niezerowym
 promieniu zbieżności nie być możliwe oszacowanie szeregu od góry albo
 od dołu. Za przykład może posłużyć zachowanie szeregów
-$\sum \frac{1}{n} z^{n}$ i $\sum n z^{n}$ w $z=1$. Oba są tam
+$\sum \frac{ 1 }{ n } z^{ n }$ i~$\sum n z^{ n }$ w~$z = 1$. Oba są tam
 rozbieżne
 
-\start Str. 98. Dowód twierdzenia Cauchy'ego-Hadamarda zawiera w sobie
-dowód kryterium Cauchy`ego zbieżności szeregów. Czyni to dowód bardzo
-zagmatwanym i trudnym do zrozumienia.
+\vspace{\spaceFour}
 
 
-% Błędy:\\
-% \begin{tabular}{|c|c|c|c|c|}
-%   \hline
-%   & \multicolumn{2}{c|}{} & & \\
-%   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                             & Powinno być \\ \cline{2-3}
-%   & Od góry & Od dołu & & \\
-%   \hline
-%   & & & & \\
-%   \hline
-% \end{tabular}
 
-\begin{itemize}
-\item[--] Str. 23. \ldots 2$^{ \circ }$ identytywna\ldots
-\item[--] Str. 28. \emph{Ad} 2$^{ \circ }$: $| ( a'_{ n } + b'_{ n } ) - ( a_{ n } + b_{ n } ) |  \leq | a'_{ n } - a_{ n } | + | b'_{ n } - b_{ n } | <2 \, \varepsilon$, bo\\
-  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n
-  } ) \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
-  \wedge | b'_{ n } - b_{ n } | < \epsilon, \textrm{ dla } n > N )
-  \big)$.
-\item[--] Str. 32.
-\item[--] Str. 43. \ldots wynika z definicji odwzorowania ciągłego.
-\item[--] Str. 54. Niech $g'( x ) h + r_{ 1 }( h ) \neq 0$\ldots
-\item[--] Str.
-  97.$$t := \frac{ | z - z_{ 0 } | }{ | z_{ 1 } - z_{ 0 } | }
-  \textrm{\ldots}$$
-\item[--] Str. 112.
-  $$\big( 0 \leq f \leq C \frac{ 1 }{ x^{ \mu } } \textrm{ ; } \mu
-  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f <
-  \infty \big) \textrm{;}$$
-\item[--] Str. 112.
-  $$\big( 0 \leq f \leq C \frac{ 1 }{ x ( \log x )^{ \mu } } \textrm{
-    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a
-  } f < \infty \big) \textrm{;}$$
-\item[--] Str. 125. \ldots
-\item[--] Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
-\end{itemize}
+\start \Str{98} Dowód twierdzenia Cauchy’ego-Hadamarda zawiera w sobie
+dowód kryterium Cauchy’ego zbieżności szeregów. Czyni to dowód bardzo
+zagmatwanym i~trudnym do zrozumienia.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+Str. 23. \ldots 2$^{ \circ }$ identytywna\ldots \\
+Str. 28. \textit{Ad} 2$^{ \circ }$: $| ( a'_{ n } + b'_{ n } )
+- ( a_{ n } + b_{ n } ) |  \leq | a'_{ n } - a_{ n } | + | b'_{ n } - b_{ n } |
+< 2 \, \varepsilon$, bo \\
+$\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n } ) \big)
+\Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
+\wedge | b'_{ n } - b_{ n } | < \epsilon, \textrm{ dla } n > N ) \big)$. \\
+Str. 32. \\
+Str. 43. \ldots wynika z definicji odwzorowania ciągłego. \\
+Str. 54. Niech $g'( x ) h + r_{ 1 }( h ) \neq 0$\ldots \\
+Str. 97. $t := \frac{ | z - z_{ 0 } | }{ | z_{ 1 } - z_{ 0 } | }
+\textrm{\ldots}$ \\
+Str. 112.
+$\big( 0 \leq f \leq C \frac{ 1 }{ x^{ \mu } } \textrm{ ; } \mu \geq 1 \big)
+\Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big) \textrm{;}$ \\
+Str. 112.
+$\big( 0 \leq f \leq C \frac{ 1 }{ x ( \log x )^{ \mu } } \textrm{ ; } \mu \geq 1 \big)
+\Rightarrow \big( \int \limits^{ \infty }_{ a } f < \infty \big) \textrm{;}$ \\
+Str. 125. \ldots \\
+Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
+
 
 \vspace{\spaceTwo}
 % ############################
@@ -836,6 +877,208 @@ zagmatwanym i trudnym do zrozumienia.
 
 
 
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Krzysztof Maurin \\
+  ,,Analiza. Część II: Ogólne struktury, funkcje algebraiczne,\\
+  całkowanie, analiza tensorowa'', \cite{} }
+
+
+Uwagi:
+\begin{itemize}
+\item Str 90. W równaniu
+  \begin{displaymath}
+    \rho( v )^{ 2 } = Q( v ) \cdot 1,
+  \end{displaymath}
+  1 po prawej stronie oznacza jedynkę w algebrze $\mathcal{C}( V )$. W
+  tekście nie zostało to w ogóle zaznaczone.
+\end{itemize}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    24  & 17 & & $\exists_{ \substack{ W \in \mathcal{B}( x ) } }$
+           & $\exists_{ \substack{ W \in \mathcal{B}( y ) } }$ \\
+    26  & 16 & & $\Leftarrow:$ & $\Leftarrow$ (a.a.). \\
+    90  & & 17 & nieskończenie & niekoniecznie \\
+    90  & &  8 & $V = (V, B)$ & $V = (V, Q)$ \\
+    90  & &  8 & algebra & algebra z jedynką \\
+    92  & & 17 & $2Q( e_{ i }, e_{ j } )$ & $B( e_{ i }, e_{ j } )$ \\
+    99  &  3 & & $K( a )$ & $\mathbf{K}( a )$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Teoria funkcji rzeczywistych}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Stanisław Łojasiewicz \\
+  „Wstęp do~teorii funkcji rzeczywistych”,
+  \cite{LojasiewiczWstepDoTeoriiFunkcjiRzeczywistych1976} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{7} Dla pełniejszego wykładu, warto tu przytoczyć pozostałe
+operacje z~udziałem $\pm \infty$.
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-01}
+  \begin{split}
+    &a + ( \pm \infty ) = ( \pm \infty ) + a = \pm \infty, \\
+    &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \pm \infty,
+    \quad a > 0, \\
+    &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \mp \infty,
+    \quad a < 0, \\
+    &( +\infty ) \cdot ( +\infty ) = ( -\infty ) \cdot ( -\infty )
+    = +\infty, \\
+    &( +\infty ) \cdot ( -\infty ) = -\infty.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{7} Iloczyn w~$\overline{ \Rbb }$ nie jest ciągły
+dla~$x = \pm \infty$ i~$y = 0$ (odpowiednio $x = 0$
+i~$y = \pm \infty$), bo jeśli weźmiemy $x_{ n } = n$, $y_{ n } = 1 / n$,
+to
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-02}
+  \lim\limits_{ n \to \infty } x_{ n } y_{ n }
+  = \lim\limits_{ n \to \infty } 1 = 1 \neq 0 = ( +\infty ) \cdot 0.
+\end{equation}
+Suma nie jest ciągła dla~$x = +\infty$ i~$y = -\infty$ (odpowiednio
+$x = -\infty$ i~$y = +\infty$), bo~jeśli weźmiemy $x_{ n } = 1 + n$
+i~$y_{ n } = -n$, to
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-03}
+  \lim\limits_{ n \to \infty } ( x_{ n } + y_{ n } )
+  = \lim\limits_{ n \to \infty } 1 = 1 \neq 0 = +\infty - \infty.
+\end{equation}
+Mnożenie nie jest łączne, bo
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-04}
+  \begin{split}
+    &( a + \infty ) - \infty = \infty - \infty = 0, \\
+    &a + ( \infty - \infty ) = a + 0 = a.
+  \end{split}
+\end{equation}
+Mnożenie nie jest rozłączne względem dodawania, bo
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-05}
+  \begin{split}
+    &( +\infty ) \cdot ( a - \infty ) = ( +\infty \cdot a ) - \infty
+    = +\infty - \infty = 0, \\
+    &( +\infty ) \cdot ( a - \infty ) = ( +\infty ) \cdot ( -\infty )
+    = -\infty.
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{7} Stwierdzenie, że~przez brak łączności dodawania nie
+możemy przenosić wyrazów z~jednej strony równania na drugą, może
+wydawać~się nieoczywiste, dlatego tutaj wyjaśnimy to na przykładzie.
+Rozpatrzmy równość
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-06}
+  1 + \infty = \infty.
+\end{equation}
+Teraz chcielibyśmy odjąć od~obu stron $\infty$ i~wykonać obliczenia
+w~następujący sposób
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-07}
+  \begin{split}
+    &\textrm{L} = 1 + \infty - \infty = 1 + 0 = 1, \\
+    &\textrm{P} = \infty - \infty = 0.
+  \end{split}
+\end{equation}
+Błąd wynika z~tego, że~tak naprawdę wyrażenie po~lewej stronie ma
+następującą postać
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-08}
+  \textrm{L} = ( 1 + \infty ) - \infty.
+\end{equation}
+Chcielibyśmy przekształcić ten wzór w~następujący sposób
+\begin{equation}
+  \label{eq:LojasiewiczWDTFRz-09}
+  1 + ( \infty - \infty ) = 1 + 0 = 1.
+\end{equation}
+Tego jednak zrobić nie możemy ze~względu na~brak łączności dodawania.
+Zignorowanie tego prowadzi do~błędnych wyników powyżej.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    9   & 15 & & $\absOne{ \alpha }$ $\absOne{ \beta }$
+           & $\absOne{ \alpha }$, $\absOne{ \beta }$ \\
+    11  & &  5 & $\{ \alpha_{ n } \}$ & $\{ x_{ n } \}$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
