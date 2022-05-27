@@ -208,165 +208,298 @@ dziedzinach.
 \vspace{\spaceFour}
 
 
-% \start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
-% założenie o~tym, że~$\dd{}{ x }{ t } \neq 0$. Jeżeli mamy dane dwie
-% funkcje $y( t )$ i~$x( t )$, to~nie musi istnieć funkcja $y( x )$.
-% Jeżeli jednak dla jakiegoś $t_{ 0 }$ mamy
-% $\dd{}{ x }{ t }( t_{ 0 } ) \neq 0$ to~na mocy twierdzenie
-% o~odwracaniu funkcji klasy $\Cj$ istnieje\footnote{Nie wiem czy
-%   założenie o~klasie różniczkowalności jest konieczne, bowiem
-%   w~przypadku funkcji rzeczywistej jednej zmiennej istnieje wiele
-%   wariantów twierdzenia o~funkcji uwikłanej i~funkcji odwrotnej, więc
-%   może~się okazać, iż~jeden z~nich pozwala osłabić ten warunek.
-%   Szeroką dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
-%   \cite{FichtenholzRachunekRiCTomI2005}.} funkcja $t( x )$ w~pewnym
-% otoczeniu $t_{ 0 }$ i~w~tym otoczeniu $y( x ) = y( t( x ) )$.
 
-% Co~jednak dzieje~się, gdy~$\dd{}{ x }{ t }( t_{ 0 } ) = 0$, czy
-% funkcja $y( x )$ wówczas nie istnieje? Następujący przypadek pokazuje,
-% że~tak nie musi być. Rozpatrzmy funkcje $x( t ) = t^{ 3 }$,
-% $y( t ) = t$. Pomimo, że~$\dd{}{ x }{ t }( 0 ) = 0$~to, można to
-% zauważyć np. rysując wykresy obu funkcji, można odwikłać $t( x )$
-% i~wówczas
-% \begin{equation*}
-%   y( x ) =
-%   \begin{cases}
-%     \sqrt[1 / 3]{ x } & x \geq 0, \\
-%     -\sqrt[1 / 3]{ x } & x < 0.
-%   \end{cases}
-% \end{equation*}
-% Funkcja ta jednak nie jest różniczkowalna dla $x = 0$. Nie potrafię
-% stwierdzić, czy znikanie pochodnej $\dd{}{ x }{ t }( t_{ 0 } )$ musi
-% pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
-% nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
-% aby~tak było.
+\start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
+założenie o~tym, że~$\frac{ dx }{ dt } \neq 0$. Jeżeli mamy dane dwie
+funkcje $y( t )$ i~$x( t )$, to~nie musi istnieć funkcja $y( x )$.
+Jeżeli jednak dla jakiegoś $t_{ 0 }$ mamy
+$\frac{ dx }{ dt }( t_{ 0 } ) \neq 0$ to~na mocy twierdzenie
+o~odwracaniu funkcji klasy $\Ccal^{ k }$ istnieje\footnote{Nie wiem czy
+  założenie o~klasie różniczkowalności jest konieczne, bowiem
+  w~przypadku funkcji rzeczywistej jednej zmiennej istnieje wiele
+  wariantów twierdzenia o~funkcji uwikłanej i~funkcji odwrotnej, więc
+  może~się okazać, iż~jeden z~nich pozwala osłabić ten warunek.
+  Szeroką dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
+  \cite{FichtenholzRachunekRozniczkowyETCVolI2005}.} funkcja $t( x )$ w~pewnym
+otoczeniu $t_{ 0 }$ i~w~tym otoczeniu $y( x ) = y\big( t( x ) \big)$.
 
-% \vspace{\spaceFour}
+Co~jednak dzieje~się, gdy~$\frac{ dx }{ dt }( t_{ 0 } ) = 0$, czy
+funkcja $y( x )$ wówczas nie istnieje? Następujący przypadek pokazuje,
+że~tak nie musi być. Rozpatrzmy funkcje $x( t ) = t^{ 3 }$,
+$y( t ) = t$. Pomimo, że~$\frac{ dx }{ dt }( 0 ) = 0$~to, można to
+zauważyć np. rysując wykresy obu funkcji, można odwikłać $t( x )$
+i~wówczas
+\begin{equation}
+  \label{eq:KrysickiWlodarskiAnalizaVolI-01}
+  y( x ) =
+  \begin{cases}
+    \hphantom{-}\sqrt[ 1 / 3 ]{ x } & x \geq 0, \\
+    -\sqrt[ 1 / 3 ]{ x } & x < 0.
+  \end{cases}
+\end{equation}
+Funkcja ta jednak nie jest różniczkowalna dla $x = 0$. Nie potrafię
+stwierdzić, czy znikanie pochodnej $\frac{ dx }{ dt }( t_{ 0 } )$ musi
+pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
+nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
+aby~tak było.
+
+\vspace{\spaceFour}
 
 
-% \start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
-% pochodnej równy jest pochodnej modułu:
-% \begin{equation*}
-%   \left| \dd{}{ f }{ t } \right| = \dd{}{ \abso{ f } }{ t }.
-% \end{equation*}
-% Że~jest inaczej można~się przekonać rozważając znany przykłady ruchu
-% jednostajnego po okręgu, gdzie prędkość ma stałą długość, a~jednak
-% moduł przyśpieszenia nie jest równy 0, lecz $\fr{ v^{ 2 } }{ \rho }$,
-% gdzie $\rho$ to promień krzywizny.
 
-% Przeprowadzając proste obliczenia dostajemy poprawne wzory na składowe
-% i~moduł przyśpieszenia:
-% \begin{align*}
-%   a_{ x } &= 50 ( \cos 5t^{ 2 } - 100 t^{ 2 } \sin 5t^{ 2 } ), \\
-%   a_{ y } &= -50 ( \sin 5t^{ 2 } + 100 t^{ 2 } \cos 5t^{ 2 } ), \\
-%   a &= 50 \sqrt{ 1 + 100 t^{ 4 } }.
-% \end{align*}
-% Widzimy więc, że~moduł rośnie w~czasie. Należało~się tego spodziewać,
-% bowiem przyśpieszenie normalne do toru dane jest wzorem
-% $\fr{ v^{ 2 } }{ \rho }$, więc jeśli prędkość rośnie liniowo, to ta
-% składowa przyśpieszenia również musi rosnąć.
+\start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
+pochodnej równy jest pochodnej modułu:
+\begin{equation*}
+  \label{eq:KrysickiWlodarskiAnalizaVolI-02}
+  \left| \frac{ df }{ dt } \right| =
+  \frac{ d \absOne{ f } }{ dt }.
+\end{equation*}
+Że~jest inaczej można~się przekonać rozważając znany przykłady ruchu
+jednostajnego po okręgu, gdzie prędkość ma stałą długość, a~jednak
+moduł przyśpieszenia nie jest równy 0, lecz $\frac{ v^{ 2 } }{ \rho }$,
+gdzie $\rho$ to promień krzywizny.
 
-% % Uwagi:
-% % \begin{itemize}
-% % \item
-% % \item
-% % \item
-% % \item
-% % \end{itemize}
+Przeprowadzając proste obliczenia dostajemy poprawne wzory na składowe
+i~moduł przyśpieszenia:
+\begin{subequations}
+  \begin{align}
+    \label{eq:KrysickiWlodarskiAnalizaVolI-03-A}
+    a_{ x } &= 50 ( \cos 5t^{ 2 } - 100 t^{ 2 } \sin 5t^{ 2 } ), \\
+    \label{eq:KrysickiWlodarskiAnalizaVolI-03-B}
+    a_{ y } &= -50 ( \sin 5t^{ 2 } + 100 t^{ 2 } \cos 5t^{ 2 } ), \\
+    \label{eq:KrysickiWlodarskiAnalizaVolI-03-C}
+    a &= 50 \sqrt{ 1 + 100 t^{ 4 } }.
+  \end{align}
+\end{subequations}
 
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     46  &  8 & & $\sqrt[n]{ u_{ n } } < p$ & $\sqrt[n]{ u_{ n } } \leq p$ \\
-%     79  & &  8 & $-b \, a$ & $-b / a$ \\
-%     80  & 10 & & $= 2$ & $x = 2$ \\
-%     88  & &  2 & $\fr{ x^{ 2 } - 1 }{ x - 2 }$ & $\fr{ x^{ 2 } - 4 }
-%                                                  { x - 2 }$ \\
-%     89  &  5 & & $\fr{ ( x - 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$
-%            & $\fr{ ( x + 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$ \\
-%     96  & &  3 & $\fr{ -1 }{ 1 - x^{ 2 } }$
-%            & $\fr{ 1 }{ 1 - x^{ 2 } }$ \\
-%     116 &  2 & & $\left[ 2 \tan \fr{ x }{ 3 } + 1 \right)$
-%            & $ \left( 2 \tan \fr{ x }{ 3 } + 1 \right)$ \\
-%     129 & &  5 & $a = 796$ & $a = 7.96$ \\
-%     231 & 11 & & $\bigg| \Sum_{ k = 0 }^{ n } u( x ) - S( x ) < \bigg|
-%                  \veps$
-%            & $\bigg| \Sum_{ k = 0 }^{ n } u( x )
-%              - S( x ) \bigg| < \veps$ \\
-%     234 & & 11 & $\sin{ 1 \atop n }$ & $\sin \fr{ 1 }{ n }$ \\
-%     241 & &  6 & $f( 0 )$ & $f'( 0 )$ \\
-%     241 & &  4 & $2^{ 3 }$ & $2^{ 2 }$ \\
-%     256 & &  4 & $\fr{ f'( x ) }{ {}'( x ) }$ & $\fr{ f'( x ) }
-%                                                 { g'( x ) }$ \\
-%     258 & &  4 & ${ 1 \atop t^{ 2 } }$ & $\fr{ 1 }{ t^{ 2 } }$ \\
-%     259 &  8 & & oraz \emph{istnieje} & \emph{ale istnieje} \\
-%     441 & &  7 & $\arctan^{ 3 }x$ & $\arctan x^{ 3 }$ \\
-%     442 & &  6 & $\fr{ 1 }{ ( 1 - x ) \sqrt{ x } }$
-%            & $\fr{ 1 }{ x \ln x \ln( \ln x ) }$ \\
-%     436 & &  6 & $-4$ & $-2$ \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
+Widzimy więc, że~moduł rośnie w~czasie. Należało~się tego spodziewać,
+bowiem przyśpieszenie normalne do toru dane jest wzorem
+$\frac{ v^{ 2 } }{ \rho }$, więc jeśli prędkość rośnie liniowo, to ta
+składowa przyśpieszenia również musi rosnąć.
 
-% \begin{itemize}
 
-% \item[--] Str. 325. 16.32.
-%   $\int \frac{ 6 x - 13 }{ x^{ 2 } - \frac{ 7 }{ 2 } x + \frac{ 3 }{ 2
-%     } } dx$.
 
-% \item[--] Str. 378. 19.15.
-%   $\int \limits_{ 0 }^{ a } 3x \sqrt{ x^{ 2 } + 4 a^{ 2 } } dx, a > 0
-%   \textrm{.}$
 
-% \item[--] Str. 436. 5.38. $\frac{ 2 }{ 3 }$.
 
-% \item[--] Str. 438. 6.50.
-%   $y' = 7 x^{ 4 / 3 } - 13 x^{ 9 / 4 } - \frac{ 2 }{ 7 } x^{ -3 / 2 }
-%   \textrm{.}$
+% ##################
+\CenterBoldFont{Błędy}
 
-% \item[--] Str. 438. 6.53.
-%   $y' = x^{ -2 / 3 } - 3 x^{ 2 } + \frac{ 1 }{ 2 } \frac{ 1 }{ \sqrt[
-%     4 ]{ x } }$.
 
-% \item[--] Str. 438. 6.56. \ldots
-%   $y' = \frac{ -5 }{ 7 \sqrt[ 7 ]{ x^{ 8 } } } - 14 x^{ 6 } - \frac{ 3
-%   }{ 4 \sqrt{ x^{ 3 } } }$.
+\begin{center}
 
-% \item[--] Str. 438. 6.89. \ldots
-%   $z' = \frac{ -2 a x }{ ( a^{ 2 } + x^{ 2 } ) \sqrt{ a^{ 4 } - x^{ 4
-%       } } }$.
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    46  &  8 & & $\sqrt[n]{ u_{ n } } < p$ & $\sqrt[n]{ u_{ n } } \leq p$ \\
+    79  & &  8 & $-b \, a$ & $-b / a$ \\
+    80  & 10 & & $= 2$ & $x = 2$ \\
+    88  & &  2 & $\frac{ x^{ 2 } - 1 }{ x - 2 }$
+           & $\frac{ x^{ 2 } - 4 }{ x - 2 }$ \\
+    89  &  5 & & $\frac{ ( x - 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$
+           & $\frac{ ( x + 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$ \\
+    96  & &  3 & $\frac{ -1 }{ 1 - x^{ 2 } }$
+           & $\frac{ 1 }{ 1 - x^{ 2 } }$ \\
+    116 &  2 & & $\left[ 2 \tan \frac{ x }{ 3 } + 1 \right)$
+           & $ \left( 2 \tan \frac{ x }{ 3 } + 1 \right)$ \\
+    129 & &  5 & $a = 796$ & $a = 7.96$ \\
+    231 & 11 & & $\bigg| \sum_{ k = 0 }^{ n } u( x ) - S( x ) < \bigg|
+                 \varepsilon$
+           & $\bigg| \sum_{ k = 0 }^{ n } u( x ) - S( x ) \bigg|
+             < \varepsilon$ \\
+    234 & & 11 & $\sin{ 1 \atop n }$ & $\sin \frac{ 1 }{ n }$ \\
+    241 & &  6 & $f( 0 )$ & $f'( 0 )$ \\
+    241 & &  4 & $2^{ 3 }$ & $2^{ 2 }$ \\
+    256 & &  4 & $\frac{ f'( x ) }{ {}'( x ) }$
+           & $\frac{ f'( x ) }{ g'( x ) }$ \\[0.4em]
+    258 & &  4 & ${ 1 \atop t^{ 2 } }$ & $\frac{ 1 }{ t^{ 2 } }$ \\
+    259 &  8 & & oraz \textit{istnieje} & \textit{ale istnieje} \\
+    441 & &  7 & $\arctan^{ 3 }x$ & $\arctan x^{ 3 }$ \\
+    442 & &  6 & $\frac{ 1 }{ ( 1 - x ) \sqrt{ x } }$
+           & $\frac{ 1 }{ x \ln x \ln( \ln x ) }$ \\
+    436 & &  6 & $-4$ & $-2$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
 
-% \item[--] Str. 440. 6.113. $\cos x \neq 0$,
-%   $y' = \frac{ 7 \sin^{ 3 } x }{ \cos^{ 8 } x }$.
+\end{center}
 
-% \item[--] Str. 441. 6.129. $x > 1$,
-%   $y' = \frac{ x \ln x }{ \sqrt{ ( x^{ 2 } - 1 )^{ 3 } } }$.
 
-% \item[--] Str. 441. 6.131.
-%   $y' = x^{ 4 } \arctan x + \frac{ x^{ 5 } - x }{ 5 ( 1 + x^{ 2 } ) }
-%   - \frac{ 1 }{ 5 } x^{ 3 } + \frac{ 1 }{ 5 } x$.
-% \item[--] Str. 478. \ldots
-%   $I = \frac{ 1 }{ 3 } \ln | a^{ 3 } + x^{ 3 } |$.
 
-% \item[--] Str. 480. 16.26. $I = \frac{ 1 }{ 8 } ( 2 x + 1 )^{ 4 }$.
+Str. 325. 16.32.
+$\int \frac{ 6 x - 13 }{ x^{ 2 } - \frac{ 7 }{ 2 } x + \frac{ 3 }{ 2 } }
+\, dx$.
 
-% \item[--] Str. 480. 16.27. $x \neq \frac{ 2 }{ 3 }$;
-%   $I = \frac{ -1 }{ 9 ( 3 x - 2 )^{ 3 } }$.
+Str. 378. 19.15.
+$\int\limits_{ 0 }^{ a } 3x \sqrt{ x^{ 2 } + 4 a^{ 2 } } \, dx$, $a > 0$.
 
-% \item[--] Str. 480. 16.37. $x \neq \frac{ 2 }{ 3 }$,
-%   $x \neq \frac{ 3 }{ 2 }$;
-%   $I = \frac{ 1 }{ 5 } \ln | \frac{ 2 x - 3 }{ 3 x - 2 } |$.
+Str. 436. 5.38. $\frac{ 2 }{ 3 }$.
 
-% \end{itemize}
+Str. 438. 6.50.
+$y' = 7 x^{ 4 / 3 } - 13 x^{ 9 / 4 } - \frac{ 2 }{ 7 } x^{ -3 / 2 }$.
+
+Str. 438. 6.53.
+$y' = x^{ -2 / 3 } - 3 x^{ 2 } + \frac{ 1 }{ 2 } \frac{ 1 }{ \sqrt[ 4 ]{ x } }$.
+
+Str. 438. 6.56. \ldots
+$y' = \frac{ -5 }{ 7 \sqrt[ 7 ]{ x^{ 8 } } } - 14 x^{ 6 }
+- \frac{ 3 }{ 4 \sqrt{ x^{ 3 } } }$.
+
+Str. 438. 6.89. \ldots
+$z' = \frac{ -2 a x }{ ( a^{ 2 } + x^{ 2 } ) \sqrt{ a^{ 4 } - x^{ 4 } } }$.
+
+Str. 440. 6.113. $\cos x \neq 0$, $y' = \frac{ 7 \sin^{ 3 } x }{ \cos^{ 8 } x }$.
+
+Str. 441. 6.129. $x > 1$,
+$y' = \frac{ x \ln x }{ \sqrt{ ( x^{ 2 } - 1 )^{ 3 } } }$.
+
+Str. 441. 6.131.
+$y' = x^{ 4 } \arctan x + \frac{ x^{ 5 } - x }{ 5 ( 1 + x^{ 2 } ) }
+- \frac{ 1 }{ 5 } x^{ 3 } + \frac{ 1 }{ 5 } x$.
+
+Str. 478. \ldots $I = \frac{ 1 }{ 3 } \ln| a^{ 3 } + x^{ 3 } |$.
+
+Str. 480. 16.26. $I = \frac{ 1 }{ 8 } ( 2 x + 1 )^{ 4 }$.
+
+Str. 480. 16.27. $x \neq \frac{ 2 }{ 3 }$;
+$I = \frac{ -1 }{ 9 ( 3 x - 2 )^{ 3 } }$.
+
+Str. 480. 16.37. $x \neq \frac{ 2 }{ 3 }$, $x \neq \frac{ 3 }{ 2 }$;
+$I = \frac{ 1 }{ 5 } \ln| \frac{ 2 x - 3 }{ 3 x - 2 } |$.
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ##########################
+\Work{ % Autorzy i tytuł dzieła
+  Włodzimierz Krysicki, L. Włodarski \\
+  „Analiza matematyczna w~zadaniach. Tom~II”,
+  \cite{KrysickiWlodarskiAnalizaWZadaniachVolII2004} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{199} \textbf{Zadanie 7.2.} Rozwiązanie tego zadania jest
+niepełne, w~następujący sensie. Równanie numer (2) w~tym zadaniu,
+po~spierwiastkowaniu sprowadza~się do~równania:
+\begin{equation}
+  \label{eq:KrysickiWlodarskiAnalizaVolII-01}
+  \left| \frac{ dy }{ dx } \right| = \absOne{ \cos x }.
+\end{equation}
+Równania tego nie da~się przedstawić w~postaci Newtona, zaś poza
+równaniami (3) z~tego zadania, można uzyskać z~niego nieskończoną
+ilość innych, np. ograniczając~się do przedziału
+$( -\frac{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 } )$ możemy rozpatrzyć:
+\begin{equation}
+  \label{eq:KrysickiWlodarskiAnalizaVolII-02}
+  \frac{ dy }{ dx } =
+  \begin{cases}
+    -\cos x, & x \in ( -\frac{ \pi }{ 2 }, \frac{ \pi }{ 2 } ), \\
+    \hphantom{-}\cos x,
+             & x \in ( \frac{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 } ).
+  \end{cases}
+\end{equation}
+Dla dowolnych warunków początkowych w~rozpatrywanym przedziale, można
+znaleźć rozwiązania tego równania różniczkowalne w~całym przedziale.
+Na przykład dla $x_{ 0 } = \frac{ \pi }{ 2 }$, $y_{ 0 } = 0$, takim
+rozwiązaniem jest:
+\begin{equation}
+  \label{eq:KrysickiWlodarskiAnalizaVolII-03}
+  y( x ) =
+  \begin{cases}
+    -\sin x + 1, & x \in ( -\frac{ \pi }{ 2 }, \frac{ \pi }{ 2 } ), \\
+    \hphantom{-}\sin x - 1,
+                 & x \in ( \frac{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 } ).
+  \end{cases}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{200} \textbf{Zadanie 7.3.} Również tutaj problem znalezienia
+wszystkich rozwiązań równania różniczkowego nie został w~pełni
+rozwiązany. Ograniczając~się do przedziału $( 0, 2 \pi )$ możemy
+zauważyć, że~funkcja:
+\begin{equation}
+  \label{eq:KrysickiWlodarskiAnalizaVolII-04}
+  y( x ) =
+  \begin{cases}
+    C_{ 1 } \sin x,& x \in ( 0, \pi ), \\
+    0, & x = \pi, \\
+    C_{ 2 } \sin x,& x \in ( \pi, 2 \pi ),
+  \end{cases}
+\end{equation}
+jest rozwiązaniem równania (1) z~tego zadania w~całym badanym
+przedziale, choć nie jest różniczkowalne w~0.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    25  & &  7 & $( \sin z )^{ \tan z }$ & $( \sin x )^{ \tan z }$ \\
+    26  & 10 & & $3 \cdot 3$ & $9$ \\
+    26  & &  4 & $|\, \mathrm{n}$ & $\ln$ \\
+    26  &  2 & & $e^{ x^{ 2 } \sin( x - y^{ 2 } ) }$
+           & $\sin^{ x^{ 2 } }( x - y^{ 2 } )$ \\
+    26  &  1 & & $e^{ x^{ 2 } \sin( x - y^{ 2 } ) }$
+           & $\sin^{ x^{ 2 } }( x - y^{ 2 } )$ \\
+           % & & & & \\
+           % & & & & \\
+    201 & &  1 & $+$ & $=$ \\
+    203 &  7 & & $\frac{ a y }{ d x }$ & $\frac{ dy }{ dx }$ \\
+    203 &  7 & & sprawdzają & spełniają \\
+    207 &  2 & & $1 \frac{ 1 +
+                 \tfrac{ 1 }{ C_{ 2 }^{ 2 } } } { x^{ 2 } + 1 }$
+           & $1 - \frac{ 1 +
+             \frac{ 1 }{ C_{ 2 }^{ 2 } } }{ x^{ 2 } + 1 }$ \\
+             % & & & & \\
+    431 & &  3 & $x^{ \frac{ 1 }{ y - 1 } }$ & $x^{ \frac{ 1 }{ y } - 1 }$ \\
+    432 & &  9 & $\frac{ \pi R^{ 3 } }{ 3 }$ & $\frac{ \pi R^{ 2 } }{ 3 }$ \\
+    449 & &  9 & $C - e^{ \frac{ 1 }{ x } }$ & $C e^{ -\frac{ 1 }{ x } }$ \\
+    449 & &  9 & $c$ & $C$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+Str. 432.
+$\frac{ \partial^{ 2 } u }{ \partial x \partial y }
+= \frac{ \partial^{ 2 } u }{ \partial y \partial x }
+= 6 x^{ 2 } - 30 x y^{ 2 } - 2 \sin 2y$. \\
+Str. 454. 9.5. $y = C \frac{ x - 2 }{ x + 2 }$. \\
+Str. 454. 9.5. $y = C x$.
 
 \vspace{\spaceTwo}
 % ############################
