@@ -78,27 +78,28 @@
 % ---------------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
 % ---------------
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
 
 
 
 % ------------------------------
 % Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ------------------------------
-\usepackage{analizamatematyczna}  % Pakiet napisany między innymi
-% dla tego pliku.
-\usepackage{latexshortcuts}
-\usepackage{mathshortcuts}
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{analizamatematyczna}  % Pakiet napisany między innymi
+% % dla tego pliku.
 
 
 
 
-% --------------------------------------------------------------------
+
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -130,13 +131,13 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Zbiory zadań z~analizy matematycznej --~błędy i~uwagi}
 
 % \author{}
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -153,18 +154,222 @@
 
 
 
+
+
 % ######################################
 \maketitle  % Tytuł całego tekstu
 % ######################################
 
 
 
-% % ######################################
-% \section{Analiza matematyczna}
 
-% \vspace{\spaceTwo}
-% % ######################################
 
+% ######################################
+\newpage
+\section{Zbiory zadań z~analizy matematycznej}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{
+  Włodzimierz Krysicki, L. Włodarski \\
+  „Analiza matematyczna w zadaniach. Tom~I”,
+  \cite{KrysickiWlodarskiAnalizaWZadaniachVolI2005}}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{89} Problemy takie jak policzenie granicy
+$\lim\limits_{ x \to 0 } \frac{ \sin 3 x }{ x }$, sugerują następujące
+postępowanie. Wiemy, że~$\lim\limits_{ x \to 0 } 3x = 0$ oraz
+że~$\lim\limits_{ x \to 0 } \frac{ \sin x }{ x } = 1$, chcielibyśmy
+przekształcić wyrażenie do postaci $3 \frac{ \sin 3x }{ 3x }$
+i~skorzystać z~tego, że~$\lim\limits_{ x \to 0 } \frac{ \sin 3x }{ 3x } = 0$,
+pytanie jedna czy ta ostania równość zachodzi? Pozytywną odpowiedź
+na~to~pytanie daje poniższe twierdzenie.
+
+Funkcje tu użyte wciąż nie są zdefiniowane
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{96} Można
+zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają taką samą pochodną,
+więc powinny różnią~się o~stałą, co~jest nonsensem. Wyjaśnieniem
+problemu jest fakt, że~te dwie funkcje~są określone na rozłącznych
+dziedzinach.
+
+\vspace{\spaceFour}
+
+
+% \start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
+% założenie o~tym, że~$\dd{}{ x }{ t } \neq 0$. Jeżeli mamy dane dwie
+% funkcje $y( t )$ i~$x( t )$, to~nie musi istnieć funkcja $y( x )$.
+% Jeżeli jednak dla jakiegoś $t_{ 0 }$ mamy
+% $\dd{}{ x }{ t }( t_{ 0 } ) \neq 0$ to~na mocy twierdzenie
+% o~odwracaniu funkcji klasy $\Cj$ istnieje\footnote{Nie wiem czy
+%   założenie o~klasie różniczkowalności jest konieczne, bowiem
+%   w~przypadku funkcji rzeczywistej jednej zmiennej istnieje wiele
+%   wariantów twierdzenia o~funkcji uwikłanej i~funkcji odwrotnej, więc
+%   może~się okazać, iż~jeden z~nich pozwala osłabić ten warunek.
+%   Szeroką dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
+%   \cite{FichtenholzRachunekRiCTomI2005}.} funkcja $t( x )$ w~pewnym
+% otoczeniu $t_{ 0 }$ i~w~tym otoczeniu $y( x ) = y( t( x ) )$.
+
+% Co~jednak dzieje~się, gdy~$\dd{}{ x }{ t }( t_{ 0 } ) = 0$, czy
+% funkcja $y( x )$ wówczas nie istnieje? Następujący przypadek pokazuje,
+% że~tak nie musi być. Rozpatrzmy funkcje $x( t ) = t^{ 3 }$,
+% $y( t ) = t$. Pomimo, że~$\dd{}{ x }{ t }( 0 ) = 0$~to, można to
+% zauważyć np. rysując wykresy obu funkcji, można odwikłać $t( x )$
+% i~wówczas
+% \begin{equation*}
+%   y( x ) =
+%   \begin{cases}
+%     \sqrt[1 / 3]{ x } & x \geq 0, \\
+%     -\sqrt[1 / 3]{ x } & x < 0.
+%   \end{cases}
+% \end{equation*}
+% Funkcja ta jednak nie jest różniczkowalna dla $x = 0$. Nie potrafię
+% stwierdzić, czy znikanie pochodnej $\dd{}{ x }{ t }( t_{ 0 } )$ musi
+% pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
+% nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
+% aby~tak było.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
+% pochodnej równy jest pochodnej modułu:
+% \begin{equation*}
+%   \left| \dd{}{ f }{ t } \right| = \dd{}{ \abso{ f } }{ t }.
+% \end{equation*}
+% Że~jest inaczej można~się przekonać rozważając znany przykłady ruchu
+% jednostajnego po okręgu, gdzie prędkość ma stałą długość, a~jednak
+% moduł przyśpieszenia nie jest równy 0, lecz $\fr{ v^{ 2 } }{ \rho }$,
+% gdzie $\rho$ to promień krzywizny.
+
+% Przeprowadzając proste obliczenia dostajemy poprawne wzory na składowe
+% i~moduł przyśpieszenia:
+% \begin{align*}
+%   a_{ x } &= 50 ( \cos 5t^{ 2 } - 100 t^{ 2 } \sin 5t^{ 2 } ), \\
+%   a_{ y } &= -50 ( \sin 5t^{ 2 } + 100 t^{ 2 } \cos 5t^{ 2 } ), \\
+%   a &= 50 \sqrt{ 1 + 100 t^{ 4 } }.
+% \end{align*}
+% Widzimy więc, że~moduł rośnie w~czasie. Należało~się tego spodziewać,
+% bowiem przyśpieszenie normalne do toru dane jest wzorem
+% $\fr{ v^{ 2 } }{ \rho }$, więc jeśli prędkość rośnie liniowo, to ta
+% składowa przyśpieszenia również musi rosnąć.
+
+% % Uwagi:
+% % \begin{itemize}
+% % \item
+% % \item
+% % \item
+% % \item
+% % \end{itemize}
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     46  &  8 & & $\sqrt[n]{ u_{ n } } < p$ & $\sqrt[n]{ u_{ n } } \leq p$ \\
+%     79  & &  8 & $-b \, a$ & $-b / a$ \\
+%     80  & 10 & & $= 2$ & $x = 2$ \\
+%     88  & &  2 & $\fr{ x^{ 2 } - 1 }{ x - 2 }$ & $\fr{ x^{ 2 } - 4 }
+%                                                  { x - 2 }$ \\
+%     89  &  5 & & $\fr{ ( x - 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$
+%            & $\fr{ ( x + 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$ \\
+%     96  & &  3 & $\fr{ -1 }{ 1 - x^{ 2 } }$
+%            & $\fr{ 1 }{ 1 - x^{ 2 } }$ \\
+%     116 &  2 & & $\left[ 2 \tan \fr{ x }{ 3 } + 1 \right)$
+%            & $ \left( 2 \tan \fr{ x }{ 3 } + 1 \right)$ \\
+%     129 & &  5 & $a = 796$ & $a = 7.96$ \\
+%     231 & 11 & & $\bigg| \Sum_{ k = 0 }^{ n } u( x ) - S( x ) < \bigg|
+%                  \veps$
+%            & $\bigg| \Sum_{ k = 0 }^{ n } u( x )
+%              - S( x ) \bigg| < \veps$ \\
+%     234 & & 11 & $\sin{ 1 \atop n }$ & $\sin \fr{ 1 }{ n }$ \\
+%     241 & &  6 & $f( 0 )$ & $f'( 0 )$ \\
+%     241 & &  4 & $2^{ 3 }$ & $2^{ 2 }$ \\
+%     256 & &  4 & $\fr{ f'( x ) }{ {}'( x ) }$ & $\fr{ f'( x ) }
+%                                                 { g'( x ) }$ \\
+%     258 & &  4 & ${ 1 \atop t^{ 2 } }$ & $\fr{ 1 }{ t^{ 2 } }$ \\
+%     259 &  8 & & oraz \emph{istnieje} & \emph{ale istnieje} \\
+%     441 & &  7 & $\arctan^{ 3 }x$ & $\arctan x^{ 3 }$ \\
+%     442 & &  6 & $\fr{ 1 }{ ( 1 - x ) \sqrt{ x } }$
+%            & $\fr{ 1 }{ x \ln x \ln( \ln x ) }$ \\
+%     436 & &  6 & $-4$ & $-2$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \begin{itemize}
+
+% \item[--] Str. 325. 16.32.
+%   $\int \frac{ 6 x - 13 }{ x^{ 2 } - \frac{ 7 }{ 2 } x + \frac{ 3 }{ 2
+%     } } dx$.
+
+% \item[--] Str. 378. 19.15.
+%   $\int \limits_{ 0 }^{ a } 3x \sqrt{ x^{ 2 } + 4 a^{ 2 } } dx, a > 0
+%   \textrm{.}$
+
+% \item[--] Str. 436. 5.38. $\frac{ 2 }{ 3 }$.
+
+% \item[--] Str. 438. 6.50.
+%   $y' = 7 x^{ 4 / 3 } - 13 x^{ 9 / 4 } - \frac{ 2 }{ 7 } x^{ -3 / 2 }
+%   \textrm{.}$
+
+% \item[--] Str. 438. 6.53.
+%   $y' = x^{ -2 / 3 } - 3 x^{ 2 } + \frac{ 1 }{ 2 } \frac{ 1 }{ \sqrt[
+%     4 ]{ x } }$.
+
+% \item[--] Str. 438. 6.56. \ldots
+%   $y' = \frac{ -5 }{ 7 \sqrt[ 7 ]{ x^{ 8 } } } - 14 x^{ 6 } - \frac{ 3
+%   }{ 4 \sqrt{ x^{ 3 } } }$.
+
+% \item[--] Str. 438. 6.89. \ldots
+%   $z' = \frac{ -2 a x }{ ( a^{ 2 } + x^{ 2 } ) \sqrt{ a^{ 4 } - x^{ 4
+%       } } }$.
+
+% \item[--] Str. 440. 6.113. $\cos x \neq 0$,
+%   $y' = \frac{ 7 \sin^{ 3 } x }{ \cos^{ 8 } x }$.
+
+% \item[--] Str. 441. 6.129. $x > 1$,
+%   $y' = \frac{ x \ln x }{ \sqrt{ ( x^{ 2 } - 1 )^{ 3 } } }$.
+
+% \item[--] Str. 441. 6.131.
+%   $y' = x^{ 4 } \arctan x + \frac{ x^{ 5 } - x }{ 5 ( 1 + x^{ 2 } ) }
+%   - \frac{ 1 }{ 5 } x^{ 3 } + \frac{ 1 }{ 5 } x$.
+% \item[--] Str. 478. \ldots
+%   $I = \frac{ 1 }{ 3 } \ln | a^{ 3 } + x^{ 3 } |$.
+
+% \item[--] Str. 480. 16.26. $I = \frac{ 1 }{ 8 } ( 2 x + 1 )^{ 4 }$.
+
+% \item[--] Str. 480. 16.27. $x \neq \frac{ 2 }{ 3 }$;
+%   $I = \frac{ -1 }{ 9 ( 3 x - 2 )^{ 3 } }$.
+
+% \item[--] Str. 480. 16.37. $x \neq \frac{ 2 }{ 3 }$,
+%   $x \neq \frac{ 3 }{ 2 }$;
+%   $I = \frac{ 1 }{ 5 } \ln | \frac{ 2 x - 3 }{ 3 x - 2 } |$.
+
+% \end{itemize}
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
@@ -191,7 +396,9 @@
   \cite{KrzyzZbiorZadanZFunkcjiAnalitycznych2005} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{28}{18} Sens tego niezbyt zgrabnie zbudowanego zdanie
 jest prosty. Mając dany dowolny niezerowy kąt\footnote{Czy to
@@ -201,10 +408,11 @@ takie $\alpha$, że~funkcja $z^{ \alpha }$ przekształca ten kąt na~kąt półp
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{31}{14} Stwierdzeni, że~całka
 \begin{equation}
-  \label{eq:Krzyz-01}
-  \int_{ \gamma } f( z )\, dz
+  \label{eq:KrzyzZZzFA-01}
+  \int_{ \gamma } f( z ) \, dz
 \end{equation}
 niezależny od parametryzacji, choć zrozumiałe jest niezręczne. Już
 następna część zdania przypomina, że~parametryzacji zmieniające
@@ -245,7 +453,10 @@ orientację.
 % \vspace{\spaceFour}
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -270,6 +481,8 @@ orientację.
 
 
 
+
+
   % \begin{tabular}{|c|c|c|c|c|}
   %   \hline
   %   & \multicolumn{2}{c|}{} & & \\
@@ -286,6 +499,7 @@ orientację.
   % \end{tabular}
 
 \end{center}
+
 % \noi \\
 % \StrWg{}{} \\
 % \Jest \Powin
@@ -303,7 +517,7 @@ orientację.
 % \Jest \Powin
 
 \vspace{\spaceTwo}
-
+% ############################
 
 
 
@@ -317,7 +531,11 @@ orientację.
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibDEUSPhil,LibMathInfo}{}
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
 
 
 

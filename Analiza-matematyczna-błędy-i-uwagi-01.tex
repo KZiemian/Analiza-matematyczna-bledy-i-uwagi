@@ -472,8 +472,8 @@ wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
   Niech $K < +\infty$, wtedy istnieje takie~$N$, że~dla $n > N$
   \begin{equation}
     \label{eq:FichtenholzVolII-13}
-    \frac{ a_{ n } }{ b_{ n } } < K + \epsilon,
-    \quad K + \epsilon > 0,
+    \frac{ a_{ n } }{ b_{ n } } < K + \epsilon, \quad
+    K + \epsilon > 0,
   \end{equation}
   skąd
   \begin{equation}
@@ -489,7 +489,8 @@ wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
   $n > N$
   \begin{equation}
     \label{eq:FichtenholzVolII-15}
-    a_{ n } > ( K - \epsilon ) b_{ n }, \quad K - \epsilon > 0.
+    a_{ n } > ( K - \epsilon ) b_{ n }, \quad
+    K - \epsilon > 0.
   \end{equation}
   Z~tej nierówności wynika, że~zbieżność szeregu~(A) implikuje
   zbieżność szeregu~(B), zaś rozbieżność szeregu~(B) pociąga za~sobą
@@ -642,10 +643,12 @@ szeregu od~0.
 % ##################
 \CenterBoldFont{Uwagi}
 
+
 \start Tyle błędów, że szybciej będzie napisać tę
 książkę od nowa.
 
 \vspace{\spaceFour}
+
 
 
 \start Paragraf poświęcony całce Riemanna, jest napisany nie
@@ -881,22 +884,29 @@ Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Krzysztof Maurin \\
-  ,,Analiza. Część II: Ogólne struktury, funkcje algebraiczne,\\
-  całkowanie, analiza tensorowa'', \cite{} }
+  „Analiza. Część II: Ogólne struktury, funkcje algebraiczne, \\
+  całkowanie, analiza tensorowa”, \cite{} }
 
 
-Uwagi:
-\begin{itemize}
-\item Str 90. W równaniu
-  \begin{displaymath}
-    \rho( v )^{ 2 } = Q( v ) \cdot 1,
-  \end{displaymath}
-  1 po prawej stronie oznacza jedynkę w algebrze $\mathcal{C}( V )$. W
-  tekście nie zostało to w ogóle zaznaczone.
-\end{itemize}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+\Str{90} W~równaniu
+\begin{equation}
+  \label{eq:MaurinAnalizaOgolneStrukturyVolII-01}
+  \rho( v )^{ 2 } = Q( v ) \cdot 1,
+\end{equation}
+Symbol „1” po prawej stronie oznacza jedynkę w algebrze $\Ccal( V )$. W~tekście nie zostało to w ogóle zaznaczone.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
 
 \begin{center}
 
@@ -907,11 +917,11 @@ Uwagi:
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    24  & 17 & & $\exists_{ \substack{ W \in \mathcal{B}( x ) } }$
-           & $\exists_{ \substack{ W \in \mathcal{B}( y ) } }$ \\
+    24  & 17 & & $\exists_{ \substack{ W \in \Bcal( x ) } }$
+           & $\exists_{ \substack{ W \in \Bcal( y ) } }$ \\
     26  & 16 & & $\Leftarrow:$ & $\Leftarrow$ (a.a.). \\
     90  & & 17 & nieskończenie & niekoniecznie \\
-    90  & &  8 & $V = (V, B)$ & $V = (V, Q)$ \\
+    90  & &  8 & $V = ( V, B )$ & $V = ( V, Q )$ \\
     90  & &  8 & algebra & algebra z jedynką \\
     92  & & 17 & $2Q( e_{ i }, e_{ j } )$ & $B( e_{ i }, e_{ j } )$ \\
     99  &  3 & & $K( a )$ & $\mathbf{K}( a )$ \\
@@ -921,7 +931,180 @@ Uwagi:
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Walter Rudin \\
+  „Analiza rzeczywista i zespolona”,
+  \cite{RudinAnalizaRzeczywistaIZespolona1998} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{132} Należy zauważyć, że wspomniana tu „miara
+rzeczywista” ma oznaczać miarę zespoloną (czyli miarę której
+dziedzina zawiera się w ciele liczb zespolonych, bez nieskończoności)
+która przyjmuje tylko wartości rzeczywiste.
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    27  & &  3 & fnkcji & funkcji \\
+    50  &  4 &  & Warunek (d) & Warunek (e) \\
+    50  & 13 &  & że$K \prec f  \prec V$ & że $K \prec f  \prec V$ \\
+    54  & & 16 & II i IV & II i VI \\
+    54  & & 15 & że więc & więc \\
+    64  & &  2 & $c_{ i } \chi_{ E_{ i } }$ & $c_{ i } \chi_{ V_{ i } }$ \\
+    95  &  5 & & $| \varphi - x_{ n } |^{ 2 } \leq | \varphi |^{ 2 }$
+           & $| \varphi - \hat{ x }_{ n } |^{ 2 } \leq | \varphi |^{ 2 }$ \\
+    95  &  8 & & $\Vert \hat{ x }_{ n } - x_{ m } \Vert_{ 2 }$
+           & $\Vert \hat{ x }_{ n } - \hat{ x }_{ m } \Vert_{ 2 }$ \\
+    99  & &  7 & $\Vert f - P \Vert_{ 2 } < \infty$
+           & $\Vert f - P \Vert_{ 2 } < \varepsilon$ \\
+    132 &  & 15 & miary rzeczywistej & miary zespolonej rzeczywistej \\
+    140 & & 11 & Ponieważ $\lambda$ & Ponieważ $\Phi$ \\
+    168 & &  5 & $\{ E_{ i } )$ & $\{ E_{ i } \}$ \\
+    177 & &  5 & $= \int\limits^{ \infty }_{ -\infty } g( t ) \, dt \ldots$
+           & $= \int\limits^{ x }_{ -\infty } g( t ) \, dt \ldots$ \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+Str. 51. $\mu( K ) = \inf\{ \Lambda f : K \prec f \}$. \\
+Str. 52. $\mu( K ) = \Lambda f$. \\
+Str. 52. \ldots co w zestawieniu z nierównością (9) daje (8). \\
+Str. 165. \ldots dla \textit{każdego} ciągu $\{ E_{ i } \}$\ldots
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Rachunek wariacyjny}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  I.M.~Gelfand, S.W.~Fomin \\
+  „Rachunek wariacyjny”, \cite{GelfandFominRachunekWariacyjny1979} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    25  & &  1 & $\lim\limits_{ \Delta x \to 0 }
+                 \frac{ \Delta y' }{ \Delta x } = \tilde{ F }_{ y' y' }$
+           & $\lim\limits_{ \Delta x \to 0 }
+             \frac{ \Delta y' }{ \Delta x } \tilde{ F }_{ y' y' }$ \\
+    27  &  7 & & $\frac{ d }{ dx }( F - y' F_{ y' } )$
+           & $\frac{ d }{ dx }( F - y' F_{ y' } ) = 0$ \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  J. Jost, X. Li-Jost \\
+  „Calculus of Variations”, \cite{JostLiJostCalculusOfVariations1998} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{6} Dowód podstawowego lematu rachunku wariacyjnego jest
+poprawny, acz mało elegancko zrobiony.
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     & & & & \\
+%     & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
 
 \vspace{\spaceTwo}
 % ############################
@@ -1079,6 +1262,73 @@ Zignorowanie tego prowadzi do~błędnych wyników powyżej.
 
 \vspace{\spaceTwo}
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Książki o~obliczeniach}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  P. J. Nahin \\
+  „Inside Interesting Integrals”,
+  \cite{NahinInterestingIntegrals2015} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    %     & & & & \\
+    %     & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWg{vi}{1} \\
+\Jest  \textbf{\textit{This book is~dedicated to all who, when they read
+    the~following line form John le~Carr\'{e}'s 1989 Cold War spy
+    novel}} \\
+\Powin \textbf{This book is~dedicated to all who, when they read
+  the~following line form John le~Carr\'{e}'s 1989 Cold War spy
+  novel} \\
+\StrWg{vi}{8} \\
+\Jest  \textbf{\textit{as well as to all who understand how frustrating is
+    the~lament in Anthony Zee's books}} \\
+\Powin \textbf{as well as to all who understand how frustrating is
+  the~lament in Anthony Zee's books} \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
 
 
 
