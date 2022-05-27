@@ -4,7 +4,7 @@
 % Część skrótów nie będzie działało bez pakietów od American Mathematican
 % Society, takich jak "amsmath", "amssym", etc.
 % ####################################################################
-\ProvidesPackage{mathshortcuts}
+\ProvidesPackage{mathcommands}
 
 
 
@@ -40,13 +40,6 @@
 % \newcommand{\ovSqTwoPi}{\fr{ 1 }{ \sqrt{ 2 \pi } }}
 
 
-% Ułamki
-% \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
-% \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
-% \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
-
-
-
 % Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
 % Wymyśl lepszą nazwę
 % \newcommand{\til}{\tilde}
@@ -66,8 +59,10 @@
 % Trzcionki matematyczne
 % \newcommand{\mr}{\mathrm}
 % \newcommand{\mb}{\mathbb}
-% \newcommand{\mc}{\mathcal}
+\newcommand{\Cfrak}{\mathfrak{C}}
 % \newcommand{\mf}{\mathfrak}
+\newcommand{\gfrak}{\mathfrak{g}}
+
 \newcommand{\Mfrak}{\mathfrak{M}}
 % \newcommand{\mbf}{\mathbf}
 % \newcommand{\bsym}{\boldsymbol}
@@ -133,17 +128,22 @@
 % ##########
 % Blackboard bold letters
 \newcommand{\Cbb}{\mathbb{C}}
+
 \newcommand{\Kbb}{\mathbb{K}}
+
 \newcommand{\Lbb}{\mathbb{L}}
+
 \newcommand{\Nbb}{\mathbb{N}}
+
 \newcommand{\Rbb}{\mathbb{R}}
+
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
 % Coś innego
-\newcommand{\Rbbp}{\Rb_{ + }}
-\newcommand{\Rbbn}{\mathbb{R}^{ n }}
-\newcommand{\Rbbd}{\mathbb{R}^{ d }}
+% \newcommand{\Rbbp}{\Rb_{ + }}
+% \newcommand{\Rbbn}{\mathbb{R}^{ n }}
+% \newcommand{\Rbbd}{\mathbb{R}^{ d }}
 
 % \newcommand{\Rbtwo}{\mathbb{R}^{ 2 }}
 % \newcommand{\Rbth}{\mathbb{R}^{ 3 }}
@@ -154,7 +154,14 @@
 
 % ##########
 % Bold face letters
+
+\newcommand{\Cbold}{\mathbf{C}}
+
 \newcommand{\Ebold}{\mathbf{E}}
+
+\newcommand{\Pbold}{\mathbf{P}}
+
+\newcommand{\Tbold}{\mathbf{T}}
 
 
 
@@ -163,18 +170,36 @@
 % ##################
 % Calligraphy letters
 \newcommand{\Acal}{\mathcal{A}}
+
 \newcommand{\Ccal}{\mathcal{C}}
+
 \newcommand{\Dcal}{\mathcal{D}}
+
+\newcommand{\Ecal}{\mathcal{E}}
+
+\newcommand{\Hcal}{\mathcal{H}}
+
+\newcommand{\Ical}{\mathcal{I}}
+
 \newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\lcal}{\mathcal{l}}
+
+\newcommand{\Mcal}{\mathcal{M}}
+
 \newcommand{\Ncal}{\mathcal{N}}
+
 \newcommand{\Ocal}{\mathcal{O}}
+
+\newcommand{\Pcal}{\mathcal{P}}
+
+\newcommand{\Rcal}{\mathcal{R}}
+
 \newcommand{\Ucal}{\mathcal{U}}
+
 \newcommand{\Vcal}{\mathcal{V}}
+
 % \newcommand{\Ec}{\mathcal{E}}
-% \newcommand{\Hc}{\mathcal{H}} % A co z \ell
 % \newcommand{\lc}{\mathcal{l}}
-% \newcommand{\Lc}{\mathcal{L}}
-% \newcommand{\Oc}{\mathcal{O}}
 % \newcommand{\Rc}{\mathcal{R}}
 
 
@@ -227,7 +252,7 @@
 % \newcommand{\Imag}{\mf{Im}}
 % \newcommand{\ot}{\otimes}
 % \newcommand{\we}{\wedge}
-\newcommand{\Tr}{\mr{Tr}}
+\DeclareMathOperator{\Tr}{Tr}
 
 
 
@@ -239,26 +264,37 @@
 % Podprzestrzenie i odwzorowania liniowe
 \newcommand{\image}{\textrm{im}}
 
-% Wektory
+% Vectors
+\newcommand{\veca}{\vec{ a }}
+
+\newcommand{\vecb}{\vec{ b }}
+
+\newcommand{\vecE}{\vec{ E }}
+
 \newcommand{\vecF}{\vec{ F }}
 \newcommand{\vecf}{\vec{ f }}
+
+\newcommand{\vecJ}{\vec{ J }}
+
+\newcommand{\vecn}{\vec{ n }}
+
+\newcommand{\vecp}{\vec{ p }}
+
+\newcommand{\vecq}{\vec{ q }}
+
 \newcommand{\vecr}{\vec{ r }}
 
 \newcommand{\vecX}{\vec{ X }}
 \newcommand{\vecx}{\vec{ x }}
+
 \newcommand{\vecy}{\vec{ y }}
 
-\newcommand{\veca}{\vec{ a }}
-\newcommand{\vecb}{\vec{ b }}
 
-\newcommand{\vecq}{\vec{ q }}
-\newcommand{\vecp}{\vec{ p }}
 
-\newcommand{\vecn}{\vec{ n }}
 
-\newcommand{\vecJ}{\vec{ J }}
 
-\newcommand{\vecE}{\vec{ E }}
+
+
 
 \newcommand{\vecZero}{\vec{ 0 }}
 
@@ -267,16 +303,50 @@
 
 
 % Vectors, bold font
+\newcommand{\vecabold}{\mathbf{a}}
+
 \newcommand{\vecbbold}{\mathbf{b}}
-\newcommand{\vecnbold}{\mathbf{n}}
+
+\newcommand{\veccbold}{\mathbf{c}}
+
+\newcommand{\vecebold}{\mathbf{e}}
+
+\newcommand{\vecgbold}{\mathbf{g}}
+
+\newcommand{\vecibold}{\mathbf{i}}
+
+\newcommand{\vecjbold}{\mathbf{j}}
+
 \newcommand{\veckbold}{\mathbf{k}}
+
+\newcommand{\vecnbold}{\mathbf{n}}
+
 \newcommand{\vecPbold}{\mathbf{P}}
 \newcommand{\vecpbold}{\mathbf{p}}
+
 \newcommand{\vecqbold}{\mathbf{q}}
+
+\newcommand{\vecRbold}{\mathbf{R}}
+\newcommand{\vecrbold}{\mathbf{r}}
+
 \newcommand{\vectbold}{\mathbf{t}}
+
+\newcommand{\vecubold}{\mathbf{u}}
+
+\newcommand{\vecVbold}{\mathbf{V}}
+\newcommand{\vecvbold}{\mathbf{v}}
+
 \newcommand{\vecxbold}{\mathbf{x}}
+
 \newcommand{\vecybold}{\mathbf{y}}
 
+
+\newcommand{\vecrhobold}{\mathbf{\rho}}
+
+\newcommand{\vecomegabold}{\boldsymbol{\omega}}
+
+
+\newcommand{\vecOnebold}{\mathbf{1}}
 
 
 
@@ -589,6 +659,8 @@
 % \newcommand{\Ad}{\mr{Ad}}
 % \newcommand{\Le}{\mc{L}}
 
+
+\newcommand{\Diam}{\textrm{Diam}}
 
 
 % \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
