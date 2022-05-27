@@ -332,234 +332,504 @@ następujący wniosek.
 
 
 
-% Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
-% funkcji określonej na zbiorze $A$ nie może zachodzić. Widzimy teraz,
-% że~problem jest bardziej złożony, niż~się powszechnie twierdzi. Błąd
-% wynika zapewne stąd, iż~większość osób nie interesuje badanie tak
-% ,,subtelnego'' przypadku, jakim jest dziedzina funkcji bardziej
-% skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$ pokazuje,
-% że~sytuacja ta jest spotykana w~konkretnych, prostych rachunkach.
+Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
+funkcji określonej na zbiorze $A$ nie może zachodzić. Widzimy teraz,
+że~problem jest bardziej złożony, niż~się powszechnie twierdzi. Błąd
+wynika zapewne stąd, iż~większość osób nie interesuje badanie tak
+„subtelnego” przypadku, jakim jest dziedzina funkcji bardziej
+skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$ pokazuje,
+że~sytuacja ta jest spotykana w~konkretnych, prostych rachunkach.
 
-% Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
-% ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
-% funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
-% w~$( a, b )$ (zob.~punkt~112, str.~196,
-% \cite{FichtenholzRachunekRiCTomI2005}), co~potencjalnie może prowadzić
-% do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie, czy~można
-% zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze, który nie
-% jest postaci $\bigcup_{ \iota \in \mc{I} } I_{ \iota }$ (przy zadanym
-% ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było, to
-% pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
-% do~przewidzenia.
+Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
+ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
+funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
+w~$( a, b )$ (zob.~punkt~112, str.~196,
+\cite{FichtenholzRachunekRozniczkowyVolI2005}), co~potencjalnie może prowadzić
+do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie, czy~można
+zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze, który nie
+jest postaci $\bigcup_{ \iota \in \Ical } I_{ \iota }$ (przy zadanym
+ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było, to
+pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
+do~przewidzenia.
 
-% \vspace{\spaceFour}
-
-
-% % \start \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
-% % wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
-% % jakiś znany fakt z~algebry? \Dok
-
-% % \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
-% \start \textbf{Str.~223, punkt [363, 5)].} Problem z~tym przykładem
-% jest taki, że
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-08}
-%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
-%   \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-%     - \frac{ 1 }{ 1 - x^{ 2n } } \right).
-% \end{equation}
-% Gdyby tak równość zachodziła, to po pierwsze
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-09}
-%   \begin{split}
-%     \sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } } &=
-%     \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } } + \frac{ 1 }{ 1 -
-%       x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
-%     + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
-%     &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
-%   \end{split}
-% \end{equation}
-% Wynika to z~tego, że~z~wyjątkiem $n = 1$
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-10}
-%   \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
-%   \neq \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
-% \end{equation}
-% Prawidłowa równość ma~postać
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-11}
-%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
-%     ( 1 - x^{ 2n } ) }
-%   \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-%     - \frac{ 1 }{ 1 - x^{ 2n } } \right),
-% \end{equation}
-% jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
-% jest znacznie mniej elegancka i~zwięzła, niż~tego
-% w~\eqref{eq:FichtenholzVolII-08}, wątpliwe więc, że~Fichtenholz chciał
-% podać tu~ten przykład.
 
-% Wydaje mi~się, że~nie jest to kwestia drobnej literówki we~wzorze
-% \eqref{eq:FichtenholzVolII-08}, lecz~został tu~popełniony poważniejszy
-% błąd, którego nie jestem w~stanie poprawić.
+\start \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
+wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
+jakiś znany fakt z~algebry? \Dok
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
-% \start \Str{228} Twierdzenie~2 jest podane w~błędnej formie
-% i~udowodnione w~nie najlepszy sposób. Poniżej podana jest poprawna
-% wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
-% \begin{twr}
-%   \label{thm:FichtenholzVolII-02}
-%   Jeśli istnieje granica\footnote{Zakładamy przy tym, że~$b_{ n }$.}
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-12}
-%     \Lim_{ n \to \infty } \frac{ a_{ n } }{ b_{ n } } = K
-%     \quad ( 0 \leq K \leq +\infty ),
-%   \end{equation}
-%   to, gdy $K < +\infty$, ze~zbieżności szeregu~(B) wynika zbieżność
-%   szeregu~(A), lub równoważnie, z~rozbieżności szeregu (A) wynika
-%   rozbieżność szeregu (B). Gdy natomiast $K > 0$, ze zbieżności
-%   szeregu (A) wynika zbieżność szeregu (B), lub~równoważnie,
-%   z~rozbieżności szeregu~(B) wynika rozbieżność szeregu~(A).
-% \end{twr}
-% \begin{proof}
-%   Niech $K < +\infty$, wtedy istnieje takie~$N$, że~dla $n > N$
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-13}
-%     \frac{ a_{ n } }{ b_{ n } } < K + \epsilon,
-%     \quad K + \epsilon > 0,
-%   \end{equation}
-%   skąd
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-14}
-%     a_{ n } < ( K + \epsilon ) b_{ n }.
-%   \end{equation}
-%   Z~tej równości wynika, że~zbieżność szeregu~(B) pociąga za~sobą
-%   zbieżność~(A), jak również, iż~rozbieżność szeregu~(A) implikuje
-%   rozbieżność szeregu~(B). Oba twierdzenia~są jednak równoważne
-%   na~mocy zasady kontrapozycji.
 
-%   Analogicznie jeśli~$K > 0$, wówczas istnieje takie~$N$, że~dla
-%   $n > N$
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-15}
-%     a_{ n } > ( K - \epsilon ) b_{ n },
-%     \quad K - \epsilon > 0.
-%   \end{equation}
-%   Z~tej nierówności wynika, że~zbieżność szeregu~(A) implikuje
-%   zbieżność szeregu~(B), zaś rozbieżność szeregu~(B) pociąga za~sobą
-%   rozbieżność szeregu~(A). Jak poprzednio, oba te~twierdzenia~są
-%   równoważne na~mocy zasady kontrapozycji.
-% \end{proof}
+\start \textbf{Str.~223, punkt [363, 5)].} Problem z~tym przykładem
+jest taki, że
+\begin{equation}
+  \label{eq:FichtenholzVolII-08}
+  \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+  \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+    - \frac{ 1 }{ 1 - x^{ 2n } } \right).
+\end{equation}
+Gdyby tak równość zachodziła, to po pierwsze
+\begin{equation}
+  \label{eq:FichtenholzVolII-09}
+  \begin{split}
+    \sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } }
+    &=
+      \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } }
+      + \frac{ 1 }{ 1 - x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
+    + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } } \\
+    &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
+  \end{split}
+\end{equation}
+Wynika to z~tego, że~z~wyjątkiem $n = 1$
+\begin{equation}
+  \label{eq:FichtenholzVolII-10}
+  \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+  \neq \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
+\end{equation}
+Prawidłowa równość ma~postać
+\begin{equation}
+  \label{eq:FichtenholzVolII-11}
+  \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
+    ( 1 - x^{ 2n } ) }
+  \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+    - \frac{ 1 }{ 1 - x^{ 2n } } \right),
+\end{equation}
+jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
+jest znacznie mniej elegancka i~zwięzła, niż~tego
+w~\eqref{eq:FichtenholzVolII-08}, wątpliwe więc, że~Fichtenholz chciał
+podać tu~ten przykład.
 
-% \vspace{\spaceFour}
+Wydaje mi~się, że~nie jest to kwestia drobnej literówki we~wzorze
+\eqref{eq:FichtenholzVolII-08}, lecz~został tu~popełniony poważniejszy
+błąd, którego nie jestem w~stanie poprawić.
+
+\vspace{\spaceFour}
 
 
-% \start \StrWg{237}{5} Aby~zachodził wzór
-% $\Dc_{ n } = \tfrac{ x }{ n + 1 }$, należy numerować wyrazy tego
-% szeregu od~0.
 
-% \vspace{\spaceFour}
-
-
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     8   & & 11 & $< | \Delta P | <$ & $\leq | \Delta P | \leq$ \\
-%     8   & &  7 & $< \fr{ | \Delta P | }{ \Delta x } <$
-%            & $\leq \frac{ | \Delta P | }{ \Delta x } \leq$ \\
-%     12  & &  5 & $a^{ n }$ & $a_{ n }$ \\
-%     13  &  7 & & $( x - a )^{ k }\, dx$ & $\int ( x - a )^{ -k }\, dx$ \\
-%     18  & &  4 & $\fr{ 1 }{ 3 }$ & $\fr{ 1 }{ 2 }$ \\
-%     18  & &  1 & więc$\cdot t$ & więc $t$ \\
-%     23  & 16 & & $n \_ 1$ & $n - 1$ \\
-%     23  & 17 & & $n \_ 2$ & $n - 2$ \\
-%     23  & & 16 & otrzvmujemy & otrzymujemy \\
-%     25  &  1 & & $e^{ \cdot (k + 1) t}$ & $e^{ (k + 1) t}$ \\
-%     28  & &  5 & z$\cdot$algebry & z~algebry \\
-%     29  & & 11 & $\fr{ P(x) }{ (x - a)^{k - 1} Q_{ 1 }(x) }$
-%            & $\fr{ P_{ 1 }(x) }{ (x - a)^{k - 1} Q_{ 1 }(x) }$ \\
-%     34  &  3 & & [lub (6) & [lub (6)] \\
-%     34  &  4 & & lub (6)] & [lub (6)] \\
-%     35  & & 17 & $\left[ \fr{ a x^{ 2 } + b x + c }
-%                  { x^{ 3 } + x^{ 2 } + x + 1 } \right]$
-%            & $\left[ \fr{ a x^{ 2 } + b x + c }
-%              { x^{ 3 } + x^{ 2 } + x + 1 } \right]'$ \\
-%     35  & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
-%            & $x^{ 3 } + x^{ 2 } + x + 1$ \\
-%     36  & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\
-%     39  &  3 & & $\sqrt[ m ]{ \fr{ \alpha x + \beta }{ \gamma x + \delta } } dx$
-%            & $\sqrt[ m ]{ \fr{ \alpha x + \beta }{ \gamma x + \delta } }$ \\
-%     40  &  2 & & $\fr{ 2t - 1 }{ \sqrt{ 3 } }$
-%            & $\fr{ 2t + 1 }{ \sqrt{ 3 } }$ \\
-%     \hline
-%   \end{tabular}
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     40  & & 12 & ${ m + 1 \atop n }$ & $\fr{ m + 1 }{ n }$ \\
-%     44  & &  4 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
-%     44  & &  1 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
-%     45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
-%     46  & &  8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
-%     222 & &  5 & [9] jest rzeczywiście & jest oczywiście \\
-%     224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
-%     226 & &  7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
-%     227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
-%     229 & &  9 & $< \frac{ 1 }{ 2^{ n } }$ & $\leq \frac{ 1 }{ 2^{ n } }$ \\
-%     231 &  8 & & $1\; ;$ & $1;$ \\
-%     233 & &  5 & $\epsilon = \mc{E} - 1$ & $\epsilon < \mc{E} - 1$ \\
-%     233 & &  5 & $\mc{E} - \epsilon = 1$ & $\mc{E} - \epsilon > 1$ \\
-%     234 & 11 & & $\Dc_{ n } > 1$ & $\Dc_{ n } \geq 1$ \\
-%     238 & &  3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
-%            & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
-%            % & & & & \\
-%            % & & & & \\
-%            % & & & & \\
-%            % & & & & \\
-%            % & & & & \\
-%            % & & & & \\
-%            % 479 & 2 & & $\IntL_{ 0 }^{ +\infty }$
-%            % & $\IntL_{ a }^{ +\infty }$ \\
-%            % 479 & 4 & & $\IntL_{ a }^{ A } \fr{ dx }{ x }$
-%            % & $\IntL_{ a }^{ A } \fr{ dx }{ x^{ \la } }$ \\
-%            % 483 & 4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
-%            % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
-% \noi
-% \StrWd{34}{3} \\
-% \Jest Zróżniczkujmy (10) obustronnie \\
-% \Powin  Wykonując jawnie różniczkowanie w~(10) \\
-% \StrWd{71}{16} \\
-% \Jest $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
-% \right.$ \\
-% \Powin
-% $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
-% \right)$ \\
-
-% \vspace{\spaceTwo}
+\start \Str{228} Twierdzenie~2 jest podane w~błędnej formie
+i~udowodnione w~nie najlepszy sposób. Poniżej podana jest poprawna
+wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
 
 
 
 
 
+% #############
+\begin{theorem}
+  \label{thm:FichtenholzVolII-02}
+
+  Jeśli istnieje granica\footnote{Zakładamy przy tym, że~$b_{ n }$.}
+  \begin{equation}
+    \label{eq:FichtenholzVolII-12}
+    \lim\limits_{ n \to \infty } \frac{ a_{ n } }{ b_{ n } } = K, \quad
+    ( 0 \leq K \leq +\infty ),
+  \end{equation}
+  to, gdy $K < +\infty$, ze~zbieżności szeregu~(B) wynika zbieżność
+  szeregu~(A), lub równoważnie, z~rozbieżności szeregu (A) wynika
+  rozbieżność szeregu (B). Gdy natomiast $K > 0$, ze zbieżności
+  szeregu (A) wynika zbieżność szeregu (B), lub~równoważnie,
+  z~rozbieżności szeregu~(B) wynika rozbieżność szeregu~(A).
+
+\end{theorem}
 
 
+
+\begin{proof}
+  Niech $K < +\infty$, wtedy istnieje takie~$N$, że~dla $n > N$
+  \begin{equation}
+    \label{eq:FichtenholzVolII-13}
+    \frac{ a_{ n } }{ b_{ n } } < K + \epsilon,
+    \quad K + \epsilon > 0,
+  \end{equation}
+  skąd
+  \begin{equation}
+    \label{eq:FichtenholzVolII-14}
+    a_{ n } < ( K + \epsilon ) b_{ n }.
+  \end{equation}
+  Z~tej równości wynika, że~zbieżność szeregu~(B) pociąga za~sobą
+  zbieżność~(A), jak również, iż~rozbieżność szeregu~(A) implikuje
+  rozbieżność szeregu~(B). Oba twierdzenia~są jednak równoważne
+  na~mocy zasady kontrapozycji.
+
+  Analogicznie jeśli~$K > 0$, wówczas istnieje takie~$N$, że~dla
+  $n > N$
+  \begin{equation}
+    \label{eq:FichtenholzVolII-15}
+    a_{ n } > ( K - \epsilon ) b_{ n }, \quad K - \epsilon > 0.
+  \end{equation}
+  Z~tej nierówności wynika, że~zbieżność szeregu~(A) implikuje
+  zbieżność szeregu~(B), zaś rozbieżność szeregu~(B) pociąga za~sobą
+  rozbieżność szeregu~(A). Jak poprzednio, oba te~twierdzenia~są
+  równoważne na~mocy zasady kontrapozycji.
+
+\end{proof}
+% #############
+
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{237}{5} Aby~zachodził wzór
+$\Dcal_{ n } = \tfrac{ x }{ n + 1 }$, należy numerować wyrazy tego
+szeregu od~0.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    8   & & 11 & $< | \Delta P | <$ & $\leq | \Delta P | \leq$ \\[0.2em]
+    8   & &  7 & $< \frac{ | \Delta P | }{ \Delta x } <$
+           & $\leq \frac{ | \Delta P | }{ \Delta x } \leq$ \\[0.2em]
+    12  & &  5 & $a^{ n }$ & $a_{ n }$ \\
+    13  &  7 & & $( x - a )^{ k } \, dx$ & $\int ( x - a )^{ -k } \, dx$ \\
+    18  & &  4 & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 2 }$ \\
+    18  & &  1 & więc$\cdot t$ & więc $t$ \\
+    23  & 16 & & $n \_ 1$ & $n - 1$ \\
+    23  & 17 & & $n \_ 2$ & $n - 2$ \\
+    23  & & 16 & otrzvmujemy & otrzymujemy \\
+    25  &  1 & & $e^{ \cdot ( k + 1 ) t}$ & $e^{ ( k + 1 ) t}$ \\
+    28  & &  5 & z$\cdot$algebry & z~algebry \\[0.2em]
+    29  & & 11 & $\frac{ P( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$
+           & $\frac{ P_{ 1 }( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$
+    \\[0.3em]
+    34  &  3 & & [lub (6) & [lub (6)] \\
+    34  &  4 & & lub (6)] & [lub (6)] \\[0.2em]
+    35  & & 17 & $\left[ \frac{ a x^{ 2 } + b x + c }
+                 { x^{ 3 } + x^{ 2 } + x + 1 } \right]$
+           & $\left[ \frac{ a x^{ 2 } + b x + c }
+             { x^{ 3 } + x^{ 2 } + x + 1 } \right]'$ \\[0.4em]
+    35  & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
+           & $x^{ 3 } + x^{ 2 } + x + 1$ \\
+    36  & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\[0.2em]
+    39  &  3 & & $\sqrt[ m ]{ \frac{ \alpha x + \beta }{ \gamma x + \delta } } \, dx$
+           & $\sqrt[ m ]{ \frac{ \alpha x + \beta }{ \gamma x + \delta } }$ \\[0.2em]
+    40  &  2 & & $\frac{ 2t - 1 }{ \sqrt{ 3 } }$
+           & $\frac{ 2t + 1 }{ \sqrt{ 3 } }$ \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    40  & & 12 & ${ m + 1 \atop n }$ & $\frac{ m + 1 }{ n }$ \\
+    44  & &  4 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
+    44  & &  1 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
+    45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
+    46  & &  8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
+    222 & &  5 & [9] jest rzeczywiście & jest oczywiście \\
+    224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
+    226 & &  7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
+    227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
+    229 & &  9 & $< \frac{ 1 }{ 2^{ n } }$ & $\leq \frac{ 1 }{ 2^{ n } }$ \\
+    231 &  8 & & $1\; ;$ & $1;$ \\
+    233 & &  5 & $\epsilon = \Ecal - 1$ & $\epsilon < \Ecal - 1$ \\
+    233 & &  5 & $\Ecal - \epsilon = 1$ & $\Ecal - \epsilon > 1$ \\
+    234 & 11 & & $\Dcal_{ n } > 1$ & $\Dcal_{ n } \geq 1$ \\
+    238 & &  3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
+           & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           479 & 2 & & $\int\limits_{ 0 }^{ +\infty }$
+           & $\int\limits_{ a }^{ +\infty }$ \\[0.8em]
+           479 & 4 & & $\int\limits_{ a }^{ A } \frac{ dx }{ x }$
+           & $\int\limits_{ a }^{ A } \frac{ dx }{ x^{ \lambda } }$ \\[0.5em]
+           483 & 4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWd{34}{3} \\
+\Jest  Zróżniczkujmy (10) obustronnie \\
+\Powin Wykonując jawnie różniczkowanie w~(10) \\
+\StrWd{71}{16} \\
+\Jest  $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+\right.$ \\
+\Powin $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+\right)$ \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Współczesnej podejście do analizy matematycznej}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Krzysztof Maurin \\
+  „Analiza. Część~I: Elementy”, \cite{MaurinAnalizaVolI1974} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\start Tyle błędów, że szybciej będzie napisać tę
+książkę od nowa.
+
+\vspace{\spaceFour}
+
+
+\start Paragraf poświęcony całce Riemanna, jest napisany nie
+najlepiej. Nie udowodniono wszystkich ważnych twierdzeń, nawet tych z
+których korzysta. Ponadto dowody są w dużej mierze przeprowadzone
+bardzo pobieżnie i niewiele mówią czytelnikowi.
+
+\vspace{\spaceFour}
+
+
+
+\start Kwestia analityczności funkcji została tu~potraktowana
+pobieżnie. Dla funkcji takich jak $\cos$, $\sin$ etc. pokazano ich
+analityczność w~0, nic nie powiedziano o analityczności w innych
+punktach.
+
+\vspace{\spaceFour}
+
+
+
+\start W ogóle nie przedyskutowano problemu mnożenia szeregów.
+
+\vspace{\spaceFour}
+
+
+
+\start Większość z definicji i twierdzeń Rozdziału VII da się uogólnić
+dla przypadku przestrzeni unormowanych.
+
+\vspace{\spaceFour}
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{10} Wszystkie dowody „nie wprost”, są przypisane
+zasadzie \\
+kontrapozycji.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{21} Użyte jest pojęcie subtelniejszego podziału, pomimo że
+nie zostało ono zdefiniowane.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{40} Twierdzenie tu zapowiedziane nie zostało nigdy
+udowodnione.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{41} Uwaga napisana jest fatalnie. Nawet jeżeli to
+twierdzenie jest prawdziwe, co nie jest oczywiste, to sformułowanie,
+zaciemnia cały problem.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{43} W drugiej części dowodu Wniosku II.5 zupełnie
+niepotrzebnie wprowadzono kule otwarte zawarte w $Z_{ 1 }$ i~$Z_{ 2 }$.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{48} Dowód pierwszej części Twierdzenia II. 18 jest
+zupełnie niezrozumiały.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{53} Czy w twierdzeniu o pochodnej funkcji odwrotnej jest
+ważna ciągłość tej funkcji?
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{56} Dyskusja skierowania w rodzinie zbiorów $\Pi$,
+bardziej zaciemnia niż wyjasnia. Po przeanalizowaniu okazuje się, że w
+definicji $\limsup$ powinno być: \\
+$A_{ i } \prec A_{ j }\Leftrightarrow A_{ j } \subset A_{ i }$, choć z
+dyskusji wynika wręcz przeciwnie.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{57} Nie zdefiniowano na jakie odcinki dzielimy przedział
+$[ a, b ]$. Okazuje się, że nie ma to znaczenia jeśli przyjmiemy miarę
+dowolnego odcinka $\mu ( \{ a, b \} ) = b - a$, jednak ta
+lekkomyślność jest rażąca.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{63} W~dowodzie Twierdzenia.III.13 „potrzeba i nie
+potrzeba” założenia $\varphi' \neq 0$, zależnie od rozpatrywanego
+przypadku.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{66} Skorzystano tu z twierdzenia dla liczb rzeczywistych,
+które zostało udowodnione tylko dla liczb całkowitych.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{68} Dowód korzysta z pojęcia bazy otoczeń domkniętych,
+które nie zostało nigdzie wcześniej przedstawione.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{90} Podane są warunki na to by ciąg $T_{ n }$ był ciągiem
+Cauchy’ego, nie zaś by było on zbieżny do $T_{ 0 }$.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{90} W Lemat V.5. zawiera poważne pomieszanie pojęć.
+Prawidłowe sformułowanie powinno brzmieć: ????
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{92} W dowodzie Lematu V.6 użyte są kule otwarte a powinny
+być domknięte.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{93} Dowód testu Weierstrassa dla funkcji jest bez sensu.
+Dowodzi tylko punktowej zbieżności szeregu funkcji. Zbieżności
+jednostajnej należy dowodzić inną metodą.
+
+\vspace{\spaceFour}
+
+
+
+\start Str. 97. Dowód punktu (b) uwagi łatwo przeprowadzić przez
+kontrapozycje, nie widzę jednak sposobu udowodnienia go w sposób
+analogiczny do punktu (a). W dowodzie tym kluczowe jest oszacowanie
+\\
+$| a_{ n } ( z_{ 1 } - z_{ 0 } )^{ n } | < M$. Jednak dla szeregu o niezerowym
+promieniu zbieżności nie być możliwe oszacowanie szeregu od góry albo
+od dołu. Za przykład może posłużyć zachowanie szeregów
+$\sum \frac{1}{n} z^{n}$ i $\sum n z^{n}$ w $z=1$. Oba są tam
+rozbieżne
+
+\start Str. 98. Dowód twierdzenia Cauchy'ego-Hadamarda zawiera w sobie
+dowód kryterium Cauchy`ego zbieżności szeregów. Czyni to dowód bardzo
+zagmatwanym i trudnym do zrozumienia.
+
+
+% Błędy:\\
+% \begin{tabular}{|c|c|c|c|c|}
+%   \hline
+%   & \multicolumn{2}{c|}{} & & \\
+%   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                             & Powinno być \\ \cline{2-3}
+%   & Od góry & Od dołu & & \\
+%   \hline
+%   & & & & \\
+%   \hline
+% \end{tabular}
+
+\begin{itemize}
+\item[--] Str. 23. \ldots 2$^{ \circ }$ identytywna\ldots
+\item[--] Str. 28. \emph{Ad} 2$^{ \circ }$: $| ( a'_{ n } + b'_{ n } ) - ( a_{ n } + b_{ n } ) |  \leq | a'_{ n } - a_{ n } | + | b'_{ n } - b_{ n } | <2 \, \varepsilon$, bo\\
+  $\big( ( a'_{ n } ) \sim ( a_{ n } ) \wedge( b'_{ n } ) \sim ( b_{ n
+  } ) \big) \Rightarrow \big( ( | a'_{ n } - a_{ n } | < \epsilon )
+  \wedge | b'_{ n } - b_{ n } | < \epsilon, \textrm{ dla } n > N )
+  \big)$.
+\item[--] Str. 32.
+\item[--] Str. 43. \ldots wynika z definicji odwzorowania ciągłego.
+\item[--] Str. 54. Niech $g'( x ) h + r_{ 1 }( h ) \neq 0$\ldots
+\item[--] Str.
+  97.$$t := \frac{ | z - z_{ 0 } | }{ | z_{ 1 } - z_{ 0 } | }
+  \textrm{\ldots}$$
+\item[--] Str. 112.
+  $$\big( 0 \leq f \leq C \frac{ 1 }{ x^{ \mu } } \textrm{ ; } \mu
+  \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a } f <
+  \infty \big) \textrm{;}$$
+\item[--] Str. 112.
+  $$\big( 0 \leq f \leq C \frac{ 1 }{ x ( \log x )^{ \mu } } \textrm{
+    ; } \mu \geq 1 \big) \Rightarrow \big( \int \limits^{ \infty }_{ a
+  } f < \infty \big) \textrm{;}$$
+\item[--] Str. 125. \ldots
+\item[--] Str. 143. \ldots korzystając ze wzorów (4) i (5)\ldots
+\end{itemize}
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
