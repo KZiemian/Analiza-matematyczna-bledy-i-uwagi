@@ -73,10 +73,10 @@
 
 % ##########
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -84,11 +84,14 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ---------------------------------------
-\usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
-\usepackage{latexshortcuts}
-% \usepackage{mathshortcuts}
+\usepackage{latexgeneralcommands}
 \usepackage{mathcommands}
 \usepackage{calculuscommands}
+\usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
+\newcommand{\ReLoc}{\mathrm{Re}}
+\newcommand{\ImLoc}{\mathrm{Im}}
+
 
 
 
@@ -149,19 +152,20 @@
 
 
 
+
+
 % ######################################
 \maketitle % Tytuł całego tekstu
 % ######################################
 
 
-% ,,P\ldots'' oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony. \\
 
 
 
 % ############################
 \Work{ % Autor i tytuł dzieła
   Laurent Schwartz \\
-  „Kurs analizy matematycznej. Tom~I”,
+v  „Kurs analizy matematycznej. Tom~I”,
   \cite{SchwartzKursAnalizyMatematycznejVolI1979} }
 
 
@@ -209,10 +213,19 @@ nie będziemy go tu przytaczać.
 
 
 
+
+
+
+
+
+
+
+% #############
 \noindent
 \textbf{Rozdział IV.}
 
 \vspace{\spaceThree}
+
 
 \start W~podanej w tym rozdziale teorii całki Lebesgue’a wychodzącej
 od całki Radona należy rozróżnić dwa jej aspekty. Po pierwsze
@@ -230,7 +243,7 @@ przeliczalnej w~nieskończoności obejmuje większość ważnych przypadków.
 
 Z~drugiej strony, pojęcie takie jak nośnik miary, choć można go
 zdefiniować dla dowolnej całki na $X$ (wystarczy rozpatrzyć nośnik
-funkcjonału $\int \varphi \, \dPL \mu$) to bardziej naturalne jest
+funkcjonału $\int \varphi \, d\mu$) to bardziej naturalne jest
 spojrzenie na niego w świetle teorii dystrybucji. Rzeczywiście, jeżeli
 $X$ jest rozmaitością, to każda miara Radona definiuje sposób
 dystrybucję, bowiem jeśli ciąg funkcji $\varphi_{ n }$ zmierza do 0
@@ -391,13 +404,13 @@ Załóżmy, że w pewnej bazie $e_{ 1 }, \ldots, e_{ n }$ każdy ciąg
 współrzędnych jest zbieżny. Mamy wtedy:
 \begin{equation}
   \label{eq:SchwartzKAMVolI-01}
-  \lim_{ n \to \infty } v_{ n }
+  \lim\limits_{ n \to \infty } v_{ n }
   =
   \lim_{ n \to \infty } \sum_{ i = 1 }^{ n } x_{ n }^{ i } e_{ i }
   =
-  \sum_{ i = 1 }^{ n } \lim_{ n \to \infty }( x_{ n }^{ i } e_{ i } )
+  \sum_{ i = 1 }^{ n } \lim\limits_{ n \to \infty }( x_{ n }^{ i } e_{ i } )
   =
-  \sum_{ i = 1 }^{ n } \lim_{ n \to \infty }( x_{ n }^{ i } ) e_{ i }
+  \sum_{ i = 1 }^{ n } ( \lim\limits_{ n \to \infty } x_{ n }^{ i } ) e_{ i }
 \end{equation}
 na mocy ciągłości działań w przestrzeni liniowo topologicznej.
 Własność ta obowiązuje teraz w dowolnej bazie, ze względu na liniowy
@@ -417,7 +430,7 @@ wynik jest natychmiastowy na podstawie oszacowania:
 Wymagałoby to przeformułowania Wniosku, co jest niewielkim problemem
 bowiem, jego obecna forma jest wysoce niesatysfakcjonująca. Przede
 wszystkim twierdz on, że iloczyn skalarny jest ciągły, to stwierdzenie
-wymaga jednak by $\vec{ E }$ była przestrzenią topologiczną. Jeżeli
+wymaga jednak by $\vecE$ była przestrzenią topologiczną. Jeżeli
 jednak iloczyn skalarny generuje półnormę, należy się spytać o jaką
 topologię chodzi.
 
@@ -517,8 +530,7 @@ skrótowość. Należy bowiem skorzystać z ważnego związku:
 \begin{equation}
   \label{eq:SchwartzKAMVolI-03}
   \Vert x \Vert = \sup_{ \Vert y^{ * } \Vert \leq 1 } | x( y^{ * } ) |
-  =
-  \sup_{ \Vert y^{ * } \Vert \leq 1 } | y^{ * }( x ) |.
+  = \sup_{ \Vert y^{ * } \Vert \leq 1 } | y^{ * }( x ) |.
 \end{equation}
 Jest to w istocie wniosek z refleksywności przestrzeni Hilberta,
 bowiem na jego mocy $x$ można traktować jako odwzorowanie liniowe
@@ -557,12 +569,12 @@ wykonywaniu rachunków.
 Omówienie problemu: \\
 Na początku musimy się spytać co oznacz symbol $\partial_{ x^{ i } }$?
 Zaczniemy od przypadku ogólnego: jeżeli mamy funkcję
-$f : E \to \vec{ F }$, gdzie $E$ jest zbiorem na którym można określić
+$f : E \to \vecF$, gdzie $E$ jest zbiorem na którym można określić
 układ współrzędnych (rozmaitością), ten symbol oznacza „oblicz
 pochodną w kierunku w którym zmienia się tylko $x$”. Linie na których
 zmienia się tylko jedna współrzędna nazywamy liniami
 izoparametrycznymi. Jest więc jasne, że ponieważ różne układy
-współrzędnych mają różne linie izoparametryczne eg. dla układu
+współrzędnych mają różne linie izoparametryczne dla układu
 kartezjańskiego na płaszczyźnie są to proste, dla współrzędnych
 radialnych, są to półproste wychodzące z początku układu współrzędnych
 (dla współrzędnej kątowej) i okręgi bez punktu (dla współrzędnej
@@ -582,7 +594,7 @@ ją jeszcze rozszerzyć. Aby uczynić ją pełną, wydaje mi się, że warto
 zauważyć następujący fakt: jeśli $f : E \to F$ jest bijekcją to
 równanie $g( x ) = h( x )$, dla funkcji określonych na $F$ (równianie
 to wygląda trywialnie, zauważmy jednak, że możemy przyjąć
-$g( x ) = \frac{ d h }{ d x }$), jest spełnione wtedy i tylko wtedy
+$g( x ) = \frac{ d h }{ dx }$), jest spełnione wtedy i tylko wtedy
 gdy spełnione jest równanie $g \circ f^{ -1 } = h \circ f^{ -1 }$.
 Niech $E$ i $F$ będą teraz unormowanymi przestrzeniami wektorowymi.
 
@@ -696,14 +708,14 @@ są rzeczywiste):
   =
   \bigg| \mu( | \varphi | ) - \sum_{ i = 0 }^{ N } | g_{ i } | \mu( \psi_{ i } ) \bigg|
   \leq
-  \Vert \mu \Vert_{ \Vcal } \frac{ \varepsilon }{ 2 \Vert \mu \Vert_{ \Vcal } } = \frac{ \varepsilon }{ 2 },
+  \Vert \mu \Vert_{ \Vcal } \frac{ \varepsilon }{ 2 \Vert \mu \Vert_{ \Vcal } }
+  = \frac{ \varepsilon }{ 2 },
 \end{equation}
 stąd
 \begin{equation}
   \label{eq:SchwartzKAMVolI-08}
   \sum_{ i = 0 }^{ N } | g_{ i } | \mu( \psi_{ i } )
-  \leq
-  \mu( | \varphi | ) + \frac{ \varepsilon }{ 2 }.
+  \leq \mu( | \varphi | ) + \frac{ \varepsilon }{ 2 }.
 \end{equation}
 To pozwala już w prosty sposób otrzymać żądaną nierówność.
 
@@ -785,6 +797,7 @@ dodatniości miary.
 \vspace{\spaceFour}
 
 
+
 \start \Str{430} Zadanie stwierdzające, że
 $( \Ocal_{ i } )_{ i \in I }$ jest pokryciem $K$ jest dość niezręczne.
 Może da się to lepiej sformułować?
@@ -853,16 +866,16 @@ mierzalny.
 
 
 
-\start \Str{457} Poprawić uwagi odnośnie przeniesienia twierdzeń z
-całki Riemanna na całkę Lebesgue’a.
+\start \Str{457} Poprawić uwagi odnośnie przeniesienia twierdzeń z~całki
+Riemanna na całkę Lebesgue’a.
 
 \vspace{\spaceFour}
 
 
 
 \start \Str{458} W wniosku 1 nie da się chyba uniknąć założenia, że
-zbiory $Y$ i $Z$ są mierzalne. W przeciwnym razie biorąc zbiór
-niemierzalny i jego dopełnienie uzyskalibyśmy wniosek, że każda
+zbiory $Y$ i~$Z$ są mierzalne. W przeciwnym razie biorąc zbiór
+niemierzalny i~jego dopełnienie uzyskalibyśmy wniosek, że każda
 funkcja całkowalna jest całkowalna na zbiorze niemierzalnym.
 
 \vspace{\spaceFour}
@@ -1043,10 +1056,10 @@ $h + 1 < k$ to $X^{ - }_{ h + 1, n } \cap X^{ + }_{ k, n } \subset N_{ n }$.
 $A_{ 2 k,\, n+ 1 }$ i~$A_{ 2 k + 1,\, n+ 1 }$ dają cały
 zbiór~$A_{ k,\, n }$, ale można chyba pokazać, że~dają prawie cały ten
 zbiór. Mamy bowiem
-$A_{ 2 k,\, n + 1 } = X^{ + }_{ k,\, n } \cap X^{ - }_{ 2 k + 1,\, n +
-  1 }$ i
-$A_{ 2 k + 1,\, n + 1 } = X^{ + }_{ 2 k + 1,\, n } \cap X^{ - }_{ k,\,
-  n }$. Co dalej?
+$A_{ 2 k,\, n + 1 } = X^{ + }_{ k,\, n }
+\cap X^{ - }_{ 2 k + 1,\, n + 1 }$
+i~$A_{ 2 k + 1,\, n + 1 } = X^{ + }_{ 2 k + 1,\, n }
+\cap X^{ - }_{ k,\, n }$. Co dalej?
 
 \vspace{\spaceFour}
 
@@ -1062,7 +1075,7 @@ możliwości poprawić.
 
 \start \Str{531} W dowodzie zakłada się, że~przestrzeń jest
 przeliczalna w~nieskończoności choć dowód nie~wydaje~się z~tego
-korzystać. Jednak w~definicji odwzorowania $\mu$\dywiz właściwego
+korzystać. Jednak w~definicji odwzorowania $\mu$-właściwego
 zakłada się tylko, że~miara przeciwobrazu każdego kompaktu jest
 skończona, a~naturalne byłoby sformułowanie, iż~miara przeciwobrazu
 dowolnego zbioru o~mierze skończonej jest skończona.
@@ -1217,13 +1230,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1279,13 +1288,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1335,7 +1340,8 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     152 &  8 & & $\Vert ( \vecx_{ i } | \vecy_{ i } )_{ \vecE_{ i } } \Vert$
            & $| ( \vecx_{ i } | \vecy_{ i } )_{ \vecE_{ i } } |$ \\
     153 &  2 & & $\Vert \vecx_{ ni } \Vert_{ \vecE } \leq \Vert \vecx_{ n } \Vert_{ \vecE }$
-           & $\Vert \vecx_{ ni } \Vert_{ \vecE_{ i } } \leq \Vert \vecx_{ n } \Vert_{ \vecE }$ ??? \\
+           & $\Vert \vecx_{ ni } \Vert_{ \vecE_{ i } }
+             \leq \Vert \vecx_{ n } \Vert_{ \vecE }$ ??? \\
     153 & &  9 & $\Vert \vecx_{ i } \Vert_{ \vecE }$
            & $\Vert \vecx_{ i } \Vert_{ \vecE_{ i } }$ \\
     153 & &  7 & $\leq \Vert \vecx_{ n } \Vert_{ \vecE }$
@@ -1348,13 +1354,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1396,13 +1398,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1420,22 +1418,23 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     242 & &  7 & nie musi & nie może \\
     245 &  6 & & liczbie & odwzorowaniu \\
     245 &  9 & & $x \mapsto
-                 \frac{ \overrightarrow{ f( x + \vec{ h } ) - f( x ) } }{ \vec{ h } }$
+                 \frac{ \overrightarrow{ f( x + \vech ) - f( x ) } }
+                 { \vech }$
            & $x \mapsto \frac{ \overrightarrow{ f( x + h ) - f( x ) } }{ h }$ \\
     250 & 11 & & $f'( a \Big)$ & $f'( a ) \Big)$ \\
     253 & 17 & & $m \}$ & $n \}$ \\
-    254 & 13 & & $\vec{ X }^{ p_{ 1 } }_{ 1 }$ & $X^{ p_{ 1 } }_{ 1 }$ \\
+    254 & 13 & & $\vecX^{ p_{ 1 } }_{ 1 }$ & $X^{ p_{ 1 } }_{ 1 }$ \\
     254 & &  3 & $m \geq 2$ & dla $m - 1$, gdzie $m \geq 2$ \\
     259 & 12 & & $\frac{ f^{ ( m + 1 ) }( x + \theta h ) }{ ( m + 1 )! }$
-           & $\frac{ f^{ ( m + 1 ) }( x + \theta \vec{ h } ) }{ ( m + 1 )! }$
+           & $\frac{ f^{ ( m + 1 ) }( x + \theta \vech ) }{ ( m + 1 )! }$
     \\
     259 & & 15 & $[ 0, 1 ]$ & $[ 0, 1 ]$) \\
     260 &  9 & & przyjmując,~że & zauważając,~że \\
-    265 & 15 & & $\frac{ \vec{ h }^{ \vec{ p } } }{ p! }$
-           & $\frac{ \vec{ h }^{ \vec{ p } } }{ \vec{ p }! }$ \\
+    265 & 15 & & $\frac{ \vech^{ \vecp } }{ p! }$
+           & $\frac{ \vech^{ \vecp } }{ \vecp! }$ \\
     269 &  9 & & $\Lbb( \overrightarrow{ E }, \Rbb )$
-           & $\Lbb( \overrightarrow{ E }, \Rbb )$ \\
-    276 &  6 & & $\vec{ c }$ & $c$ \\
+           & $\Lbb( \overrightarrow{ E }, \Rbb )$???? \\
+    276 &  6 & & $\vecc$ & $c$ \\
     280 &  5 & & $Q^{ - } \circ P$ & $Q^{ -1 } \circ P$ \\
     280 & &  9 & ciągłe & różniczkowalne \\
     281 & 18 & & $V \mapsto W = u_{ 0 } W$ & $V \mapsto W = u_{ 0 } V$ \\
@@ -1446,18 +1445,14 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     284 &  7 & & zaś jest & jest więc \\
     288 & 11 & & odwzorowanie $B$ jest otwarte & zbiór $B$ jest otwarty \\
     288 & 11 & & odwzorowanie $A$ jest otwarte & zbiór $A$ jest otwarty \\
-    289 & 23 & & \textit{w przestrzeń} & \textit{w zupełną przestrzeń} \\
+    289 & 23 & & \textit{w~przestrzeń} & \textit{w~zupełną przestrzeń} \\
     291 & &  6 & twierdzenia~49 & twierdzenia~50 \\
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1481,12 +1476,12 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     374 & &  2 & & $\int^{ * } \! f$ \\
     375 &  2 & & & $\int^{ * } \! f$ \\
     375 & & 12 & Biorąc kres górny prawej & Biorąc kres dolny prawej \\
-    379 & &  3 & $\int\limits_{ [ b, c ]  } \Vert \vec{ f } - \vec{ f }_{ n } \Vert$
-           & $\int^{ * }_{ [ b, c ]  } \Vert \vec{ f } - \vec{ f }_{ n } \Vert$ \\
+    379 & &  3 & $\int\limits_{ [ b, c ]  } \Vert \vecf - \vecf_{ n } \Vert$
+           & $\int^{ * }_{ [ b, c ]  } \Vert \vecf - \vecf_{ n } \Vert$ \\
     380 & & 11 & $\int\limits_{ [ a, b ] }$
            & $\int\limits_{ [ a, b ] } \vec{ f } $ \\
     381 & 11 & & & $\int^{ * } \! f$ \\
-    382 & & 13 & $||| \vec g_{ n } ||| \leq 3 ||| \vec{ \; \; } |||$
+    382 & & 13 & $||| \vec g_{ n } ||| \leq 3 ||| \vec{ \; \; } |||$ ????
            & $||| \vec{ g_{ n } } ||| \leq 3 ||| \vec{ g } |||$ \\
     382 & &  1 & $3 || \vec{ g } |||$ & $3 ||| \vec{ g } |||$ \\
     385 & 13 & & $[ c_{ i }, c_{ i + 1 } ]$ & $[ c_{ i }, c_{ i + 1 } [$ \\
@@ -1495,13 +1490,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1549,13 +1540,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1608,13 +1595,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1630,18 +1613,18 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
            & $\mu( ] a - \epsilon, b + \epsilon [ )$ \\
     462 & &  6 & $\mu( ] a - \epsilon, b + \epsilon ] )$
            & $\mu( [ a - \epsilon, b + \epsilon ] )$ \\
-    464 & 17 & & $\int \Vert \vec{ f } - \vec{ g } \Vert$
-           & $\int^{ * } \Vert \vec{ f } - \vec{ g } \Vert$ \\
-    464 & 19 & & $\int \Vert \vec{ f } - \vec{ \gamma } \Vert$
-           & $\int^{ * } \Vert \vec{ f } - \vec{ \gamma } \Vert$ \\
+    464 & 17 & & $\int \Vert \vecf - \vecg \Vert$
+           & $\int^{ * } \Vert \vecf - \vecg \Vert$ \\
+    464 & 19 & & $\int \Vert \vecf - \vec{ \gamma } \Vert$
+           & $\int^{ * } \Vert \vecf - \vec{ \gamma } \Vert$ \\
     467 &  1 & & kompaktów $K_{ \delta }$ & kompaktów $K_{ i }$ \\
     467 &  1 & & Zbiór $K_{ i }$ & Zbiór $K_{ \delta }$ \\
     467 & 12 & & $\mu( K_{ n } \setminus K_{ \delta }' )$
            & $\mu( K_{ \delta }' \setminus K_{ n } )$ \\
     468 &  9 & & 22 & 23 \\
-    469 &  9 & & $\vec{ f }$ & $\int \vec{ f }$ \\
-    469 &  9 & & $\int\:\; \Vert \vec{ f } - \vec{ f_{ n } } \Vert$
-           & $\int \Vert \vec{ f } - \vec{ f_{ n } } \Vert$ \\
+    469 &  9 & & $\vecf$ & $\int \vecf$ \\
+    469 &  9 & & $\int\:\; \Vert \vecf - \vecf_{ n } \Vert$
+           & $\int \Vert \vecf - \vecf_{ n } \Vert$ \\
     470 &  9 & & $] 0, 1 ]$ & $[ 0, 1 [$ \\
     474 & 13 & & $\int^{ * } | f - f_{ 0 } |$
            & $\int^{ * } | f - f_{ 0 } | = \int ( f - f_{ 0 } )$ \\
@@ -1659,8 +1642,8 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     483 & &  9 & $\Ccal( X ) \otimes F$ & $\Ccal( X ) \otimes \vec{ F }$ \\
     487 & 10 & & \textit{jest zapewniona} & \textit{nie jest zapewniona} \\
     487 & 13 & & 32 przyjmując $p = 1$. & 32. \\
-    487 & 16 & & $\Vert \vec{ f } \Vert^{ p } )$
-           & $\Vert \vec{ f } \Vert^{ p }$ \\
+    487 & 16 & & $\Vert \vecf \Vert^{ p } )$
+           & $\Vert \vecf \Vert^{ p }$ \\
     487 & & 10 & twierdzenia 46 & nierówności \\
     492 &  8 & & równoważność & nierównoważność \\
     496 & 17 & & pierwsza & druga \\
@@ -1680,13 +1663,9 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     504 &  4 & & zbioru & w $X$ zawartych w zbiorze \\ \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1707,14 +1686,14 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     511 & &  4 & $\leq \nu( K )$ & $= \nu( K )$ \\
     512 &  1 & & $M_{ n }$ & $M_{ n } \cup N_{ n }$ \\
     512 &  3 & & $M_{ n }$ & $M_{ n } \cup N_{ n }$ \\
-    512 & & 16 & $\varphi\, \dPL \mu$ & $\int \varphi\, \dPL \mu$ \\
+    512 & & 16 & $\varphi \, d\mu$ & $\int \varphi \, d\mu$ \\
     512 & & 13 & $\nu = \mu$ & $\nu \leq \mu$ \\
     517 & 15 & & majorantą & majorantą) \\
     522 &  4 & & Tak samo można & Można też \\
-    522 & &  3 & $B( \vec{ p }_{ 1 }, g_{ 1 }, f )$
-           & $B( \vec{ p }_{ 1 } g_{ 1 }, \vec{ f } )$ \\
-    522 & &  1 & $B( \vec{ p }_{ 1 }, g_{ 1 }, \vec{ f } )$
-           & $B( \vec{ p }_{ 1 } g_{ 1 }, \vec{ f } )$ \\
+    522 & &  3 & $B( \vecp_{ 1 }, g_{ 1 }, f )$
+           & $B( \vecp_{ 1 } g_{ 1 }, \vecf )$ \\
+    522 & &  1 & $B( \vecp_{ 1 }, g_{ 1 }, \vecf )$
+           & $B( \vecp_{ 1 } g_{ 1 }, \vecf )$ \\
     523 &  5 & & dwie & zatem dwie \\
     523 &  6 & & isnieją bowiem & istnieją \\
     524 & 14 & & $d \mu$ & $d \vec{ \mu }$ \\
@@ -1739,20 +1718,16 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     532 &  2 & & \textit{nierówność} & \textit{równość} \\
     532 &  4 & & \textit{nierównością} & \textit{równością} \\
     537 & &  2 & & można \\
-    538 &  9 & & $\Vert \vec{ p }_{ n } + \vec{ p } \Vert$
-           & $\Vert \vec{ p }_{ n } - \vec{ p }\, \Vert$ \\
+    538 &  9 & & $\Vert \vecp_{ n } + \vecp \Vert$
+           & $\Vert \vecp_{ n } - \vecp \, \Vert$ \\
     538 & 10 & & $\Vert p_{ n } - p \Vert$
-           & $\Vert \vec{ p }_{ n } - \vec{ p }\, \Vert$ \\
+           & $\Vert \vecp_{ n } - \vecp \, \Vert$ \\
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1780,8 +1755,8 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     571 & &  5 & \textit{$\nu$-całkowalny}
            & \textit{$\nu$-mierzalny} \\
     573 &  3 & & $( \lambda \otimes \mu )$-prawie & $\lambda$-prawie \\
-    575 & 10 & & $\vec{ P }_{ l }$ & $P_{ l }$ \\
-    575 & 11 & & $d_{ p }$ & $\vec{ d }_{ p }$ \\
+    575 & 10 & & $\vecP_{ l }$ & $P_{ l }$ \\
+    575 & 11 & & $d_{ p }$ & $\vecd_{ p }$ \\
     575 & & 17 & sumie wektorowej & domknięciu \\
     576 & &  9 & zwartych & o~domknięciu zwartym \\
     577 & & 10 & $R_{ 1 }$ & $\Rbb_{ 1 }$ \\
@@ -1805,22 +1780,18 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
     594 &  2 & & $\Rbb^{ 2 }$ & $\Rbb_{ 1 }$ \\
     594 & &  3 & funkcji & funkcji ciągłej \\
     599 &  7 & & (4.9.38) & (4.8.38) \\
-    609 &  3 & & $\int \Vert \vec{ f } \Vert \varphi_{ b } \, d\lambda$
-           & $\int^{ * } \Vert \vec{ f } \Vert \varphi_{ b } \, d\lambda$ \\
-    609 &  5 & & $\int \Vert \vec{ f } \Vert \varphi_{ b' } \, d\lambda$
-           & $\int^{ * } \Vert \vec{ f } \Vert \varphi_{ b' } \, d\lambda$ \\
-    609 &  5 & & $\int\limits_{ | a, b' [ } \Vert \vec{ f } \Vert \, d\lambda$
-           & $\int\limits_{ | a, b' [ }{^{ * }} \Vert \vec{ f } \Vert \, d\lambda$ \\
+    609 &  3 & & $\int \Vert \vecf \Vert \varphi_{ b } \, d\lambda$
+           & $\int^{ * } \Vert \vecf \Vert \varphi_{ b } \, d\lambda$ \\
+    609 &  5 & & $\int \Vert \vecf \Vert \varphi_{ b' } \, d\lambda$
+           & $\int^{ * } \Vert \vecf \Vert \varphi_{ b' } \, d\lambda$ \\
+    609 &  5 & & $\int\limits_{ | a, b' [ } \Vert \vecf \Vert \, d\lambda$
+           & $\int\limits_{ | a, b' [ }{^{ * }} \Vert \vecf \Vert \, d\lambda$ \\
     \hline
   \end{tabular}
 
-\end{center}
 
 
 
-
-
-\begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1841,21 +1812,21 @@ przestrzeni topologicznych, jednak tu trzeba~się chwilę zastanowić. %
            & $v = ( u_{ 1 }, \ldots, u_{ N - 1 } )$ \\
     643 & 11 & & $\omega$ & $w$ \\
     643 & & 10 & $\left( = \frac{ 1 }{
-                 \partialDerivative{}{ h }{ { x_{ N } } }( x ) } \right)$
+                 \frac{ \partial h }{ \partial x_{ N } }( x ) } \right)$
            & $= \left( \frac{ 1 }{
-             \partialDerivative{}{ h }{ { x_{ N } } }( x ) } \right)$ \\
+             \frac{ \partial h }{ \partial x_{ N } }( x ) } \right)$ \\
     648 & & 12 & \textbf{Całkowalność}
            & \textbf{Różniczkowalność} \\
     649 & &  1 & $\overrightarrow{ f_{ m n }( x ) - f_{ m n }( x ) }$
-           & $\vec{ f }_{ m n }( x ) - \vec{ f }_{ m n }( x )$ \\
+           & $\vecf_{ m n }( x ) - \vecf_{ m n }( x )$ \\
     % 649 & &  9 & \raisebox{\depth}{\scalebox{1}[-1]{\textit{j}}}\textit{ednostajnie}
     %        & \textit{jednostajnie} \\
     654 &  4 & & $1 )$ & $1$ \\
     649 & &  8 & \textit{ewentualnie} & \textit{odpowiednio} \\
     666 &  4 & & wyprowadzony & podany \\
     & & & & \\
-    564 &  8 & & $\vec{ E }$.
-           & $\vec{ E }$, gdzie $\vec{ x }_{ n } \in B( a_{ n }, \varphi )$. \\
+    564 &  8 & & $\vecE$.
+           & $\vecE$, gdzie $\vecx_{ n } \in B( a_{ n }, \varphi )$. \\
            % Coś tu jest nie tak
     \hline
   \end{tabular}
@@ -1912,29 +1883,29 @@ przestrzeni \\ % to jakoś źle brzmi
 podprzestrzenie jest~liniowe \\
 \StrWd{163}{1} \\
 \Jest
-$\Vert \vec{ x } + \vec{ y } \Vert = \Vert \vec{ x } \Vert + \Vert \vec{ y } \Vert$
-$+ 2 \mathrm{Re}( \vec{ x } | \vec{ y } )$ \\
-\Powin $\Vert \vec{ x } + \vec{ y } \Vert^{ 2 } = \Vert \vec{ x } \Vert^{ 2 }
-+ \Vert \vec{ y } \Vert^{ 2 }$ $+ 2 \mathrm{Re}( \vec{ x } | \vec{ y } )$ \\
+$\Vert \vecx + \vecy \Vert = \Vert \vecx \Vert + \Vert \vecy \Vert$
+$+ 2 \ReLoc( \vecx | \vecy )$ \\
+\Powin $\Vert \vecx + \vecy \Vert^{ 2 } = \Vert \vecx \Vert^{ 2 }
++ \Vert \vecy \Vert^{ 2 } + 2 \ReLoc( \vecx | \vecy )$ \\
 \StrWg{165}{9} \\
-\Jest i \\
+\Jest  i \\
 \Powin i~wraz z~pierwszą częścią dowodu wykazuje, \\
 \StrWg{200}{18} \\
-\Jest obie te granice nie są równe \\
-\Powin  jeśli co~najmniej jedna z~tych granic nie~jest równa \\
+\Jest  obie te granice nie są równe \\
+\Powin jeśli co~najmniej jedna z~tych granic nie~jest równa \\
 \StrWg{245}{8} \\
-\Jest funkcja \\
-\Powin  funkcja $x \mapsto f'( x )$ jest jednostajnie ciągła \\
+\Jest  funkcja \\
+\Powin funkcja $x \mapsto f'( x )$ jest jednostajnie ciągła \\
 \StrWd{259}{12} \\
 \Jest \textit{$\Omega \subset E$ w zbiór $F$} \\
 \Powin $\Omega \subset E$ przestrzeni afinicznej unormowanej
 w~przestrzeń afiniczną unormowaną~$F$ \\
 \StrWd{280}{10} \\
-\Jest Odwzorowanie to~jest ciągłe \\
-\Powin  Wynika stąd, że~odwzorowanie to~jest ciągłe \\
+\Jest  Odwzorowanie to~jest ciągłe \\
+\Powin Wynika stąd, że~odwzorowanie to~jest ciągłe \\
 \StrWd{374}{10} \\
-\Jest Punkty te~nie muszą \\
-\Powin  Punkty te~można umieścić znajdować~się \\
+\Jest  Punkty te~nie muszą \\
+\Powin Punkty te~można umieścić znajdować~się \\
 \StrWg{379}{7} \\
 \Jest  \textit{Riemanna} (niekoniecznie\ldots zwartym) \\
 \Powin \textit{Riemanna} \\
@@ -1945,58 +1916,55 @@ w~przestrzeń afiniczną unormowaną~$F$ \\
 \Jest Przekonamy~się \\
 \Powin  O~jej istnieniu przekonamy~się \\
 \StrWd{393}{12} \\
-\Jest (4.2.21)~i~biorąc pod~uwagę (3.2.19), \\
+\Jest  (4.2.21)~i~biorąc pod~uwagę (3.2.19), \\
 \Powin (4.2.21), \\
 \StrWd{396}{14} \\
-\Jest ciągła na przedziale $[ a', b' ]$ funkcja $\varphi$ \\
-\Powin  funkcja $\varphi$ ciągła na przedziale $[ a', b' ]$ \\
+\Jest  ciągła na przedziale $[ a', b' ]$ funkcja $\varphi$ \\
+\Powin funkcja $\varphi$ ciągła na przedziale $[ a', b' ]$ \\
 \StrWg{399}{7} \\
-\Jest Gdy przestrzeń~$X$ jest zwarta, wtedy~dochodzimy tego \\
-\Powin  Z~własności zbiorów zwartych wynika \\
+\Jest  Gdy przestrzeń~$X$ jest zwarta, wtedy~dochodzimy tego \\
+\Powin Z~własności zbiorów zwartych wynika \\
 \StrWg{407}{5} \\
-\Jest pojęcie \\
-\Powin  pojęcie i~udowodnimy związane z~nim twierdzenie \\
+\Jest  pojęcie \\
+\Powin pojęcie i~udowodnimy związane z~nim twierdzenie \\
 \StrWg{413}{12} \\
-\Jest \textit{przy ciągłym $\vec{ p }$ jest sumą mnogościową domknięcia
+\Jest  \textit{przy ciągłym $\vecp$ jest sumą mnogościową domknięcia
   zbioru punktów $a_{ \nu }$ i~nośnika
-  funkcji $\vec{ p }$.} \\
+  funkcji $\vecp$.} \\
 \Powin \textit{zawiera~się w~sumie mnogościowej domknięcia zbioru
-  punktów $a_{ \nu }$ i~nośnika funkcji $\vec{ p }$, zaś~przy
-  $\vec{ p }$
-  ciągłym jest ich sumą.} \\
+  punktów $a_{ \nu }$ i~nośnika funkcji $\vecp$, zaś~przy
+  $\vecp$ ciągłym jest ich sumą.} \\
 \StrWd{415}{14} \\
 \Jest  \textit{lokalnie zwartą\ldots} \\
 \Powin \textit{lokalnie zwartą, przeliczalną w~nieskończoności\ldots} \\
 \StrWg{436}{17} \\
-\Jest $\complement ( [ a, b ] )$ \\
+\Jest  $\complement ( [ a, b ] )$ \\
 \Powin $\complement ( [ a, b ] )$ i~niech~$D$ będzie wspomnianym wyżej
 zbiorem. \\
 \StrWd{438}{14} \\
-\Jest pseudomierzalny (niekoniecznie o mierze skończonej). \\
+\Jest  pseudomierzalny (niekoniecznie o mierze skończonej). \\
 \Powin pseudomierzalny. Zbiór ten~ma miarę skończoną ze~względu
 na~własność~(4.3.12) i~skończoną miarę kompaktu $K$. \\
 \StrWd{439}{4} \\
-\Jest \textit{jeżeli wszystkie $\mu( A_{ n } )$~są nieskończone.} \\
+\Jest  \textit{jeżeli wszystkie $\mu( A_{ n } )$~są nieskończone.} \\
 \Powin \textit{jeżeli dla~nieskończenie wielu $A_{ n }$ zachodzi
   $\mu( A_{ n } ) = +\infty$.} \\
 \StrWg{451}{18} \\
-\Jest zbioru~$X$ w~mierzalny, zgodnie z~wnioskiem~1,
-zbiór $\vec{ F } \times \vec{ F }$ \\
-\Powin zbioru $X$ w~zbiór $\vec{ F } \times \vec{ F }$, mierzalnego
+\Jest  zbioru~$X$ w~mierzalny, zgodnie z~wnioskiem~1,
+zbiór $\vecF \times \vecF$ \\
+\Powin zbioru $X$ w~zbiór $\vecF \times \vecF$, mierzalnego
 zgodnie
 z~wnioskiem~1 \\
 \StrWg{467}{4} \\
 \Jest w odwzorowaniu $f_{ \delta }$ jest sumą kompaktów $K_{ i }$,
 a~zatem jest domknięty, więc~obcięcie $f_{ \delta }$ funkcji $f$
-do~$K_{ \delta }$
-jest ciągłe na~$K_{ \delta }$. \\
+do~$K_{ \delta }$ jest ciągłe na~$K_{ \delta }$. \\
 \Powin przez obcięcie $f_{ \delta }$ funkcji $f$ do~$K_{ \delta }$
 jest sumą kompaktów $K_{ i }$, a~zatem jest domknięty,
-więc~$f_{ \delta }$
-jest ciągłe na~$K_{ \delta }$. \\
+więc~$f_{ \delta }$ jest ciągłe na~$K_{ \delta }$. \\
 \StrWd{481}{14} \\
-\Jest zbiór otwarty $\mathcal{V}$ kompaktu $K$\ldots \\
-\Powin otwarte otoczenie $\mathcal{V}$ kompaktu $K$ o~domknięciu
+\Jest zbiór otwarty $\Vcal$ kompaktu $K$\ldots \\
+\Powin otwarte otoczenie $\Vcal$ kompaktu $K$ o~domknięciu
 zwartym\ldots \\
 \StrWg{510}{5} \\
 \Jest Pierwsza część twierdzenia nie została jednak jeszcze
@@ -2012,58 +1980,58 @@ udowodniona\ldots \\
 \Jest każda kula o~środku w~punkcie~$b$ \\
 \Powin każde otoczenie punktu~$b$
 \StrWd{532}{11} \\
-\Jest z~nierówności wypukłości\ldots\\
+\Jest z~nierówności wypukłości \\
 \Powin  z~własności wypukłości i~wartości średniej\ldots \\
 \StrWd{532}{18} \\
 \Jest \textit{oraz, przy założeniach twierdzenia 72, istniej
-  $K( H \mu )$\ldots} \\
+  $K( H \mu )$} \\
 \Powin \textit{oraz $H$~i~$K$ spełniają założenia twierdzenia~72,
-  tak~że~istniej $K( H \mu )$\ldots}\\
+  tak~że~istniej $K( H \mu )$}\\
 \StrWg{539}{10} \\
-\Jest  W~konsekwencji\ldots \\
-\Powin Pokażemy, że~w~konsekwencji tego\ldots \\
+\Jest  W~konsekwencji \\
+\Powin Pokażemy, że~w~konsekwencji tego \\
 \StrWd{563}{12} \\
 \Jest  obie funkcje~są równe zeru. \\
 \Powin funkcja $\psi$ jest równa zeru. \\
 \StrWd{563}{11} \\
-\Jest jest majoryzowany przez funkcję $f$, równą $f( a )$. \\
-\Powin  jest równy $f( a )$.\\
+\Jest  jest majoryzowany przez funkcję $f$, równą $f( a )$. \\
+\Powin jest równy $f( a )$.\\
 \StrWg{563}{14} \\
-\Jest lokalnie zwartymi \\
-\Powin  lokalnie zwartymi, przeliczalnymi w~nieskończoności \\
+\Jest  lokalnie zwartymi \\
+\Powin lokalnie zwartymi, przeliczalnymi w~nieskończoności \\
 \StrWd{578}{2} \\
-\Jest a~więc funkcja regularna\ldots \\
-\Powin  więc każda funkcja regularna jest borelowska\ldots \\
+\Jest  a~więc funkcja regularna\ldots \\
+\Powin więc każda funkcja regularna jest borelowska \\
 \StrWd{586}{4} \\
-\Jest funkcją dowolną\ldots \\
-\Powin  dowolną funkcją lokalnie $\mu$\dywiz całkowalną\ldots \\
+\Jest  funkcją dowolną\ldots \\
+\Powin dowolną funkcją lokalnie $\mu$-całkowalną \\
 \StrWg{592}{18} \\
-\Jest rosnącą i~w~ogólny przypadku silnie rosnącą. \\
-\Powin  rosnącą, lecz~w~ogólny przypadku nie silnie rosnącą. \\
+\Jest  rosnącą i~w~ogólny przypadku silnie rosnącą. \\
+\Powin rosnącą, lecz~w~ogólny przypadku nie silnie rosnącą. \\
 \StrWg{593}{6} \\
-\Jest sprawa polega na tym, że nawet\ldots \\
-\Powin  nawet\ldots \\
+\Jest  sprawa polega na tym, że nawet \\
+\Powin nawet \\
 \StrWg{605}{8} \\
 \Jest $[ a, b ]$ \\
 \Powin  $[ a', b' ]$, zawierającym zbiór $\xi( [ \alpha, \beta ] )$ \\
 \StrWd{607}{10} \\
-\Jest nie miałoby sensu jako całka funkcji ciągłej. \\
-\Powin  nie miałoby sensu. \\
+\Jest  nie miałoby sensu jako całka funkcji ciągłej. \\
+\Powin nie miałoby sensu. \\
 \StrWg{610}{10} \\
-\Jest całek posługiwaliśmy się\ldots \\
-\Powin  niewłaściwej całek posłużymy~się\ldots \\
+\Jest  całek posługiwaliśmy się\ldots \\
+\Powin niewłaściwej całek posłużymy~się\ldots \\
 \StrWg{637}{18} \\
-\Jest  \textit{zdefiniowaną}\ldots \\
-\Powin \textit{gdzie $D( u )$ jest~zdefiniowane}\ldots \\
+\Jest  \textit{zdefiniowaną} \\
+\Powin \textit{gdzie $D( u )$ jest~zdefiniowane} \\
 \StrWg{646}{9} \\
 \Jest  \textit{funkcją pierwotną pola sfery jest $S_{ N } R^{ N - 1 }$,
-  znikającą przy $R = 0$}\ldots \\
+  znikającą przy $R = 0$} \\
 \Powin \textit{jest to~funkcja pierwotna pola sfery
   $S_{ N } R^{ N - 1 }$,
-  znikająca przy $R = 0$}\ldots \\
+  znikająca przy $R = 0$} \\
 \StrWg{651}{16} \\
-\Jest twierdzenia~13\ldots \\
-\Powin twierdzenia~26, rozdział~III\ldots \\
+\Jest  twierdzenia~13 \\
+\Powin twierdzenia~26, rozdział~III \\
 
 \vspace{\spaceTwo}
 % ############################
@@ -2288,7 +2256,11 @@ $$\vec{ \mu }_{ 2 } = \Phi_{ 2 1 } \vec{ \mu }_{ 1 } \ldots$$
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{MathComScienceBooks}{}
+\bibliographystyle{alpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
 
 
 
