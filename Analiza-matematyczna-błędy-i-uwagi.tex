@@ -133,6 +133,8 @@
   Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -173,9 +175,87 @@
 \Work{ % Autor i tytuł dzieła
   Grigorij Michajłowicz Fichtenholz \\
   „Rachunek różniczkowy i~całkowy. Tom~I”,
-  \cite{FichtenholzRachunekRozniczkowyETCVolI2005} }
+  \cite{FichtenholzRachunekRozniczkowyETCVolI2005}}
 
 
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+\vspace{\spaceFour}
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    8   & & 11 & $< | \Delta P | <$ & $\leq | \Delta P | \leq$ \\[0.2em]
+    8   & &  7 & $< \frac{ | \Delta P | }{ \Delta x } <$
+           & $\leq \frac{ | \Delta P | }{ \Delta x } \leq$ \\[0.2em]
+    12  & &  5 & $a^{ n }$ & $a_{ n }$ \\
+    13  &  7 & & $( x - a )^{ k } \, dx$ & $\int ( x - a )^{ -k } \, dx$ \\
+    18  & &  4 & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 2 }$ \\
+    18  & &  1 & więc$\cdot t$ & więc $t$ \\
+    23  & 16 & & $n \_ 1$ & $n - 1$ \\
+    23  & 17 & & $n \_ 2$ & $n - 2$ \\
+    23  & & 16 & otrzvmujemy & otrzymujemy \\
+    25  &  1 & & $e^{ \cdot ( k + 1 ) t}$ & $e^{ ( k + 1 ) t}$ \\
+    28  & &  5 & z$\cdot$algebry & z~algebry \\[0.2em]
+    29  & & 11 & $\frac{ P( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$
+           & $\frac{ P_{ 1 }( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$
+    \\[0.3em]
+    34  &  3 & & [lub (6) & [lub (6)] \\
+    34  &  4 & & lub (6)] & [lub (6)] \\[0.2em]
+    35  & & 17 & $\left[ \frac{ a x^{ 2 } + b x + c }
+                 { x^{ 3 } + x^{ 2 } + x + 1 } \right]$
+           & $\left[ \frac{ a x^{ 2 } + b x + c }
+             { x^{ 3 } + x^{ 2 } + x + 1 } \right]'$ \\[0.4em]
+    35  & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
+           & $x^{ 3 } + x^{ 2 } + x + 1$ \\
+    36  & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\[0.2em]
+    39  &  3 & & $\sqrt[ m ]{ \frac{ \alpha x + \beta }{ \gamma x + \delta } } \, dx$
+           & $\sqrt[ m ]{ \frac{ \alpha x + \beta }{ \gamma x + \delta } }$ \\[0.2em]
+    40  &  2 & & $\frac{ 2t - 1 }{ \sqrt{ 3 } }$
+           & $\frac{ 2t + 1 }{ \sqrt{ 3 } }$ \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
 
 
 Str. 303.
@@ -187,7 +267,6 @@ z'_{ y } = \frac{ y }{ q }\textrm{.}$ \\
 Str. 376. \ldots ale równa jest 0, gdy\ldots
 
 
-\vspace{\spaceTwo}
 % ############################
 
 
@@ -415,15 +494,16 @@ Gdyby tak równość zachodziła, to po pierwsze
 Wynika to z~tego, że~z~wyjątkiem $n = 1$
 \begin{equation}
   \label{eq:FichtenholzVolII-10}
-  \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
-  \neq \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
+  \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } } \neq
+  \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
 \end{equation}
 Prawidłowa równość ma~postać
 \begin{equation}
   \label{eq:FichtenholzVolII-11}
   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
     ( 1 - x^{ 2n } ) }
-  \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+  \neq
+  \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
     - \frac{ 1 }{ 1 - x^{ 2n } } \right),
 \end{equation}
 jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
@@ -602,8 +682,9 @@ szeregu od~0.
 
 \end{center}
 
+\vspace{\spaceTwo}
 
-\noindent
+
 \StrWd{34}{3} \\
 \Jest  Zróżniczkujmy (10) obustronnie \\
 \Powin Wykonując jawnie różniczkowanie w~(10) \\
@@ -613,7 +694,7 @@ szeregu od~0.
 \Powin $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
 \right)$ \\
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
