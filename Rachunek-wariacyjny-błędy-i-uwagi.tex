@@ -106,8 +106,12 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach
+
+\renewcommand{\baselinestretch}{1.1}
+
+
 
 
 
@@ -175,19 +179,24 @@
 
 % ############################
 \Work{ % Autorzy i tytuł dzieła
-  I.M.~Gelfand, S.W.~Fomin \\
-  „Rachunek wariacyjny”, \cite{GelfandFominRachunekWariacyjny1972}}
+  \mbox{I. \hspace{-0.4em} M.}~Gelfand,
+  \mbox{S. \hspace{-0.4em} W.}~Fomin \\[0.3em]
+  \textit{Rachunek wariacyjny}, \cite{GelfandFominRachunekWariacyjny1972}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
-\start \Str{10} W~tym miejscu pierwszy raz autorzy książki używają pewnego
+
+\Str{10} W~tym miejscu pierwszy raz autorzy książki używają pewnego
 skrótu myślowego. Zapisują oni bowiem funkcjonał długości
-krzywej\footnote{Dokładniej, chodzi o~klasę krzywych które da się zapisać za
+krzywej\footnote{Dokładniej, chodzi o~klasę krzywych, które da się zapisać za
   pomocą zależności typu $x \mapsto ( x, y( x ) )$, gdzie $y( x )$ jest normalną
-  funkcją zmiennej~$x$. Krzywą która nie jest tego typu, jest choćby okrąg
+  funkcją zmiennej~$x$. Krzywą, która nie jest tego typu, jest choćby okrąg
   o~środku w~punkcie $( 0, 0 )$ i~promieniu jeden. Dla punktu tego okręgu
   o~współrzędnych $( x, y )$ spełnione jest równanie
   $x^{ 2 } + y^{ 2 } = 1$. Przy czym nie zakładamy, że~$y$ jest funkcją $x$,
@@ -202,8 +211,7 @@ Bardziej precyzyjny zapis tego funkcjonału miałby postać
   \label{eq:Gelfand-Fomin-Year1972-02}
   \int_{ a }^{ b } \sqrt{ 1 + \big( y'( x ) \big)^{ 2 } } \,\: dx.
 \end{equation}
-
-Innym przykładem tego skrótu myślowego, jest pojawiający~się też na tej
+Innym przykładem tego skrótu myślowego jest pojawiający~się też na tej
 stronie zapis innego funkcjonału
 \begin{equation}
   \label{eq:Gelfand-Fomin-Year1972-03}
@@ -214,10 +222,9 @@ który w~bardziej precyzyjnej notacji zapisalibyśmy jako
   \label{eq:Gelfand-Fomin-Year1972-04}
   \int_{ a }^{ b } F\left( x, y( x ), y'( x ) \right) dx.
 \end{equation}
-
 Dla większej przejrzystości prowadzonych rozważań, w~dalszym ciągu tych
 notatek będziemy~się starali możliwie jawnie zapisywać zależność wszystkich
-funkcji od~ich argumentów, w~sytuacjach gdy wykonujemy operacje takie
+funkcji od~ich argumentów w~sytuacjach, gdy wykonujemy operacje takie
 jak całkowanie po~tych zmiennych.
 
 \vspace{\spaceFour}
@@ -226,13 +233,13 @@ jak całkowanie po~tych zmiennych.
 
 
 
-\start \Str{15} W~definicji liniowego funkcjonału nad liniową przestrzenią
+\Str{15} W~definicji liniowego funkcjonału nad liniową przestrzenią
 unormowaną~$R$ nie pojawia się warunek, by był on jednorodny, czyli
 \begin{equation}
   \label{eq:Gelfand-Fomin-Year1972-05}
   \varphi( \alpha \, h ) = \alpha \, \varphi( h ), \quad \alpha \in \Cbb, \, h \in R.
 \end{equation}
-Nie wiem, czy jest to przeczenie ze~strony autorów, czy też addytywność
+Nie wiem, czy jest to przeoczenie ze~strony autorów, czy też addytywność
 i~ciągłość takiego funkcjonału od razu gwarantuje jego jednorodność.
 
 \vspace{\spaceFour}
@@ -241,14 +248,15 @@ i~ciągłość takiego funkcjonału od razu gwarantuje jego jednorodność.
 
 
 
-\start \Str{15} W~tym miejscu autorzy wprowadzają jedno z~kluczowych dla
-rachunku wariacyjnego zagadnień. Mianowicie, przyjmijmy, iż~dana jest pewna
-przestrzeń funkcji~$H$. Jeśli dla funkcji $f( x )$ zachodzi
+\Str{15} W~tym miejscu autorzy wprowadzają jedno z~kluczowych dla
+rachunku wariacyjnego zagadnień. Mianowicie przyjmijmy, iż~dana jest pewna
+przestrzeń funkcji~$H$. Jeśli dla funkcji $f( x )$ równość
 \begin{equation}
   \label{eq:Gelfand-Fomin-Year1972-06}
-  \int_{ x_{ 1 } }^{ x_{ 2 } } f( x ) h( x ) \, dx = 0,
+  \int_{ x_{ 1 } }^{ x_{ 2 } } f( x ) h( x ) \, dx = 0
 \end{equation}
-dla każdego $h( x ) \in H$, to co możemy o~niej na podstawie tego powiedzieć?
+zachodzi dla każdego $h( x ) \in H$, to co możemy o~niej na podstawie tego
+powiedzieć?
 
 ????
 Z braku czasu mogę tylko zaznaczyć kilka problemów jakie mogą się w~związku
@@ -258,7 +266,7 @@ istniały? Dla jakich przestrzeni $H$ chcielibyśmy udowodnić twierdzenia,
 która dowodzą, np. że funkcja $f( x )$ jest tożsamościowo równa 0?
 
 ????
-Te i inne pytanie musimy na razie odłożyć na bok, licząc, iż przyjdą kiedyś
+Te i inne pytanie musimy na razie odłożyć na bok, licząc iż przyjdą kiedyś
 lepsze czasy, gdy będziemy się mogli nimi zająć.
 
 \vspace{\spaceFour}
@@ -267,7 +275,7 @@ lepsze czasy, gdy będziemy się mogli nimi zająć.
 
 
 
-\start \Str{17} W~tym miejscu potrzebny nam jest rozkład funkcji ciągłej
+\Str{17} W~tym miejscu potrzebny nam jest rozkład funkcji ciągłej
 $f : [ a, b ] \to \Rbb$ (lub $f : [ a, b ] \to \Cbb$), postaci
 \begin{equation}
   \label{eq:Gelfand-Fomin-Year1972-07}
@@ -282,7 +290,7 @@ Taki rozkład da się bardzo łatwo podać. Weźmy mianowicie
 \begin{subequations}
   \begin{align}
     \label{eq:Gelfand-Fomin-Year1972-09-A}
-    &\alpha = \frac{ 1 }{ \abs{ b - a } } \, \int_{ a }^{ b } f( x ) dx, \\
+    &\alpha = \frac{ 1 }{ \abs{ b - a } } \, \int_{ a }^{ b } f( x ) dx, \\[0.3em]
     \label{eq:Gelfand-Fomin-Year1972-09-B}
     &\lambda( x ) = f( x ) - \alpha.
   \end{align}
@@ -296,32 +304,34 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 
 
 
-% ##################
-\newpage
+% % ##################
+% \newpage
 
-\CenterBoldFont{Błędy}
+% \CenterBoldFont{Błędy}
+
+% \vspace{-0.5em}
 
 
-\begin{center}
+% \begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
 
-\end{center}
+% \end{center}
 
 \vspace{\spaceTwo}
 
@@ -338,13 +348,20 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
-  I.M.~Gelfand, S.W.~Fomin \\
-  „Rachunek wariacyjny”, \cite{GelfandFominRachunekWariacyjny1979}}
+  \mbox{I. \hspace{-0.4em} M.}~Gelfand,
+  \mbox{S. \hspace{-0.4em} W.}~Fomin \\[0.3em]
+  \textit{Rachunek wariacyjny}, \cite{GelfandFominRachunekWariacyjny1979}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Błędy}
+
+\vspace{-0.5em}
 
 
 \begin{center}
