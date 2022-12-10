@@ -86,8 +86,8 @@
 % ------------------------------
 % Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ------------------------------
-\usepackage{mathcommands}
 \usepackage{latexshortcuts}
+\usepackage{mathcommands}
 \usepackage{calculuscommands}
 
 
@@ -116,6 +116,8 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
 \renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach
 
@@ -137,14 +139,16 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Tytuł i autor tekstu
 \title{Analiza matematyczna \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -183,7 +187,7 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Franciszek Leja \\
-  „Funkcje zespolone”, \cite{LejaFunkcjeZespolone2006} }
+  \textit{Funkcje zespolone}, \cite{LejaFunkcjeZespolone2006}}
 % Sprawdź tu wszystkie eqref.
 
 
@@ -202,14 +206,18 @@ płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
 
 
 
+
+
 \start W~analizie zespolonej jest praktycznie użyteczne wprowadzenie
 zwięzłego oznaczenie na~otoczenie pierścieniowe
 \begin{equation}
-  \label{eq:LejaFZ-01}
+  \label{eq:Leja-FZ-01}
   \Pier(a, r, R) := \{ z \;|\; r < \absOne{ z - a } < R \}.
 \end{equation}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -219,6 +227,8 @@ jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
 liczby postaci $\alpha + \beta i$.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -275,12 +285,16 @@ Tą tożsamość można udowodnić w~następujący sposób
 
 
 
+
+
 \start \Str{9--10} Według wszystkich mi znanych historycznych prac na
 temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
 badania rozwiązań równania \textit{trzeciego} stopnia, nie zaś równań
 kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -321,6 +335,8 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 59--60).
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -380,6 +396,8 @@ będziemy~się w~tym miejscu szerzej zajmować.
 
 
 
+
+
 \start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
 momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
 $\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
@@ -388,6 +406,8 @@ obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
 wiem, jak należałoby to~poprawić.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -414,6 +434,8 @@ za~pomocą $\alpha$ i~$\beta$.
 
 
 
+
+
 \start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
 iloczyn Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
 i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
@@ -432,11 +454,15 @@ jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 
 
 
+
+
 \start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
 Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
 wartość tej granicy wynika z~twierdzenia Abela.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -499,6 +525,8 @@ Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
 zakończony.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -616,6 +644,8 @@ liczbie~$n + 1$. Tym samym
 
 
 
+
+
 \start \Str{22} Potrzebujemy jeszcze udowodnić,
 że~$\lim_{ n \to \infty } r_{ n } = 0$. Ponieważ $\alpha_{ n }$
 i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
@@ -652,11 +682,15 @@ drugi człon jest również mniejszy od~$\varepsilon / 2$, co~kończy dowód.
 
 
 
+
+
 \start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
 przy omawianiu własności przecięć zbiorów domkniętych, jest tu
 wymieniony osobno.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -681,6 +715,8 @@ starać o~większą jasność i~precyzję tekstów matematycznych.
 
 
 
+
+
 \start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
 na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
 $\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
@@ -688,6 +724,8 @@ może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
 jest żadnym problemem dla~rozwijanej tu~teorii.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -768,6 +806,8 @@ bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
 
 
 
+
+
 \start \Str{30--31} Definicja krzywej przedziałami gładkiej jest
 niepełna, skutkiem czego pojęcie wierzchołka takiej krzywej jest
 błędne. Weźmy krzywą gładką na przedziale $[ \alpha, \beta ]$
@@ -785,6 +825,8 @@ jest ona gładka w~przedziałach $[ t_{ k - 1 } - \epsilon, t_{ k } ]$
 i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -889,6 +931,8 @@ by~chyba zbyt daleko od~słów Lejii.
 
 
 
+
+
 \start \Str{33} Warto zaznaczyć, że~w~tej książce używa~się pojęcia
 południk inaczej niż w~geografii, gdzie oznacza on~część okręgu
 wielkiego biegnącą od~bieguna północnego do~południowego (półokrąg).
@@ -900,11 +944,15 @@ konsekwentnie.
 
 
 
+
+
 \start \Str{35} Warto byłoby udowodnić, że~jeśli punkty~$p$,~$q$ są
 symetryczne względem pewnej prostej, to~łączący je odcinek jest
 prostopadły do~tej prostej.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -917,11 +965,15 @@ przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 
 
 
+
+
 \start \Str{38} Nie jestem pewien czy z~definicji wynika, że~do danych
 pęków należą odpowiednie proste (okręgi niewłaściwe), czy też należy
 tak zmodyfikować definicję, by~do nich należały.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -963,6 +1015,8 @@ z_{ n } \}$ poprzez
 
 
 
+
+
 \start \Str{53} Warto byłoby tu częściej zaznaczać, że~liczba $N$ jest
 funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \begin{equation}
@@ -971,6 +1025,8 @@ funkcją argumentu zespolonego $N( z )$. Na~przykład pisząc
 \end{equation}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -989,11 +1045,15 @@ z~okresów przyjąć, nie jest łatwe.
 
 
 
+
+
 \start \Str{56} Ze~wzoru (20) rzeczywiście wynika, że~$\sin$ i~$\cos$
 mają okres $2\pi$, ale~nie wynika, iż~dla którejś z~nich nie~istnieje
 mniejsza liczba dodatnia o~tej własności.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1010,12 +1070,16 @@ używać w~zwykły sposób.
 
 
 
+
+
 \start \Str{59} Zamiast rozumieć przez $a^{ b }$ każdą z~liczb podanej
 postaci, lepiej byłoby oznaczać zbiór wszystkich tych liczb.
 Oczywiście, należy uważać na~wymienione już w~przypadku funkcji
 wielowartościowych problemy.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1037,6 +1101,8 @@ mieć skok, a~więc przestaje być ciągła.
 
 
 
+
+
 \start \Str{60} Nie udowodniono tu, że~dwie dowolne gałęzie logarytmu
 różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
 \begin{equation}
@@ -1044,239 +1110,267 @@ różnią~się o~$2 k \pi i$. Dowód ten jest dość prosty.
   e^{ l_{ i }( z ) } = e^{ l_{ j }( z ) }
   \iff e^{ l_{ i }( z ) } / e^{ l_{ j }( z ) } = e^{ l_{ i }( z ) - l_{ j }( z ) }
     = 1.
-  \end{equation}
-  Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
-  $k( z ) \in \Zbb$. Jako różnica dwóch funkcji ciągłych jest
-  to~funkcja ciągła, jednak funkcja ciągła o~wartościach całkowitych
-  musi być równa stałej, czyli $k( z ) = k \in \Zbb$.
+\end{equation}
+Wynika z~tego że~$l_{ i }( z ) - l_{ j }( z ) = 2 k( z ) \pi i$,
+$k( z ) \in \Zbb$. Jako różnica dwóch funkcji ciągłych jest
+to~funkcja ciągła, jednak funkcja ciągła o~wartościach całkowitych
+musi być równa stałej, czyli $k( z ) = k \in \Zbb$.
 
-  \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
-  \start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
-  traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
-  \vspace{\spaceFour}
 
+\start \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy
+traktować $z$ i~$\zbar$ jako dwie zmienne niezależne.
 
+\vspace{\spaceFour}
 
-  \start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
-  zespoloną, a~formalną kluczowe jest to, że~zakłada~się w~nim, iż
-  pochodne cząstkowe istnieją i~są ciągłe. Założenie to zostało podane
-  wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
-  twierdzenia.
 
-  \vspace{\spaceFour}
 
 
 
-  \start \Str{73} Przedyskutujemy tu~czy rysunek~(36) poprawnie
-  przedstawia działanie funkcji analitycznej w~otoczeniu punktu
-  $z_{ 0 }$ takiego, że~$f'( z_{ 0 } ) \neq 0$. Okazuje~się,
-  że~w~pewnym otoczeniu tego punktu funkcja istotnie musi
-  zachowywać~się tak, jak to tam przedstawiono. Aby~niniejsza analiza
-  była prawomocna należy założyć, że~funkcje $u( x, y )$, $v( x, y )$
-  są odpowiednio gładkie. Choć potem zostanie pokazane, że~są one
-  klasy $\Ccal^{ \infty }( \Rbb^{ 2 } )$\footnote{Dokładniej: są one
-    analityczne na~$\Rbb^{ 2 }$. Jednak do~tej pory nie znalazłem
-    dowodu tego faktu w~książce Lejii.}, to tutaj wystarczy nam, że~są
-  klasy $\Ccal^{ 1 }( \Rbb^{ 2 } )$\footnote{Należy sprawdzić, czy nie
-    wystarczy zwykła różniczkowalność.}.
+\start \Str{68} W~podany tu~twierdzeniu o~związku między pochodną
+zespoloną, a~formalną kluczowe jest to, że~zakłada~się w~nim, iż
+pochodne cząstkowe istnieją i~są ciągłe. Założenie to zostało podane
+wyżej w~tekście, niestety nie zostało przedstawione jawnie w~treści
+twierdzenia.
 
-  Zacznijmy od~uwagi ogólnej. Jeśli oznaczymy
-  $z_{ 0 } = x_{ 0 } + i y_{ 0 }$, $c = u( x_{ 0 }, y_{ 0 } )$
-  i~$c' = v( x_{ 0 }, y_{ 0 } )$, to~równania $c = u( x, y )$
-  i~$c' = v( x, y )$ wyznaczają poziomice funkcji $u( x, y )$
-  do~wartości~$c$ i~$v( x, y )$ do~wartości~$c'$. Ze~wzoru (18)
-  na~stronie~72 wiemy, że~jeśli $f'( z_{ 0 } ) \neq 0$, to macierz
-  Jacobiego odwzorowania $( u( x, y ), v( x, y ) )$ jest w tym punkcie
-  nieosobliwa. Na~mocy twierdzenia o~lokalnym odwracaniu odwzorowań
-  istnieje otoczenie punktu $z_{ 0 } \in \Vcal$ takie, że~na
-  $f( \Vcal )$ istnieje odwzorowanie $f^{ -1 }$, które jest tak
-  gładkie jak funkcje $u( x, y )$ i~$v( x, y )$. Na~podstawie tego
-  oraz równań Cauchy'ego-Riemanna można pokazać, że~na zbiorze $\Vcal$
-  sytuacja musi wyglądać tak, jak na rysunku~(36).
+\vspace{\spaceFour}
 
-  Jako, że~nie musi to być całkiem oczywiste tutaj przedstawimy
-  dyskusję kilku wynikających stąd własności. Kąt pod jakim
-  przecinają~się poziomice, jak pokazano w~książce, wynika z~równań
-  Cauchy'ego-Riemanna. Poziomica $c = u( x, y )$ (analogicznie
-  rozumujemy dla $c' = v( x, y )$) jest obrazem przez funkcję
-  $f^{ -1 }$ przecięcia prostej $u = c$ i~zbioru $f( \Vcal )$, na~mocy
-  więc bijektywności~$f^{ -1 }$ pokrywają one cały zbiór $\Vcal$. Ich
-  gładkość zaś~wynika z~gładkości~$f^{ -1 }$. Co więcej, ponieważ
-  w~zbiorze $f( \Vcal )$ proste $c = u$ i~$c' = v$ przecinają~się
-  tylko raz, więc na~mocy injektywności $f$, również odpowiadające
-  im~poziomice przecinają~się tylko raz w~zbiorze~$\Vcal$.
 
-  Nie ma potrzeby zajmować~się globalnym kształtem poziomic, więc
-  zagadnienia tego nie będziemy omawiać.
 
-  \vspace{\spaceFour}
 
 
+\start \Str{73} Przedyskutujemy tu~czy rysunek~(36) poprawnie
+przedstawia działanie funkcji analitycznej w~otoczeniu punktu
+$z_{ 0 }$ takiego, że~$f'( z_{ 0 } ) \neq 0$. Okazuje~się,
+że~w~pewnym otoczeniu tego punktu funkcja istotnie musi
+zachowywać~się tak, jak to tam przedstawiono. Aby~niniejsza analiza
+była prawomocna należy założyć, że~funkcje $u( x, y )$, $v( x, y )$
+są odpowiednio gładkie. Choć potem zostanie pokazane, że~są one
+klasy $\Ccal^{ \infty }( \Rbb^{ 2 } )$\footnote{Dokładniej: są one
+  analityczne na~$\Rbb^{ 2 }$. Jednak do~tej pory nie znalazłem
+  dowodu tego faktu w~książce Lejii.}, to tutaj wystarczy nam, że~są
+klasy $\Ccal^{ 1 }( \Rbb^{ 2 } )$\footnote{Należy sprawdzić, czy nie
+  wystarczy zwykła różniczkowalność.}.
 
-  \start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
+Zacznijmy od~uwagi ogólnej. Jeśli oznaczymy
+$z_{ 0 } = x_{ 0 } + i y_{ 0 }$, $c = u( x_{ 0 }, y_{ 0 } )$
+i~$c' = v( x_{ 0 }, y_{ 0 } )$, to~równania $c = u( x, y )$
+i~$c' = v( x, y )$ wyznaczają poziomice funkcji $u( x, y )$
+do~wartości~$c$ i~$v( x, y )$ do~wartości~$c'$. Ze~wzoru (18)
+na~stronie~72 wiemy, że~jeśli $f'( z_{ 0 } ) \neq 0$, to macierz
+Jacobiego odwzorowania $( u( x, y ), v( x, y ) )$ jest w tym punkcie
+nieosobliwa. Na~mocy twierdzenia o~lokalnym odwracaniu odwzorowań
+istnieje otoczenie punktu $z_{ 0 } \in \Vcal$ takie, że~na
+$f( \Vcal )$ istnieje odwzorowanie $f^{ -1 }$, które jest tak
+gładkie jak funkcje $u( x, y )$ i~$v( x, y )$. Na~podstawie tego
+oraz równań Cauchy'ego-Riemanna można pokazać, że~na zbiorze $\Vcal$
+sytuacja musi wyglądać tak, jak na rysunku~(36).
 
-  \vspace{\spaceFour}
+Jako, że~nie musi to być całkiem oczywiste tutaj przedstawimy
+dyskusję kilku wynikających stąd własności. Kąt pod jakim
+przecinają~się poziomice, jak pokazano w~książce, wynika z~równań
+Cauchy'ego-Riemanna. Poziomica $c = u( x, y )$ (analogicznie
+rozumujemy dla $c' = v( x, y )$) jest obrazem przez funkcję
+$f^{ -1 }$ przecięcia prostej $u = c$ i~zbioru $f( \Vcal )$, na~mocy
+więc bijektywności~$f^{ -1 }$ pokrywają one cały zbiór $\Vcal$. Ich
+gładkość zaś~wynika z~gładkości~$f^{ -1 }$. Co więcej, ponieważ
+w~zbiorze $f( \Vcal )$ proste $c = u$ i~$c' = v$ przecinają~się
+tylko raz, więc na~mocy injektywności $f$, również odpowiadające
+im~poziomice przecinają~się tylko raz w~zbiorze~$\Vcal$.
 
+Nie ma potrzeby zajmować~się globalnym kształtem poziomic, więc
+zagadnienia tego nie będziemy omawiać.
 
+\vspace{\spaceFour}
 
-  \start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
-  policz~$\absOne{ z }^{ 2 } + 1$.
 
-  \vspace{\spaceFour}
 
 
 
-  \start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
-  po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
-  to~jednak jasno z~rysunku.
+\start \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
 
-  \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
-  \start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
-  różna od~0, jest problematyczne, bowiem nie jest wcale jasne,
-  czy~można przypisać jakiś sens pochodnej w~punkcie $z = -d / c$.
-  Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
-  poza tym punktem.
 
-  \vspace{\spaceFour}
 
+\start \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
+policz~$\absOne{ z }^{ 2 } + 1$.
 
+\vspace{\spaceFour}
 
-  \start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
-  do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
-  nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
-  funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
-  trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
-  może być znacznie bardziej skomplikowany obiektem, niż byśmy
-  oczekiwali.
 
-  Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
-  poziomice powinny być dobrze określone. Może warto będzie do~tego
-  zagadnienia powrócić i~zanalizować je dokładnie?
 
-  \vspace{\spaceFour}
 
 
+\start \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia,
+po~której stronie równika należy umieścić rzut punktu~$z'$. Wynika
+to~jednak jasno z~rysunku.
 
-  \start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
-  całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
-  że~rzeczywiście równa jest ona liczbie obiegów, liczonych
-  ze~zwrotem, wokół punktu~$a$ krzywej zamkniętej~$C$.
+\vspace{\spaceFour}
 
-  Należy też dodać komentarz, że~okrążenie punktu przez krzywą liczymy
-  ze~znakiem plus, gdy~podczas okrążania krzywa jest zorientowana
-  dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
-  zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze
-  krzywej zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny
-  czas.
 
-  \vspace{\spaceFour}
 
 
 
-  \start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
-  tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
-  krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
-  dać~się aproksymować ją przez linię łamaną.
+\start \Str{75} Stwierdzenie, że~pochodna homografii jest wszędzie
+różna od~0, jest problematyczne, bowiem nie jest wcale jasne,
+czy~można przypisać jakiś sens pochodnej w~punkcie $z = -d / c$.
+Prawdą jest jednak, że~pochodna homografii jest różna od~0 wszędzie
+poza tym punktem.
 
-  \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
-  \start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
-  zadziwiająco dużo twierdzeń z~topologii płaszczyzny i~krzywych,
-  których dowody wcale nie~są dla mnie oczywiste. Po pierwsze,
-  że~istnieją łuki regularne~$l_{ i }$ łączące kontur~$C_{ 0 }$
-  z~konturami $C_{ i }$ i~że~powstała w~wyniku tej konstrukcji krzywa
-  jest wciąż kawałkami gładka. Po~drugie należy udowodnić, że~w~tej
-  nowej krzywej znajdują~się wszystkie krzywe $-C_{ i }$ i~po każdej
-  z~nich całkujemy dokładnie raz, brak zaś w~ogóle $C_{ i }$.
-  Po~trzecie, że~po~każdym z~łuków $l_{ i }$ całkujemy dokładnie dwa
-  razy, obiegając je w~dwóch przeciwnych kierunkach.
 
-  Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc
-  jest zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 
-  \vspace{\spaceFour}
+\start \Str{79} Ponieważ jak to zostało wspomniane w~komentarzu
+do~str.~10, $\arg z$ jest funkcją wieloznaczną, co~rodzi pewne
+nieoczekiwane trudności przy posługiwaniu~się nią, więc zapewne też
+funkcja $\varphi( x, y ) = \arg f( z )$, będzie sprawiać podobne
+trudności. Z~tego powodu również poziomica $\mu' = \varphi( x, y )$
+może być znacznie bardziej skomplikowany obiektem, niż byśmy
+oczekiwali.
 
+Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
+poziomice powinny być dobrze określone. Może warto będzie do~tego
+zagadnienia powrócić i~zanalizować je dokładnie?
 
+\vspace{\spaceFour}
 
-  \start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
-  zostało one w~żaden sposób jasno zdefiniowane, pozostając
-  na~poziomie intuicji matematycznej.
 
-  \vspace{\spaceFour}
 
 
 
-  \start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
-  „drogi całkowania”, jednak nie jest ono zdefiniowane. Przez
-  \textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką.
-  Dla wygody będziemy czasem mówili po~prostu o~„drodze”.
+\start \Str{87--88} Udowodniono to, że~$I( C, a )$ jest liczbą
+całkowitą, jednak warto byłoby podać jakieś argumenty za~tym,
+że~rzeczywiście równa jest ona liczbie obiegów, liczonych
+ze~zwrotem, wokół punktu~$a$ krzywej zamkniętej~$C$.
 
-  \vspace{\spaceFour}
+Należy też dodać komentarz, że~okrążenie punktu przez krzywą liczymy
+ze~znakiem plus, gdy~podczas okrążania krzywa jest zorientowana
+dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
+zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze
+krzywej zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny
+czas.
 
+\vspace{\spaceFour}
 
 
 
 
-  % ##################
-  \begin{figure}
 
-    \label{fig:LejaFZ-02}
+\start \Str{92} W~tym miejscu chyba wychodzi założenie, że~pracujemy
+tylko z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie
+krzywa ta~mogłaby nie mieć określonej długości albo~mogłoby nie
+dać~się aproksymować ją przez linię łamaną.
 
-    \centering
+\vspace{\spaceFour}
 
-    \begin{tikzpicture}[scale=1.35]
-      \def\axissize{2.5}
 
-      \def\R{2.8}
 
 
 
-      \draw[help lines, ->] (0,0) -- (\axissize,0);
+\start \Str{93} Sytuacja przedstawiona na~rysunku~52 wymaga
+zadziwiająco dużo twierdzeń z~topologii płaszczyzny i~krzywych,
+których dowody wcale nie~są dla mnie oczywiste. Po pierwsze,
+że~istnieją łuki regularne~$l_{ i }$ łączące kontur~$C_{ 0 }$
+z~konturami $C_{ i }$ i~że~powstała w~wyniku tej konstrukcji krzywa
+jest wciąż kawałkami gładka. Po~drugie należy udowodnić, że~w~tej
+nowej krzywej znajdują~się wszystkie krzywe $-C_{ i }$ i~po każdej
+z~nich całkujemy dokładnie raz, brak zaś w~ogóle $C_{ i }$.
+Po~trzecie, że~po~każdym z~łuków $l_{ i }$ całkujemy dokładnie dwa
+razy, obiegając je w~dwóch przeciwnych kierunkach.
 
-      \draw[help lines, ->] (0,-0.5) -- (0,\axissize);
+Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc
+jest zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 
-      \draw[dashed] (-0.6 * \axissize,0) -- (0,0);
+\vspace{\spaceFour}
 
 
 
-      \filldraw[black] (1.3,0) circle (1.5pt) node [below] {1};
 
-      \draw[line width = 0.9pt, decoration = { markings, mark = at
-        position 0.3 with {\arrow[line width=1.2pt]{>}}, mark = at
-        position 0.75 with {\arrow [line width=1.1pt]{>}},}, postaction
-      = {decorate} ] (1.3,0) arc (0:53:1.3) -- (53:\R);
 
+\start \Str{94} Wprowadzono tu~pojęcie sumy krzywych, jednak nie
+zostało one w~żaden sposób jasno zdefiniowane, pozostając
+na~poziomie intuicji matematycznej.
 
-      \filldraw[black] (53:1.3) circle (1.1pt) node [left]
-      {$e^{ i \varphi }$};
+\vspace{\spaceFour}
 
-      \filldraw[black] (53:\R) circle (1.5pt) node [right]
-      {$R\, e^{ i \varphi }$};
 
 
 
-      \node at (1.33,0.8) {$\Gamma$};
 
+\start \Str{94} W~tym miejscu chyba pierwszy raz pojawia~się pojęcie
+„drogi całkowania”, jednak nie jest ono zdefiniowane. Przez
+\textbf{drogę całkowania} należy rozumieć krzywą kawałkami gładką.
+Dla wygody będziemy czasem mówili po~prostu o~„drodze”.
 
+\vspace{\spaceFour}
 
-      \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
 
-      \node at (0.4,\axissize) {$\mathfrak{Im}\, z$};
 
-      \node at (-0.15,-0.2) {$0$};
-    \end{tikzpicture}
 
-    \caption{Przykładowy kontur po~którym można całkować funkcje
-      $1 / \zeta$ „od~1 do~nieskończoności”.}
+
+
+
+% ##################
+\begin{figure}
+
+  \label{fig:LejaFZ-02}
+
+  \centering
+
+  \begin{tikzpicture}[scale=1.35]
+    \def\axissize{2.5}
+
+    \def\R{2.8}
+
+
+
+    \draw[help lines, ->] (0,0) -- (\axissize,0);
+
+    \draw[help lines, ->] (0,-0.5) -- (0,\axissize);
+
+    \draw[dashed] (-0.6 * \axissize,0) -- (0,0);
+
+
+
+    \filldraw[black] (1.3,0) circle (1.5pt) node [below] {1};
+
+    \draw[line width = 0.9pt, decoration = { markings, mark = at
+      position 0.3 with {\arrow[line width=1.2pt]{>}}, mark = at
+      position 0.75 with {\arrow [line width=1.1pt]{>}},}, postaction
+    = {decorate} ] (1.3,0) arc (0:53:1.3) -- (53:\R);
+
+
+    \filldraw[black] (53:1.3) circle (1.1pt) node [left]
+    {$e^{ i \varphi }$};
+
+    \filldraw[black] (53:\R) circle (1.5pt) node [right]
+    {$R\, e^{ i \varphi }$};
+
+
+
+    \node at (1.33,0.8) {$\Gamma$};
+
+
+
+    \node at (\axissize,0) [below] {$\mathfrak{Re}\, z$};
+
+    \node at (0.4,\axissize) {$\mathfrak{Im}\, z$};
+
+    \node at (-0.15,-0.2) {$0$};
+  \end{tikzpicture}
+
+  \caption{Przykładowy kontur po~którym można całkować funkcje
+    $1 / \zeta$ „od~1 do~nieskończoności”.}
 
 \end{figure}
 % ##################
@@ -1338,6 +1432,8 @@ dobrze uzasadniona.
 
 
 
+
+
 \start \Str{96} Dowód, że~w~obszarze jednospójnym funkcja
 $\log f( z )$ istnieje jest w~tym momencie niepełny. Ponieważ
 założyliśmy, że~funkcji $f( z )$ jest analityczna, w~tym momencie
@@ -1347,6 +1443,8 @@ analityczna. Dopiero gdy dowiedziemy, że~każda funkcja analityczna
 jest nieskończenie wiele razy różniczkowalna, dowód będzie pełen.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1402,6 +1500,8 @@ względem zmiennej~$\zeta$.
 
 
 
+
+
 \start \StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy
 zdefiniować symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest
 dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
@@ -1413,6 +1513,8 @@ dowolną liczbą zespoloną, $n$ liczbą naturalną. Wydaje mi~się,
 \end{equation}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1463,11 +1565,15 @@ poprzedniego lematu znika w~całym~$D$.
 
 
 
+
+
 \start \textbf{Str.~106, wiersze 1--2.} Nierówność
 $\absOne{ f( z' ) } > \absOne{ f( z_{ 0 } ) }$ jest bardzo brzydko
 podzielona między dwie linie.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1478,11 +1584,15 @@ wyjaśnia analiza przeprowadzona na~stronie~152.
 
 
 
+
+
 \start \Str{132} Podobnie jak przy definiowaniu ciała funkcji
 wymiernych, należy tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma
 w~punkcie $z_{ 0 }$ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1513,6 +1623,8 @@ wzór~(17).
 
 
 
+
+
 \start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
 książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
 w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
@@ -1533,6 +1645,8 @@ do~wyprowadzenia wzoru~(18) ze~strony~133.
 
 
 
+
+
 \start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
 przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
 Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
@@ -1545,6 +1659,8 @@ kołem~$\absOne{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
 $f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1569,11 +1685,15 @@ jednak, że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
 
 
 
+
+
 \start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro
 zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
 na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1590,12 +1710,16 @@ gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
 
 
+
+
 \start \Str{154} Uogólniona tu~definicja transformacji konforemnej
 sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
 że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
 z~zachowaniem zwrotu?
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1620,6 +1744,8 @@ tylko powiedzieć, że
 \end{equation}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1693,9 +1819,13 @@ zostało to~zrobione na~(\ref{fig:LejaFZ-03}).
 
 
 
+
+
 \start \Str{172--174}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1704,6 +1834,8 @@ ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości
 algebraicznie.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -1724,13 +1856,13 @@ poprawić??????????????????
 
 % ##################
 \newpage
+
 \CenterBoldFont{Błędy}
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -1786,6 +1918,8 @@ poprawić??????????????????
 
 
 
+
+  \newpage
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1845,7 +1979,7 @@ poprawić??????????????????
 
 \end{center}
 
-\vspace{0.5em}
+\vspace{\spaceTwo}
 
 
 \noindent
@@ -1891,7 +2025,7 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 \Powin \textit{symetrii Riemanna-Schwarza}
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -1906,8 +2040,8 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 % ############################
 \Work{ % Autor i tytuł dzieła
   B. W. Szabat \\
-  „Wstęp do analizy zespolonej”,
-  \cite{SzabatWstepDoAnalizyZespolonej1974} }
+  \textit{Wstęp do analizy zespolonej},
+  \cite{SzabatWstepDoAnalizyZespolonej1974}}
 
 
 % ##################
@@ -1947,6 +2081,7 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{DEUSPhilBooks,MathComScienceBooks}{}
