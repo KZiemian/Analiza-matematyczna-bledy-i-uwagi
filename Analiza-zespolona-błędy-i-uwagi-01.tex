@@ -118,7 +118,7 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach
 
 
@@ -190,9 +190,13 @@
   \textit{Funkcje zespolone}, \cite{LejaFunkcjeZespolone2006}}
 % Sprawdź tu wszystkie eqref.
 
+\vspace{0em}
+
 
 % ##################
 \CenterBoldFont{Uwagi}
+
+\vspace{0em}
 
 
 \start W~książce często mówi~się o~prostej na~płaszczyźnie
@@ -211,8 +215,8 @@ płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
 \start W~analizie zespolonej jest praktycznie użyteczne wprowadzenie
 zwięzłego oznaczenie na~otoczenie pierścieniowe
 \begin{equation}
-  \label{eq:Leja-FZ-01}
-  \Pier(a, r, R) := \{ z \;|\; r < \absOne{ z - a } < R \}.
+  \label{eq:Leja-Funkcje-zespolone-01}
+  \Pier( a, r, R ) := \{ z \; | \; r < \absOne{ z - a } < R \}.
 \end{equation}
 
 \vspace{\spaceFour}
@@ -239,14 +243,14 @@ sens, należy chyba postępować w~następujący sposób\footnote{Leja
 mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
 zespolonych przez liczbę rzeczywistą~$a \neq 0$
 \begin{equation}
-  \label{eq:LejaFZ-02}
+  \label{eq:Leja-Funkcje-zespolone-02}
   \frac{ z }{ a } = \frac{ 1 }{ a } \cdot z.
 \end{equation}
 Z~niemożliwości obliczenia $1 / 0$ w~liczba rzeczywistych wynika więc
 niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
 odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
-  \label{eq:LejaFZ-03}
+  \label{eq:Leja-Funkcje-zespolone-03}
   \frac{ 1 }{ a + i0 } = \frac{ 1 }{ a } + i0
   = \frac{ 1 }{ a },
 \end{equation}
@@ -254,7 +258,7 @@ więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
 reguł mnożenia. Teraz możemy \textit{zdefiniować} dla~$z \neq 0$
 liczbę $1 / z$ wzorem
 \begin{equation}
-  \label{eq:LejaFZ-04}
+  \label{eq:Leja-Funkcje-zespolone-04}
   \frac{ 1 }{ z } := \frac{ \zbar }{ z \zbar }.
 \end{equation}
 Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
@@ -2084,7 +2088,7 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 
 \bibliographystyle{plalpha}
 
-\bibliography{DEUSPhilBooks,MathComScienceBooks}{}
+\bibliography{PhilBooks,MathComScienceBooks}{}
 
 
 
