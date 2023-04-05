@@ -68,25 +68,25 @@
 % ---------------
 \usepackage{tikz}
 
-\usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
-% pakietu TikZ
+% Włączenie konkretnych bibliotek pakietu TikZ.
+\usetikzlibrary{decorations.markings}
 
 
 
-% ---------------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ---------------
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
 
 
 
 % ------------------------------
 % Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ------------------------------
-\usepackage{latexshortcuts}
+\usepackage{latexgeneralcommands}
 \usepackage{mathcommands}
 \usepackage{calculuscommands}
 
@@ -199,12 +199,13 @@
 \vspace{0em}
 
 
-\start W~książce często mówi~się o~prostej na~płaszczyźnie
-zespolonej~$\Cbb$, jednak prawie zawsze chodzi o~prostą w~sensie
-płaszczyzny rzeczywistej $\Cbb \simeq \Rbb^{ 2 }$. W~dodatku
-\textit{Wstęp do~teorii funkcji analitycznych wielu zmiennych} Józefa
-Siciaka wprowadza~się pojęcie prostej zespolonej, która w~przypadku
-płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
+\noindent
+W~książce często mówi~się o~prostej na~płaszczyźnie zespolonej~$\Cbb$,
+jednak prawie zawsze chodzi o~prostą w~sensie płaszczyzny rzeczywistej
+$\Cbb \simeq \Rbb^{ 2 }$. W~dodatku \textit{Wstęp do~teorii funkcji
+  analitycznych wielu zmiennych} Józefa Siciaka wprowadza~się pojęcie
+prostej zespolonej, która w~przypadku płaszczyzny zespolonej~$\Cbb$ jest
+po~prostu jej równa.
 
 \vspace{\spaceFour}
 
@@ -212,8 +213,9 @@ płaszczyzny zespolonej~$\Cbb$ jest po prostu jej równa.
 
 
 
-\start W~analizie zespolonej jest praktycznie użyteczne wprowadzenie
-zwięzłego oznaczenie na~otoczenie pierścieniowe
+\noindent
+W~analizie zespolonej jest praktycznie użyteczne wprowadzenie zwięzłego
+oznaczenie na~otoczenie pierścieniowe
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-01}
   \Pier( a, r, R ) := \{ z \; | \; r < \absOne{ z - a } < R \}.
@@ -225,7 +227,8 @@ zwięzłego oznaczenie na~otoczenie pierścieniowe
 
 
 
-\start \Str{7} Powinna już tu być podana podstawowa własność jednostki
+\noindent
+\Str{7} Powinna już tu być podana podstawowa własność jednostki
 urojonej~$i^{ 2 } = -1$, nie zaś dopiero na~stronie 9. Bez~tego, bądź
 jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
 liczby postaci $\alpha + \beta i$.
@@ -270,19 +273,19 @@ Teraz należy sprawdzić, czy tak wprowadzone dzielenie przez liczbę
 zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
 Na~przykład, że~zachodzi
 \begin{equation}
-  \label{eq:LejaFZ-05}
+  \label{eq:Leja-Funkcje-zespolone-05}
   ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cbb.
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
 \begin{equation}
-  \label{eq:LejaFZ-06}
+  \label{eq:Leja-Funkcje-zespolone-06}
     ( 1 / z ) / w =
-    \left( \frac{ \zbar }{ z \zbar } \right) / w
-    = \frac{ \zbar }{ z \zbar } \frac{ \wbar }{ w \wbar }
-    = \frac{ 1 }{ z \zbar } \frac{ 1 }{ w \wbar } ( \zbar \wbar )
-    = \frac{ 1 }{ z \zbar w \wbar } ( \zbar \wbar )
-    = \frac{ 1 }{ z w \zbar \wbar } ( \zbar \wbar )
-    = 1 / ( z w ).
+    \left( \frac{ \zbar }{ z \zbar } \right) / w =
+    \frac{ \zbar }{ z \zbar } \frac{ \wbar }{ w \wbar } =
+    \frac{ 1 }{ z \zbar } \frac{ 1 }{ w \wbar } ( \zbar \wbar ) =
+    \frac{ 1 }{ z \zbar w \wbar } ( \zbar \wbar ) =
+    \frac{ 1 }{ z w \zbar \wbar } ( \zbar \wbar ) =
+    1 / ( z w ).
 \end{equation}
 
 \vspace{\spaceFour}
@@ -291,10 +294,11 @@ Tą tożsamość można udowodnić w~następujący sposób
 
 
 
-\start \Str{9--10} Według wszystkich mi znanych historycznych prac na
-temat liczb zespolonych, zostały one odkryte już w~XVI wieku podczas
-badania rozwiązań równania \textit{trzeciego} stopnia, nie zaś równań
-kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
+\noindent
+\Str{9--10} Według wszystkich mi znanych historycznych prac na~temat liczb
+zespolonych, zostały one odkryte już w~XVI wieku podczas badania rozwiązań
+równania \textit{trzeciego} stopnia, nie zaś równań kwadratowych.
+\red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 
 \vspace{\spaceFour}
 
@@ -302,7 +306,8 @@ kwadratowych. \red{Zacytuj tu jakąś dobrą pozycję historyczną.}
 
 
 
-\start \Str{10} Przy określaniu argumentu liczby zespolonej pierwszy
+\noindent
+\Str{10} Przy określaniu argumentu liczby zespolonej pierwszy
 raz pojawia~się problem często spotykany w~analizie zespolonej
 mianowicie, że~wielu funkcji nie da~się określić jako zwykłych funkcji
 liczbowych, które liczbie zespolonej przyporządkowują liczbę
@@ -314,7 +319,7 @@ zapisowi\footnote{Dla liczy~$0$ można uznać dowolną liczbę rzeczywistą
   za~jej argument, ale~to pojęcie nie jest użyteczne, więc nie
   będziemy~się nim zajmować.}~$\arg z$, przy $z \neq 0$. Są~one postaci
 \begin{equation}
-  \label{eq:LejaFZ-07}
+  \label{eq:Leja-Funkcje-zespolone-07}
   \arg z = \Arg z + 2\pi k, \quad k = 0, \pm 1, \pm 2, \ldots,
 \end{equation}
 gdzie $\Arg z$ jest już zwyczajną funkcją liczbową.
@@ -344,16 +349,16 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 
 
 
-\start \Str{12} Należy silniej niż w~tekście podkreślić,
+\noindent
+\Str{12} Należy silniej niż w~tekście podkreślić,
 że~$\sqrt[n]{ z }$ nie jest zwykłą funkcją liczbową, lecz~funkcją
 $n$-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
 jednowartościowych\footnote{Pisał już o~tym Frege, zobacz część
   poświęcona jego filozofii w~G. E. M. Anscombe P. T. Geach,
-  \textit{Trzej filozofowie}
-  \cite{AnscombeGeachTrzejFilozofowie1981}.}. Zapomnienie o~tym
-prowadzi do~znanego paradoksu. Mamy mianowicie
+  \textit{Trzej filozofowie}   \cite{AnscombeGeachTrzejFilozofowie1981}.}.
+Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
 \begin{equation}
-  \label{eq:LejaFZ-08}
+  \label{eq:Leja-Funkcje-zespolone-08}
   -1 = i \cdot i = \sqrt{ -1 } \cdot \sqrt{ -1 } = \sqrt{ ( -1 ) \cdot ( -1 ) }
   = \sqrt{ 1 } = 1.
 \end{equation}
@@ -365,13 +370,13 @@ naprawdę dzieje w~powyższym wzorze przestaje być oczywisty. W~istocie
 zauważmy, że~wynik powyższych obliczeń można otrzymać w~następujący
 sposób
 \begin{equation}
-  \label{eq:LejaFZ-09}
+  \label{eq:Leja-Funkcje-zespolone-09}
   ( -i ) \cdot i = 1.
 \end{equation}
 Drugi błąd jest następując. Jeśli rozważamy~$1$ jako liczbę zespoloną,
 to
 \begin{equation}
-  \label{eq:LejaFZ-10}
+  \label{eq:Leja-Funkcje-zespolone-10}
   \sqrt{ 1 } = \{ 1, -1 \},
 \end{equation}
 czyli otrzymany poprzednio wynik $\sqrt{ 1 }$~„$=$”~$1$, przedstawia
@@ -402,11 +407,11 @@ będziemy~się w~tym miejscu szerzej zajmować.
 
 
 
-\start \Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym
-momencie skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$,
-$\alpha > 0$ ma tylko dwa rozwiązania rzeczywiste
-$\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł tych
-obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
+\noindent
+\Str{12--13} W~przeprowadzonych tu rachunkach, trzeba w~pewnym momencie
+skorzystać z~tego, że~równanie $x^{ 2 } = \alpha$, $\alpha > 0$ ma tylko dwa
+rozwiązania rzeczywiste $\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamysł
+tych obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
 wiem, jak należałoby to~poprawić.
 
 \vspace{\spaceFour}
@@ -415,19 +420,19 @@ wiem, jak należałoby to~poprawić.
 
 
 
-\start \Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$ kieruje~się
-chyba następującą myślą. Aby znaleźć te pierwiastki musimy obliczyć
-funkcje trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$,
-$\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo wyrazić $\cos \varphi$
-i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
+\noindent
+\Str{13} Paragraf o~obliczaniu $\sqrt{ \alpha + i \beta }$ kieruje~się chyba
+następującą myślą. Aby znaleźć te pierwiastki musimy obliczyć funkcje
+trygonometryczne dla~$\theta_{ 0 } = \varphi / 2$, $\theta_{ 1 } = \varphi / 2 + \pi$. Można łatwo
+wyrazić $\cos \varphi$ i~$\sin \varphi$ za~pomocą $\alpha$ i~$\beta$. Teraz możemy obliczyć
 \begin{equation}
-  \label{eq:LejaFZ-11}
+  \label{eq:Leja-Funkcje-zespolone-11}
   \cos \theta_{ 0 } = \cos \tfrac{ \varphi }{ 2 } = \frac{ 1 }{ 2 } ( 1 + \cos \varphi ),
 \end{equation}
 podobnie dla~funkcji $\sin$. Drugi pierwiastek obliczamy za~pomocą
 wzorów
 \begin{equation}
-  \label{eq:LejaFZ-12}
+  \label{eq:Leja-Funkcje-zespolone-12}
   \cos( \tfrac{ \varphi }{ 2 } + \pi ) = -\cos( \tfrac{ \varphi }{ 2 } ), \quad
   \sin( \tfrac{ \varphi }{ 2 } + \pi ) = -\sin( \tfrac{ \varphi }{ 2 } ).
 \end{equation}
@@ -440,11 +445,12 @@ za~pomocą $\alpha$ i~$\beta$.
 
 
 
-\start \Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na
-iloczyn Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe
-i~mnożyli je tak jakby były zwykłymi wielomianami, wówczas
+\noindent
+\Str{20} Warto byłoby przytoczyć skąd~się bierze wzór na~iloczyn
+Cauchy’ego szeregów. Gdybyśmy wzięli dwa szeregi potęgowe i~mnożyli je tak
+jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
-  \label{eq:LejaFZ-13}
+  \label{eq:Leja-Funkcje-zespolone-13}
   \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right)
   \left( \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
   }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
@@ -460,9 +466,10 @@ jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 
 
 
-\start \Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez
-Mertensa, wystarczy wykazać zbieżność iloczynu szeregów, bowiem
-wartość tej granicy wynika z~twierdzenia Abela.
+\noindent
+\Str{20} Zauważmy, że~w~twierdzeniu udowodnionym przez Mertensa, wystarczy
+wykazać zbieżność iloczynu szeregów, bowiem wartość tej granicy wynika
+z~twierdzenia Abela.
 
 \vspace{\spaceFour}
 
@@ -470,14 +477,14 @@ wartość tej granicy wynika z~twierdzenia Abela.
 
 
 
-\start \Str{20--21} Dowód twierdzenia Mertensa jest według mnie
-przeprowadzony zbyt szybko, dlatego tutaj postaramy~się go uzupełnić
-w~kilku miejscach.
+\noindent
+\Str{20--21} Dowód twierdzenia Mertensa jest według mnie przeprowadzony zbyt
+szybko, dlatego tutaj postaramy~się go uzupełnić w~kilku miejscach.
 
 Chcemy pokazać, że~dla wszystkich $n > N$, przy pewnym skończonym~$N$,
 zachodzi poniższa nierówność
 \begin{equation}
-  \label{eq:LejaFZ-14}
+  \label{eq:Leja-Funkcje-zespolone-14}
   \absOne{ C_{ n } - A_{ n } B } \leq \varepsilon, \quad \forall \varepsilon > 0,
 \end{equation}
 bowiem z~tego będzie wynikać
@@ -494,13 +501,12 @@ $\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
   \begin{split}
     \absOne{ C_{ n } - A_{ n } B }
     &=
-      \absOne{ a_{ 0 } \beta_{ n } + a_{ 1 } \beta_{ n - 1 } + \ldots + a_{ n } \beta_{ 0 } }
-      \leq
+      \absOne{ a_{ 0 } \beta_{ n } + a_{ 1 } \beta_{ n - 1 } + \ldots + a_{ n } \beta_{ 0 } } \leq
       \absOne{ a_{ 0 } } \absOne{ \beta_{ n } }
       + \absOne{ a_{ 1 } } \absOne{ \beta_{ n - 1 } } + \ldots
       + \absOne{ a_{ n - p + 1 } } \absOne{ \beta_{ p + 1 } } \, + \\
-    &\hspace{1.5em} + \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }
-      \leq
+    &\hspace{1.5em}
+      + \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } } \leq
       \frac{ \varepsilon }{ 2K }
       ( \absOne{ a_{ 0 } } + \ldots + \absOne{ a_{ n - p + 1 } } )
       + \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }.
@@ -534,9 +540,10 @@ zakończony.
 
 
 
-\start \Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty,
-dlatego tu~postaram się go uzupełnić tu i~w~następny punkcie.
-Po~pierwsze dowód formuły
+\noindent
+\Str{22} Dowód twierdzenia Abela nie jest wcale oczywisty, dlatego
+tu~postaram się go uzupełnić tu i~w~następny punkcie. Po~pierwsze dowód
+formuły
 \begin{equation}
   \label{eq:LejaFZ-19}
   \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n }
