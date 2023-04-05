@@ -239,12 +239,13 @@ liczby postaci $\alpha + \beta i$.
 
 
 
-\start \Str{8--9} Aby~wyrażenie $1 / z = \zbar / ( z \zbar )$ miało
-sens, należy chyba postępować w~następujący sposób\footnote{Leja
-  zapewne zdawał sobie z~tego sprawę, jednak według mnie nie~zaznaczył
-  tego wystarczająco jasno w~tekście.}. Na~początku należy zdefiniować
-mnożenie liczb zespolonych, z~tego zaś wynika wzór na dzielenie liczb
-zespolonych przez liczbę rzeczywistą~$a \neq 0$
+\noindent
+\Str{8--9} Aby~wyrażenie $1 / z = \zbar / ( z \zbar )$ miało sens, należy
+chyba postępować w~następujący sposób\footnote{Leja zapewne zdawał sobie
+  z~tego sprawę, jednak według mnie nie~zaznaczył tego wystarczająco jasno
+  w~tekście.}. Na~początku należy zdefiniować mnożenie liczb zespolonych,
+z~tego zaś wynika wzór na dzielenie liczb zespolonych przez liczbę
+rzeczywistą~$a \neq 0$
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-02}
   \frac{ z }{ a } = \frac{ 1 }{ a } \cdot z.
@@ -489,15 +490,15 @@ zachodzi poniższa nierówność
 \end{equation}
 bowiem z~tego będzie wynikać
 \begin{equation}
-  \label{eq:LejaFZ-15}
-  \absOne{ C_{ n } - AB }
-  \leq \absOne{ C_{ n } - A_{ n } B } + \absOne{ A_{ n } B - AB } \leq 2 \varepsilon,
+  \label{eq:Leja-Funkcje-zespolone-15}
+  \absOne{ C_{ n } - AB } \leq
+  \absOne{ C_{ n } - A_{ n } B } + \absOne{ A_{ n } B - AB } \leq 2 \varepsilon,
 \end{equation}
 dla wszystkich $n > N_{ 1 }$. Ustalmy najpierw $\varepsilon > 0$. Teraz
 dobierzmy takie $p$, że~dla $n > p$ zachodzi nierówność
 $\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
 \begin{equation}
-  \label{eq:LejaFZ-16}
+  \label{eq:Leja-Funkcje-zespolone-16}
   \begin{split}
     \absOne{ C_{ n } - A_{ n } B }
     &=
@@ -514,12 +515,11 @@ $\absOne{ \beta_{ n } } < \varepsilon / 2K$. Teraz zachodzi nierówność
 \end{equation}
 Pierwszy wyraz jest $\leq \epsilon / 2$. Dla drugiego wyrazu mamy
 \begin{equation}
-  \label{eq:LejaFZ-17}
-  \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } }
-  \leq
+  \label{eq:Leja-Funkcje-zespolone-17}
+  \absOne{ a_{ n - p } \beta_{ p } + \ldots + a_{ n } \beta_{ 0 } } \leq
   \absOne{ a_{ n - p } } \absOne{ \beta_{ p } } + \ldots + \absOne{ a_{ n } }
-  \absOne{ \beta_{ 0 } }
-  \leq M_{ p } ( \absOne{ a_{ n - p } } + \ldots + \absOne{ a_{ n } } ),
+  \absOne{ \beta_{ 0 } } \leq
+  M_{ p } ( \absOne{ a_{ n - p } } + \ldots + \absOne{ a_{ n } } ),
 \end{equation}
 gdzie
 $M_{ p } = \max( \absOne{ \beta_{ 1 } }, \ldots, \absOne{ \beta_{ p } } )$.
@@ -528,7 +528,7 @@ $n > q$ zachodzić
 $\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$. Teraz dla każdego
 $n > \max( p, q )$ zachodzi
 \begin{equation}
-  \label{eq:LejaFZ-18}
+  \label{eq:Leja-Funkcje-zespolone-18}
   \absOne{ C_{ n } - AB } \leq \varepsilon.
 \end{equation}
 Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
@@ -545,20 +545,20 @@ zakończony.
 tu~postaram się go uzupełnić tu i~w~następny punkcie. Po~pierwsze dowód
 formuły
 \begin{equation}
-  \label{eq:LejaFZ-19}
+  \label{eq:Leja-Funkcje-zespolone-19}
   \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n }
   = AB + A q_{ n } + B p_{ n } + r_{ n },
 \end{equation}
 nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
-  \label{eq:LejaFZ-20}
+  \label{eq:Leja-Funkcje-zespolone-20}
   C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 }
   = n AB + A ( \beta_{ 0 } + \beta_{ 1 } + \ldots + \beta_{ n - 1 } )
   + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ldots + \alpha_{ n - 1 } ) + R_{ n },
 \end{equation}
 gdzie
 \begin{equation}
-  \label{eq:LejaFZ-21}
+  \label{eq:Leja-Funkcje-zespolone-21}
   R_{ n } = n r_{ n } =
   \alpha_{ n - 1 } \beta_{ 0 } + \alpha_{ n - 2 } \beta_{ 1 } + \ldots + \alpha_{ 0 } \beta_{ n - 1 }.
 \end{equation}
@@ -567,7 +567,7 @@ wyrazów.
 
 Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
-  \label{eq:LejaFZ-22}
+  \label{eq:Leja-Funkcje-zespolone-22}
   \begin{split}
     \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
     0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } )
@@ -580,7 +580,7 @@ Wzór ten jest dość oczywisty, jeśli~się prześledzi kilka pierwszych
 przypadków. Dowód przeprowadzimy indukcyjnie. Przypadek $n = 0$
 wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
 \begin{equation}
-  \label{eq:LejaFZ-23}
+  \label{eq:Leja-Funkcje-zespolone-23}
   \begin{split}
     \sum_{ i = 0 }^{ n + 1 } c_{ i }
     &= ( a_{ 0 } + a_{ 1 } + \ldots +
@@ -590,11 +590,10 @@ wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
       1 }
       + \ldots + a_{ n - 1 } ) b_{ 1 } + \ldots + a_{ 0 } b_{ n } \, + \\
     &\hspace{1.5em}
-      + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1
-      }
-      = ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
-    &\hspace{1.5em} + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 } +
-      \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
+      + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1 } =
+      ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
+    &\hspace{1.5em} + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 }
+      + \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
   \end{split}
 \end{equation}
 
@@ -602,30 +601,30 @@ Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-16}, który również
 przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
 Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
-  \label{eq:LejaFZ-24}
-    C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
-    = n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
-      \alpha_{ i } + R_{ n } + C_{ n }.
+  \label{eq:Leja-Funkcje-zespolone-24}
+  C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n } =
+  n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+  \alpha_{ i } + R_{ n } + C_{ n }.
 \end{equation}
 Następny krok jest trochę długi. Przeliczając kilka pierwszych
 przypadków, łatwo zgadnąć, że
 \begin{equation}
-  \label{eq:LejaFZ-25}
+  \label{eq:Leja-Funkcje-zespolone-25}
   C_{ n } = AB + A \beta_{ n } + B \alpha_{ n } - R_{ n } + R_{ n + 1 }.
 \end{equation}
 Zacznijmy od~tego, że
 $b_{ n } = B_{ n } - B_{ n - 1 } = \beta_{ n } - \beta_{ n - 1 }$,
-korzystając więc, ze~wzoru \eqref{eq:Leja-19}
+korzystając więc, ze~wzoru \eqref{eq:Leja-Funkcje-zespolone-19}
 \begin{equation}
-  \label{eq:LejaFZ-26}
+  \label{eq:Leja-Funkcje-zespolone-26}
   \begin{split}
     C_{ n }
     &= A_{ n } b_{ 0 } + A_{ n - 1 } b_{ 1 } + \ldots + A_{ 0 }
       b_{ n } = ( A + \alpha_{ n } ) ( B + \beta_{ 0 } ) + ( A + \alpha_{ n - 1 } )
       ( \beta_{ 1 } - \beta_{ 0 } ) \, + \\
     &\hspace{1.5em} + ( A + \alpha_{ n - 2 } )( \beta_{ 2 } - \beta_{ 1 } ) + \ldots
-      + ( A + \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } )
-      = AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \, + \\
+      + ( A + \alpha_{ 0 } ) ( \beta_{ n } - \beta_{ n - 1 } ) =
+      AB + B \alpha_{ n } + \alpha_{ n } \beta_{ 0 } \, + \\
     &\hspace{1.5em} + A \beta_{ 0 } + A ( \beta_{ 1 } - \beta_{ 0 } + \beta_{ 2 }
       - \beta_{ 1 } + \ldots + \beta_{ n } - \beta_{ n - 1 } ) + \alpha_{ n - 1 } ( \beta_{ 1 } - \beta_{ 0 } )
       + \alpha_{ n - 2 } ( \beta_{ 2 } - \beta_{ 1 } ) \, + \\
@@ -641,7 +640,7 @@ korzystając więc, ze~wzoru \eqref{eq:Leja-19}
 Warto pamiętać, że~suma $C_{ 0 } + C_{ 1 } + \ldots + C_{ n }$ odpowiada
 liczbie~$n + 1$. Tym samym
 \begin{equation}
-  \label{eq:LejaFZ-27}
+  \label{eq:Leja-Funkcje-zespolone-27}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
     &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
@@ -657,12 +656,12 @@ liczbie~$n + 1$. Tym samym
 
 
 
-\start \Str{22} Potrzebujemy jeszcze udowodnić,
-że~$\lim_{ n \to \infty } r_{ n } = 0$. Ponieważ $\alpha_{ n }$
-i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
+\noindent
+\Str{22} Potrzebujemy jeszcze udowodnić, że~$\lim_{ n \to \infty } r_{ n } = 0$.
+Ponieważ $\alpha_{ n }$ i~$\beta_{ n }$ są zbieżne istnieją więc stałe $M_{ \alpha }$
 i~$M_{ \beta }$ takie, że
 \begin{equation}
-  \label{eq:LejaFZ-28}
+  \label{eq:Leja-Funkcje-zespolone-28}
   \absOne{ M_{ \alpha } } \leq M_{ \alpha }, \quad \absOne{ \beta_{ n } } \leq M_{ \beta }.
 \end{equation}
 Ustalmy teraz $\varepsilon > 0$. Skoro $\beta_{ n }$ jest zbieżny do~0, więc możemy
@@ -670,7 +669,7 @@ znaleźć taką liczbę~$p$,
 iż~$\absOne{ \beta_{ n } } \leq \varepsilon / 2 M_{ \alpha }$,
 dla~$n > p$. Teraz
 \begin{equation}
-  \label{eq:LejaFZ-29}
+  \label{eq:Leja-Funkcje-zespolone-29}
   \begin{split}
     \absOne{ r_{ n } }
     &=
@@ -695,9 +694,9 @@ drugi człon jest również mniejszy od~$\varepsilon / 2$, co~kończy dowód.
 
 
 
-\start \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak
-przy omawianiu własności przecięć zbiorów domkniętych, jest tu
-wymieniony osobno.
+\noindent
+\Str{25} Wedle definicji zbiór pusty jest domknięty, jednak przy omawianiu
+własności przecięć zbiorów domkniętych, jest tu wymieniony osobno.
 
 \vspace{\spaceFour}
 
@@ -705,10 +704,11 @@ wymieniony osobno.
 
 
 
-\start \Str{28--29} Jest to przykład bałaganu pojęciowego najczystszego
-rodzaju. Najpierw na~stronie~28 definiuje~się krzywą jako zbiór
-punktów, by na~stronie następnej stronie zwraca~się uwagę, że~należy
-odróżnić krzywą od~jej zbioru punktów.
+\noindent
+\Str{28--29} Jest to przykład bałaganu pojęciowego najczystszego rodzaju.
+Najpierw na~stronie~28 definiuje~się krzywą jako zbiór punktów, by
+na~stronie następnej stronie zwraca~się uwagę, że~należy odróżnić krzywą
+od~jej zbioru punktów.
 
 Problem wynika z~pierwszej definicji, wedle której krzywa to~zbiór
 punktów dany przez odpowiednią funkcje. Aby~rozwiązać ten problem,
@@ -728,11 +728,12 @@ starać o~większą jasność i~precyzję tekstów matematycznych.
 
 
 
-\start \Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją
-na~przedział~$I$, to wedle przyjętej definicji~$z( \varphi( \tau ) )$,
-$\tau \in I_{ 1 }$ jest krzywą. Jedna w~tym wypadku jej zbiór punktów,
-może być różny od~tej dla~krzywej~$z( t )$, $t \in I$, co~jednak nie
-jest żadnym problemem dla~rozwijanej tu~teorii.
+\noindent
+\Str{29} Jeśli funkcja $\varphi( \tau )$ nie jest suriekcją na~przedział~$I$, to
+wedle przyjętej definicji~$z\big( \varphi( \tau ) \big)$, $\tau \in I_{ 1 }$ jest krzywą.
+Jedna w~tym wypadku jej zbiór punktów, może być różny od~tej
+dla~krzywej~$z( t )$, $t \in I$, co~jednak nie jest żadnym problemem
+dla~rozwijanej tu~teorii.
 
 \vspace{\spaceFour}
 
@@ -740,20 +741,20 @@ jest żadnym problemem dla~rozwijanej tu~teorii.
 
 
 
-\start \Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$
-w~definicji krzywej gładkiej. W~geometrii różniczkowej, krzywą o~tej
-własności nazywa~się \textbf{regularną}. Jeśli rozważana krzywa nie
-jest regularna, to może~się zdarzyć, że~funkcja~$s( t )$ nie jest
-monotoniczne rosnąc, lecz tylko niemalejąca i~na przedziałach stała,
-tym samym nieodwracalna i~stwierdzenie, iż~istnieje parametr
-kanoniczny jest nieprawdziwe.
+\noindent
+\Str{30} Warto podkreślić wagę warunku $z'( t ) \neq 0$ w~definicji krzywej
+gładkiej. W~geometrii różniczkowej, krzywą o~tej własności nazywa~się
+\textbf{regularną}. Jeśli rozważana krzywa nie jest regularna, to może~się
+zdarzyć, że~funkcja~$s( t )$ nie jest monotoniczne rosnąc, lecz tylko
+niemalejąca i~na przedziałach stała, tym samym nieodwracalna
+i~stwierdzenie, iż~istnieje parametr kanoniczny jest nieprawdziwe.
 
 Powód tego jest dość oczywisty. Jeśli krzywa ma~\textbf{punkty
   osobliwe}, czyli punkty w~których~$z'( t ) = 0$, to~możliwa jest
 sytuacja, iż~pomimo zmieniającego~się parametru, będzie ona „stała
 w~miejscu”. Przykładem takie zachowania jest krzywa
 \begin{equation}
-  \label{eq:LejaFZ-30}
+  \label{eq:Leja-Funkcje-zespolone-30}
   z( t ) =
   \begin{cases}
     t^{ 2 } + i 0, & t \leq 0, \\
