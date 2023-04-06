@@ -552,14 +552,14 @@ tu~postaram się go uzupełnić tu i~w~następny punkcie. Po~pierwsze dowód
 formuły
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-19}
-  \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n }
-  = AB + A q_{ n } + B p_{ n } + r_{ n },
+  \frac{ C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } }{ n } =
+  AB + A q_{ n } + B p_{ n } + r_{ n },
 \end{equation}
 nie jest taki oczywista. Pokażemy tu, że~zachodzi równoważna formuła
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-20}
-  C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 }
-  = n AB + A ( \beta_{ 0 } + \beta_{ 1 } + \ldots + \beta_{ n - 1 } )
+  C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } =
+  n AB + A ( \beta_{ 0 } + \beta_{ 1 } + \ldots + \beta_{ n - 1 } )
   + B ( \alpha_{ 0 } + \alpha_{ 1 } + \ldots + \alpha_{ n - 1 } ) + R_{ n },
 \end{equation}
 gdzie
@@ -575,8 +575,9 @@ Musimy jednak najpierw wykazać wynik pomocniczy:
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-22}
   \begin{split}
-    \sum_{ i = 0 }^{ n } c_{ i } = \sum_{ i = 0 }^{ n } ( a_{ i } b_{
-    0 } + a_{ i - 1 } b_{ 1 } + \ldots + a_{ 0 } b_{ i } )
+    \sum_{ i = 0 }^{ n } c_{ i } =
+    \sum_{ i = 0 }^{ n } ( a_{ i } b_{ 0 } + a_{ i - 1 } b_{ 1 } + \ldots
+    + a_{ 0 } b_{ i } )
     &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
       + \ldots + a_{ n - 1 } ) b_{ 1 } \, + \\
     &\hspace{1.5em} + \ldots + a_{ 0 } b_{ n }.
@@ -590,22 +591,22 @@ wychodzi sam, zakładają, że~dla $n$ wynik jest już wykazany obliczmy
   \begin{split}
     \sum_{ i = 0 }^{ n + 1 } c_{ i }
     &= ( a_{ 0 } + a_{ 1 } + \ldots +
-      a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } ) b_{
-      1 } + \ldots + a_{ 0 } b_{ n } + c_{ n + 1 } \, + \\
-    &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{
-      1 }
+      a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } )
+      b_{ 1 } + \ldots + a_{ 0 } b_{ n } + c_{ n + 1 } = \\
+    &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } ) b_{ 0 } + ( a_{ 0 } + a_{ 1 }
       + \ldots + a_{ n - 1 } ) b_{ 1 } + \ldots + a_{ 0 } b_{ n } \, + \\
     &\hspace{1.5em}
-      + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1 } =
-      ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } \, + \\
-    &\hspace{1.5em} + ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 }
+      + a_{ n + 1 } b_{ 0 } + a_{ n } b_{ 1 } + \ldots + a_{ 0 } b_{ n + 1 } = \\
+    &= ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n } + a_{ n + 1 } ) b_{ 0 } +
+      ( a_{ 0 } + a_{ 1 } + \ldots + a_{ n - 1 } + a_{ n } ) b_{ 1 } \, + \\
+    &\hspace{1.5em}
       + \ldots + ( a_{ 0 } + a_{ 1 } ) b_{ 0 } + a_{ 0 } b_{ n + 1 }.
   \end{split}
 \end{equation}
 
-Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-16}, który również
-przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego rachunku.
-Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
+Możemy teraz przejść do~dowodu wzoru \eqref{eq:Leja-Funkcje-zespolone-16},
+który również przeprowadzimy indukcyjnie. Dla~$n = 0$ wynika to z~prostego
+rachunku. Zadłużmy, że~jest to prawdą dla~$n$~i~udowodnijmy dla~$n + 1$.
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-24}
   C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n } =
@@ -815,10 +816,10 @@ otrzymamy
   \label{eq:Leja-Funkcje-zespolone-34}
   z\big( \varphi( \tau ) \big) = \tau, \quad \tau \in \Rbb.
 \end{equation}
-Natomiast w~przypadku \eqref{eq:Leja-30} mamy do~czynienia z~punktami
-osobliwymi krzywej, co~nie powinno nas dziwić. Problem polega tu
-bowiem nie na~szczególnym wyborze parametryzacji, lecz na~tym,
-że~krzywa od pewnego momentu stoi w~miejscu.
+Natomiast w~przypadku \eqref{eq:Leja-Funkcje-zespolone-30} mamy
+do~czynienia z~punktami osobliwymi krzywej, co~nie powinno nas dziwić.
+Problem polega tu bowiem nie na~szczególnym wyborze parametryzacji, lecz
+na~tym, że~krzywa od pewnego momentu stoi w~miejscu.
 
 \vspace{\spaceFour}
 
@@ -1887,194 +1888,12 @@ ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości algebraicznie.
 
 
 
-% \start \Str{269} Dowód kryterium Cauchy'ego wydaje mi się błędy bądź
-% niepotrzebnie skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
-% poprawić??????????????????
+\noindent
+\Str{269} Dowód kryterium Cauchy'ego wydaje mi się błędy bądź niepotrzebnie
+skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
+poprawić??????????????????
 
-% \vspace{\spaceFour}
-
-
-
-
-
-
-
-
-
-
-% % ##################
-% \newpage
-
-% \CenterBoldFont{Błędy}
-
-% \begin{center}
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
-%     7   & &  9 & $x,\! y$ & $x, y$ \\
-%     11  &  2 & & $\absOne{ a b }$ & $ab$ \\
-%     11  &  3 & & $\absOne{ \tfrac{ a }{ b } }$ & $\tfrac{ a }{ b }$ \\
-%     22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
-%     22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
-%     22  & 13 & & urojoną ? & urojoną? \\
-%     22  & 15 & & rzeczywistą~? & rzeczywistą? \\
-%     24  & 11 & & $a, \:\; b$ & $a, b$ \\
-%     25  & &  6 & $\textrm{re}\, z < 0$ & $\textrm{re}\, z = 0$???? \\
-%     27  & &  9 & wniosek~: & wniosek: \\
-%     27  &  6 & & zbieżny, & zbieżny. \\
-%     27  & &  2 & Spójność & $N$-spójność \\
-%     29  &  6 & & otwarty~: & otwarty: \\
-%     30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
-%     30  & & 11 & $t$ & $( t - t_{ 0 } )$ Dokończ komentarze poniżej \\
-%     36  &  2 & & $\re( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z$
-%            & $\re[ ( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z ]$ \\
-%     36  &  4 & & $\left| \frac{ z - ( p - \lambda^{ 2 } q) }
-%                  { 1 - \lambda^{ 2 } } \right|^{ 2 }$
-%            & $\left| z - \frac{ ( p - \lambda^{ 2 } q) }
-%              { 1 - \lambda^{ 2 } } \right|^{ 2 }$ \\
-%     39  &  2 & & $\absOne{ b - c }$ ? & $\absOne{ b - c }$? \\
-%     45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
-%     47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
-%     49  & & 13 & $\sqrt[n]{ \absOne{ a_{ n } } } z$
-%            & $\sqrt[n]{ \absOne{ a_{ n } } } | z |$ \\
-%     53  &  7 & & $s$ ? & $s$? \\
-%     54  & 10 & & słabszym : & słabszym: \\
-%     56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
-%     57  &  9 & & 31 & 31) \\
-%     64  &  5 & & krótko : & krótko: \\
-%     65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
-%     68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
-%            & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
-%     69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
-%     73  & 13 & & $iw$ & $iv$ \\
-%     75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
-%            & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
-%     75  & &  3 & $c z - d$ & $c z + d$ \\
-%     75  & & 16 & $ab - bc$ & $ad - bc$ \\
-%     79  & &  5 & okręgów~: & okręgów: \\
-%     80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
-%     80  & & 10 & prostą~: & prostą: \\
-%     90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
-%     \hline
-%   \end{tabular}
-
-
-
-
-
-%   \newpage
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
-%     94  & &  6 & regularną & kawałkami gładką \\
-%     99  &  1 & & zewnątrz & na~zewnątrz \\
-%     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
-%            & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
-%     102 & &  7 & części & części otwartej \\
-%     105 & &  6 & zerowych : & zerowych: \\
-%     106 & &  2 & \textit{jest w~środku} & \textit{w~środku} \\
-%     106 & &  1 & \textit{równa} & \textit{jest równa} \\
-%     107 &  6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
-%     131 & 11 & & myś & myśl \\
-%     126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{ ( z - z_{ 0 } )^{ n + 1 } }$
-%            & $\frac{ ( z - z_{ 0 } )^{ n } }{ ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
-%     132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
-%     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
-%     140 & &  7 & $f |$ & $\absOne{ f }$ \\
-%     143 & & 18 & w~otoczeniu punktu & \textit{w~otoczeniu punktu} \\
-%     146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
-%     146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
-%            & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
-%     146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
-%            & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
-%     146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
-%     155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
-%     155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
-%     159 & 10 & & krótko : & krótko: \\
-%     159 & 12 & & części & części otwartej \\
-%     159 & & 10 & części & części otwartej \\
-%     164 & 10 & & 102 & 101 \\
-%     166 &  6 & & potęgowych . & potęgowych. \\
-%     170 & & 16 & monochromii & monodromii \\
-%     173 & & 10 & est & jest \\
-%     173 & &  9 & jsię & się \\
-%     174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
-%     178 &  2 & & 132 & 133 \\
-%     199 &  3 & & $\nu = 1$ & $k = 1$ \\
-%     207 & &  6 & $( 1$ & $1$ \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-
-% \end{center}
-
-% \vspace{\spaceTwo}
-
-
-% \noindent
-% \StrWg{28}{5} \\
-% \Jest  nieograniczone \\
-% \Powin nieograniczone i~domknięte \\
-% \StrWg{36}{5} \\
-% \Jest  Ze~wzorów (9)~otrzymujemy \\
-% \Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
-% \StrWg{56}{2} \\
-% \Jest  a~istnieją wartości~$w$, które \\
-% \Powin a~istnieje wartość~$w$, którą \\
-% \StrWg{75}{12} \\
-% \Jest  rozciętej wzdłuż jednego południka na~pas nieograniczony
-% płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
-% \Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
-% w~powierzchnię boczną \\
-% \StrWd{92}{6} \\
-% \Jest  \textit{krzywą} \\
-% \Powin \textit{krzywą kawałkami gładką} \\
-% \StrWg{95}{5} \\
-% \Jest  linią \\
-% \Powin dowolna linia łamana \\
-% \StrWd{107}{12} \\
-% \Jest  dowolnym konturem zawartym \\
-% \Powin dowolną drogą całkowania zawartą \\
-% \StrWd{108}{13} \\
-% \Jest  domkniętym \\
-% \Powin domkniętym i~ograniczonym \\
-% \StrWd{119}{8} \\
-% \Jest  \textit{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
-% \Powin \textit{jeśli~są równe na~brzegu $B$, to~są równe również
-%   w~obszarze~$D$} \\
-% \StrWd{134}{16} \\
-% \Jest  krzywych zamkniętych \\
-% \Powin kawałkami gładkich zamkniętych krzywych \\
-% \StrWg{165}{2} \\
-% \Jest  niech brzeg tego obszaru zawiera odcinek \\
-% \Powin niech część wspólna brzegu tego obszaru i~osi
-% $\textrm{im}\, z = 0$ tworzy odcinek \\
-% \StrWd{165}{6} \\
-% \Jest  \textit{symetrii{ }{ } Riemanna-Schwarza} \\
-% \Powin \textit{symetrii Riemanna-Schwarza}
-
-
-
-% % ############################
+\vspace{\spaceFour}
 
 
 
@@ -2085,42 +1904,226 @@ ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości algebraicznie.
 
 
 
-% % ############################
-% \Work{ % Autor i tytuł dzieła
-%   B. W. Szabat \\
-%   \textit{Wstęp do analizy zespolonej},
-%   \cite{SzabatWstepDoAnalizyZespolonej1974}}
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
+    7   & &  9 & $x,\! y$ & $x, y$ \\
+    11  &  2 & & $\absOne{ a b }$ & $ab$ \\
+    11  &  3 & & $\absOne{ \tfrac{ a }{ b } }$ & $\tfrac{ a }{ b }$ \\
+    22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
+    22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
+    22  & 13 & & urojoną ? & urojoną? \\
+    22  & 15 & & rzeczywistą~? & rzeczywistą? \\
+    24  & 11 & & $a, \:\; b$ & $a, b$ \\
+    25  & &  6 & $\textrm{re}\, z < 0$ & $\textrm{re}\, z = 0$???? \\
+    27  & &  9 & wniosek~: & wniosek: \\
+    27  &  6 & & zbieżny, & zbieżny. \\
+    27  & &  2 & Spójność & $N$-spójność \\
+    29  &  6 & & otwarty~: & otwarty: \\
+    30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
+    30  & & 11 & $t$ & $( t - t_{ 0 } )$ Dokończ komentarze poniżej \\
+    36  &  2 & & $\re( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z$
+           & $\re[ ( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z ]$ \\
+    36  &  4 & & $\left| \frac{ z - ( p - \lambda^{ 2 } q) }
+                 { 1 - \lambda^{ 2 } } \right|^{ 2 }$
+           & $\left| z - \frac{ ( p - \lambda^{ 2 } q) }
+             { 1 - \lambda^{ 2 } } \right|^{ 2 }$ \\
+    39  &  2 & & $\absOne{ b - c }$ ? & $\absOne{ b - c }$? \\
+    45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
+    47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
+    49  & & 13 & $\sqrt[n]{ \absOne{ a_{ n } } } z$
+           & $\sqrt[n]{ \absOne{ a_{ n } } } | z |$ \\
+    53  &  7 & & $s$ ? & $s$? \\
+    54  & 10 & & słabszym : & słabszym: \\
+    56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
+    57  &  9 & & 31 & 31) \\
+    64  &  5 & & krótko : & krótko: \\
+    65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
+    68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
+           & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
+    69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
+    73  & 13 & & $iw$ & $iv$ \\
+    75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+           & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    75  & &  3 & $c z - d$ & $c z + d$ \\
+    75  & & 16 & $ab - bc$ & $ad - bc$ \\
+    79  & &  5 & okręgów~: & okręgów: \\
+    80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    80  & & 10 & prostą~: & prostą: \\
+    90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    \hline
+  \end{tabular}
 
 
-% % ##################
-% \CenterBoldFont{Błędy}
-
-
-% \begin{center}
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     17  &  5 & & dal & dal- \\
-%     25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-
-% \end{center}
-
-
-% \vspace{\spaceTwo}
 
 
 
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
+    94  & &  6 & regularną & kawałkami gładką \\
+    99  &  1 & & zewnątrz & na~zewnątrz \\
+    102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
+           & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
+    102 & &  7 & części & części otwartej \\
+    105 & &  6 & zerowych : & zerowych: \\
+    106 & &  2 & \textit{jest w~środku} & \textit{w~środku} \\
+    106 & &  1 & \textit{równa} & \textit{jest równa} \\
+    107 &  6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
+    131 & 11 & & myś & myśl \\
+    126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{ ( z - z_{ 0 } )^{ n + 1 } }$
+           & $\frac{ ( z - z_{ 0 } )^{ n } }{ ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
+    132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
+    134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
+    140 & &  7 & $f |$ & $\absOne{ f }$ \\
+    143 & & 18 & w~otoczeniu punktu & \textit{w~otoczeniu punktu} \\
+    146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
+    146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
+           & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
+    146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
+           & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
+    146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
+    155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    159 & 10 & & krótko : & krótko: \\
+    159 & 12 & & części & części otwartej \\
+    159 & & 10 & części & części otwartej \\
+    164 & 10 & & 102 & 101 \\
+    166 &  6 & & potęgowych . & potęgowych. \\
+    170 & & 16 & monochromii & monodromii \\
+    173 & & 10 & est & jest \\
+    173 & &  9 & jsię & się \\
+    174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
+    178 &  2 & & 132 & 133 \\
+    199 &  3 & & $\nu = 1$ & $k = 1$ \\
+    207 & &  6 & $( 1$ & $1$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
 
 
-% % ############################
+\noindent
+\StrWg{28}{5} \\
+\Jest  nieograniczone \\
+\Powin nieograniczone i~domknięte \\
+\StrWg{36}{5} \\
+\Jest  Ze~wzorów (9)~otrzymujemy \\
+\Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\StrWg{56}{2} \\
+\Jest  a~istnieją wartości~$w$, które \\
+\Powin a~istnieje wartość~$w$, którą \\
+\StrWg{75}{12} \\
+\Jest  rozciętej wzdłuż jednego południka na~pas nieograniczony
+płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
+\Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+w~powierzchnię boczną \\
+\StrWd{92}{6} \\
+\Jest  \textit{krzywą} \\
+\Powin \textit{krzywą kawałkami gładką} \\
+\StrWg{95}{5} \\
+\Jest  linią \\
+\Powin dowolna linia łamana \\
+\StrWd{107}{12} \\
+\Jest  dowolnym konturem zawartym \\
+\Powin dowolną drogą całkowania zawartą \\
+\StrWd{108}{13} \\
+\Jest  domkniętym \\
+\Powin domkniętym i~ograniczonym \\
+\StrWd{119}{8} \\
+\Jest  \textit{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
+\Powin \textit{jeśli~są równe na~brzegu $B$, to~są równe również
+  w~obszarze~$D$} \\
+\StrWd{134}{16} \\
+\Jest  krzywych zamkniętych \\
+\Powin kawałkami gładkich zamkniętych krzywych \\
+\StrWg{165}{2} \\
+\Jest  niech brzeg tego obszaru zawiera odcinek \\
+\Powin niech część wspólna brzegu tego obszaru i~osi
+$\textrm{im}\, z = 0$ tworzy odcinek \\
+\StrWd{165}{6} \\
+\Jest  \textit{symetrii{ }{ } Riemanna-Schwarza} \\
+\Powin \textit{symetrii Riemanna-Schwarza}
+
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  B. W. Szabat \\
+  \textit{Wstęp do analizy zespolonej},
+  \cite{SzabatWstepDoAnalizyZespolonej1974}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\vspace{0em}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    17  &  5 & & dal & dal- \\
+    25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ############################
 
 
 
