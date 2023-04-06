@@ -1581,7 +1581,7 @@ zbioru $E$ i~niech $w_{ n } \in E$ będzie ciągiem elementów zbieżnym
 do~$w_{ 0 }$. Funkcja $f( z )$ jest ciągła w~$D$, bo~posiada pochodną
 $f'( z )$, stąd
 \begin{equation}
-  \label{eq:LejaFZ-45}
+  \label{eq:Leja-Funkcje-zespolone-45}
   f( w_{ 0 } ) = \lim\limits_{ n \to \infty } f( w_{ n } ) = 0.
 \end{equation}
 Analogicznie $f'( z )$ jest ciągła na mocy istnienia~$f''( z )$
@@ -1644,7 +1644,7 @@ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 \noindent
 \Str{133} Wzór~(17) w~istocie jest już zawarty we~wzorze~(4) na~stronie~124
 \begin{equation}
-  \label{eq:LejaFZ-46}
+  \label{eq:Leja-Funkcje-zespolone-46}
   a_{ n } =
   \frac{ 1 }{ 2\pi i }
   \int\limits_{ K } \frac{ f( \zeta ) }{ ( \zeta - a )^{ n + 1 } } \, d\zeta,
@@ -1653,7 +1653,7 @@ biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 gdzie $K$ jest dowolnym okręgiem leżącym wewnątrz pierścienia
 $0 < \absOne{ z - a } < r$. Biorąc $n = -1$ otrzymujemy
 \begin{equation}
-  \label{eq:LejaFZ-47}
+  \label{eq:Leja-Funkcje-zespolone-47}
   a_{ -1 } = \frac{ 1 }{ 2\pi i } \int\limits_{ K } f( \zeta ) \, d\zeta.
 \end{equation}
 Ponieważ funkcja $f( z )$ jest analityczna wewnątrz i~na brzegu
@@ -1670,215 +1670,218 @@ wzór~(17).
 
 
 
-% \start \Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej
-% książce bardzo użytecznego wzoru na~residuum funkcji $f( z )$
-% w~punkcie~$z_{ 0 }$, gdzie ma~ona biegun rzędu~$n$
-% \begin{equation}
-%   \label{eq:LejaFZ-48}
-%   \Res( f, z_{ 0 } ) =
-%   \frac{ 1 }{ ( n - 1 )! }
-%   \lim\limits_{ z \to z_{ 0 } }
-%   \frac{ d^{ n - 1 } }{ dz^{ n - 1 } } ( z - z_{ 0 } )^{ n } f( z ).
-% \end{equation}
-% Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
-% jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
-% przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
-% będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
-% do~wyprowadzenia wzoru~(18) ze~strony~133.
+\noindent
+\Str{134} Jest to bardzo dziwne, że~Leja nie podał w~swej książce bardzo
+użytecznego wzoru na~residuum funkcji $f( z )$ w~punkcie~$z_{ 0 }$, gdzie
+ma~ona biegun rzędu~$n$
+\begin{equation}
+  \label{eq:Leja-Funkcje-zespolone-48}
+  \Res( f, z_{ 0 } ) =
+  \frac{ 1 }{ ( n - 1 )! }
+  \lim\limits_{ z \to z_{ 0 } }
+  \frac{ d^{ n - 1 } }{ dz^{ n - 1 } } ( z - z_{ 0 } )^{ n } f( z ).
+\end{equation}
+Wzór ten można łatwo wyprowadzić, zapisując funkcję $f( z )$ za~pomocą
+jej rozwinięcia Laurenta i~wymnażając to~rozwinięcie
+przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
+będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
+do~wyprowadzenia wzoru~(18) ze~strony~133.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$
-% przekształca zawsze obszar na~obszar wymaga chyba pewnego komentarza.
-% Jeśli~$D$ jest obszarem, to~$f( D )$ jest spójny, bowiem funkcja
-% analityczna jest ciągła, zaś~funkcja ciągła zawsze przekształca zbiór
-% spójny na~zbiór spójny.
+\noindent
+\Str{144} Twierdzenie, o~tym, że~funkcja analityczna $f( z )$ przekształca
+zawsze obszar na~obszar wymaga chyba pewnego komentarza. Jeśli~$D$ jest
+obszarem, to~$f( D )$ jest spójny, bowiem funkcja analityczna jest ciągła,
+zaś~funkcja ciągła zawsze przekształca zbiór spójny na~zbiór spójny.
 
-% Z~twierdzenia udowodnionego na~stronie~143 wynika, że~jeśli
-% $z_{ 0 } \in D$ to~$f( D )$ zawiera punkt $f( z_{ 0 } )$ wraz z~pewnym
-% kołem~$\absOne{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
-% $f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
+Z~twierdzenia udowodnionego na~stronie~143 wynika, że~jeśli
+$z_{ 0 } \in D$ to~$f( D )$ zawiera punkt $f( z_{ 0 } )$ wraz z~pewnym
+kołem~$\absOne{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
+$f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{144} Twierdzenie, że~funkcja analityczna $f( z )$,
-% dla~której mamy $f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun
-% jednokrotny), jest jednokrotna w~odpowiednio mały otoczeniu $z_{ 0 }$
-% należy rozumieć w~następujący sposób.
+\noindent
+\Str{144} Twierdzenie, że~funkcja analityczna $f( z )$, dla~której mamy
+$f'( z_{ 0 } )$ (lub w~$z_{ 0 }$ ma~biegun jednokrotny), jest jednokrotna
+w~odpowiednio mały otoczeniu $z_{ 0 }$ należy rozumieć w~następujący sposób.
 
-% Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
-% że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
-% dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
-% że~$f\big( K( z_{ 0 }, \delta ) \big) \neq K( f( z_{ 0 } ), \eta )$,
-% bowiem
-% $K( f( z_{ 0 } ), \eta ) \subsetneq f\big( K( z_{ 0 }, \delta ) \big)$. Jednak
-% zbiór
-% $K( z_{ 0 }, \delta ) \cap f^{ -1 }\big( K( f( z_{ 0 } ), \eta )
-% \big)$ jest otwarty, więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$,
-% która jest otoczeniem~$z_{ 0 }$ o~rządnych własnościach. Zauważmy
-% jednak, że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
+Wyżej zostało pokazane, że~istnieje koło $K( z_{ 0 }, \delta )$ takie,
+że~$f( z )$ przyjmuje każdą wartość z~koła $K( f( z_{ 0 } ), \eta )$
+dokładnie w~jednym punkcie tego koła, może~się jednak zdarzyć,
+że~$f\big( K( z_{ 0 }, \delta ) \big) \neq K( f( z_{ 0 } ), \eta )$, bowiem
+$K( f( z_{ 0 } ), \eta ) \subsetneq f\big( K( z_{ 0 }, \delta ) \big)$. Jednak zbiór
+$K( z_{ 0 }, \delta ) \cap f^{ -1 }\big( K( f( z_{ 0 } ), \eta ) \big)$ jest otwarty,
+więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która jest otoczeniem~$z_{ 0 }$
+o~rządnych własnościach. Zauważmy jednak,
+że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro
-% zamiana $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje
-% na~zewnątrz koła jednostkowego, te~same wartości co~w~jego wnętrzu”.
+\noindent
+\Str{146} Należy pomyśleć, jak uściślić stwierdzenie „skoro zamiana
+$z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje na~zewnątrz koła
+jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza
-% odnosi~się do~siły elektrostatycznej w~dwóch wymiarach przestrzennych.
-% Wtedy istotnie potencjał pola ładunku punktowego wynosi
-% $m \log( 1 / \absOne{ \vecr }_{ 2 } )$,
-% gdzie~$\absOne{ \vecr }_{ 2 } = x^{ 2 } + y^{ 2 }$. Gdybyśmy rozważali
-% sytuację trójwymiarową, wtedy ten potencjał miałby wartość
-% $m / \absOne{ \vecr }_{ 3 }$,
-% gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
+\noindent
+\Str{152} Należy zaznaczyć, że~przeprowadzona tu~analiza odnosi~się
+do~siły elektrostatycznej w~dwóch wymiarach przestrzennych. Wtedy istotnie
+potencjał pola ładunku punktowego wynosi
+$m \log( 1 / \absOne{ \vecr }_{ 2 } )$,
+gdzie~$\absOne{ \vecr }_{ 2 } = x^{ 2 } + y^{ 2 }$. Gdybyśmy rozważali
+sytuację trójwymiarową, wtedy ten potencjał miałby wartość
+$m / \absOne{ \vecr }_{ 3 }$,
+gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{154} Uogólniona tu~definicja transformacji konforemnej
-% sprawia mi~pewien problemów. Mianowicie, jak można twierdzić,
-% że~w~punkcie~$\infty$ tak zdefiniowane odwzorowanie jest równokątne
-% z~zachowaniem zwrotu?
+\noindent
+\Str{154} Uogólniona tu~definicja transformacji konforemnej sprawia
+mi~pewien problemów. Mianowicie, jak można twierdzić, że~w~punkcie~$\infty$ tak
+zdefiniowane odwzorowanie jest równokątne z~zachowaniem zwrotu?
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{162} Nazwa \textit{szereg lukowy} bierze~się zapewne stąd,
-% że~jeśli rozpatrzymy względną odległość między dwoma kolejnymi
-% wykładnikami wynosi
-% \begin{equation}
-%   \label{eq:LejaFZ-49}
-%   \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } }
-%   \geq \theta > 0.
-% \end{equation}
-% W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
-% której długość jest większa od~$\theta$.
+\noindent
+\Str{162} Nazwa \textit{szereg lukowy} bierze~się zapewne stąd, że~jeśli
+rozpatrzymy względną odległość między dwoma kolejnymi wykładnikami wynosi
+\begin{equation}
+  \label{eq:Leja-Funkcje-zespolone-49}
+  \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } } \geq
+  \theta > 0.
+\end{equation}
+W~tym sensie między kolejnymi wyrazami znajduje~się zawsze luka,
+której długość jest większa od~$\theta$.
 
-% Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
-% $i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności możemy
-% tylko powiedzieć, że
-% \begin{equation}
-%   \label{eq:LejaFZ-50}
-%   \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } }
-%   = \frac{ 1 }{ n }.
-% \end{equation}
+Szereg potęgowy może być lukowy, np.~gdy tylko dla $n = 2^{ i }$,
+$i = 0, 1, 2, \ldots$, mamy $a_{ n } \neq 0$. Jednak w~ogólności możemy
+tylko powiedzieć, że
+\begin{equation}
+  \label{eq:Leja-Funkcje-zespolone-50}
+  \frac{ \absOne{ \lambda_{ n + 1 } - \lambda_{ n } } }{ \absOne{ \lambda_{ n } } } =
+  \frac{ 1 }{ n }.
+\end{equation}
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{163} Już tutaj należałoby wprowadzić pojęcia
-% \textbf{środka elementu}, \textbf{koła elementu} i~\textbf{promienia
-%   elementu}. Pojęcia te pojawiają~się dopiero na~stronach~175 i~176.
+\noindent
+\Str{163} Już tutaj należałoby wprowadzić pojęcia \textbf{środka elementu},
+\textbf{koła elementu} i~\textbf{promienia elementu}. Pojęcia te
+pojawiają~się dopiero na~stronach~175 i~176.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% % ##################
-% \begin{figure}[h]
+% ##################
+\begin{figure}[h]
 
-%   \centering
+  \centering
 
-%   \label{fig:LejaFZ-03}
+  \label{fig:Leja-Funkcje-zespolone-03}
 
-%   \begin{tikzpicture}[scale=1.3]
-%     % Pierwszy graf
-%     \draw[black] (0, 0) -- (0, 1.2);
+  \begin{tikzpicture}
 
+    % Oznaczenia
+    \node at (-0.75,-0.4) {Rząd};
 
 
-%     % Drugi graf
-%     \draw[black] (0.65, 0) -- (0.65, 0.25);
 
-%     \draw[black] (0.65, 0.25) -- (0.4, 0.5) -- (0.4, 1.2);
+    % Rysunek ilustrujący zerowy rząd rozgałęzienia.
+    \draw[black] (0,0) -- (0,1.7);
 
-%     \draw[black] (0.65, 0.25) -- (0.9, 0.5) -- (0.9, 1.2);
+    \node at (0,-0.4) {$0$};
 
 
+    % Rysunek ilustrujący pierwszy rząd rozgałęzienia.
+    \draw[black] (1,0) -- (1,0.5);
 
-%     % Trzeci graf
-%     \draw[black] (1.5, 0) -- (1.5, 0.25) -- (1.25, 0.5) -- (1.25, 1.2);
+    \draw[black] (1,0.5) -- (0.5,0.8) -- (0.5,1.7);
 
-%     \draw[black] (1.5, 0.25) -- (1.9, 0.5) -- (1.65, 0.75) -- (1.65,
-%     1.2);
+    \draw[black] (1,0.5) -- (1.5,0.8) -- (1.5,1.7);
 
-%     \draw[black] (1.9, 0.5) -- (2.15, 0.75) -- (2.15, 1.2);
+    \node at (1,-0.4) {$1$};
 
 
+    % Rysunek ilustrujący drugi rząd rozgałęzienia.
+    \draw[black] (2.5,0) -- (2.5,0.5) -- (2,0.8) -- (2,1.7);
 
-%     % Oznaczenia
-%     \node at (-0.75, -0.3) {Rząd};
+    \draw[black] (2.5,0.5) -- (3,0.8) -- (2.7, 1.1) -- (2.7,1.7);
 
-%     \node at (0, -0.3) {$0$};
+    \draw[black] (3,0.8) -- (3.3,1.1) -- (3.3,1.7);
 
-%     \node at (0.65, -0.3) {$1$};
+    \node at (2.5,-0.4) {$2$};
 
-%     \node at (1.5, -0.3) {$2$};
-%   \end{tikzpicture}
+  \end{tikzpicture}
 
-%   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
-%     zespolonej a~jej $p$-krotnością.}
+  \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
+    zespolonej a~jej $p$-krotnością.}
 
-% \end{figure}
-% % ##################
+\end{figure}
+% ##################
 
 
 
 
 
-% \start \Str{172} Przyjęty związek między $p$-krotnością funkcji,
-% a~rzędem jej rozgałęzienia można zilustrować graficznie, tak jak
-% zostało to~zrobione na~(\ref{fig:LejaFZ-03}).
+\noindent
+\Str{172} Przyjęty związek między $p$-krotnością funkcji, a~rzędem jej
+rozgałęzienia można zilustrować graficznie, tak jak zostało to~zrobione
+na~\eqref{fig:Leja-Funkcje-zespolone-03}.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{172--174}
+\noindent
+\Str{172--174}
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
-% ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości
-% algebraicznie.
+\noindent
+\Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
+ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości algebraicznie.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
