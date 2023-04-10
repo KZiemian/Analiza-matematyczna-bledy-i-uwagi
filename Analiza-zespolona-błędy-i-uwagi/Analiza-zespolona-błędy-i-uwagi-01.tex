@@ -124,8 +124,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -1917,51 +1917,44 @@ poprawić??????????????????
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    7   & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
-    7   & &  9 & $x,\! y$ & $x, y$ \\
-    11  &  2 & & $\absOne{ a b }$ & $ab$ \\
-    11  &  3 & & $\absOne{ \tfrac{ a }{ b } }$ & $\tfrac{ a }{ b }$ \\
-    22  &  1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
-    22  &  1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
-    22  & 13 & & urojoną ? & urojoną? \\
-    22  & 15 & & rzeczywistą~? & rzeczywistą? \\
-    24  & 11 & & $a, \:\; b$ & $a, b$ \\
-    25  & &  6 & $\textrm{re}\, z < 0$ & $\textrm{re}\, z = 0$???? \\
-    27  & &  9 & wniosek~: & wniosek: \\
-    27  &  6 & & zbieżny, & zbieżny. \\
-    27  & &  2 & Spójność & $N$-spójność \\
-    29  &  6 & & otwarty~: & otwarty: \\
-    30  & & 13 & $t$ & $( t - t_{ 0 } )$ \\
-    30  & & 11 & $t$ & $( t - t_{ 0 } )$ Dokończ komentarze poniżej \\
-    36  &  2 & & $\re( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z$
-           & $\re[ ( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z ]$ \\
-    36  &  4 & & $\left| \frac{ z - ( p - \lambda^{ 2 } q) }
+    \hphantom{0}7 & & 10 & $\alpha,\:\; \beta$ & $\alpha, \beta$ \\
+    \hphantom{0}7 & & \hphantom{0}9 & $x,\! y$ & $x, y$ \\
+    11 & \hphantom{0}2 & & $\absOne{ a b }$ & $ab$ \\
+    11 & \hphantom{0}3 & & $\absOne{ \tfrac{ a }{ b } }$
+    & $\tfrac{ a }{ b }$ \\
+    22 & \hphantom{0}1 & & $\alpha_{ n }$ & $\alpha_{ n - 1 }$ \\
+    22 & \hphantom{0}1 & & $\beta_{ n }$ & $\beta_{ n - 1 }$ \\
+    22 & 13 & & urojoną ? & urojoną? \\
+    22 & 15 & & rzeczywistą~? & rzeczywistą? \\
+    24 & 11 & & $a, \:\; b$ & $a, b$ \\
+    25 & & \hphantom{0}6 & $\textrm{re}\, z < 0$
+    & $\textrm{re}\, z = 0$???? \\
+    27 & & \hphantom{0}9 & wniosek~: & wniosek: \\
+    27 & \hphantom{0}6 & & zbieżny, & zbieżny. \\
+    27 & & \hphantom{0}2 & Spójność & $N$-spójność \\
+    29 & \hphantom{0}6 & & otwarty~: & otwarty: \\
+    30 & & 13 & $t$ & $( t - t_{ 0 } )$ \\
+    30 & & 11 & $t$ & $( t - t_{ 0 } )$ Dokończ komentarze poniżej \\
+    36 & \hphantom{0}2 & & $\re( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z$
+    & $\re[ ( \overline{ p } - \lambda^{ 2 } \overline{ q } ) z ]$ \\
+    36 & \hphantom{0}4 & & $\left| \frac{ z - ( p - \lambda^{ 2 } q) }
                  { 1 - \lambda^{ 2 } } \right|^{ 2 }$
            & $\left| z - \frac{ ( p - \lambda^{ 2 } q) }
              { 1 - \lambda^{ 2 } } \right|^{ 2 }$ \\
-    39  &  2 & & $\absOne{ b - c }$ ? & $\absOne{ b - c }$? \\
-    45  & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
-    47  &  5 & & $z_{ n }$ & $z^{ n }$ \\
-    49  & & 13 & $\sqrt[n]{ \absOne{ a_{ n } } } z$
+    39 & \hphantom{0}2 & & $\absOne{ b - c }$ ? & $\absOne{ b - c }$? \\
+    45 & 13 & & \textit{wewnętrzną ,} & \textit{wewnętrzną,} \\
+    47 & \hphantom{0}5 & & $z_{ n }$ & $z^{ n }$ \\
+    49 & & 13 & $\sqrt[n]{ \absOne{ a_{ n } } } z$
            & $\sqrt[n]{ \absOne{ a_{ n } } } | z |$ \\
-    53  &  7 & & $s$ ? & $s$? \\
-    54  & 10 & & słabszym : & słabszym: \\
-    56  & &  4 & w~zbiorze & \textit{w~zbiorze} \\
-    57  &  9 & & 31 & 31) \\
-    64  &  5 & & krótko : & krótko: \\
-    65  & & 14 & \textit{jeśli ma} & \textit{ma} \\
-    68  & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
-           & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
-    69  & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
-    73  & 13 & & $iw$ & $iv$ \\
-    75  & &  7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
-           & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
-    75  & &  3 & $c z - d$ & $c z + d$ \\
-    75  & & 16 & $ab - bc$ & $ad - bc$ \\
-    79  & &  5 & okręgów~: & okręgów: \\
-    80  & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
-    80  & & 10 & prostą~: & prostą: \\
-    90  &  2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    53 & \hphantom{0}7 & & $s$ ? & $s$? \\
+    54 & 10 & & słabszym : & słabszym: \\
+    56 & & \hphantom{0}4 & w~zbiorze & \textit{w~zbiorze} \\
+    57 & \hphantom{0}9 & & 31 & 31) \\
+    64 & \hphantom{0}5 & & krótko : & krótko: \\
+    65 & & 14 & \textit{jeśli ma} & \textit{ma} \\
+    68 & 16 & & $\frac{ \partial f }{ \partial z } - i \frac{ \partial f }{ \partial y }$
+          & $\frac{ \partial f }{ \partial x } - i \frac{ \partial f }{ \partial y }$ \\
+    69 & & 13 & $a_{ n }$ & $\absOne{ a_{ n } }$ \\
     \hline
   \end{tabular}
 
@@ -1977,43 +1970,124 @@ poprawić??????????????????
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    90  &  5 & & pochodna$f'( z )$ & pochodna $f'( z )$ \\
-    94  & &  6 & regularną & kawałkami gładką \\
-    99  &  1 & & zewnątrz & na~zewnątrz \\
+    73 & 13 & & $iw$ & $iv$ \\
+    75 & & \hphantom{0}7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+           & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    75 & & \hphantom{0}3 & $c z - d$ & $c z + d$ \\
+    75 & & 16 & $ab - bc$ & $ad - bc$ \\
+    79 & & \hphantom{0}5 & okręgów~: & okręgów: \\
+    80 & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    80 & & 10 & prostą~: & prostą: \\
+    90 & \hphantom{0}2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    \hphantom{0}90 & \hphantom{0}5 & & pochodna$f'( z )$
+    & pochodna $f'( z )$ \\
+    \hphantom{0}94 & & \hphantom{0}6 & regularną & kawałkami gładką \\
+    \hphantom{0}99 & \hphantom{0}1 & & zewnątrz & na~zewnątrz \\
     102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
            & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
-    102 & &  7 & części & części otwartej \\
-    105 & &  6 & zerowych : & zerowych: \\
-    106 & &  2 & \textit{jest w~środku} & \textit{w~środku} \\
-    106 & &  1 & \textit{równa} & \textit{jest równa} \\
-    107 &  6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
+    102 & & \hphantom{0}7 & części & części otwartej \\
+    105 & & \hphantom{0}6 & zerowych : & zerowych: \\
+    106 & & \hphantom{0}2 & \textit{jest w~środku} & \textit{w~środku} \\
+    106 & & \hphantom{0}1 & \textit{równa} & \textit{jest równa} \\
+    107 & \hphantom{0}6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
     131 & 11 & & myś & myśl \\
-    126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{ ( z - z_{ 0 } )^{ n + 1 } }$
+    126 & & \hphantom{0}7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{ ( z - z_{ 0 } )^{ n + 1 } }$
            & $\frac{ ( z - z_{ 0 } )^{ n } }{ ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
-    132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
+    132 & \hphantom{0}2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
     134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
-    140 & &  7 & $f |$ & $\absOne{ f }$ \\
+    140 & & \hphantom{0}7 & $f |$ & $\absOne{ f }$ \\
     143 & & 18 & w~otoczeniu punktu & \textit{w~otoczeniu punktu} \\
-    146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
-    146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
+    146 & & \hphantom{0}8 & \textbf{P}odstawmy & Podstawmy \\
+    146 & & \hphantom{0}5 & $( r + \frac{ 1 }{ r } )^{ z }$
            & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
-    146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
+    146 & & \hphantom{0}5 & $( r - \frac{ 1 }{ r } )^{ z }$
            & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
-    146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
+    146 & & \hphantom{0}3 & kątem~$y$ & kątem~$\varphi$ \\
     155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
-    155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    155 & & \hphantom{0}3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
     159 & 10 & & krótko : & krótko: \\
+    % 159 & 12 & & części & części otwartej \\
+    % 159 & & 10 & części & części otwartej \\
+    % 164 & 10 & & 102 & 101 \\
+    % 166 &  6 & & potęgowych . & potęgowych. \\
+    % 170 & & 16 & monochromii & monodromii \\
+    % 173 & & 10 & est & jest \\
+    % 173 & &  9 & jsię & się \\
+    % 174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
+    % 178 &  2 & & 132 & 133 \\
+    % 199 &  3 & & $\nu = 1$ & $k = 1$ \\
+    % 207 & &  6 & $( 1$ & $1$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 73 & 13 & & $iw$ & $iv$ \\
+    % 75 & & \hphantom{0}7 & $( a z_{ 1 } + b )\;\, ( c z_{ 2 } + d )$
+    %        & $( a z_{ 1 } + b ) ( c z_{ 2 } + d )$ \\
+    % 75 & & \hphantom{0}3 & $c z - d$ & $c z + d$ \\
+    % 75 & & 16 & $ab - bc$ & $ad - bc$ \\
+    % 79 & & \hphantom{0}5 & okręgów~: & okręgów: \\
+    % 80 & & 12 & $a^{ x } \cdot a^{ iy }$ & $e^{ x } \cdot e^{ iy }$ \\
+    % 80 & & 10 & prostą~: & prostą: \\
+    % 90 & \hphantom{0}2 & & \textit{krzywą zamkniętą} & \textit{konturem} \\
+    % \hphantom{0}90 & \hphantom{0}5 & & pochodna$f'( z )$
+    % & pochodna $f'( z )$ \\
+    % \hphantom{0}94 & & \hphantom{0}6 & regularną & kawałkami gładką \\
+    % \hphantom{0}99 & \hphantom{0}1 & & zewnątrz & na~zewnątrz \\
+    % 102 & 14 & & $=\!\! f^{ ( k - 1 ) }( z_{ 0 } )$
+    %        & $= f^{ ( k - 1 ) }( z_{ 0 } )$ \\
+    % 102 & &  7 & części & części otwartej \\
+    % 105 & &  6 & zerowych : & zerowych: \\
+    % 106 & &  2 & \textit{jest w~środku} & \textit{w~środku} \\
+    % 106 & &  1 & \textit{równa} & \textit{jest równa} \\
+    % 107 &  6 & & $\absOne{ z } \leq r$ & $\absOne{ z } = r$ \\
+    % 131 & 11 & & myś & myśl \\
+    % 126 & &  7 & $\frac{ ( \zeta - z_{ 0 } )^{ n } }{ ( z - z_{ 0 } )^{ n + 1 } }$
+    %        & $\frac{ ( z - z_{ 0 } )^{ n } }{ ( \zeta - z_{ 0 } )^{ n + 1 } }$ \\
+    % 132 &  2 & & $=\!\! a_{ -k + 1 }$ & $= a_{ -k + 1 }$ \\
+    % 134 & 14 & & $P_{ 3 }( a )$ & $P_{ 3 }( z )$ \\
+    % 140 & &  7 & $f |$ & $\absOne{ f }$ \\
+    % 143 & & 18 & w~otoczeniu punktu & \textit{w~otoczeniu punktu} \\
+    % 146 & &  8 & \textbf{P}odstawmy & Podstawmy \\
+    % 146 & &  5 & $( r + \frac{ 1 }{ r } )^{ z }$
+    %        & $( r + \frac{ 1 }{ r } )^{ 2 }$ \\
+    % 146 & &  5 & $( r - \frac{ 1 }{ r } )^{ z }$
+    %        & $( r - \frac{ 1 }{ r } )^{ 2 }$ \\
+    % 146 & &  3 & kątem~$y$ & kątem~$\varphi$ \\
+    % 155 & & 13 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    % 155 & &  3 & $0 < 2\pi$ & $\theta < 2\pi$ \\
+    % 159 & 10 & & krótko : & krótko: \\
     159 & 12 & & części & części otwartej \\
     159 & & 10 & części & części otwartej \\
     164 & 10 & & 102 & 101 \\
-    166 &  6 & & potęgowych . & potęgowych. \\
+    166 & \hphantom{0}6 & & potęgowych . & potęgowych. \\
     170 & & 16 & monochromii & monodromii \\
     173 & & 10 & est & jest \\
-    173 & &  9 & jsię & się \\
+    173 & & \hphantom{0}9 & jsię & się \\
     174 & 13 & & $( \sqrt[p]{ z )^{ \nu } }$ & $( \sqrt[p]{ z } )^{ \nu }$ \\
-    178 &  2 & & 132 & 133 \\
-    199 &  3 & & $\nu = 1$ & $k = 1$ \\
-    207 & &  6 & $( 1$ & $1$ \\
+    178 & \hphantom{0}2 & & 132 & 133 \\
+    199 & \hphantom{0}3 & & $\nu = 1$ & $k = 1$ \\
+    207 & & \hphantom{0}6 & $( 1$ & $1$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -2087,6 +2161,8 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   B. W. Szabat \\
   \textit{Wstęp do analizy zespolonej},
@@ -2109,7 +2185,7 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    17  &  5 & & dal & dal- \\
+    17  & \hphantom{0}5 & & dal & dal- \\
     25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
     % & & & & \\
     \hline

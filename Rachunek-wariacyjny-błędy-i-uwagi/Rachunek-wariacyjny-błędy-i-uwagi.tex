@@ -73,12 +73,14 @@
 
 
 
-% ---------------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ---------------
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -108,8 +110,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -371,11 +373,11 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    25  & &  1 & $\lim\limits_{ \Delta x \to 0 }
+    25  & & \hphantom{0}1 & $\lim\limits_{ \Delta x \to 0 }
                  \frac{ \Delta y' }{ \Delta x } = \tilde{ F }_{ y' y' }$
            & $\lim\limits_{ \Delta x \to 0 }
              \frac{ \Delta y' }{ \Delta x } \tilde{ F }_{ y' y' }$ \\
-    27  &  7 & & $\frac{ d }{ dx }( F - y' F_{ y' } )$
+    27  & \hphantom{0}7 & & $\frac{ d }{ dx }( F - y' F_{ y' } )$
            & $\frac{ d }{ dx }( F - y' F_{ y' } ) = 0$ \\
            % & & & & \\
     \hline
@@ -511,6 +513,7 @@ poprawny, acz mało elegancko zrobiony.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}
