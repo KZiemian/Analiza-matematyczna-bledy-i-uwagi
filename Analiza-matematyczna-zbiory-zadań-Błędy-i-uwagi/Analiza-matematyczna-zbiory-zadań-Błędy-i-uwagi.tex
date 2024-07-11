@@ -1,122 +1,137 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-\usepackage{bm}  % Daję komendę \bm do pogrubionej czcionki matematycznej
-% Gryzie się z innymi czcionkami
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
-\usepackage{tikz}  % Potężny pakiet PGF/TikZ.
-\usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
-% pakietu TikZ
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ---------------
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Analiza-matematyczna-zbiory-zadan-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
 \newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
 
 
 
 
 
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
 
 
 
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
 
 
-
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -127,16 +142,16 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Zbiory zadań z~analizy matematycznej \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -164,26 +179,18 @@
 
 
 % ######################################
-\newpage
-\section{Zbiory zadań z~analizy matematycznej}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{
-  Włodzimierz Krysicki, L. Włodarski \\
-  „Analiza matematyczna w zadaniach. Tom~I”,
+\section{Włodzimierz Krysicki, L. Włodarski
+  \textit{Analiza matematyczna w zadaniach. Tom~I},
   \cite{KrysickiWlodarskiAnalizaWZadaniachVolI2005}}
+% ######################################
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
 
-\start \Str{89} Problemy takie jak policzenie granicy
+\noindent
+\Str{89} Problemy takie jak policzenie granicy
 $\lim\limits_{ x \to 0 } \frac{ \sin 3 x }{ x }$, sugerują następujące
 postępowanie. Wiemy, że~$\lim\limits_{ x \to 0 } 3x = 0$ oraz
 że~$\lim\limits_{ x \to 0 } \frac{ \sin x }{ x } = 1$, chcielibyśmy
@@ -194,21 +201,26 @@ na~to~pytanie daje poniższe twierdzenie.
 
 Funkcje tu użyte wciąż nie są zdefiniowane
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{96} Można
-zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają taką samą pochodną,
-więc powinny różnią~się o~stałą, co~jest nonsensem. Wyjaśnieniem
+
+
+\noindent
+\Str{96} Można zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają taką samą
+pochodną, więc powinny różnią~się o~stałą, co~jest nonsensem. Wyjaśnieniem
 problemu jest fakt, że~te dwie funkcje~są określone na rozłącznych
 dziedzinach.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
+
+
+\noindent
+\Str{125} Warto przedyskutować, dlaczego tak ważnej jest
 założenie o~tym, że~$\frac{ dx }{ dt } \neq 0$. Jeżeli mamy dane dwie
 funkcje $y( t )$ i~$x( t )$, to~nie musi istnieć funkcja $y( x )$.
 Jeżeli jednak dla jakiegoś $t_{ 0 }$ mamy
@@ -242,11 +254,14 @@ pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
 nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
 aby~tak było.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
+
+
+\noindent
+\Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
 pochodnej równy jest pochodnej modułu:
 \begin{equation*}
   \label{eq:KrysickiWlodarskiAnalizaVolI-02}
@@ -328,6 +343,7 @@ składowa przyśpieszenia również musi rosnąć.
 
 \end{center}
 
+\VerSpaceTwo
 
 
 Str. 325. 16.32.
@@ -372,7 +388,7 @@ Str. 480. 16.37. $x \neq \frac{ 2 }{ 3 }$, $x \neq \frac{ 3 }{ 2 }$;
 $I = \frac{ 1 }{ 5 } \ln| \frac{ 2 x - 3 }{ 3 x - 2 } |$.
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -385,7 +401,7 @@ $I = \frac{ 1 }{ 5 } \ln| \frac{ 2 x - 3 }{ 3 x - 2 } |$.
 
 
 % ##########################
-\Work{ % Autorzy i tytuł dzieła
+\section{ % Autorzy i tytuł dzieła
   Włodzimierz Krysicki, L. Włodarski \\
   „Analiza matematyczna w~zadaniach. Tom~II”,
   \cite{KrysickiWlodarskiAnalizaWZadaniachVolII2004} }
@@ -395,7 +411,8 @@ $I = \frac{ 1 }{ 5 } \ln| \frac{ 2 x - 3 }{ 3 x - 2 } |$.
 \CenterBoldFont{Uwagi do konkretnych stron}
 
 
-\start \Str{199} \textbf{Zadanie 7.2.} Rozwiązanie tego zadania jest
+\noindent
+\Str{199} \textbf{Zadanie 7.2.} Rozwiązanie tego zadania jest
 niepełne, w~następujący sensie. Równanie numer (2) w~tym zadaniu,
 po~spierwiastkowaniu sprowadza~się do~równania:
 \begin{equation}
@@ -429,11 +446,14 @@ rozwiązaniem jest:
   \end{cases}
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{200} \textbf{Zadanie 7.3.} Również tutaj problem znalezienia
+
+
+\noindent
+\Str{200} \textbf{Zadanie 7.3.} Również tutaj problem znalezienia
 wszystkich rozwiązań równania różniczkowego nie został w~pełni
 rozwiązany. Ograniczając~się do przedziału $( 0, 2 \pi )$ możemy
 zauważyć, że~funkcja:
@@ -493,6 +513,9 @@ przedziale, choć nie jest różniczkowalne w~0.
 
 \end{center}
 
+\VerSpaceTwo
+
+
 Str. 432.
 $\frac{ \partial^{ 2 } u }{ \partial x \partial y }
 = \frac{ \partial^{ 2 } u }{ \partial y \partial x }
@@ -500,7 +523,7 @@ $\frac{ \partial^{ 2 } u }{ \partial x \partial y }
 Str. 454. 9.5. $y = C \frac{ x - 2 }{ x + 2 }$. \\
 Str. 454. 9.5. $y = C x$.
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -512,17 +535,9 @@ Str. 454. 9.5. $y = C x$.
 
 
 
-% ######################################
-\newpage
-\section{Zbiory zadań z~analizy zespolonej}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
 
 % ####################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Jak Krzyż \\
   „Zbiór zadań z~funkcji analitycznych”,
   \cite{KrzyzZbiorZadanZFunkcjiAnalitycznych2005} }
@@ -532,16 +547,18 @@ Str. 454. 9.5. $y = C x$.
 \CenterBoldFont{Uwagi}
 
 
-\start \StrWg{28}{18} Sens tego niezbyt zgrabnie zbudowanego zdanie
+\StrWierszGora{28}{18} Sens tego niezbyt zgrabnie zbudowanego zdanie
 jest prosty. Mając dany dowolny niezerowy kąt\footnote{Czy to
   założenie jest potrzebne?} o~wierzchołku $z = 0$, możemy dobrać
 takie $\alpha$, że~funkcja $z^{ \alpha }$ przekształca ten kąt na~kąt półpełny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{31}{14} Stwierdzeni, że~całka
+
+
+\StrWierszGora{31}{14} Stwierdzeni, że~całka
 \begin{equation}
   \label{eq:KrzyzZZzFA-01}
   \int_{ \gamma } f( z ) \, dz
@@ -552,7 +569,7 @@ orientację zmienia jej znak na przeciwny. Należałoby więc napisać,
 iż~całka ta nie zależy od~wyboru parametryzacji zachowującej
 orientację.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 % \start
@@ -632,7 +649,7 @@ orientację.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % \noi \\
@@ -665,17 +682,15 @@ orientację.
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}

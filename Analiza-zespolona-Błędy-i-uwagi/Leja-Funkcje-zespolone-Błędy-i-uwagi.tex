@@ -1,140 +1,161 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------
-% Wspaniały pakiet PGF/TikZ
-% ---------------
-\usepackage{tikz}
-
-% Włączenie konkretnych bibliotek pakietu TikZ.
-\usetikzlibrary{decorations.markings}
-
-% Picsy TikZa
-\usepackage{TikZPics}
-
-% Dodatkowe style TikZa
-\usepackage{TikZStyles}
-
-
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-\usepackage{calculuscommands}
-
-
-
-
-
-% ------------------------------
-% Commands for use within this file only
-% ------------------------------
-\newcommand{\re}{\textrm{re}}
-
-
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Analiza-zespolona-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
+
+% Package containing commands created for writing about complex analysis
+\usepackage{complex-analysis}
+
+
+
+
+
+% ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+\usepackage{tikz}
+
+% Loding TikZ libraries
+\usetikzlibrary{decorations.markings}
+
+% Pics for drawing charts
+\usepackage{PGF-TikZ-Chart-pics}
+
+% Pics for drawing geometric objects
+\usepackage{PGF-TikZ-Geometry-pics}
+
+% Styles for arrows
+\usepackage{PGF-TikZ-Arrows-styles}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -145,16 +166,17 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
-\title{Analiza matematyczna \\
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Franciszek Leja \textit{Funkcje zespolone}
+  \parencite{Leja-Funkcje-zespolone-Pub-2006} \\
   {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -166,6 +188,7 @@
 
 
 % ####################################################################
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -174,7 +197,8 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+% Title of the text
+\maketitle
 % ######################################
 
 
@@ -182,27 +206,8 @@
 
 
 % ######################################
-% \newpage
-\section{Analiza zespolona}
-
-\vspace{\spaceTwo}
+\section{Uwagi}
 % ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Franciszek Leja \\
-  \textit{Funkcje zespolone}, \cite{LejaFunkcjeZespolone2006}}
-% Sprawdź tu wszystkie eqref.
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
 
 
 \noindent
@@ -213,7 +218,7 @@ $\Cbb \simeq \Rbb^{ 2 }$. W~dodatku \textit{Wstęp do~teorii funkcji
 prostej zespolonej, która w~przypadku płaszczyzny zespolonej~$\Cbb$ jest
 po~prostu jej równa.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -227,7 +232,7 @@ oznaczenie na~otoczenie pierścieniowe
   \Pier( a, r, R ) := \{ z \; | \; r < \absOne{ z - a } < R \}.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -239,14 +244,14 @@ urojonej~$i^{ 2 } = -1$, nie zaś dopiero na~stronie 9. Bez~tego, bądź
 jakiegoś innego wyjaśnienia, ciężko zrozumieć czym tak naprawdę~są
 liczby postaci $\alpha + \beta i$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\Str{8--9} Aby~wyrażenie $1 / z = \zbar / ( z \zbar )$ miało sens, należy
+\Str{8--9} Aby~wyrażenie $1 / z = \bar{z} / ( z \bar{z} )$ miało sens, należy
 chyba postępować w~następujący sposób\footnote{Leja zapewne zdawał sobie
   z~tego sprawę, jednak według mnie nie~zaznaczył tego wystarczająco jasno
   w~tekście.}. Na~początku należy zdefiniować mnożenie liczb zespolonych,
@@ -261,18 +266,18 @@ niemożliwość zrobienia tego samego w~liczbach zespolonych. Ponieważ
 odwrotność liczby jest liczbą rzeczywistą daną wzorem
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-03}
-  \frac{ 1 }{ a + i0 } = \frac{ 1 }{ a } + i0
-  = \frac{ 1 }{ a },
+  \frac{ 1 }{ a + i0 } = \frac{ 1 }{ a } + i0 =
+  \frac{ 1 }{ a },
 \end{equation}
 więc dzielenie liczby zespolonej przez rzeczywistą wynika teraz z~ich
 reguł mnożenia. Teraz możemy \textit{zdefiniować} dla~$z \neq 0$
 liczbę $1 / z$ wzorem
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-04}
-  \frac{ 1 }{ z } := \frac{ \zbar }{ z \zbar }.
+  \frac{ 1 }{ z } := \frac{ \bar{z} }{ z \bar{z} }.
 \end{equation}
-Ponieważ $z \zbar$ jest liczbą rzeczywistą, więc dzielenie przez nią
-wynika z~pojęć już wprowadzonych. Gdy $z = 0$ wtedy $z \zbar = 0$,
+Ponieważ $z \bar{z}$ jest liczbą rzeczywistą, więc dzielenie przez nią
+wynika z~pojęć już wprowadzonych. Gdy $z = 0$ wtedy $z \bar{z} = 0$,
 widzimy więc, że~również w~przypadku liczb zespolonych nie jest
 możliwe dzielenie przez~0.
 
@@ -281,21 +286,23 @@ zespoloną posiada te same własności, co dzielenie liczb rzeczywistych.
 Na~przykład, że~zachodzi
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-05}
-  ( 1 / z ) / w = 1 / ( z w ), \quad z, w \in \Cbb.
+  ( 1 / z ) / w = 1 / ( z w ), \quad
+  z, w \in \Cbb.
 \end{equation}
 Tą tożsamość można udowodnić w~następujący sposób
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-06}
     ( 1 / z ) / w =
-    \left( \frac{ \zbar }{ z \zbar } \right) / w =
-    \frac{ \zbar }{ z \zbar } \frac{ \wbar }{ w \wbar } =
-    \frac{ 1 }{ z \zbar } \frac{ 1 }{ w \wbar } ( \zbar \wbar ) =
-    \frac{ 1 }{ z \zbar w \wbar } ( \zbar \wbar ) =
-    \frac{ 1 }{ z w \zbar \wbar } ( \zbar \wbar ) =
+    \left( \frac{ \bar{z} }{ z \bar{z} } \right) / w =
+    \frac{ \bar{z} }{ z \bar{z} } \frac{ \bar{w} }{ w \bar{w} } =
+    \frac{ 1 }{ z \bar{z} } \frac{ 1 }{ w \bar{w} }
+    ( \bar{z} \bar{w} ) =
+    \frac{ 1 }{ z \bar{z} w \bar{w} } ( \bar{z} \bar{w} ) =
+    \frac{ 1 }{ z w \bar{z} \bar{w} } ( \bar{z} \bar{w} ) =
     1 / ( z w ).
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -305,9 +312,9 @@ Tą tożsamość można udowodnić w~następujący sposób
 \Str{9--10} Według wszystkich mi znanych historycznych prac na~temat liczb
 zespolonych, zostały one odkryte już w~XVI wieku podczas badania rozwiązań
 równania \textit{trzeciego} stopnia, nie zaś równań kwadratowych.
-\red{Zacytuj tu jakąś dobrą pozycję historyczną.}
+????Zacytuj tu jakąś dobrą pozycję historyczną.????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -350,7 +357,7 @@ byłaby ciągła na~os $\arg z = \pi$, co~w~dalszym ciągu okaże~się
 bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 59--60).
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -362,7 +369,7 @@ bardzo niewygodnie (pierwsze znaki tego znaleźć można na~stronach
 $n$-wartościową, nie można więc jej używać w~ten sam sposób co~funkcji
 jednowartościowych\footnote{Pisał już o~tym Frege, zobacz część
   poświęcona jego filozofii w~G. E. M. Anscombe P. T. Geach,
-  \textit{Trzej filozofowie}   \cite{AnscombeGeachTrzejFilozofowie1981}.}.
+  \textit{Trzej filozofowie} \cite{AnscombeGeachTrzejFilozofowie1981}.}.
 Zapomnienie o~tym prowadzi do~znanego paradoksu. Mamy mianowicie
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-08}
@@ -405,10 +412,10 @@ Warto zwrócić uwagę, że~jednoznaczną funkcję
 $\sqrt[ n ]{ \cdot }: z \mapsto \sqrt[ n ]{ z }$ na~pewnych właściwych
 podzbiorach $\Cbb$. Wynika to~między innymi z~twierdzenia o~istnieniu
 jednoznacznych gałęzi logarytmu, zobacz str.~95 w~komentowanej
-tu~książce \cite{LejaFunkcjeZespolone2006}. Tym problemem nie
+tu~książce \parencite{Leja-Funkcje-zespolone-Pub-2006}. Tym problemem nie
 będziemy~się w~tym miejscu szerzej zajmować.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -421,7 +428,7 @@ rozwiązania rzeczywiste $\pm \sqrt{ \alpha }$. Wynika to~ze~wzoru~(9), ale~zamy
 tych obliczeń polega na~tym, by~z~niego nie korzystać. W~tym momencie nie
 wiem, jak należałoby to~poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -446,7 +453,7 @@ wzorów
 Tym samym możemy wyrazić oba szukane pierwiastki w~prosty sposób
 za~pomocą $\alpha$ i~$\beta$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -459,15 +466,15 @@ jakby były zwykłymi wielomianami, wówczas
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-13}
   \left( \sum_{ n = 0 }^{ \infty } a_{ n } z^{ n } \right)
-  \left( \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) = \sum_{ n = 0
-  }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots + a_{ 0
-  } b_{ n } ) z^{ n }.
+  \left( \sum_{ m = 0 }^{ \infty } b_{ m } z^{ m } \right) =
+  \sum_{ n = 0 }^{ \infty } ( a_{ n } b_{ 0 } + a_{ n - 1 } b_{ 1 } + \ldots +
+  a_{ 0 } b_{ n } ) z^{ n }.
 \end{equation}
 Należy jednak pamiętać, że~rachunki te są nieścisłe i~mogą być
 matematycznie niepoprawne dla~pewnych szeregów potęgowych. Dostarczają
 jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -478,7 +485,7 @@ jednak uzasadnienia dla tego sposobu mnożenia szeregów.
 wykazać zbieżność iloczynu szeregów, bowiem wartość tej granicy wynika
 z~twierdzenia Abela.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -535,12 +542,12 @@ $\absOne{ a_{ n - p } } < \varepsilon / ( 2 p M_{ p } )$. Teraz dla każdego
 $n > \max( p, q )$ zachodzi
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-18}
-  \absOne{ C_{ n } - AB } \leq \varepsilon.
+  \absOne{ C_{ n } - A B } \leq \varepsilon.
 \end{equation}
 Możemy więc przyjąć $N = \max( p, q )$ i~tym samym dowód jest
 zakończony.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -650,14 +657,14 @@ liczbie~$n + 1$. Tym samym
   \label{eq:Leja-Funkcje-zespolone-27}
   \begin{split}
     C_{ 0 } + C_{ 1 } + \ldots + C_{ n - 1 } + C_{ n }
-    &= n AB + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
+    &= n A B + A \sum_{ i = 0 }^{ n - 1 } \beta_{ i } + B \sum_{ i = 0 }^{ n - 1 }
       \alpha_{ i } + R_{ n } + C_{ n } = \\
     &= ( n + 1 ) AB + A \sum_{ i = 0 }^{ n } \beta_{ i } + B \sum_{ i = 0 }^{ n } \alpha_{ i }
       + R_{ n + 1 }.
   \end{split}
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -695,7 +702,7 @@ dla~$n > p$. Teraz
 Ponieważ $p$~jest ustalone, więc istnieje takie~$q$, że~dla $n > q$
 drugi człon jest również mniejszy od~$\varepsilon / 2$, co~kończy dowód.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -705,7 +712,7 @@ drugi człon jest również mniejszy od~$\varepsilon / 2$, co~kończy dowód.
 \Str{25} Wedle definicji zbiór pusty jest domknięty, jednak przy omawianiu
 własności przecięć zbiorów domkniętych, jest tu wymieniony osobno.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -729,7 +736,7 @@ właściwa wynika zwykle jasno z~kontekstu. Nie będziemy~się starali
 doprecyzować jego słów w~każdej z~tych sytuacji, jednak warto~się
 starać o~większą jasność i~precyzję tekstów matematycznych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -742,7 +749,7 @@ Jedna w~tym wypadku jej zbiór punktów, może być różny od~tej
 dla~krzywej~$z( t )$, $t \in I$, co~jednak nie jest żadnym problemem
 dla~rozwijanej tu~teorii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -787,7 +794,8 @@ możliwe, jeśli tych punktów jest „odpowiednio mało”. Przykładem takiej
 sytuacji jest krzywa
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-32}
-  z( t ) = t^{ 3 } + i 0, \quad t \in \Rbb.
+  z( t ) = t^{ 3 } + i 0, \quad
+  t \in \Rbb.
 \end{equation}
 
 Z~tego względu rozróżnia~się \textbf{punkty osobliwe krzywej}
@@ -821,7 +829,7 @@ do~czynienia z~punktami osobliwymi krzywej, co~nie powinno nas dziwić.
 Problem polega tu bowiem nie na~szczególnym wyborze parametryzacji, lecz
 na~tym, że~krzywa od pewnego momentu stoi w~miejscu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -843,7 +851,7 @@ $z( t )$ jest gładka w~przedziale $[ t_{ k - 1 }, t_{ k } ]$, to nie
 jest ona gładka w~przedziałach $[ t_{ k - 1 } - \epsilon, t_{ k } ]$
 i~$[ t_{ k - 1 }, t_{ k } + \epsilon ]$ dla wszystkich~$\epsilon > 0$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -877,14 +885,14 @@ ta parametryzacja jest dodatnia, lecz biorąc pod uwagę, że~nie udało
 mi~się zdefiniować odpowiednich homotopii i~tym samym główny problem
 jest wciąż nie rozwiązany, nie ma to wielkiego sensu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 % ##################
-\begin{figure}
+\begin{figure}[h]
 
   \label{fig:Leja-Funkcje-zespolone-01}
 
@@ -960,7 +968,7 @@ w~ogólniejszych przypadkach, kiedy rozpatrywane krzywe mają punkty
 wielokrotne. Takie jednak poszerzenie pojęcia konturu, odeszłoby
 by~chyba zbyt daleko od~słów Lejii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -974,7 +982,7 @@ Tutaj natomiast oznacza okrąg wielki przechodzący przez oba bieguny
 i~wydaje~się, że~terminologia ta jest używana w~całej książce
 konsekwentnie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -985,7 +993,7 @@ konsekwentnie.
 względem pewnej prostej, to~łączący je odcinek jest prostopadły do~tej
 prostej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -997,7 +1005,7 @@ i~\textbf{okręgami przechodzącymi przez punkt w nieskończoności} jest
 to, że~rzucie stereograficznym obrazem okręgu na~sferze przechodzącego
 przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1008,7 +1016,7 @@ przez biegun~$N$ jest właśnie linia prosta na~płaszczyźnie.
 należą odpowiednie proste (okręgi niewłaściwe), czy też należy tak
 zmodyfikować definicję, by~do nich należały.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1049,7 +1057,7 @@ z_{ n } \}$ poprzez
   f( z_{ i } ) := \frac{ P( z_{ i } ) }{ Q( z_{ i } ) }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1063,7 +1071,7 @@ argumentu zespolonego $N( z )$. Na~przykład pisząc
   f( z ) - \sum_{ n = 0 }^{ N( z ) } a_{ n } \to 0.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1080,7 +1088,7 @@ urojona) jako okres należy przyjąć liczbę której część rzeczywista
 (urojona) jest najmniejszą liczbą dodatnią spośród możliwych. W~innym
 przypadku sformułowanie kryterium, który z~okresów przyjąć, nie jest łatwe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1088,10 +1096,10 @@ przypadku sformułowanie kryterium, który z~okresów przyjąć, nie jest łatwe
 
 \noindent
 \Str{56} Ze~wzoru (20) rzeczywiście wynika, że~$\sin$ i~$\cos$
-mają okres $2\pi$, ale~nie wynika, iż~dla którejś z~nich nie~istnieje
+mają okres $2 \pi$, ale~nie wynika, iż~dla którejś z~nich nie~istnieje
 mniejsza liczba dodatnia o~tej własności.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1107,7 +1115,7 @@ wyrażenia~$\sqrt{ z }$. Natomiast $\Log z$ jest już zwykłą funkcją
 liczbową, choć nieciągłą, więc mając to w~pamięci można jej używać w~zwykły
 sposób.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1118,7 +1126,7 @@ sposób.
 lepiej byłoby oznaczać zbiór wszystkich tych liczb. Oczywiście, należy
 uważać na~wymienione już w~przypadku funkcji wielowartościowych problemy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1139,7 +1147,7 @@ i~gałąź logarytmu przestaje być jednoznaczna, albo~ograniczamy ich
 zakres na~przykład do~zbioru~$( -\pi, \pi ]$ i~wówczas funkcja musi
 mieć skok, a~więc przestaje być ciągła.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1158,7 +1166,7 @@ $k( z ) \in \Zbb$. Jako różnica dwóch funkcji ciągłych jest
 to~funkcja ciągła, jednak funkcja ciągła o~wartościach całkowitych
 musi być równa stałej, czyli $k( z ) = k \in \Zbb$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1166,9 +1174,9 @@ musi być równa stałej, czyli $k( z ) = k \in \Zbb$.
 
 \noindent
 \Str{68} Należy przemyśleć, jaki jest sens tego, że~możemy traktować~$z$
-i~$\zbar$ jako dwie zmienne niezależne.
+i~$\bar{z}$ jako dwie zmienne niezależne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1180,7 +1188,7 @@ a~formalną kluczowe jest to, że~zakłada~się w~nim, iż~pochodne cząstkowe
 istnieją i~są ciągłe. Założenie to zostało podane wyżej w~tekście, niestety
 nie zostało przedstawione jawnie w~treści twierdzenia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1228,7 +1236,7 @@ im~poziomice przecinają~się tylko raz w~zbiorze~$\Vcal$.
 Nie ma potrzeby zajmować~się globalnym kształtem poziomic, więc
 zagadnienia tego nie będziemy omawiać.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1237,7 +1245,7 @@ zagadnienia tego nie będziemy omawiać.
 \noindent
 \Str{74} Osie $\eta$ i~$\xi$ na~rys.~38~są podpisane na~odwrót.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1247,7 +1255,7 @@ zagadnienia tego nie będziemy omawiać.
 \Str{75} Wskazówka do~obliczenia wzorów (23): na~początku
 policz~$\absOne{ z }^{ 2 } + 1$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1257,7 +1265,7 @@ policz~$\absOne{ z }^{ 2 } + 1$.
 \Str{75} W~opisie rzutu Merkatora zabrakło wyjaśnienia, po~której stronie
 równika należy umieścić rzut punktu~$z'$. Wynika to~jednak jasno z~rysunku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1269,7 +1277,7 @@ jest problematyczne, bowiem nie jest wcale jasne, czy~można przypisać
 jakiś sens pochodnej w~punkcie $z = -d / c$. Prawdą jest jednak,
 że~pochodna homografii jest różna od~0 wszędzie poza tym punktem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1287,7 +1295,7 @@ Jednak lokalnie zarówno postać biegunowa, jak i~odpowiadające jej
 poziomice powinny być dobrze określone. Może warto będzie do~tego
 zagadnienia powrócić i~zanalizować je dokładnie?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1305,7 +1313,7 @@ dodatnio względem swojego wnętrza, ze~znakiem minus, gdy~jest
 zorientowana ujemnie. To~rodzi problem jak zdefiniować wnętrze
 krzywej zamkniętej z~samoprzecięciami, odłóżmy go~jednak na~inny czas.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1317,7 +1325,7 @@ z~krzywymi przedziałami gładkimi. W~przeciwnym bowiem razie krzywa
 ta~mogłaby nie mieć określonej długości albo~mogłoby nie dać~się
 aproksymować ją przez linię łamaną.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1337,7 +1345,7 @@ w~dwóch przeciwnych kierunkach.
 Wszystkie te~stwierdzenia~są oczywiste na~podstawie rysunku, więc
 jest zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1348,7 +1356,7 @@ jest zrozumiałe, że~Leja chciał uniknąć dowodzenia ich wszystkich.
 w~żaden sposób jasno zdefiniowane, pozostając na~poziomie intuicji
 matematycznej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1360,7 +1368,7 @@ całkowania”, jednak nie jest ono zdefiniowane. Przez \textbf{drogę
   całkowania} należy rozumieć krzywą kawałkami gładką. Dla wygody będziemy
 czasem mówili po~prostu o~„drodze”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1369,7 +1377,7 @@ czasem mówili po~prostu o~„drodze”.
 
 
 % ##################
-\begin{figure}
+\begin{figure}[h]
 
   \label{fig:Leja-Funkcje-zespolone-02}
 
@@ -1396,7 +1404,7 @@ czasem mówili po~prostu o~„drodze”.
 
 
 
-    \pic at (1.9,0) {tick x axis thin 3};
+    \pic at (1.9,0) {tick x axis thin 2};
 
     \pic at (1.9,0) {point};
 
@@ -1487,7 +1495,7 @@ $\exp( \log \infty ) = \infty$. Biorąc to~wszystko pod uwagę, decyzja
 by wykluczyć z~rozważanego zbioru $D$ punkt $\infty$, jawi~się jako
 dobrze uzasadniona.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1502,7 +1510,7 @@ różniczkowalna, tym samym analityczna. Dopiero gdy dowiedziemy, że~każda
 funkcja analityczna jest nieskończenie wiele razy różniczkowalna, dowód
 będzie pełen.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1557,23 +1565,23 @@ ciągła na~zbiorze zwartym jest jednostajnie ciągła, więc na mocy
 przytoczonego twierdzenia $r( \zeta, z )$ zmierza jednostajnie do~$0$
 względem zmiennej~$\zeta$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{101}{1} Aby~wzór w~tej linii miał sens, należy zdefiniować symbol
-Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest dowolną liczbą zespoloną, $n$
-liczbą naturalną. Wydaje mi~się, że~poprawna definicja~to
+\StrWierszDol{101}{1} Aby~wzór w~tej linii miał sens, należy zdefiniować
+symbol Newtona, dla pary $\mu$, $n$, gdzie $\mu$ jest dowolną liczbą zespoloną,
+$n$ liczbą naturalną. Wydaje mi~się, że~poprawna definicja~to
 \begin{equation}
   \label{eq:Leja-Funkcje-zespolone-43}
   \binom{ \mu }{ n } :=
   \frac{ \mu ( \mu - 1 ) ( \mu - 2 ) \cdot \ldots \cdot ( \mu - n + 1 ) }{ n! }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1622,7 +1630,7 @@ zbieżności tego szeregu jest niezerowy, widzimy, że~funkcja~$f( z )$
 znika w~kole otwartym o~niezerowym promieniu, więc na~mocy
 poprzedniego lematu znika w~całym~$D$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1633,7 +1641,7 @@ poprzedniego lematu znika w~całym~$D$.
 $\absOne{ f( z' ) } > \absOne{ f( z_{ 0 } ) }$ jest bardzo brzydko
 podzielona między dwie linie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1643,7 +1651,7 @@ podzielona między dwie linie.
 \Str{116} Pochodzenia nazwy \textit{potencjał logarytmiczny} wyjaśnia
 analiza przeprowadzona na~stronie~152.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1654,7 +1662,7 @@ analiza przeprowadzona na~stronie~152.
 tu~dodać komentarz, że~jeśli funkcja $f( z )$ ma w~punkcie $z_{ 0 }$
 biegun, to~definiujemy $1 / f( z_{ 0 } ) := 0$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1683,7 +1691,7 @@ tak mały by~ten okrąg zawierał~się wewnątrz~$C$\footnote{Czy pojęcie
   musi być puste.}), więc~całki po~nich~są równe, a~stąd wynika
 wzór~(17).
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1706,7 +1714,7 @@ przez~$( z - z_{ 0 } )^{ n }$ wyraz po~wyrazie (dalszych kroków nie
 będziemy tu~wymieniać). Postępowanie to jest bardzo podobne,
 do~wyprowadzenia wzoru~(18) ze~strony~133.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1723,7 +1731,7 @@ $z_{ 0 } \in D$ to~$f( D )$ zawiera punkt $f( z_{ 0 } )$ wraz z~pewnym
 kołem~$\absOne{ w - f( z_{ 0 } ) } < \eta$, $\eta > 0$. Tym samym
 $f( D )$ jest otwarty, a~jako zbiór otwarty i~spójny jest obszarem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1744,7 +1752,7 @@ więc zawiera pewną kulę $K( z_{ 0 }, \delta' )$, która jest otoczeniem~$z_{ 
 o~rządnych własnościach. Zauważmy jednak,
 że~$f\big( K( z_{ 0 }, \delta' ) \big)$ nie~musi być kulą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1755,7 +1763,7 @@ o~rządnych własnościach. Zauważmy jednak,
 $z \mapsto 1 / z$ nie zmienia postaci funkcji, to przyjmuje na~zewnątrz koła
 jednostkowego, te~same wartości co~w~jego wnętrzu”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1771,7 +1779,7 @@ sytuację trójwymiarową, wtedy ten potencjał miałby wartość
 $m / \absOne{ \vecr }_{ 3 }$,
 gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1782,7 +1790,7 @@ gdzie~$\absOne{ \vecr }_{ 3 } = x^{ 2 } + y^{ 2 } + z^{ 2 }$.
 mi~pewien problemów. Mianowicie, jak można twierdzić, że~w~punkcie~$\infty$ tak
 zdefiniowane odwzorowanie jest równokątne z~zachowaniem zwrotu?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1808,7 +1816,7 @@ tylko powiedzieć, że
   \frac{ 1 }{ n }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1819,7 +1827,7 @@ tylko powiedzieć, że
 \textbf{koła elementu} i~\textbf{promienia elementu}. Pojęcia te
 pojawiają~się dopiero na~stronach~175 i~176.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1869,6 +1877,7 @@ pojawiają~się dopiero na~stronach~175 i~176.
   \caption{Ilustracja związku między rzędem rozgałęzienia funkcji
     zespolonej a~jej $p$-krotnością.}
 
+
 \end{figure}
 % ##################
 
@@ -1881,7 +1890,7 @@ pojawiają~się dopiero na~stronach~175 i~176.
 rozgałęzienia można zilustrować graficznie, tak jak zostało to~zrobione
 na~\eqref{fig:Leja-Funkcje-zespolone-03}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1890,7 +1899,7 @@ na~\eqref{fig:Leja-Funkcje-zespolone-03}.
 \noindent
 \Str{172--174}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1900,7 +1909,7 @@ na~\eqref{fig:Leja-Funkcje-zespolone-03}.
 \Str{177} Równoważnie można powiedzieć, że~funkcja algebraiczna
 ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości algebraicznie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1911,7 +1920,7 @@ ma~w~punktach $z_{ 1 }, z_{ 2 }, \ldots, z_{ \mu }$ osobliwości algebraicznie.
 skomplikowany w wielu miejscach. Kiedyś trzeba go będzie
 poprawić??????????????????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1945,8 +1954,8 @@ poprawić??????????????????
     22 & 13 & & urojoną ? & urojoną? \\
     22 & 15 & & rzeczywistą~? & rzeczywistą? \\
     24 & 11 & & $a, \:\; b$ & $a, b$ \\
-    25 & & \hphantom{0}6 & $\textrm{re}\, z < 0$
-    & $\textrm{re}\, z = 0$???? \\
+    25 & & \hphantom{0}6 & $\re z < 0$
+    & $re z = 0$???? \\
     27 & & \hphantom{0}9 & wniosek~: & wniosek: \\
     27 & \hphantom{0}6 & & zbieżny, & zbieżny. \\
     27 & & \hphantom{0}2 & Spójność & $N$-spójność \\
@@ -2064,54 +2073,50 @@ poprawić??????????????????
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{28}{5} \\
-\Jest  nieograniczone \\
-\Powin nieograniczone i~domknięte \\
-\StrWg{36}{5} \\
-\Jest  Ze~wzorów (9)~otrzymujemy \\
-\Powin Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
-\StrWg{56}{2} \\
-\Jest  a~istnieją wartości~$w$, które \\
-\Powin a~istnieje wartość~$w$, którą \\
-\StrWg{75}{12} \\
-\Jest  rozciętej wzdłuż jednego południka na~pas nieograniczony
+\StrWierszGora{28}{5} \\
+\Jest nieograniczone \\
+\PowinnoByc nieograniczone i~domknięte \\
+\StrWierszGora{36}{5} \\
+\Jest Ze~wzorów (9)~otrzymujemy \\
+\PowinnoByc Otrzymujemy z~nich wzory~(9) i~na ich mocy mamy \\
+\StrWierszGora{56}{2} \\
+\Jest a~istnieją wartości~$w$, które \\
+\PowinnoByc a~istnieje wartość~$w$, którą \\
+\StrWierszGora{75}{12} \\
+\Jest rozciętej wzdłuż jednego południka na~pas nieograniczony
 płaszczyzny~$p$ nawiniętej na~powierzchnię boczną \\
-\Powin rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
+\PowinnoByc rzutowanej wzdłuż południków na~pas nieograniczony~$p$ zwinięty
 w~powierzchnię boczną \\
-\StrWd{92}{6} \\
-\Jest  \textit{krzywą} \\
-\Powin \textit{krzywą kawałkami gładką} \\
-\StrWg{95}{5} \\
-\Jest  linią \\
-\Powin dowolna linia łamana \\
-\StrWd{107}{12} \\
-\Jest  dowolnym konturem zawartym \\
-\Powin dowolną drogą całkowania zawartą \\
-\StrWd{108}{13} \\
-\Jest  domkniętym \\
-\Powin domkniętym i~ograniczonym \\
-\StrWd{119}{8} \\
-\Jest  \textit{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
-\Powin \textit{jeśli~są równe na~brzegu $B$, to~są równe również
+\StrWierszDol{92}{6} \\
+\Jest \textit{krzywą} \\
+\PowinnoByc \textit{krzywą kawałkami gładką} \\
+\StrWierszGora{95}{5} \\
+\Jest linią \\
+\PowinnoByc dowolna linia łamana \\
+\StrWierszDol{107}{12} \\
+\Jest dowolnym konturem zawartym \\
+\PowinnoByc dowolną drogą całkowania zawartą \\
+\StrWierszDol{108}{13} \\
+\Jest domkniętym \\
+\PowinnoByc domkniętym i~ograniczonym \\
+\StrWierszDol{119}{8} \\
+\Jest \textit{są~identyczne, jeżeli~są równe na~brzegu~$B$} \\
+\PowinnoByc \textit{jeśli~są równe na~brzegu $B$, to~są równe również
   w~obszarze~$D$} \\
-\StrWd{134}{16} \\
-\Jest  krzywych zamkniętych \\
-\Powin kawałkami gładkich zamkniętych krzywych \\
-\StrWg{165}{2} \\
-\Jest  niech brzeg tego obszaru zawiera odcinek \\
-\Powin niech część wspólna brzegu tego obszaru i~osi
-$\textrm{im}\, z = 0$ tworzy odcinek \\
-\StrWd{165}{6} \\
-\Jest  \textit{symetrii{ }{ } Riemanna-Schwarza} \\
-\Powin \textit{symetrii Riemanna-Schwarza}
-
-
-
-% ############################
+\StrWierszDol{134}{16} \\
+\Jest krzywych zamkniętych \\
+\PowinnoByc kawałkami gładkich zamkniętych krzywych \\
+\StrWierszGora{165}{2} \\
+\Jest niech brzeg tego obszaru zawiera odcinek \\
+\PowinnoByc niech część wspólna brzegu tego obszaru i~osi
+$\im z = 0$ tworzy odcinek \\
+\StrWierszDol{165}{6} \\
+\Jest \textit{symetrii~~~Riemanna-Schwarza} \\
+\PowinnoByc \textit{symetrii Riemanna-Schwarza}
 
 
 
@@ -2120,48 +2125,6 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 
 
 
-
-
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  B. W. Szabat \\
-  \textit{Wstęp do analizy zespolonej},
-  \cite{SzabatWstepDoAnalizyZespolonej1974}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Błędy}
-
-\vspace{0em}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    17  & \hphantom{0}5 & & dal & dal- \\
-    25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-
-
-% ############################
 
 
 
@@ -2174,17 +2137,15 @@ $\textrm{im}\, z = 0$ tworzy odcinek \\
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{PhilBooks,MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
