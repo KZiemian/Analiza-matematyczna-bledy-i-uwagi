@@ -1,128 +1,137 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Wspaniały pakiet PGF/TikZ
-% ------------------------------
-% \usepackage{tikz}
-
-% \usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
-% % pakietu TikZ
-
-
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-% \usepackage{calculuscommands}
-
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Analiza-zespolona-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -133,8 +142,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Rachunek wariacyjny \\
   {\Large Błędy i~uwagi}}
 
@@ -142,7 +151,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -180,10 +189,9 @@
 
 
 % ############################
-\Work{ % Autorzy i tytuł dzieła
-  \mbox{I. \hspace{-0.4em} M.}~Gelfand,
-  \mbox{S. \hspace{-0.4em} W.}~Fomin \\[0.3em]
-  \textit{Rachunek wariacyjny}, \cite{GelfandFominRachunekWariacyjny1972}}
+\section{I.M.~Gelfand, S.W.~Fomin \textit{Rachunek
+    wariacyjny},
+  \cite{GelfandFominRachunekWariacyjny1972}}
 
 \vspace{0em}
 
@@ -194,6 +202,7 @@
 \vspace{0em}
 
 
+\noindent
 \Str{10} W~tym miejscu pierwszy raz autorzy książki używają pewnego
 skrótu myślowego. Zapisują oni bowiem funkcjonał długości
 krzywej\footnote{Dokładniej, chodzi o~klasę krzywych, które da się zapisać za
@@ -229,12 +238,13 @@ notatek będziemy~się starali możliwie jawnie zapisywać zależność wszystki
 funkcji od~ich argumentów w~sytuacjach, gdy wykonujemy operacje takie
 jak całkowanie po~tych zmiennych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
+\noindent
 \Str{15} W~definicji liniowego funkcjonału nad liniową przestrzenią
 unormowaną~$R$ nie pojawia się warunek, by był on jednorodny, czyli
 \begin{equation}
@@ -244,12 +254,13 @@ unormowaną~$R$ nie pojawia się warunek, by był on jednorodny, czyli
 Nie wiem, czy jest to przeoczenie ze~strony autorów, czy też addytywność
 i~ciągłość takiego funkcjonału od razu gwarantuje jego jednorodność.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
+\noindent
 \Str{15} W~tym miejscu autorzy wprowadzają jedno z~kluczowych dla
 rachunku wariacyjnego zagadnień. Mianowicie przyjmijmy, iż~dana jest pewna
 przestrzeń funkcji~$H$. Jeśli dla funkcji $f( x )$ równość
@@ -271,12 +282,13 @@ która dowodzą, np. że funkcja $f( x )$ jest tożsamościowo równa 0?
 Te i inne pytanie musimy na razie odłożyć na bok, licząc iż przyjdą kiedyś
 lepsze czasy, gdy będziemy się mogli nimi zająć.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
+\noindent
 \Str{17} W~tym miejscu potrzebny nam jest rozkład funkcji ciągłej
 $f : [ a, b ] \to \Rbb$ (lub $f : [ a, b ] \to \Cbb$), postaci
 \begin{equation}
@@ -292,7 +304,9 @@ Taki rozkład da się bardzo łatwo podać. Weźmy mianowicie
 \begin{subequations}
   \begin{align}
     \label{eq:Gelfand-Fomin-Year1972-09-A}
-    &\alpha = \frac{ 1 }{ \abs{ b - a } } \, \int_{ a }^{ b } f( x ) dx, \\[0.3em]
+    &\alpha =
+      \frac{ 1 }{ \absOne{ b - a } } \,
+      \int_{ a }^{ b } f( x ) \, dx, \\[0.3em]
     \label{eq:Gelfand-Fomin-Year1972-09-B}
     &\lambda( x ) = f( x ) - \alpha.
   \end{align}
@@ -300,7 +314,7 @@ Taki rozkład da się bardzo łatwo podać. Weźmy mianowicie
 Widzimy więc, że~wprowadzenie funkcji $\lambda( x )$ sprowadza~się do sprytnej
 zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -334,7 +348,7 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 
 % \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -351,10 +365,9 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
-  \mbox{I. \hspace{-0.4em} M.}~Gelfand,
-  \mbox{S. \hspace{-0.4em} W.}~Fomin \\[0.3em]
-  \textit{Rachunek wariacyjny}, \cite{GelfandFominRachunekWariacyjny1979}}
+\section{I.M.~Gelfand, S.W.~Fomin \textit{Rachunek
+    wariacyjny},
+  \cite{GelfandFominRachunekWariacyjny1979}}
 
 \vspace{0em}
 
@@ -362,7 +375,7 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 % ##################
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -385,7 +398,7 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -454,8 +467,8 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
-  J. Jost, X. Li-Jost \\
+\section{ % Autorzy i tytuł dzieła
+  J. Jost, X. Li-Jost
   \textit{Calculus of Variations},
   \cite{JostLiJostCalculusOfVariations1998}}
 
@@ -467,6 +480,7 @@ zmiany oznaczeń. Co nie zmienia faktu, że~jest to bardzo użyteczny trik.
 \vspace{0em}
 
 
+\noindent
 \Str{6} Dowód podstawowego lematu rachunku wariacyjnego jest
 poprawny, acz mało elegancko zrobiony.
 
@@ -491,7 +505,7 @@ poprawny, acz mało elegancko zrobiony.
 
 % \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -505,24 +519,17 @@ poprawny, acz mało elegancko zrobiony.
 
 
 
-
-
-
-
-
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
