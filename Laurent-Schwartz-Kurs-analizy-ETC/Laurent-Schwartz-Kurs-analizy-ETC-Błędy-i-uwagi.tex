@@ -1,124 +1,137 @@
-% Autor: Kamil Ziemian
-
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ---------------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ---------------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-\usepackage{xcolor}
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ---------------------------------------
-% MARGINS
-% ---------------------------------------
-\setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ---------------------------------------
-% Często przydatne pakiety
-% ---------------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ---------------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ---------------------------------------
-\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuje tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Analiza-zespolona-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
 \newtheorem{corollary}{Wniosek}
-
-
-
-% ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-\usepackage{calculuscommands}
-\usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
-
-\newcommand{\ReLoc}{\mathrm{Re}}
-\newcommand{\ImLoc}{\mathrm{Im}}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
 
 
 
 
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
 
 
 
-% ---------------------------------------
-% Ustawienia różnych parametrów tekstu
-% ---------------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
 
 
-
-% ---------------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ---------------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -129,14 +142,17 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
-\title{Dzieła Laurenta Schwartza \\
-  Błędy i~uwagi}
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Laurent Schwartz \textit{Kurs analizy matematycznej. Tom~I} \\
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -163,54 +179,61 @@
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Laurent Schwartz \\
-  „Kurs analizy matematycznej. Tom~I”,
-  \cite{SchwartzKursAnalizyMatematycznejVolI1979} }
+% ######################################
+\section{Uwagi ogólne}
+% ######################################
 
 
-% ##################
-\CenterBoldFont{Uwagi ogólne}
-
-
+\noindent
 To zadziwiające, że~w~tak ogromnym traktacie nie~udowodniono
 twierdzenia o trzech ciągach, które ma tak fundamentalne znaczenie
 w~analizie matematycznej.
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
+
+
+\noindent
 Udowodnić, że domknięcie podprzestrzeni, też jest podprzestrzenią. Czy
 nie można tego po prostu skwitować, że wynika to od razu, z tego że
 taka podprzestrzeń nie ma punktów izolowanych?
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
+
+
+\noindent
 Duża ilość nieomówionych pojęć pojawiających się w rozdziale 16
 sugeruje, że~książce został pominięty rozdział poświęcony omówieniu
 własności przestrzeni Banacha. Albo, że~taki rozdział powinien się
 w~niej znaleźć.
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
+
+
+\noindent
 Rozdział II.16. jakkolwiek prezentuje teorię przestrzeni Hilberta
 pięknie i głęboko, jest w~pewnym stopniu chaotyczny i~przydałaby mu
 się dodatkowa edycja.
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
+
+
+\noindent
 Nie zdefiniowano pojęcia izometrii. To pojęcie jest tak oczywiste, że
 nie będziemy go tu przytaczać.
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
@@ -221,14 +244,13 @@ nie będziemy go tu przytaczać.
 
 
 
-% #############
+% ######################################
+\section{Rozdział IV.}
+% ######################################
+
+
 \noindent
-\textbf{Rozdział IV.}
-
-\vspace{\spaceThree}
-
-
-\start W~podanej w tym rozdziale teorii całki Lebesgue’a wychodzącej
+W~podanej w tym rozdziale teorii całki Lebesgue’a wychodzącej
 od całki Radona należy rozróżnić dwa jej aspekty. Po pierwsze
 $\mu^{ * }$ i $\mu_{ * }$ są zapewne miarami zewnętrznymi (co trzeba
 wykazać) których obcięcia do zbiorów mierzalnych~są miarami (co jest
@@ -258,11 +280,13 @@ zależy to w~pierwszym rzędzie od~tego, czy~funkcje gładkie są gęste w
 zbiorze funkcji ciągłych, ale na te wszystkie pytania nie jestem
 w~stanie odpowiedzieć.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \textbf{2.} Podrozdział~6. „Obraz miary w~odwzorowaniu”
+
+\noindent
+\textbf{2.} Podrozdział~6. „Obraz miary w~odwzorowaniu”
 korzysta jawnie z~całki Radona i~funkcji ciągłych o~nośniku zwartym
 więc jego uogólnienie na regularne miary borelowskie może nie być
 możliwe (choć nie wydaje się to prawdopodobne). Ponieważ jednak
@@ -270,11 +294,14 @@ formuły tutaj są znacznie ogólniejsze niż w~większości książek się
 rozważa przy twierdzeniu o zmianie zmiennych w~całce z~miarą
 Lebesgue’a na $\Rbb^{ n }$, a~do tego ostatecznie dążymy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start Rozdział IV. Uwaga 3. W~tym rozdziale często jest żądane by
+
+
+\noindent
+Rozdział IV. Uwaga 3. W~tym rozdziale często jest żądane by
 dany zbiór $A$ był zwarty lub borelowski o~domknięciu zwartym. Na
 podstawie dzieła \cite{BogachevMeasureTheory2007}?? należy dojść do
 wniosku, że~wielu wypadkach, jeśli nie~we wszystkich, można zamiast
@@ -282,11 +309,14 @@ tego przyjąć, że~$A$ jest mierzalny o~mierze skończonej (co zapewne
 motywuje ten wybór u Schwartza) i~teoria nie ulegnie zmianie.
 W~szczególności można to zrobić w~definicji całek na stronie 454.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{16} Dyskusja zmiany zmiennej i funkcji jest tak piękna, że
+
+
+\noindent
+\Str{16} Dyskusja zmiany zmiennej i funkcji jest tak piękna, że
 warto jeszcze dodać następującą uwagę aby uczynić ją odrobinę bardziej
 pełną. Rozważmy dane funkcje z $G_{ 1 }$, $G_{ 2 }$ z $E_{ 1 }$ w $F$
 i niech $g$ będzie bijekcją z $E_{ 1 }$ na $E_{ 2 }$. Wtedy równanie
@@ -298,10 +328,14 @@ $G_{ 1 }( f_{ 1 }( y ), g^{ -1 }( y ) ) = G_{ 2 }( f_{ 1 }( y ), g^{
 $f_{ 1 }( y ) = f \circ g^{ -1 }( y )$. Analogiczne rozważanie można
 przeprowadzić dla zmiany funkcji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
-\start \Str{17} Jeżeli $f : E \to F$ nie jest suriekcją to rodzina
+
+
+
+\noindent
+\Str{17} Jeżeli $f : E \to F$ nie jest suriekcją to rodzina
 zbiorów postaci $f^{ -1 } ( \{ z \} )$ dalej stanowi rozwarstwienie
 przestrzeni $E$, z tą różnicą, że zawiera teraz zbiór $\emptyset$.
 Ponadto dla suriekcji, jeżeli $x \neq y$ to
@@ -311,11 +345,14 @@ szczególności $f^{ -1 }$ nie musi być odwzorowaniem na zbiór klas
 abstrakcji. W tej sytuacji nie można uważać $F$ za „model” dla
 $E / R$. Można to jednak naprawić zawężając zbiór końcowy do $f( E )$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{46} Wywodząc bezpośrednio z punktu a) punkt c), Schwartz
+
+
+\noindent
+\Str{46} Wywodząc bezpośrednio z punktu a) punkt c), Schwartz
 popełnia, chyba, pewną nonszalancje. Wydaje się, że rozumował on tak:
 jeżeli $F$ jest otoczeniem w $E$, zaś $\Vbb$ otoczeniem w $F$, to
 otwarty względem $F$ zbiór zawarty w $A$, jest też otwarty w $E$. Jest
@@ -329,69 +366,94 @@ $E$, zaś $\Vbb$ jest otoczeniem $a$ w $F$, to zawiera zbiór $B$,
 zawierający $a$, będący śladem zbioru otwartego $B_{ 1 }$ z~$E$. Teraz
 $A \cap B_{ 1 } \subset \Vbb$, jest otwarty zarówno w $E$ jak i~w~$F$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{30} Funkcja $f( x ) = \frac{ \log( x ) }{ 1 - x }$ nie
+
+
+\noindent
+\Str{30} Funkcja $f( x ) = \frac{ \log( x ) }{ 1 - x }$ nie
 jest bijekcją odcinka $] 0, 1 [$ na $\Rbb$, bowiem w całym tym
 przedziale $f( x ) < -1$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{51} Pierwsze sformułowanie Twierdzenia 2 z rozdziału II,
+
+
+\noindent
+\Str{51} Pierwsze sformułowanie Twierdzenia 2 z rozdziału II,
 obowiązuje tylko w przestrzeniach metrycznych, jednak pozostałem dwa
 obowiązują w dowolnej przestrzeni metrycznej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{53} Ostatnie zdanie przypis 5 jest napisany zbyt
-lekkomyślnie, sugeruje bowiem, że dla zbieżności danej funkcji nie ma
-znaczenia czy $a \in A$, czy też $a \notin A$. W rzeczywistości jest
-wręcz przeciwnie.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{53} Ostatnie zdanie przypis 5 jest napisany zbyt lekkomyślnie,
+sugeruje bowiem, że dla zbieżności danej funkcji nie ma znaczenia czy
+$a \in A$, czy też $a \notin A$. W rzeczywistości jest wręcz przeciwnie.
 
-\start \Str{60} W dowodzie Twierdzenia 13, można pominąć zdanie po
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{60} W dowodzie Twierdzenia 13, można pominąć zdanie po
 „z~dostatecznie dużymi wskaźnikami;”. Poprawia to ponadto spójność
 rozumowania.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{60} Poprawić dowód Twierdzenia 20. \red{???!!!}
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{60} Poprawić dowód Twierdzenia 20. ???!!!
 
-\start \Str{65} Dowód pierwszej części twierdzenia 27 jest bez sensu.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{96} Należałoby udowodnić równoważność podanych tu określeń
-normy.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{65} Dowód pierwszej części twierdzenia 27 jest bez sensu.
 
-\start \Str{106} Uzupełnić dowód.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{108} Wspomniano tu analogiczne wyniki dla ciągów w
+
+
+\noindent
+\Str{96} Należałoby udowodnić równoważność podanych tu określeń normy.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{106} Uzupełnić dowód.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{108} Wspomniano tu analogiczne wyniki dla ciągów w
 przestrzeni skończenie wymiarowej, które nie zostały chyba jednak
 nigdzie podane. Jakkolwiek centralny wynik jest oczywisty, warto
 go tu przytoczyć. \\
@@ -422,11 +484,14 @@ wynik jest natychmiastowy na podstawie oszacowania:
   \Vert x_{ 0 }^{ i } - x_{ n }^{ i } \Vert \leq \Vert x_{ 0 } - x_{ n } \Vert
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{141} Warto byłoby, tak jak w rozdziale III, termin
+
+
+\noindent
+\Str{141} Warto byłoby, tak jak w rozdziale III, termin
 „iloczyn skalarny” zarezerwować dla form dodatnio określonych.
 Wymagałoby to przeformułowania Wniosku, co jest niewielkim problemem
 bowiem, jego obecna forma jest wysoce niesatysfakcjonująca. Przede
@@ -435,11 +500,14 @@ wymaga jednak by $\vecE$ była przestrzenią topologiczną. Jeżeli
 jednak iloczyn skalarny generuje półnormę, należy się spytać o jaką
 topologię chodzi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{141} W dowodzie twierdzenia 84. jest użyte twierdzenie o
+
+
+\noindent
+\Str{141} W dowodzie twierdzenia 84. jest użyte twierdzenie o
 uzupełnianiu przestrzeni metrycznych (w szczególnym przypadku
 unormowanych), jednak to twierdzenie nie jest nigdzie podane ani
 udowodnione! Nie udowadnianie tego twierdzenia i powoływanie się na
@@ -447,24 +515,33 @@ nie, jest chyba jakąś tradycją książek do matematyki. Zastanowić się
 czy można to twierdzenie udowodnić korzystając z kanonicznego
 izomorfizmu ze strony 106.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{144} Do pełnej poprawności dowodu Twierdzenia 89 potrzeba
+
+
+\noindent
+\Str{144} Do pełnej poprawności dowodu Twierdzenia 89 potrzeba
 jeszcze udowodnić, że domknięcie zbioru wypukłego jest wypukłe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start Str{145} Poprawić ten punkt.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{145} Poprawić ten punkt.
 
-\start \Str{146} Twierdzenie 91 i Uwaga do niego wprowadzają pewien
+\VerSpaceFour
+
+
+
+
+
+\noindent
+ \Str{146} Twierdzenie 91 i Uwaga do niego wprowadzają pewien
 logiczny zamęt. Dopiero w Uwadze jest zauważone, ze to odwzorowanie
 jest liniowe, co należałoby zauważyć w miejscu gdzie stwierdza się, że
 są to dopełnienia algebraiczne, a bez tego pojęcie normy odwzorowanie
@@ -478,20 +555,26 @@ czystym nonsensem pozbawionym matematycznej treści. Zauważmy ponadto,
 $\Vert u( x ) \Vert \leq k \Vert x \Vert$, nie można wnioskować o~liniowości funkcji.
 Trzeba szerzej przedyskutować problem dopełnień topologicznych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{148} Przy dyskusji ilorazów przestrzeni Hilberta, jest
+
+
+\noindent
+\Str{148} Przy dyskusji ilorazów przestrzeni Hilberta, jest
 wspomniana analogiczna procedura dla ilorazu przestrzeni Banach,
 pomimo, że nie została w książce omówiona. \\
 Pobieżne przedstawienie tej konstrukcji.???!!!
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{149} Aby dowód tego twierdzenia był kompletny należy
+
+
+\noindent
+\Str{149} Aby dowód tego twierdzenia był kompletny należy
 skorzystać z poniższego lematu. \\
 Lemat. \\
 Jeżeli $\alpha$ jest niezerową formą nad przestrzenią Hilberta, a
@@ -508,30 +591,38 @@ pięknego wzoru $\dim\image f = \dim X - \dim\ker f$, pozwalającego
 obliczyć wymiar jądra. Ponieważ jednak przestrzeń Hilberta może być
 nieskończenie wymiarowa, wzoru ten oczywiście nie zachodzi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{150} Nie zdefiniowano użytych tu pojęć wzajemnych
+
+
+\noindent
+\Str{150} Nie zdefiniowano użytych tu pojęć wzajemnych
 odwzorowań, refleksywności przestrzeni i słabej zwartości. Do tego
 pojęcie kanonicznej iniekcji podane jest zbyt zwięźle.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{150} Poprawić uwagę na dole strony.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{150} Poprawić uwagę na dole strony.
 
-\start \Str{160} W dowodzie tego arcyważnego twierdzenia jest pewna
+\VerSpaceFour
+
+
+
+
+\noindent
+\Str{160} W dowodzie tego arcyważnego twierdzenia jest pewna
 skrótowość. Należy bowiem skorzystać z ważnego związku:
 \begin{equation}
   \label{eq:SchwartzKAMVolI-03}
-  \Vert x \Vert = \sup_{ \Vert y^{ * } \Vert \leq 1 } | x( y^{ * } ) |
-  = \sup_{ \Vert y^{ * } \Vert \leq 1 } | y^{ * }( x ) |.
+  \Vert x \Vert = \sup_{ \Vert y^{ * } \Vert \leq 1 } | x( y^{ * } ) | =
+  \sup_{ \Vert y^{ * } \Vert \leq 1 } | y^{ * }( x ) |.
 \end{equation}
 Jest to w istocie wniosek z refleksywności przestrzeni Hilberta,
 bowiem na jego mocy $x$ można traktować jako odwzorowanie liniowe
@@ -544,26 +635,35 @@ z~izomorfizmu przestrzeni Hilberta z~jej dualną, mamy zależność:
 Zauważenie tych związków nie jest banalne, ich udowodnienie, gdy już
 wiadomo z jakich twierdzeń skorzystać, już jest.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{169} Zastanowić się czy ten dowód wymaga uzupełnienia.
+
+
+\noindent
+\Str{169} Zastanowić się czy ten dowód wymaga uzupełnienia.
 Chodzi o warunek by domknięcie zbioru było zwarte.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{221}. Twierdzenia 16 i 17, mądrzej byłoby umieścić na
+
+
+\noindent
+\Str{221}. Twierdzenia 16 i 17, mądrzej byłoby umieścić na
 stronie 217, na końcu podparagrafu „Pochodna zupełna, czyli
 odwzorowanie pochodne”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{229} W tym miejscu powinien być komentarz odnośnie tego
+
+
+\noindent
+\Str{229} W tym miejscu powinien być komentarz odnośnie tego
 jak podstępnym obiektem są pochodne cząstkowe w wybranych
 współrzędnych, choć problem ten się nie pojawia przy mechanicznym
 wykonywaniu rachunków.
@@ -586,11 +686,14 @@ względem tej zmiennej się niezmienna. Lecz nawet tu sytuacja jest
 zwodnicza, co zademonstrujemy na wyjątkowo uderzającym
 transformacji liniowych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{233} Dyskusja o zmianie zmienny jest tak piękna, że warto
+
+
+\noindent
+\Str{233} Dyskusja o zmianie zmienny jest tak piękna, że warto
 ją jeszcze rozszerzyć. Aby uczynić ją pełną, wydaje mi się, że warto
 zauważyć następujący fakt: jeśli $f : E \to F$ jest bijekcją to
 równanie $g( x ) = h( x )$, dla funkcji określonych na $F$ (równianie
@@ -599,23 +702,32 @@ $g( x ) = \frac{ d h }{ dx }$), jest spełnione wtedy i tylko wtedy
 gdy spełnione jest równanie $g \circ f^{ -1 } = h \circ f^{ -1 }$.
 Niech $E$ i $F$ będą teraz unormowanymi przestrzeniami wektorowymi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{243} Poprawić dowód uwagi 2.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{243} Poprawić dowód uwagi 2.
 
-\start \Str{249} Zrób coś z wzorem (3.6.7).
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{387} Przedyskutuj to oszacowanie. Jest poprawne, nie jest
+
+
+\noindent
+\Str{249} Zrób coś z wzorem (3.6.7).
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{387} Przedyskutuj to oszacowanie. Jest poprawne, nie jest
 tylko wspomniane, że jest przyjęte tak by łatwo było liczyć, nie by
 uzyskać optymalne oszacowanie, co w praktycznych rachunkach jest i tak
 bez znaczenia. To, że takich przedziałów jest nie więcej niż $2N$
@@ -623,26 +735,35 @@ wynika chyba z tego, iż tych punktów jest $N + 1$, więc mogą się one
 zawierać w co najwyżej $N + 1$ przedziałach. Zachodzi przy tym
 $N + 1 \leq 2 N, N \geq 1$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{399} Uwagi 1 i 2 należy przepisać, w obecnej formie są
+
+
+\noindent
+\Str{399} Uwagi 1 i 2 należy przepisać, w obecnej formie są
 zbyt chaotyczne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{401} Zdanie w linii siódmej „ponieważ funkcja wykładnicza
+
+
+\noindent
+\Str{401} Zdanie w linii siódmej „ponieważ funkcja wykładnicza
 rośnie szybciej niż dowolny wielomian”, jest sformułowane niezbyt
 szczęśliwie. Spróbuj je poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{403} Dowód faktu, że suma przedstawiająca funkcje $\beta$
+
+
+\noindent
+\Str{403} Dowód faktu, że suma przedstawiająca funkcje $\beta$
 jest lokalnie skończona jest chyba następujący. Dla dowolnego kompaktu
 $K$ z własności zbiorów $U_{ n }$ jednie dla skończonej ilość
 wskaźników $n$ funkcje $\beta_{ i n }$ są niezerowe, z drugiej strony
@@ -650,29 +771,38 @@ dla każdego ustalonego $n$ jednie skończona ilość funkcji jest
 niezerowa. Na tym kompakcie nie znika więc tylko skończona ilość
 funkcji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{405} Uzupełnienie dowodu Wniosku 3. Z tego że, nośnik
+
+
+\noindent
+\Str{405} Uzupełnienie dowodu Wniosku 3. Z tego że, nośnik
 $\alpha_{ i }$ znika na pewnym otoczeniu sumy $F_{ i }'$, wynika w
 szczególności, iż znika ona na pewnym otoczeniu $F_{ j }, j \neq i$.
 Przecinając te wszystkie otoczenia dla $j \neq i$ otrzymujemy
 otoczenie $F_{ j }$ na którym jest niezerowa tylko funkcja
 $\alpha_{ j }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{406} Nie jestem wcale pewien czy z Wniosku 4 wynikają
+
+
+\noindent
+\Str{406} Nie jestem wcale pewien czy z Wniosku 4 wynikają
 wszystkie pozostałe wnioski.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{419} Udowodnienie nierówności (4.2.61) jest raczej zbyt
+
+
+\noindent
+\Str{419} Udowodnienie nierówności (4.2.61) jest raczej zbyt
 ascetyczne, więc tutaj podamy bardziej rozbudowaną formę. Z
 nierówności (4.2.63) wynika, że:
 \begin{equation}
@@ -720,17 +850,23 @@ stąd
 \end{equation}
 To pozwala już w prosty sposób otrzymać żądaną nierówność.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{419} Tu na pewno nie chodzi o wzory (4.2.35).
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{419} Tu na pewno nie chodzi o wzory (4.2.35).
 
-\start \Str{421} Uzupełnienie dowodu, że
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{421} Uzupełnienie dowodu, że
 $\inf( e^{ + }, e^{ - } ) = 0$. Analogicznie jak dla supremum
 zachodzi:
 \begin{equation}
@@ -747,29 +883,38 @@ Stąd mamy
 Łącząc to z podany w książce wywodem dowodzimy już bezpośrednio
 rozważanej własności.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{422} Czy siatka zupełna według podanej tu definicji jest
+
+
+\noindent
+\Str{422} Czy siatka zupełna według podanej tu definicji jest
 też siatką? Wydaje mi się, że~nie bowiem wtedy dla każdej pary
 $( e, 0 )$ musiałby istnieć element ją majoryzujący, a~w~definicji
 siatki zupełnej nic się o~tym nie zakłada. Wydaje się więc, że trzeba
 dodatkowo założyć, iż~siatka zupełna jest siatką.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{422} Nie rozumiem twierdzenia 19 w tej części która odnosi
+
+
+\noindent
+\Str{422} Nie rozumiem twierdzenia 19 w tej części która odnosi
 się do wzoru (4.2.71). Czy nie należy w nim zastąpić $\mu( \psi )$
 przez $| \mu( \psi ) |$?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{423} W~dowodzie jest luka, trzeba bowiem wykazać,
+
+
+\noindent
+\Str{423} W~dowodzie jest luka, trzeba bowiem wykazać,
 że~$\psi_{ 1 } = \inf( \psi, \varphi )$ jest ciągła. Można to zrobić
 tak: jeżeli $\psi( x ) > \varphi( x )$ (analogicznie dla
 $\psi( x ) < \varphi( x )$) to z~ciągłości tych funkcji wynika,
@@ -788,32 +933,48 @@ trapezów zawartych w przedziale
 $[-\frac{ 1 }{ n }, 1 + \frac{ 1 }{ n } ]$. Infinimum tego zbioru
 funkcji jest tą właśnie funkcją charakterystyczną.n
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{429} Tę nierówność da się chyba uzyskać nie korzystając z
-dodatniości miary.
-
-\vspace{\spaceFour}
 
 
+\noindent
+\Str{429} Tę nierówność da się chyba uzyskać nie korzystając z~dodatniości
+miary.
 
-\start \Str{430} Zadanie stwierdzające, że
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{430} Zadanie stwierdzające, że
 $( \Ocal_{ i } )_{ i \in I }$ jest pokryciem $K$ jest dość niezręczne.
 Może da się to lepiej sformułować?
 
-\start Str. 439. Warto podać dowód tego, że $\complement A$ jest
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{439} Warto podać dowód tego, że $\complement A$ jest
 mierzalny. Zauważmy, że dla każdego kompaktu zachodzi
 $\complement A \cap K = K \setminus ( A \cap K )$. Zbiór $A \cap K$
 jest mierzalny i jako podzbiór kompaktu ma miarę skończoną.
 Mierzalność $\complement A$ wynika więc z rozważań na stronie 436.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{446} Zarówno to stwierdzenie, że zbiory $A$ dla który
+
+
+\noindent
+\Str{446} Zarówno to stwierdzenie, że zbiory $A$ dla który
 $f^{ -1 }( A )$ jest mierzalne stanowią $\sigma$-algebrę jak i~dowód
 twierdzenia 24 wymagają posłużenie się relacjami
 \begin{equation}
@@ -823,11 +984,14 @@ twierdzenia 24 wymagają posłużenie się relacjami
 \end{equation}
 W~wypadku twierdzenia 24 wystarczy tylko pierwsza z~nich.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{449} W twierdzeniu 26. Schwartz konstruuje ciąg funkcji
+
+
+\noindent
+\Str{449} W twierdzeniu 26. Schwartz konstruuje ciąg funkcji
 piętrowych który jest tylko prawie wszędzie zbieżny do $f$. Z drugiej
 strony dla przypadku $F = \Rbb$ Rudin
 \cite{RudinAnalizaRzeczywistaIZespolona1998} konstruuje bez problemu
@@ -836,11 +1000,14 @@ poprawić lub znacznie uprościć dowód? Jeśli nie jest to prawdą, to
 należy zbadać sprawę zbioru $E$ który jest traktowany jak
 pseudomierzalny, acz nie wiem z czego to wynika.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{453} Dla każdego z~zbiorów $A \cap K_{ n }$ istnieją
+
+
+\noindent
+\Str{453} Dla każdego z~zbiorów $A \cap K_{ n }$ istnieją
 zbiory borelowskie o zadanej własności i~mierze skończonej
 $A_{ i }^{ * }$ oraz~$A_{ * i }$. Ich sumy są zbiorami mierzalnymi
 (a~nawet borelowskimi) trzeba jeszcze pokazać, że miara ich różnicy
@@ -854,37 +1021,49 @@ rozpisując tą zależność za pomocą kwantyfikatorów). Teraz:
   \leq \sum \mu( A^{ * }_{ i } \setminus A_{ * i } ) = 0.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{456} Dowód wzoru (4.3.30) jest prosty, jeśli tylko uda się
+
+
+\noindent
+\Str{456} Dowód wzoru (4.3.30) jest prosty, jeśli tylko uda się
 go pokazać dla zbioru $A$~o~domknięciu zwartym. Wbrew uwadze na dole
 strony nie jest to dla mnie oczywiste, poza przypadkiem gdy $A$~jest
 mierzalny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{457} Poprawić uwagi odnośnie przeniesienia twierdzeń z~całki
+
+
+\noindent
+\Str{457} Poprawić uwagi odnośnie przeniesienia twierdzeń z~całki
 Riemanna na całkę Lebesgue’a.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{458} W wniosku 1 nie da się chyba uniknąć założenia, że
+
+
+\noindent
+\Str{458} W wniosku 1 nie da się chyba uniknąć założenia, że
 zbiory $Y$ i~$Z$ są mierzalne. W przeciwnym razie biorąc zbiór
 niemierzalny i~jego dopełnienie uzyskalibyśmy wniosek, że każda
 funkcja całkowalna jest całkowalna na zbiorze niemierzalnym.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{458} Dla pełniejszego dowodu wniosku 2. warto pokazać, że
-ciąg $\vec{ f } \varphi_{ A \cap K_{ n } }$ jest ciągiem
+
+
+\noindent
+\Str{458} Dla pełniejszego dowodu wniosku 2. warto pokazać, że~ciąg
+$\vecf \varphi_{ A \cap K_{ n } }$ jest ciągiem
 aproksymacyjny do funkcji $\vec{ f } \varphi_{ A }$. Wystarczy
 zauważyć, że:
 \begin{equation}
@@ -894,29 +1073,38 @@ zauważyć, że:
   = \Vert \vec{ f } \Vert \; \mu( A \setminus A \cap K_{ n } ) \to 0.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{462} Całe rozumowanie prowadzące do wzoru $(4.3.44)$ jest
+
+
+\noindent
+\Str{462} Całe rozumowanie prowadzące do wzoru $(4.3.44)$ jest
 absolutnie poprawne, tylko że ten wzór z niego nie wynika. I nie wiem
 jak to poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{465} W twierdzeniu Jegorowa założenie, że~$K$ jest zwarty
+
+
+\noindent
+\Str{465} W~twierdzeniu Jegorowa założenie, że~$K$ jest zwarty
 jest chyba nadmiarowe (patrz Uwaga 1 do rozdziału IV). W~zupełności
 powinno wystarczyć, że~jest zbiorem mierzalnym o~mierze skończonej,
 zobacz \cite{RudinAnalizaRzeczywistaIZespolona1998}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{469} Rozumowanie które prowadzi do zależności
-$\int \Vert \vec{ f } - \vec{ f }_{ n } \Vert \to 0$ wydaje się
+
+
+\noindent
+\Str{469} Rozumowanie które prowadzi do zależności
+$\int \Vert \vecf - \vecf_{ n } \Vert \to 0$ wydaje się
 wyglądać następująco. Skoro pokazaliśmy, że $\vec{ f }$ jest
 całkowalna, całkowalna jest funkcja $\vec{ f } - \vec{ f }_{ n }$ z
 nią zaś $\Vert \vec{ f } - \vec{ f }_{ n } \Vert$. Oznacza to w
@@ -925,36 +1113,54 @@ $\int^{ * } \Vert \vec{ f } - \vec{ f }_{ n } \Vert = \int \Vert \vec{
   f } - \vec{ f }_{ n } \Vert$. \textit{To rozumowanie można chyba mocno
   poprawić.}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{471} W dowodzie twierdzenia Fatou używa się faktu, że góra
+
+
+\noindent
+\Str{471} W dowodzie twierdzenia Fatou używa się faktu, że góra
 i dolna obwiednia dwóch funkcji całkowalnych jest funkcją
 całkowalną, jednak ten fakt nie jest chyba nigdzie dowiedziony. \\
 Pomysł na dowód: rozważyć ciągi aproksymacyjne $f_{ n }$, $g_{ n }$
 dla funkcji $f$ i~$g$ złożone z funkcji schodkowych i~pokazać,
 że~$\sup( f_{ n }, g_{ n } )$ jest ciągiem aproksymacyjnym funkcji
-schodkowych dla $\sup( f, g )$. \start Str. 473. Drugi punkt wniosku 2
+schodkowych dla $\sup( f, g )$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{473} Drugi punkt wniosku 2
 można wzmocnić. Zauważmy bowiem, że dla ciągu rosnącego mamy zawsze
 $\int f_{ 0 } \leq \int f_{ n }$, czyli dla ciągu rosnącego musi być
 $\int f_{ n } \to +\infty$ i $\int f_{ n } \to -\infty$ dla
 malejącego. \textit{Możliwe, że ten dowód da się poprawić.}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{477} W założeniach twierdzenia 42 nie jest podane, że
+
+
+\noindent
+\Str{477} W założeniach twierdzenia 42 nie jest podane, że
 przestrzeń jest przeliczalna w nieskończoności, a wydaje się to
 potrzebne w dowodzie dla otrzymania wstępującego ciągu kompaktów
 pokrywających całą przestrzeń.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{479} W dowodzie twierdzenia wniosku 4, jest przywołane
+
+
+\noindent
+\Str{479} W dowodzie twierdzenia wniosku 4, jest przywołane
 twierdzenie 26 i uwaga 2 do niego. Jednak twierdzenie 26 nie ma uwagi
 numer 2, nie chodzi też o wniosek 2 z tego twierdzenia. Jednak sam
 dowód faktu dla którego odwołano się do tej uwagi nie będzie raczej
@@ -2131,12 +2337,12 @@ przeciwne do założenia $a \in \overline{ A }$
 
 
 
-% ##################
+% ######################################
 \newpage
-\Work{ % Autor i tytuł dzieła
-  Laurent Schwartz \\
-  „Kurs analizy matematycznej. Tom II”,
+\section{Laurent Schwartz \textit{Kurs analizy
+    matematycznej. Tom II},
   \cite{SchwartzKursAnalizyMatematycznejVolII1980} }
+% ######################################
 
 
 % Uwagi:
@@ -2256,16 +2462,15 @@ $$\vec{ \mu }_{ 2 } = \Phi_{ 2 1 } \vec{ \mu }_{ 1 } \ldots$$
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
-\bibliographystyle{alpha}
+% Bibliography
 
-\bibliography{MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
